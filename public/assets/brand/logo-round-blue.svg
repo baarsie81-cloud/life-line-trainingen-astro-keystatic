@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 360" role="img" aria-labelledby="title">
+  <title id="title">Life-Line-Trainingen</title>
+  <rect width="860" height="360" fill="none"/>
+  <g fill="#2877A7">
+    <path d="M96 180a120 120 0 1 1 120 120v-42a78 78 0 1 0-78-78H96Z"/>
+    <path d="M205 60h45v240h-45z"/>
+    <path d="M64 157h150v46H64z"/>
+    <path d="M658 156h150v18H658z"/>
+    <path d="M522 162l34-34 43 43 38-38 74 74 28-28 13 13-41 41-112-112-43 43-34-34-24 24z"/>
+  </g>
+  <g fill="#0E446A">
+    <text x="304" y="226" font-family="Aptos, Inter, Arial, sans-serif" font-size="86" font-weight="900" letter-spacing="2">LIFE-LINE</text>
+    <text x="306" y="286" font-family="Aptos, Inter, Arial, sans-serif" font-size="32" font-weight="800" letter-spacing="24">TRAININGEN</text>
+  </g>
+</svg>

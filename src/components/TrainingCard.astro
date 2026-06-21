@@ -1,0 +1,21 @@
+---
+interface Props {
+  title: string;
+  eyebrow: string;
+  description: string;
+  image: string;
+  href: string;
+}
+
+const { title, eyebrow, description, image, href } = Astro.props;
+---
+
+<article class="training-card">
+  <img src={image} alt="" loading="lazy" decoding="async" />
+  <div>
+    <p>{eyebrow}</p>
+    <h3>{title}</h3>
+    <span>{description}</span>
+    <a href={href}>Bekijk training</a>
+  </div>
+</article>

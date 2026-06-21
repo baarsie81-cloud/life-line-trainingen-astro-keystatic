@@ -1,0 +1,105 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import AudienceCard from "../components/AudienceCard.astro";
+import TrainingCard from "../components/TrainingCard.astro";
+import home from "../content/pages/home.json";
+
+const trainingFiles = import.meta.glob("../content/trainings/*.json", { eager: true });
+const allTrainings = Object.values(trainingFiles).map((entry: any) => entry.default);
+const featuredTrainings = allTrainings
+  .filter((training) => training.visible && home.featuredTrainingSlugs.includes(training.slug))
+  .sort((a, b) => {
+    const aIndex = home.featuredTrainingSlugs.indexOf(a.slug);
+    const bIndex = home.featuredTrainingSlugs.indexOf(b.slug);
+    return aIndex - bIndex || a.order - b.order;
+  });
+---
+
+<BaseLayout title={home.seoTitle} description={home.seoDescription}>
+  <section class="hero">
+    <img class="hero-image" src={home.hero.image} alt={home.hero.imageAlt} loading="eager" decoding="async" />
+    <div class="hero-overlay"></div>
+    <div class="container hero-content">
+      <div class="hero-copy">
+        <p class="eyebrow">{home.hero.eyebrow}</p>
+        <h1>{home.hero.title}</h1>
+        <p class="hero-intro">{home.hero.intro}</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href={home.hero.primaryCta.href}>{home.hero.primaryCta.label}</a>
+          <a class="button button-secondary" href={home.hero.secondaryCta.href}>{home.hero.secondaryCta.label}</a>
+        </div>
+      </div>
+      <aside class="hero-proof" aria-label="Waarom Life-Line-Trainingen">
+        <span>Sinds 2003</span>
+        <p>{home.hero.trust}</p>
+      </aside>
+    </div>
+  </section>
+
+  <section class="audience-shell" aria-labelledby="audience-title">
+    <div class="container audience-panel">
+      <div class="section-kicker">
+        <p class="eyebrow">Kies jouw situatie</p>
+        <h2 id="audience-title">Vind sneller de training die past</h2>
+      </div>
+      <div class="audience-grid">
+        {home.audiences.map((audience) => <AudienceCard {...audience} />)}
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-split">
+    <div class="container split-grid">
+      <div>
+        <p class="eyebrow">{home.positioning.eyebrow}</p>
+        <h2>{home.positioning.title}</h2>
+        <p class="section-intro">{home.positioning.intro}</p>
+      </div>
+      <div class="principles">
+        {
+          home.positioning.items.map((item, index) => (
+            <article>
+              <span>{String(index + 1).padStart(2, "0")}</span>
+              <h3>{item.title}</h3>
+              <p>{item.text}</p>
+            </article>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-soft">
+    <div class="container">
+      <div class="section-heading">
+        <p class="eyebrow">Uitgelichte trainingen</p>
+        <h2>Trainingen die direct toepasbaar zijn</h2>
+        <p>Een selectie van trainingen en opleidingen voor mensen die verantwoordelijkheid dragen voor veiligheid.</p>
+      </div>
+      <div class="training-grid">
+        {featuredTrainings.map((training) => <TrainingCard {...training} />)}
+      </div>
+    </div>
+  </section>
+
+  <section class="visual-statement">
+    <div class="visual-grid">
+      {home.visualStatement.images.map((image) => <img src={image.src} alt={image.alt} loading="lazy" decoding="async" />)}
+    </div>
+    <div class="container statement-copy">
+      <p>{home.visualStatement.quote}</p>
+      <span>{home.visualStatement.text}</span>
+    </div>
+  </section>
+
+  <section class="final-cta">
+    <div class="container final-cta-inner">
+      <div>
+        <p class="eyebrow">{home.finalCta.eyebrow}</p>
+        <h2>{home.finalCta.title}</h2>
+        <p>{home.finalCta.text}</p>
+      </div>
+      <a class="button button-light" href={home.finalCta.button.href}>{home.finalCta.button.label}</a>
+    </div>
+  </section>
+</BaseLayout>

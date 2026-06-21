@@ -1,0 +1,24 @@
+{
+  "name": "Life-Line-Trainingen",
+  "url": "https://life-line-training.nl",
+  "email": "info@life-line-trainingen.nl",
+  "address": ["Sleeg 1", "6905 BH Zevenaar"],
+  "description": "Praktijkgerichte trainingen in reanimatie, eerste hulp en waterveiligheid voor organisaties, zwembadprofessionals, hulpverleners en instructeurs.",
+  "headerCta": {
+    "label": "Vraag training aan",
+    "href": "/contact/"
+  },
+  "logos": {
+    "blue": "/assets/brand/logo-round-blue.png",
+    "white": "/assets/brand/logo-round-white.png"
+  },
+  "navigation": [
+    { "label": "Organisaties", "href": "/voor-organisaties/" },
+    { "label": "Zwembadprofessionals", "href": "/voor-zwembadprofessionals/" },
+    { "label": "Trainingen", "href": "/trainingen/" },
+    { "label": "Kennisbank", "href": "/kennisbank/" },
+    { "label": "Over ons", "href": "/over-life-line-trainingen/" },
+    { "label": "Contact", "href": "/contact/" }
+  ],
+  "footerText": "Life-Line-Trainingen helpt mensen en teams om rustig, praktisch en doelgericht te handelen wanneer het erop aankomt."
+}

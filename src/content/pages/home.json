@@ -1,0 +1,93 @@
+{
+  "seoTitle": "Life-Line-Trainingen | Praktische trainingen in reanimatie en waterveiligheid",
+  "seoDescription": "Praktijkgerichte trainingen voor organisaties, zwembadprofessionals, hulpverleners en instructeurs. Leer handelen bij reanimatie, eerste hulp en waterveiligheid.",
+  "hero": {
+    "eyebrow": "Reanimatie, eerste hulp en waterveiligheid",
+    "title": "Praktische trainingen voor mensen die moeten handelen",
+    "intro": "Life-Line-Trainingen helpt organisaties, zwembadprofessionals en hulpverleners om snel, rustig en doelgericht te handelen in noodsituaties. Met trainingen die herkenbaar zijn, actief blijven hangen en direct toepasbaar zijn in de praktijk.",
+    "image": "/assets/photos/instructeur-zwembad-breed.jpg",
+    "imageAlt": "Life-Line instructeur tijdens een praktijktraining in een zwembad.",
+    "primaryCta": {
+      "label": "Vraag training aan",
+      "href": "/contact/"
+    },
+    "secondaryCta": {
+      "label": "Bekijk trainingen",
+      "href": "/trainingen/"
+    },
+    "trust": "Sinds 2003 praktijkgerichte trainingen in veiligheid, reanimatie en waterveiligheid"
+  },
+  "audiences": [
+    {
+      "label": "Teams en organisaties",
+      "title": "Organisaties",
+      "text": "Voor bedrijven, scholen, verenigingen en instellingen die medewerkers praktisch willen trainen.",
+      "href": "/voor-organisaties/"
+    },
+    {
+      "label": "In en rond het zwembad",
+      "title": "Zwembadprofessionals",
+      "text": "Voor teams die verantwoordelijkheid dragen voor bezoekers, veiligheid en snel handelen bij incidenten.",
+      "href": "/voor-zwembadprofessionals/"
+    },
+    {
+      "label": "Vakmensen",
+      "title": "Hulpverleners & instructeurs",
+      "text": "Voor professionals die hun kennis willen verdiepen, actualiseren of doorgeven aan anderen.",
+      "href": "/voor-hulpverleners-en-instructeurs/"
+    },
+    {
+      "label": "Thuis en gezin",
+      "title": "Ouders & verzorgers",
+      "text": "Voor ouders en verzorgers die beter voorbereid willen zijn op noodsituaties met kinderen en water.",
+      "href": "/voor-ouders-en-verzorgers/"
+    }
+  ],
+  "positioning": {
+    "eyebrow": "Waarom Life Line",
+    "title": "Niet alleen weten wat moet. Ook durven doen.",
+    "intro": "In een noodsituatie telt niet alleen kennis, maar ook vertrouwen. Daarom trainen we met herkenbare situaties, duidelijke stappen en begeleiding die mensen in beweging brengt.",
+    "items": [
+      {
+        "title": "Praktijkgericht oefenen",
+        "text": "Geen droge theorie, maar oefenen met scenario's die lijken op de echte werkomgeving."
+      },
+      {
+        "title": "Herkenbare situaties",
+        "text": "Deelnemers leren beslissen, samenwerken en handelen met materialen en risico's die zij kennen."
+      },
+      {
+        "title": "Training op maat",
+        "text": "Voor teams en professionals stemmen we inhoud, niveau en voorbeelden af op de dagelijkse praktijk."
+      }
+    ]
+  },
+  "featuredTrainingSlugs": ["bls", "pbls", "waterveiligheid", "instructeursopleidingen"],
+  "visualStatement": {
+    "quote": "In een noodsituatie heb je geen tijd voor twijfel.",
+    "text": "Daarom trainen we mensen niet alleen op kennis, maar vooral op doen: kijken, beslissen, communiceren en handelen.",
+    "images": [
+      {
+        "src": "/assets/photos/bls-aed-training-breed.jpg",
+        "alt": "BLS training met reanimatiepop en AED."
+      },
+      {
+        "src": "/assets/photos/waterveiligheid-rescue-tube.jpg",
+        "alt": "Reddingsmateriaal tijdens een waterveiligheidstraining."
+      },
+      {
+        "src": "/assets/photos/waterredding-praktijk.jpg",
+        "alt": "Praktijkoefening waterredding in het zwembad."
+      }
+    ]
+  },
+  "finalCta": {
+    "eyebrow": "Samen trainen",
+    "title": "Welke training past bij jouw organisatie of team?",
+    "text": "Vertel kort wat je wilt bereiken. Dan denken we mee over een training die past bij jouw mensen, risico's en werkomgeving.",
+    "button": {
+      "label": "Plan een kennismaking",
+      "href": "/contact/"
+    }
+  }
+}

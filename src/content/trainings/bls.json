@@ -1,0 +1,10 @@
+{
+  "title": "BLS",
+  "slug": "bls",
+  "href": "/trainingen/bls/",
+  "eyebrow": "Reanimatie en AED",
+  "description": "Leer volwassenen reanimeren en een AED veilig inzetten volgens duidelijke, praktische stappen.",
+  "image": "/assets/photos/bls-reanimatie-aed.jpg",
+  "visible": true,
+  "order": 1
+}

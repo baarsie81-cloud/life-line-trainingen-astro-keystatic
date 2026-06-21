@@ -1,0 +1,30 @@
+---
+import site from "../content/settings/site.json";
+---
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div>
+      <span class="footer-logo">
+        <img src={site.logos.white} alt={site.name} />
+      </span>
+      <p>{site.footerText}</p>
+    </div>
+    <div>
+      <h2>Pagina's</h2>
+      <ul>
+        {site.navigation.map((item) => <li><a href={item.href}>{item.label}</a></li>)}
+      </ul>
+    </div>
+    <div>
+      <h2>Contact</h2>
+      <address>
+        {site.address.map((line) => <>{line}<br /></>)}
+        <a href={`mailto:${site.email}`}>{site.email}</a>
+      </address>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container">© Life-Line-Trainingen 2026. Alle rechten voorbehouden.</div>
+  </div>
+</footer>

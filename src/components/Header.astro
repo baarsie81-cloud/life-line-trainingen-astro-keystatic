@@ -1,0 +1,27 @@
+---
+import site from "../content/settings/site.json";
+
+const navItems = site.navigation;
+---
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand-link" href="/" aria-label="Life-Line-Trainingen home">
+      <img src={site.logos.blue} alt={site.name} />
+    </a>
+
+    <nav class="desktop-nav" aria-label="Hoofdnavigatie">
+      {navItems.map((item) => <a href={item.href}>{item.label}</a>)}
+    </nav>
+
+    <a class="header-cta" href={site.headerCta.href}>{site.headerCta.label}</a>
+
+    <details class="mobile-menu">
+      <summary>Menu</summary>
+      <nav aria-label="Mobiele navigatie">
+        {navItems.map((item) => <a href={item.href}>{item.label}</a>)}
+        <a class="mobile-cta" href={site.headerCta.href}>{site.headerCta.label}</a>
+      </nav>
+    </details>
+  </div>
+</header>
