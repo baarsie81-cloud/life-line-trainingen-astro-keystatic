@@ -363,7 +363,7 @@ h3 {
 .audience-card {
   display: grid;
   min-height: 230px;
-  align-content: start;
+  grid-template-rows: auto auto 1fr auto;
   border: 1px solid var(--blue-light);
   border-radius: var(--radius);
   background: linear-gradient(180deg, #ffffff 0%, #f8fcfe 100%);
