@@ -19,28 +19,28 @@
   },
   "audiences": [
     {
-      "label": "Teams en organisaties",
-      "title": "Organisaties",
-      "text": "Voor bedrijven, scholen, verenigingen en instellingen die medewerkers praktisch willen trainen.",
-      "href": "/voor-organisaties/"
-    },
-    {
       "label": "In en rond het zwembad",
-      "title": "Zwembadprofessionals",
-      "text": "Voor teams die verantwoordelijkheid dragen voor bezoekers, veiligheid en snel handelen bij incidenten.",
-      "href": "/voor-zwembadprofessionals/"
+      "title": "Zwembaden",
+      "text": "Voor zwembadteams die verantwoordelijkheid dragen voor bezoekers, toezicht, veiligheid en snel handelen bij incidenten.",
+      "href": "/zwembaden/"
     },
     {
-      "label": "Vakmensen",
-      "title": "Hulpverleners & instructeurs",
-      "text": "Voor professionals die hun kennis willen verdiepen, actualiseren of doorgeven aan anderen.",
-      "href": "/voor-hulpverleners-en-instructeurs/"
+      "label": "Training geven",
+      "title": "Instructeurs",
+      "text": "Voor instructeurs die hun kennis willen verdiepen, actualiseren of sterker willen overbrengen in de praktijk.",
+      "href": "/instructeurs/"
     },
     {
-      "label": "Thuis en gezin",
-      "title": "Ouders & verzorgers",
-      "text": "Voor ouders en verzorgers die beter voorbereid willen zijn op noodsituaties met kinderen en water.",
-      "href": "/voor-ouders-en-verzorgers/"
+      "label": "Handelen onder druk",
+      "title": "Hulpverleners",
+      "text": "Voor hulpverleners en professionals die zekerder willen handelen bij reanimatie, eerste hulp en waterveiligheid.",
+      "href": "/hulpverleners/"
+    },
+    {
+      "label": "Teams en medewerkers",
+      "title": "Organisaties",
+      "text": "Voor bedrijven, scholen, verenigingen en instellingen die medewerkers praktisch en doelgericht willen trainen.",
+      "href": "/organisaties/"
     }
   ],
   "positioning": {
