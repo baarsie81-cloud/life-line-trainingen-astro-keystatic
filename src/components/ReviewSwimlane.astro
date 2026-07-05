@@ -1,0 +1,66 @@
+---
+interface ReviewItem {
+  author: string;
+  context?: string;
+  rating: number;
+  quote: string;
+  date?: string;
+  visible?: boolean;
+}
+
+interface Props {
+  eyebrow: string;
+  title: string;
+  intro: string;
+  sourceLabel: string;
+  sourceHref: string;
+  reviews: ReviewItem[];
+}
+
+const { eyebrow, title, intro, sourceLabel, sourceHref, reviews } = Astro.props;
+const visibleReviews = reviews.filter((review) => review.visible !== false);
+const loopReviews = [...visibleReviews, ...visibleReviews];
+const hasReviews = visibleReviews.length > 0;
+---
+
+{
+  hasReviews && (
+    <section class="review-swimlane" aria-labelledby="review-title">
+      <div class="container review-heading">
+        <div>
+          <p class="eyebrow">{eyebrow}</p>
+          <h2 id="review-title">{title}</h2>
+          <p>{intro}</p>
+        </div>
+        <a class="review-source" href={sourceHref} target="_blank" rel="noreferrer">
+          {sourceLabel}
+        </a>
+      </div>
+
+      <div class="review-track-wrap" aria-label="Ervaringen van klanten">
+        <div class="review-track">
+          {loopReviews.map((review) => (
+            <article class="review-card">
+              <div class="review-stars" aria-label={`${review.rating} van 5 sterren`}>
+                {Array.from({ length: 5 }).map((_, index) => (
+                  <span class={index < review.rating ? "is-filled" : ""} aria-hidden="true">
+                    &#9733;
+                  </span>
+                ))}
+              </div>
+              <blockquote>{review.quote}</blockquote>
+              <footer>
+                <strong>{review.author}</strong>
+                {(review.context || review.date) && (
+                  <span>
+                    {[review.context, review.date].filter(Boolean).join(" - ")}
+                  </span>
+                )}
+              </footer>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+  )
+}

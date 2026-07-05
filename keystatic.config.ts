@@ -164,6 +164,51 @@ export default config({
           },
           { label: "Visueel statement" }
         ),
+        reviewSwimlane: fields.object(
+          {
+            eyebrow: fields.text({ label: "Label boven titel", validation: { isRequired: true } }),
+            title: fields.text({ label: "Titel", validation: { isRequired: true } }),
+            intro: fields.text({ label: "Intro", multiline: true, validation: { isRequired: true } }),
+            sourceLabel: fields.text({ label: "Google linktekst", validation: { isRequired: true } }),
+            sourceHref: fields.text({
+              label: "Google link",
+              description: "Plak hier de link naar de Google reviews of het Google bedrijfsprofiel.",
+              validation: { isRequired: true },
+            }),
+            reviews: fields.array(
+              fields.object(
+                {
+                  author: fields.text({ label: "Naam reviewer", validation: { isRequired: true } }),
+                  context: fields.text({
+                    label: "Context",
+                    description: "Bijvoorbeeld Google review, organisatie of type training.",
+                  }),
+                  rating: fields.integer({
+                    label: "Score",
+                    description: "Gebruik een score van 1 t/m 5.",
+                    defaultValue: 5,
+                    validation: { isRequired: true },
+                  }),
+                  quote: fields.text({ label: "Reviewtekst", multiline: true, validation: { isRequired: true } }),
+                  date: fields.text({
+                    label: "Datum",
+                    description: "Optioneel, bijvoorbeeld juni 2026.",
+                  }),
+                  visible: fields.checkbox({
+                    label: "Zichtbaar op de website",
+                    defaultValue: false,
+                  }),
+                },
+                { label: "Review" }
+              ),
+              {
+                label: "Reviews",
+                itemLabel: (props) => props.fields.author.value || "Review",
+              }
+            ),
+          },
+          { label: "Reviewbanner" }
+        ),
         finalCta: fields.object(
           {
             eyebrow: fields.text({ label: "Label boven titel", validation: { isRequired: true } }),

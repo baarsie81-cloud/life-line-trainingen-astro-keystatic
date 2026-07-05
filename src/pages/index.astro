@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import AudienceCard from "../components/AudienceCard.astro";
+import ReviewSwimlane from "../components/ReviewSwimlane.astro";
 import TrainingCard from "../components/TrainingCard.astro";
 import home from "../content/pages/home.json";
 
@@ -91,6 +92,8 @@ const featuredTrainings = allTrainings
       <span>{home.visualStatement.text}</span>
     </div>
   </section>
+
+  <ReviewSwimlane {...home.reviewSwimlane} />
 
   <section class="final-cta">
     <div class="container final-cta-inner">

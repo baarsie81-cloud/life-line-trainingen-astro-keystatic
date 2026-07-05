@@ -81,6 +81,95 @@
       }
     ]
   },
+  "reviewSwimlane": {
+    "eyebrow": "Google reviews",
+    "title": "Ervaringen uit de praktijk",
+    "intro": "Wat deelnemers en opdrachtgevers zeggen over de trainingen van Life-Line-Trainingen.",
+    "sourceLabel": "Bekijk op Google",
+    "sourceHref": "https://www.google.com/search?q=Life-Line-Trainingen+reviews",
+    "reviews": [
+      {
+        "author": "Jolien Kok",
+        "context": "Google review",
+        "rating": 5,
+        "quote": "Twee leerzame trainingen achter de rug en nu gekwalificeerd als Instructeur BLS. De persoonlijke aanpak van Mike en de kleine groep maakten het voor mij extra waardevol.",
+        "date": "3 maanden geleden",
+        "visible": true
+      },
+      {
+        "author": "debbie klercq",
+        "context": "Google review",
+        "rating": 5,
+        "quote": "Via de NRR bij Mike terecht gekomen. Echt een ontzettende leuke leerzame training. Veilig leren met een vleugje humor.",
+        "date": "7 maanden geleden",
+        "visible": true
+      },
+      {
+        "author": "Sandra Talens",
+        "context": "Google review",
+        "rating": 4,
+        "quote": "Zeer leerzame EHBO-training. Fijn om de informatie uit de e-learning ook toegepast te zien worden.",
+        "date": "7 maanden geleden",
+        "visible": true
+      },
+      {
+        "author": "Andre Wolbrink",
+        "context": "Google review",
+        "rating": 5,
+        "quote": "Herhaling EHBO was zeer leerzaam en dynamisch. Veel praktijk met Lotus en groepjes.",
+        "date": "7 maanden geleden",
+        "visible": true
+      },
+      {
+        "author": "Esther De Geest",
+        "context": "Google review",
+        "rating": 5,
+        "quote": "Erg fijne trainingsdagen gehad bij Mike. Duidelijke uitleg en leuke scenario's.",
+        "date": "7 maanden geleden",
+        "visible": true
+      },
+      {
+        "author": "Anouk Cats",
+        "context": "Google review",
+        "rating": 5,
+        "quote": "Fijne leeromgeving, duidelijke uitleg en mooie opzet/verloop van lesstof.",
+        "date": "7 maanden geleden",
+        "visible": true
+      },
+      {
+        "author": "Thomas Flanderijn",
+        "context": "Google review",
+        "rating": 4,
+        "quote": "Erg gedetailleerd uitgelegd, stap voor stap. Lekker relaxen met thee en koekie tussendoor.",
+        "date": "7 maanden geleden",
+        "visible": true
+      },
+      {
+        "author": "Irma Wolbrink",
+        "context": "Google review",
+        "rating": 5,
+        "quote": "Erg afwisselend programma met kundige leuke instructeurs en topper van een Lotus!",
+        "date": "7 maanden geleden",
+        "visible": true
+      },
+      {
+        "author": "Wietske Rensing",
+        "context": "Google review",
+        "rating": 5,
+        "quote": "Prettige trainingen. Duidelijk instructies en goede indeling van de dagen",
+        "date": "7 maanden geleden",
+        "visible": true
+      },
+      {
+        "author": "Andreea",
+        "context": "Google review",
+        "rating": 5,
+        "quote": "Vandaag een EHBO cursus gevolgd, de trainer en de Lotus waren goed op elkaar ingespeeld. De leslokaal en de omgeving waar de cursus werd gegeven gaaf de mogelijkheid tot veel leerzame en creatieve situaties.",
+        "date": "een jaar geleden",
+        "visible": true
+      }
+    ]
+  },
   "finalCta": {
     "eyebrow": "Samen trainen",
     "title": "Welke training past bij jouw organisatie of team?",
