@@ -13,9 +13,9 @@
     "white": "/assets/brand/logo-round-white.png"
   },
   "navigation": [
-    { "label": "Organisaties", "href": "/voor-organisaties/" },
-    { "label": "Zwembadprofessionals", "href": "/voor-zwembadprofessionals/" },
-    { "label": "Trainingen", "href": "/trainingen/" },
+    { "label": "Zwembaden", "href": "/zwembaden/" },
+    { "label": "Instructeurs", "href": "/instructeurs/" },
+    { "label": "Hulpverleners", "href": "/hulpverleners/" },
     { "label": "Kennisbank", "href": "/kennisbank/" },
     { "label": "Over ons", "href": "/over-life-line-trainingen/" },
     { "label": "Contact", "href": "/contact/" }
