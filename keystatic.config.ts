@@ -272,6 +272,14 @@ export default config({
               fields.object(
                 {
                   label: fields.text({ label: "Klein label", validation: { isRequired: true } }),
+                  recommended: fields.checkbox({
+                    label: "Toon als aanbeveling",
+                    defaultValue: false,
+                  }),
+                  recommendedLabel: fields.text({
+                    label: "Aanbeveling label",
+                    description: "Bijvoorbeeld: Onze aanbeveling.",
+                  }),
                   title: fields.text({ label: "Titel", validation: { isRequired: true } }),
                   text: fields.text({ label: "Korte tekst", multiline: true, validation: { isRequired: true } }),
                   detailsTitle: fields.text({ label: "Uitklapknop tekst", validation: { isRequired: true } }),

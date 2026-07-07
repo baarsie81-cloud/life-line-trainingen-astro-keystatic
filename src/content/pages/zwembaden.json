@@ -49,6 +49,8 @@
       },
       {
         "label": "Veiligheidsorganisatie",
+        "recommended": true,
+        "recommendedLabel": "Onze aanbeveling",
         "title": "Veiligheidsdag",
         "text": "Voor teams die EHBO- en BHV-competenties praktisch willen oefenen in de eigen zwembadcontext.",
         "detailsTitle": "Bekijk wat deze training behandelt",
