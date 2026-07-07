@@ -37,7 +37,7 @@ export default config({
     },
     navigation: {
       "Vaste pagina's": ["home", "zwembaden", "site"],
-      Content: ["trainings"],
+      Content: ["trainings", "blogs"],
     },
   },
   singletons: {
@@ -380,6 +380,83 @@ export default config({
         }),
         order: fields.integer({
           label: "Volgorde",
+          validation: { isRequired: true },
+        }),
+      },
+    }),
+    blogs: collection({
+      label: "Nieuws & blogs",
+      slugField: "title",
+      path: "src/content/blogs/*",
+      format: { data: "json" },
+      columns: ["title", "date", "category", "visible"],
+      schema: {
+        title: fields.slug({
+          name: { label: "Titel", validation: { isRequired: true } },
+          slug: {
+            label: "Slug",
+            description: "Laat deze gelijk aan de oude URL-slug als je een bestaand artikel overneemt.",
+          },
+        }),
+        seoTitle: fields.text({ label: "SEO titel", validation: { isRequired: true } }),
+        seoDescription: fields.text({
+          label: "SEO omschrijving",
+          multiline: true,
+          validation: { isRequired: true },
+        }),
+        date: fields.date({ label: "Publicatiedatum", validation: { isRequired: true } }),
+        author: fields.text({ label: "Auteur", validation: { isRequired: true } }),
+        readingTime: fields.text({ label: "Leestijd", validation: { isRequired: true } }),
+        excerpt: fields.text({
+          label: "Overzichtstekst",
+          multiline: true,
+          validation: { isRequired: true },
+        }),
+        image: fields.image({
+          label: "Hoofdafbeelding",
+          directory: "public/assets/blogs",
+          publicPath: "/assets/blogs",
+          validation: { isRequired: true },
+        }),
+        imageAlt: fields.text({ label: "Alt-tekst afbeelding", validation: { isRequired: true } }),
+        category: fields.select({
+          label: "Categorie",
+          defaultValue: "Waterveiligheid",
+          options: [
+            { label: "Waterveiligheid", value: "Waterveiligheid" },
+            { label: "Reanimatie", value: "Reanimatie" },
+            { label: "EHBO & hulpverlening", value: "EHBO & hulpverlening" },
+            { label: "Instructeurs", value: "Instructeurs" },
+            { label: "Zwembaden", value: "Zwembaden" },
+          ],
+        }),
+        audience: fields.select({
+          label: "Doelgroep",
+          defaultValue: "Hulpverleners",
+          options: [
+            { label: "Zwembaden", value: "Zwembaden" },
+            { label: "Instructeurs", value: "Instructeurs" },
+            { label: "Hulpverleners", value: "Hulpverleners" },
+            { label: "Ouders & verzorgers", value: "Ouders & verzorgers" },
+            { label: "Organisaties", value: "Organisaties" },
+          ],
+        }),
+        tags: fields.array(fields.text({ label: "Tag" }), {
+          label: "Tags",
+          itemLabel: (props) => props.value || "Tag",
+        }),
+        featured: fields.checkbox({
+          label: "Uitgelicht artikel",
+          defaultValue: false,
+        }),
+        visible: fields.checkbox({
+          label: "Zichtbaar op de website",
+          defaultValue: true,
+        }),
+        bodyHtml: fields.text({
+          label: "Artikelinhoud",
+          description: "Gebruik eenvoudige HTML voor koppen, alinea's, lijstjes, links en quotes.",
+          multiline: true,
           validation: { isRequired: true },
         }),
       },

@@ -1,0 +1,139 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import site from "../../content/settings/site.json";
+
+export const prerender = true;
+
+const blogFiles = import.meta.glob("../../content/blogs/*.json", { eager: true });
+const allBlogs = Object.values(blogFiles).map((entry: any) => entry.default);
+const visibleBlogs = allBlogs
+  .filter((blog) => blog.visible)
+  .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+
+export function getStaticPaths() {
+  const files = import.meta.glob("../../content/blogs/*.json", { eager: true });
+  const blogs = Object.values(files)
+    .map((entry: any) => entry.default)
+    .filter((blog) => blog.visible);
+
+  return blogs.map((blog) => ({
+    params: { slug: blog.title.slug },
+    props: { blog },
+  }));
+}
+
+const { blog } = Astro.props;
+const related = visibleBlogs
+  .filter((item) => item.title.slug !== blog.title.slug && item.category === blog.category)
+  .slice(0, 3);
+
+const formatDate = (date: string) =>
+  new Intl.DateTimeFormat("nl-NL", {
+    day: "numeric",
+    month: "long",
+    year: "numeric",
+  }).format(new Date(date));
+
+const canonical = new URL(`/nieuws/${blog.title.slug}/`, site.url);
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  headline: blog.title.name,
+  description: blog.seoDescription,
+  image: new URL(blog.image, site.url).href,
+  datePublished: blog.date,
+  dateModified: blog.date,
+  author: {
+    "@type": "Person",
+    name: blog.author,
+  },
+  publisher: {
+    "@type": "Organization",
+    name: site.name,
+    url: site.url,
+    logo: {
+      "@type": "ImageObject",
+      url: new URL(site.logos.blue, site.url).href,
+    },
+  },
+  mainEntityOfPage: canonical.href,
+};
+---
+
+<BaseLayout
+  title={blog.seoTitle}
+  description={blog.seoDescription}
+  image={blog.image}
+  type="article"
+  structuredData={structuredData}
+>
+  <article class="article-page">
+    <header class="article-hero">
+      <div class="container article-hero-inner">
+        <a class="back-link" href="/nieuws/">Terug naar kennisbank</a>
+        <div class="article-meta">
+          <span>{formatDate(blog.date)}</span>
+          <span>{blog.category}</span>
+          <span>{blog.readingTime}</span>
+        </div>
+        <h1>{blog.title.name}</h1>
+        <p>{blog.excerpt}</p>
+      </div>
+    </header>
+
+    <div class="container article-layout">
+      <aside class="article-sidebar" aria-label="Artikelinformatie">
+        <img src={blog.image} alt={blog.imageAlt} loading="eager" decoding="async" />
+        <dl>
+          <div>
+            <dt>Auteur</dt>
+            <dd>{blog.author}</dd>
+          </div>
+          <div>
+            <dt>Doelgroep</dt>
+            <dd>{blog.audience}</dd>
+          </div>
+        </dl>
+      </aside>
+
+      <div class="article-content" set:html={blog.bodyHtml} />
+    </div>
+  </article>
+
+  {related.length > 0 && (
+    <section class="section section-soft related-articles" aria-labelledby="related-title">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Verder lezen</p>
+          <h2 id="related-title">Meer over {blog.category.toLowerCase()}</h2>
+        </div>
+        <div class="related-grid">
+          {
+            related.map((item) => (
+              <article class="related-card">
+                <img src={item.image} alt={item.imageAlt} loading="lazy" decoding="async" />
+                <div>
+                  <span>{formatDate(item.date)}</span>
+                  <h3>
+                    <a href={`/nieuws/${item.title.slug}/`}>{item.title.name}</a>
+                  </h3>
+                </div>
+              </article>
+            ))
+          }
+        </div>
+      </div>
+    </section>
+  )}
+
+  <section class="final-cta">
+    <div class="container final-cta-inner">
+      <div>
+        <p class="eyebrow">Aan de slag</p>
+        <h2>Wil je dit praktisch trainen met je team?</h2>
+        <p>Life-Line-Trainingen vertaalt kennis naar oefenen, handelen en vertrouwen in echte situaties.</p>
+      </div>
+      <a class="button button-light" href="/contact/">Neem contact op</a>
+    </div>
+  </section>
+</BaseLayout>

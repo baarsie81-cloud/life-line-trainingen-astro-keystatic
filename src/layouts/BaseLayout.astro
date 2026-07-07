@@ -7,10 +7,14 @@ import site from "../content/settings/site.json";
 interface Props {
   title: string;
   description: string;
+  image?: string;
+  type?: string;
+  structuredData?: Record<string, unknown>;
 }
 
-const { title, description } = Astro.props;
+const { title, description, image = "/assets/photos/instructeur-zwembad-breed.jpg", type = "website", structuredData } = Astro.props;
 const canonical = new URL(Astro.url.pathname, site.url);
+const ogImage = new URL(image, site.url);
 ---
 
 <!doctype html>
@@ -24,10 +28,11 @@ const canonical = new URL(Astro.url.pathname, site.url);
     <link rel="canonical" href={canonical} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
-    <meta property="og:type" content="website" />
+    <meta property="og:type" content={type} />
     <meta property="og:url" content={canonical} />
-    <meta property="og:image" content="/assets/photos/instructeur-zwembad-breed.jpg" />
+    <meta property="og:image" content={ogImage} />
     <link rel="icon" type="image/png" href={site.logos.blue} />
+    {structuredData && <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />}
   </head>
   <body>
     <Header />

@@ -2,11 +2,14 @@ import site from "../content/settings/site.json";
 
 const trainingFiles = import.meta.glob("../content/trainings/*.json", { eager: true });
 const trainings = Object.values(trainingFiles).map((entry: any) => entry.default);
+const blogFiles = import.meta.glob("../content/blogs/*.json", { eager: true });
+const blogs = Object.values(blogFiles).map((entry: any) => entry.default);
 
 export async function GET() {
   const staticPaths = ["/", ...site.navigation.map((item) => item.href)];
   const trainingPaths = trainings.filter((training) => training.visible).map((training) => training.href);
-  const paths = Array.from(new Set([...staticPaths, ...trainingPaths]));
+  const blogPaths = blogs.filter((blog) => blog.visible).map((blog) => `/nieuws/${blog.title.slug}/`);
+  const paths = Array.from(new Set([...staticPaths, ...trainingPaths, ...blogPaths]));
 
   const body = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
