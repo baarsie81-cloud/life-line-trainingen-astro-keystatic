@@ -83,7 +83,7 @@
       {
         "label": "Module 1",
         "title": "Training Zwemmend Redden",
-        "subtitle": "Voor wie hun vaardigheden wil aanscherpen - leidt niet tot een certificaat.",
+        "subtitle": "Voor teams die hun vaardigheden willen aanscherpen. Deze training leidt niet tot een certificaat.",
         "detailsTitle": "Bekijk details en voorwaarden",
         "facts": [
           {
@@ -93,10 +93,6 @@
           {
             "label": "Wat",
             "text": "Praktijktraining zwemmend redden in het eigen zwembad, afgestemd op de leerbehoeften van het team."
-          },
-          {
-            "label": "Waar",
-            "text": "Op locatie, reiskosten inbegrepen."
           },
           {
             "label": "Hoe",
@@ -111,7 +107,7 @@
       {
         "label": "Module 2",
         "title": "Opleiding Zwemmend Redden",
-        "subtitle": "Voor teams die toe willen naar een erkend certificaat - met een verplichte voorbereiding.",
+        "subtitle": "Voor teams die toe willen naar een erkend certificaat. Vooraf voorbereiden is verplicht.",
         "detailsTitle": "Bekijk details en instapeis",
         "facts": [
           {
@@ -123,16 +119,12 @@
             "text": "Opleidingstraject conform de eindtermen Zwemmend Redden Zwembaden van Reddingsbrigade Nederland, afgesloten met certificaat."
           },
           {
-            "label": "Waar",
-            "text": "Op locatie, reiskosten inbegrepen."
-          },
-          {
             "label": "Hoe",
             "text": "1 dag (8 uur) actieve training."
           }
         ],
         "noticeTitle": "Instapeis",
-        "noticeText": "Deelname is alleen mogelijk na voorbereiding: e-learning óf lesboek, plus een casuïstiekopdracht. Deze casuïstiek moet vooraf voldoende beoordeeld zijn - pas dan mag een deelnemer meedoen aan de trainingsdag.",
+        "noticeText": "Deelname is alleen mogelijk na voorbereiding: e-learning óf lesboek, plus een casuïstiekopdracht. Deze casuïstiek moet vooraf voldoende beoordeeld zijn. Pas daarna mag een deelnemer meedoen aan de trainingsdag.",
         "ctaLabel": "Vraag offerte aan inclusief voorbereidingstraject",
         "ctaHref": "/contact/"
       },
@@ -149,10 +141,6 @@
           {
             "label": "Wat",
             "text": "Hercertificering conform de eindtermen Zwemmend Redden Zwembaden van Reddingsbrigade Nederland."
-          },
-          {
-            "label": "Waar",
-            "text": "Op locatie, reiskosten inbegrepen."
           },
           {
             "label": "Hoe",
