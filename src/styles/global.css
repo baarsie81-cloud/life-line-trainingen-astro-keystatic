@@ -618,7 +618,7 @@ h3 {
 .level-card {
   position: relative;
   display: grid;
-  grid-template-rows: auto auto auto auto 1fr;
+  grid-template-rows: auto auto auto 1fr;
   border: 1px solid rgba(40, 119, 167, 0.16);
   border-radius: var(--radius);
   background: var(--white);
@@ -628,16 +628,20 @@ h3 {
 
 .level-card.is-recommended {
   border-color: rgba(40, 119, 167, 0.42);
+  padding-top: 1.15rem;
   box-shadow: 0 18px 46px rgba(8, 63, 100, 0.15);
 }
 
 .level-badge {
-  width: fit-content;
+  position: absolute;
+  top: -0.68rem;
+  right: 0.9rem;
+  max-width: calc(100% - 1.8rem);
   border-radius: 999px;
   background: var(--orange);
   color: var(--white);
-  padding: 0.42rem 0.72rem;
-  font-size: 0.72rem;
+  padding: 0.36rem 0.64rem;
+  font-size: 0.66rem;
   font-weight: 900;
   letter-spacing: 0.08em;
   line-height: 1;
@@ -650,10 +654,6 @@ h3 {
   font-weight: 900;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-}
-
-.level-badge + span {
-  margin-top: 0.7rem;
 }
 
 .level-card h3 {
