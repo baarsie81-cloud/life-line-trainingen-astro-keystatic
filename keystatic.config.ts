@@ -291,6 +291,29 @@ export default config({
           },
           { label: "Trainingsniveaus" }
         ),
+        addition: fields.object(
+          {
+            eyebrow: fields.text({ label: "Label boven titel", validation: { isRequired: true } }),
+            title: fields.text({ label: "Titel", validation: { isRequired: true } }),
+            intro: fields.text({ label: "Intro", multiline: true, validation: { isRequired: true } }),
+            items: fields.array(
+              fields.object(
+                {
+                  label: fields.text({ label: "Moment label", validation: { isRequired: true } }),
+                  title: fields.text({ label: "Titel", validation: { isRequired: true } }),
+                  duration: fields.text({ label: "Duur", validation: { isRequired: true } }),
+                  text: fields.text({ label: "Tekst", multiline: true, validation: { isRequired: true } }),
+                },
+                { label: "Moment" }
+              ),
+              {
+                label: "Momenten",
+                itemLabel: (props) => props.fields.title.value || "Moment",
+              }
+            ),
+          },
+          { label: "Aanvulling ZRZ" }
+        ),
         groupSize: fields.object(
           {
             eyebrow: fields.text({ label: "Label boven titel", validation: { isRequired: true } }),

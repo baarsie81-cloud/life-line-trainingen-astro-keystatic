@@ -69,20 +69,28 @@
           "Beroerte, bloedneus en levensbedreigende bloedingen",
           "Nek- en wervelletsel, pijn op de borstkas en bijna-verdrinking"
         ]
-      },
-      {
-        "label": "Praktijk in water",
-        "title": "Zwemmend Redden",
-        "text": "Twee praktijkmomenten in het eigen zwembad, gericht op training en herexamen.",
-        "detailsTitle": "Bekijk hoe de twee momenten zijn opgebouwd",
-        "details": [
-          "Moment 1 (2,5 uur): praktijktraining zwemmend redden in het eigen zwembad, conform eindtermen ZRZ",
-          "Moment 2 (2,5 uur): verdieping van de praktijk en afname van het herexamen",
-          "Het reguliere examen wordt vooralsnog elders afgenomen; dit onderdeel richt zich op training en herexamen"
-        ]
       }
     ],
     "note": "Niet zeker welk niveau past? In een kort intakegesprek brengen we de leerbehoeften van jullie team in kaart. Dat zit standaard in elk traject."
+  },
+  "addition": {
+    "eyebrow": "De aanvulling",
+    "title": "Zwemmend Redden (ZRZ)",
+    "intro": "Naast de Veiligheidsdag traint dit onderdeel specifiek de vaardigheden voor zwemmend redden in jullie eigen bad, conform de eindtermen ZRZ. We verdelen het per team bewust over twee momenten van 2,5 uur, beter voor opname en uitvoering dan één lange sessie. In de 5-uursvorm nemen we eventueel ook een herexamen af.",
+    "items": [
+      {
+        "label": "Moment 1",
+        "title": "Vaardigheidstraining",
+        "duration": "2,5 uur",
+        "text": "Praktijktraining zwemmend redden in het eigen zwembad."
+      },
+      {
+        "label": "Moment 2",
+        "title": "Verdieping & herexamen",
+        "duration": "2,5 uur",
+        "text": "Aanscherpen van de praktijk en afname van het herexamen."
+      }
+    ]
   },
   "groupSize": {
     "eyebrow": "Maximaal 12 deelnemers",

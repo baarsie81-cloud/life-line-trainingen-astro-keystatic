@@ -73,6 +73,28 @@ import page from "../content/pages/zwembaden.json";
       </div>
 
       <p class="level-note">{page.levels.note}</p>
+
+      <div class="addition-band" aria-labelledby="addition-title">
+        <div class="addition-copy">
+          <p class="eyebrow">{page.addition.eyebrow}</p>
+          <h3 id="addition-title">{page.addition.title}</h3>
+          <p>{page.addition.intro}</p>
+        </div>
+        <div class="addition-swimlane" aria-label="Momenten voor Zwemmend Redden">
+          {
+            page.addition.items.map((item) => (
+              <article class="addition-card">
+                <div>
+                  <span>{item.label}</span>
+                  <strong>{item.duration}</strong>
+                </div>
+                <h4>{item.title}</h4>
+                <p>{item.text}</p>
+              </article>
+            ))
+          }
+        </div>
+      </div>
     </div>
   </section>
 
