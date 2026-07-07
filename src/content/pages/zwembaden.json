@@ -84,6 +84,7 @@
         "label": "Module 1",
         "title": "Training Zwemmend Redden",
         "subtitle": "Voor wie hun vaardigheden wil aanscherpen - leidt niet tot een certificaat.",
+        "detailsTitle": "Bekijk details en voorwaarden",
         "facts": [
           {
             "label": "Wie",
@@ -100,10 +101,6 @@
           {
             "label": "Hoe",
             "text": "1 dagdeel (2,5 uur) actieve training."
-          },
-          {
-            "label": "Inzet",
-            "text": "1× instructeur Zwemmend Redden."
           }
         ],
         "noticeTitle": "Let op",
@@ -115,6 +112,7 @@
         "label": "Module 2",
         "title": "Opleiding Zwemmend Redden",
         "subtitle": "Voor teams die toe willen naar een erkend certificaat - met een verplichte voorbereiding.",
+        "detailsTitle": "Bekijk details en instapeis",
         "facts": [
           {
             "label": "Wie",
@@ -131,10 +129,6 @@
           {
             "label": "Hoe",
             "text": "1 dag (8 uur) actieve training."
-          },
-          {
-            "label": "Inzet",
-            "text": "1× instructeur Zwemmend Redden."
           }
         ],
         "noticeTitle": "Instapeis",
@@ -146,6 +140,7 @@
         "label": "Module 3",
         "title": "Hercertificering Zwemmend Redden",
         "subtitle": "Voor wie al een Zwemmend Redden Zwembaden-certificaat heeft en dit moet verlengen.",
+        "detailsTitle": "Bekijk details",
         "facts": [
           {
             "label": "Wie",
@@ -162,10 +157,6 @@
           {
             "label": "Hoe",
             "text": "1,5 dagdeel (5 uur) actieve training."
-          },
-          {
-            "label": "Inzet",
-            "text": "1× instructeur Zwemmend Redden."
           }
         ],
         "noticeTitle": "",

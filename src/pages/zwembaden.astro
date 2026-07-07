@@ -90,23 +90,26 @@ import page from "../content/pages/zwembaden.json";
                 </div>
                 <h4>{item.title}</h4>
                 <p>{item.subtitle}</p>
-                <dl>
-                  {
-                    item.facts.map((fact) => (
-                      <div>
-                        <dt>{fact.label}</dt>
-                        <dd>{fact.text}</dd>
-                      </div>
-                    ))
-                  }
-                </dl>
-                {item.noticeText && (
-                  <div class="addition-notice">
-                    <strong>{item.noticeTitle}</strong>
-                    <p>{item.noticeText}</p>
-                  </div>
-                )}
-                <a class="addition-cta" href={item.ctaHref}>{item.ctaLabel}</a>
+                <details>
+                  <summary>{item.detailsTitle}</summary>
+                  <dl>
+                    {
+                      item.facts.map((fact) => (
+                        <div>
+                          <dt>{fact.label}</dt>
+                          <dd>{fact.text}</dd>
+                        </div>
+                      ))
+                    }
+                  </dl>
+                  {item.noticeText && (
+                    <div class="addition-notice">
+                      <strong>{item.noticeTitle}</strong>
+                      <p>{item.noticeText}</p>
+                    </div>
+                  )}
+                  <a class="addition-cta" href={item.ctaHref}>{item.ctaLabel}</a>
+                </details>
               </article>
             ))
           }

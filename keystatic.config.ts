@@ -318,6 +318,7 @@ export default config({
                   label: fields.text({ label: "Module label", validation: { isRequired: true } }),
                   title: fields.text({ label: "Titel", validation: { isRequired: true } }),
                   subtitle: fields.text({ label: "Korte toelichting", multiline: true, validation: { isRequired: true } }),
+                  detailsTitle: fields.text({ label: "Uitklapknop tekst", validation: { isRequired: true } }),
                   facts: fields.array(
                     fields.object(
                       {
