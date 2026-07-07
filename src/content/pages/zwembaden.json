@@ -76,21 +76,102 @@
     "note": "Niet zeker welk niveau past? In een kort intakegesprek brengen we de leerbehoeften van jullie team in kaart. Dat zit standaard in elk traject."
   },
   "addition": {
-    "eyebrow": "De aanvulling",
-    "title": "Zwemmend Redden (ZRZ)",
-    "intro": "Naast de Veiligheidsdag traint dit onderdeel specifiek de vaardigheden voor zwemmend redden in jullie eigen bad, conform de eindtermen ZRZ. We verdelen het per team bewust over twee momenten van 2,5 uur, beter voor opname en uitvoering dan één lange sessie. In de 5-uursvorm nemen we eventueel ook een herexamen af.",
+    "eyebrow": "Zwemmend Redden Zwembaden",
+    "title": "Aanvullend: Zwemmend Redden",
+    "intro": "Zwemmend Redden bestaat uit drie losse trajecten, elk met een ander doel. Kies op basis van waar je team nu staat: vaardigheden aanscherpen, een certificaat behalen, of een bestaand certificaat verlengen.",
     "items": [
       {
-        "label": "Moment 1",
-        "title": "Vaardigheidstraining",
-        "duration": "2,5 uur",
-        "text": "Praktijktraining zwemmend redden in het eigen zwembad."
+        "label": "Module 1",
+        "title": "Training Zwemmend Redden",
+        "subtitle": "Voor wie hun vaardigheden wil aanscherpen - leidt niet tot een certificaat.",
+        "facts": [
+          {
+            "label": "Wie",
+            "text": "1 team (max. 12 deelnemers)"
+          },
+          {
+            "label": "Wat",
+            "text": "Praktijktraining zwemmend redden in het eigen zwembad, afgestemd op de leerbehoeften van het team."
+          },
+          {
+            "label": "Waar",
+            "text": "Op locatie, reiskosten inbegrepen."
+          },
+          {
+            "label": "Hoe",
+            "text": "1 dagdeel (2,5 uur) actieve training."
+          },
+          {
+            "label": "Inzet",
+            "text": "1× instructeur Zwemmend Redden."
+          }
+        ],
+        "noticeTitle": "Let op",
+        "noticeText": "Deze training bevat geen toets en levert geen Zwemmend Redden Zwembaden-certificaat op. Wil je dat je team een erkend certificaat behaalt? Kies dan Opleiding Zwemmend Redden.",
+        "ctaLabel": "Vraag offerte aan",
+        "ctaHref": "/contact/"
       },
       {
-        "label": "Moment 2",
-        "title": "Verdieping & herexamen",
-        "duration": "2,5 uur",
-        "text": "Aanscherpen van de praktijk en afname van het herexamen."
+        "label": "Module 2",
+        "title": "Opleiding Zwemmend Redden",
+        "subtitle": "Voor teams die toe willen naar een erkend certificaat - met een verplichte voorbereiding.",
+        "facts": [
+          {
+            "label": "Wie",
+            "text": "1 team (max. 12 deelnemers)"
+          },
+          {
+            "label": "Wat",
+            "text": "Opleidingstraject conform de eindtermen Zwemmend Redden Zwembaden van Reddingsbrigade Nederland, afgesloten met certificaat."
+          },
+          {
+            "label": "Waar",
+            "text": "Op locatie, reiskosten inbegrepen."
+          },
+          {
+            "label": "Hoe",
+            "text": "1 dag (8 uur) actieve training."
+          },
+          {
+            "label": "Inzet",
+            "text": "1× instructeur Zwemmend Redden."
+          }
+        ],
+        "noticeTitle": "Instapeis",
+        "noticeText": "Deelname is alleen mogelijk na voorbereiding: e-learning óf lesboek, plus een casuïstiekopdracht. Deze casuïstiek moet vooraf voldoende beoordeeld zijn - pas dan mag een deelnemer meedoen aan de trainingsdag.",
+        "ctaLabel": "Vraag offerte aan inclusief voorbereidingstraject",
+        "ctaHref": "/contact/"
+      },
+      {
+        "label": "Module 3",
+        "title": "Hercertificering Zwemmend Redden",
+        "subtitle": "Voor wie al een Zwemmend Redden Zwembaden-certificaat heeft en dit moet verlengen.",
+        "facts": [
+          {
+            "label": "Wie",
+            "text": "1 team (max. 12 deelnemers)"
+          },
+          {
+            "label": "Wat",
+            "text": "Hercertificering conform de eindtermen Zwemmend Redden Zwembaden van Reddingsbrigade Nederland."
+          },
+          {
+            "label": "Waar",
+            "text": "Op locatie, reiskosten inbegrepen."
+          },
+          {
+            "label": "Hoe",
+            "text": "1,5 dagdeel (5 uur) actieve training."
+          },
+          {
+            "label": "Inzet",
+            "text": "1× instructeur Zwemmend Redden."
+          }
+        ],
+        "noticeTitle": "",
+        "noticeText": "",
+        "ctaLabel": "Vraag offerte aan",
+        "ctaHref": "/contact/"
       }
     ]
   },

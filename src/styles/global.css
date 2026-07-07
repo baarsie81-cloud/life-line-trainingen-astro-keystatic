@@ -730,18 +730,21 @@ h3 {
 
 .addition-swimlane {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1rem;
 }
 
 .addition-card {
+  display: grid;
+  align-content: start;
+  gap: 0.85rem;
   border: 1px solid rgba(40, 119, 167, 0.22);
   border-radius: var(--radius);
   background: var(--white);
   padding: 1.15rem;
 }
 
-.addition-card div {
+.addition-card-top {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -767,15 +770,88 @@ h3 {
 }
 
 .addition-card h4 {
-  margin: 0.8rem 0 0;
+  margin: 0;
   color: var(--blue-dark);
   font-size: 1.4rem;
   line-height: 1.08;
 }
 
 .addition-card p {
-  margin-top: 0.6rem;
   color: var(--muted);
+}
+
+.addition-card dl {
+  display: grid;
+  gap: 0.55rem;
+  margin: 0.25rem 0 0;
+}
+
+.addition-card dl div {
+  display: grid;
+  grid-template-columns: 68px minmax(0, 1fr);
+  gap: 0.65rem;
+  border-top: 1px solid rgba(40, 119, 167, 0.14);
+  padding-top: 0.55rem;
+}
+
+.addition-card dt {
+  color: var(--orange);
+  font-size: 0.73rem;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.addition-card dd {
+  margin: 0;
+  color: var(--blue-dark);
+  font-size: 0.95rem;
+  font-weight: 800;
+  line-height: 1.45;
+}
+
+.addition-notice {
+  border-left: 4px solid var(--orange);
+  border-radius: var(--radius);
+  background: rgba(240, 74, 24, 0.08);
+  padding: 0.9rem 1rem;
+}
+
+.addition-notice strong {
+  display: block;
+  border-radius: 0;
+  background: transparent;
+  color: var(--orange);
+  padding: 0;
+  font-size: 0.76rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  white-space: normal;
+}
+
+.addition-notice p {
+  margin-top: 0.4rem;
+  color: var(--ink);
+  font-size: 0.95rem;
+  font-weight: 800;
+}
+
+.addition-cta {
+  display: inline-flex;
+  min-height: 46px;
+  align-items: center;
+  justify-content: center;
+  align-self: end;
+  border-radius: var(--radius);
+  background: var(--blue-dark);
+  color: var(--white);
+  padding: 0.75rem 0.9rem;
+  font-weight: 900;
+  line-height: 1.1;
+}
+
+.addition-cta:hover {
+  background: var(--orange);
 }
 
 .group-size {
@@ -1800,9 +1876,14 @@ h3 {
     margin-top: 1.4rem;
   }
 
-  .addition-card div {
+  .addition-card-top {
     align-items: flex-start;
     flex-wrap: wrap;
+  }
+
+  .addition-card dl div {
+    grid-template-columns: 1fr;
+    gap: 0.2rem;
   }
 
   .audience-card {

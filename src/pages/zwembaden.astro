@@ -81,16 +81,32 @@ import page from "../content/pages/zwembaden.json";
           <h3 id="addition-title">{page.addition.title}</h3>
           <p>{page.addition.intro}</p>
         </div>
-        <div class="addition-swimlane" aria-label="Momenten voor Zwemmend Redden">
+        <div class="addition-swimlane" aria-label="Trajecten voor Zwemmend Redden Zwembaden">
           {
             page.addition.items.map((item) => (
               <article class="addition-card">
-                <div>
+                <div class="addition-card-top">
                   <span>{item.label}</span>
-                  <strong>{item.duration}</strong>
                 </div>
                 <h4>{item.title}</h4>
-                <p>{item.text}</p>
+                <p>{item.subtitle}</p>
+                <dl>
+                  {
+                    item.facts.map((fact) => (
+                      <div>
+                        <dt>{fact.label}</dt>
+                        <dd>{fact.text}</dd>
+                      </div>
+                    ))
+                  }
+                </dl>
+                {item.noticeText && (
+                  <div class="addition-notice">
+                    <strong>{item.noticeTitle}</strong>
+                    <p>{item.noticeText}</p>
+                  </div>
+                )}
+                <a class="addition-cta" href={item.ctaHref}>{item.ctaLabel}</a>
               </article>
             ))
           }

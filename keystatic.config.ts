@@ -315,20 +315,43 @@ export default config({
             items: fields.array(
               fields.object(
                 {
-                  label: fields.text({ label: "Moment label", validation: { isRequired: true } }),
+                  label: fields.text({ label: "Module label", validation: { isRequired: true } }),
                   title: fields.text({ label: "Titel", validation: { isRequired: true } }),
-                  duration: fields.text({ label: "Duur", validation: { isRequired: true } }),
-                  text: fields.text({ label: "Tekst", multiline: true, validation: { isRequired: true } }),
+                  subtitle: fields.text({ label: "Korte toelichting", multiline: true, validation: { isRequired: true } }),
+                  facts: fields.array(
+                    fields.object(
+                      {
+                        label: fields.text({ label: "Label", validation: { isRequired: true } }),
+                        text: fields.text({ label: "Tekst", multiline: true, validation: { isRequired: true } }),
+                      },
+                      { label: "Feit" }
+                    ),
+                    {
+                      label: "Feiten",
+                      itemLabel: (props) => props.fields.label.value || "Feit",
+                    }
+                  ),
+                  noticeTitle: fields.text({
+                    label: "Let op / instapeis titel",
+                    description: "Laat leeg als er geen opvallend blok nodig is.",
+                  }),
+                  noticeText: fields.text({
+                    label: "Let op / instapeis tekst",
+                    multiline: true,
+                    description: "Laat leeg als er geen opvallend blok nodig is.",
+                  }),
+                  ctaLabel: fields.text({ label: "Knoptekst", validation: { isRequired: true } }),
+                  ctaHref: fields.text({ label: "Knoplink", validation: { isRequired: true } }),
                 },
-                { label: "Moment" }
+                { label: "Module" }
               ),
               {
-                label: "Momenten",
-                itemLabel: (props) => props.fields.title.value || "Moment",
+                label: "Modules",
+                itemLabel: (props) => props.fields.title.value || "Module",
               }
             ),
           },
-          { label: "Aanvulling ZRZ" }
+          { label: "Aanvulling Zwemmend Redden Zwembaden" }
         ),
         groupSize: fields.object(
           {
