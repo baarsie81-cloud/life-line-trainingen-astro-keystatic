@@ -1,0 +1,115 @@
+{
+  "seoTitle": "Training zwembadpersoneel | EHBO, BHV en zwemmend redden",
+  "seoDescription": "Praktijkgerichte EHBO- en BHV-training voor zwembadpersoneel. Teams van max. 12, op locatie, afgestemd op jullie bad. Vraag een offerte aan.",
+  "hero": {
+    "eyebrow": "Training voor zwembaden",
+    "title": "Training voor zwembadpersoneel: veiligheid die je team écht beheerst",
+    "intro": "Praktijkgerichte EHBO- en BHV-trainingen, op locatie, in teams van maximaal 12. Zodat iedereen die bij jullie werkt weet wat te doen, nog voordat het misgaat.",
+    "image": "/assets/photos/zwembad-overzicht-rug.jpg",
+    "imageAlt": "Zwembadomgeving waar Life-Line-Trainingen veiligheidstrainingen voor zwembadpersoneel verzorgt.",
+    "primaryCta": {
+      "label": "Vraag een offerte aan",
+      "href": "/contact/"
+    },
+    "secondaryCta": {
+      "label": "Bekijk eerst hoe het werkt",
+      "href": "#hoe-het-werkt"
+    },
+    "trust": "Op locatie, in het eigen bad, met teams van maximaal 12 deelnemers"
+  },
+  "quickAnswer": {
+    "eyebrow": "Voor zwembadteams",
+    "title": "Wat bieden we voor zwembaden?",
+    "text": "Life-Line Trainingen traint zwembadpersoneel in EHBO, bedrijfshulpverlening en zwemmend redden, volledig op locatie in jullie eigen bad. We werken met teams van maximaal 12 deelnemers, zodat iedereen genoeg tijd in het water krijgt en de training echt beklijft. Onze trainingen zijn opgebouwd in niveaus. Van individuele basisvaardigheden tot teambrede veiligheidsorganisatie en starten altijd met een intake waarin we de leerbehoeften van jullie team in kaart brengen."
+  },
+  "problem": {
+    "eyebrow": "Waarom dit ertoe doet",
+    "title": "Een zwembad draait op vertrouwen",
+    "paragraphs": [
+      "Bezoekers vertrouwen erop dat jullie team er staat op het moment dat het telt. Dat moment komt zelden aangekondigd: een drenkeling, een val of een medische noodsituatie.",
+      "Op dat moment maakt het verschil of je team getraind heeft met 30 anderen erbij, of echt heeft geoefend in een klein team met persoonlijke feedback.",
+      "Wij trainen niet vanuit een lesboekje, maar vanuit wat er daadwerkelijk gebeurt op de werkvloer van een zwembad."
+    ]
+  },
+  "levels": {
+    "eyebrow": "Trainingsniveaus",
+    "title": "Drie niveaus, van individuele basis tot teambrede paraatheid",
+    "intro": "Elke training bouwt voort op de vorige. Welk niveau bij jullie team past, bepalen we samen in een kort intakegesprek.",
+    "items": [
+      {
+        "label": "Basisvaardigheden",
+        "title": "Workshop drenkelingen & reanimatie",
+        "text": "Voor individuele basisvaardigheden bij verdrinking, reanimatie en AED-gebruik.",
+        "detailsTitle": "Bekijk wat deze training behandelt",
+        "details": [
+          "Bewusteloosheid en verslikking",
+          "Reanimatie en AED, inclusief drenkelingen",
+          "Vaardigheidsniveau: individueel handelen"
+        ]
+      },
+      {
+        "label": "Veiligheidsorganisatie",
+        "title": "Veiligheidsdag",
+        "text": "Voor teams die EHBO- en BHV-competenties praktisch willen oefenen in de eigen zwembadcontext.",
+        "detailsTitle": "Bekijk wat deze training behandelt",
+        "details": [
+          "EHBO-competenties: bewusteloosheid, bloedingen, brandwonden en huidwonden",
+          "Letsels aan spieren, botten en gewrichten, vergiftiging, verslikking, reanimatie en AED",
+          "NIBHV-competenties: bhv-taken en bhv-inzet, brand en ontruiming",
+          "Beginnende brand blussen, deur controleren bij brand en ontruiming volgens procedure"
+        ]
+      },
+      {
+        "label": "Verdieping",
+        "title": "Lifesavertraining",
+        "text": "Voor teams die bovenop de veiligheidsdag extra willen trainen op acute en complexe situaties.",
+        "detailsTitle": "Bekijk wat deze training behandelt",
+        "details": [
+          "Alles uit Veiligheidsdag",
+          "Beroerte, bloedneus en levensbedreigende bloedingen",
+          "Nek- en wervelletsel, pijn op de borstkas en bijna-verdrinking"
+        ]
+      },
+      {
+        "label": "Praktijk in water",
+        "title": "Zwemmend Redden",
+        "text": "Twee praktijkmomenten in het eigen zwembad, gericht op training en herexamen.",
+        "detailsTitle": "Bekijk hoe de twee momenten zijn opgebouwd",
+        "details": [
+          "Moment 1 (2,5 uur): praktijktraining zwemmend redden in het eigen zwembad, conform eindtermen ZRZ",
+          "Moment 2 (2,5 uur): verdieping van de praktijk en afname van het herexamen",
+          "Het reguliere examen wordt vooralsnog elders afgenomen; dit onderdeel richt zich op training en herexamen"
+        ]
+      }
+    ],
+    "note": "Niet zeker welk niveau past? In een kort intakegesprek brengen we de leerbehoeften van jullie team in kaart. Dat zit standaard in elk traject."
+  },
+  "groupSize": {
+    "eyebrow": "Maximaal 12 deelnemers",
+    "title": "Waarom we nooit met grote groepen werken",
+    "intro": "In een zwembad leer je veiligheid niet door alleen te kijken. Daarom trainen we in kleine teams, met genoeg ruimte voor oefenen, feedback en herhaling.",
+    "items": [
+      {
+        "title": "Maximale watertijd",
+        "text": "In een team van 12 staat iedereen echt in het water te oefenen. Bij grotere groepen verschuift de dag naar kijken in plaats van doen."
+      },
+      {
+        "title": "Volledige borging",
+        "text": "Elke deelnemer doorloopt de complete training, niet een verkorte versie omdat de groep te groot was."
+      },
+      {
+        "title": "Persoonlijke aandacht",
+        "text": "Met instructeur en oefenslachtoffer op 12 deelnemers blijft de verhouding scherp en krijgt iedereen gerichte feedback."
+      }
+    ]
+  },
+  "finalCta": {
+    "eyebrow": "Training op locatie",
+    "title": "Wil je weten welk traject past bij jullie zwembadteam?",
+    "text": "Vertel kort hoe jullie team is opgebouwd en welke veiligheidsvragen er spelen. Dan denken we mee over een passend traject op locatie.",
+    "button": {
+      "label": "Vraag een offerte aan",
+      "href": "/contact/"
+    }
+  }
+}

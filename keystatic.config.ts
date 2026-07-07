@@ -36,7 +36,7 @@ export default config({
       name: "Life-Line-Trainingen CMS",
     },
     navigation: {
-      "Vaste pagina's": ["home", "site"],
+      "Vaste pagina's": ["home", "zwembaden", "site"],
       Content: ["trainings"],
     },
   },
@@ -208,6 +208,109 @@ export default config({
             ),
           },
           { label: "Reviewbanner" }
+        ),
+        finalCta: fields.object(
+          {
+            eyebrow: fields.text({ label: "Label boven titel", validation: { isRequired: true } }),
+            title: fields.text({ label: "Titel", validation: { isRequired: true } }),
+            text: fields.text({ label: "Tekst", multiline: true, validation: { isRequired: true } }),
+            button: fields.object(linkFields, { label: "Knop" }),
+          },
+          { label: "Conversieblok" }
+        ),
+      },
+    }),
+    zwembaden: singleton({
+      label: "Zwembaden",
+      path: "src/content/pages/zwembaden",
+      format: { data: "json" },
+      schema: {
+        seoTitle: fields.text({ label: "SEO titel", validation: { isRequired: true } }),
+        seoDescription: fields.text({
+          label: "SEO omschrijving",
+          multiline: true,
+          validation: { isRequired: true },
+        }),
+        hero: fields.object(
+          {
+            eyebrow: fields.text({ label: "Label boven titel", validation: { isRequired: true } }),
+            title: fields.text({ label: "Hoofdtitel", validation: { isRequired: true } }),
+            intro: fields.text({ label: "Intro", multiline: true, validation: { isRequired: true } }),
+            image: imageField("Hero foto"),
+            imageAlt: fields.text({ label: "Alt-tekst hero foto", validation: { isRequired: true } }),
+            primaryCta: fields.object(linkFields, { label: "Primaire knop" }),
+            secondaryCta: fields.object(linkFields, { label: "Tweede knop / ankerlink" }),
+            trust: fields.text({ label: "Vertrouwensregel", validation: { isRequired: true } }),
+          },
+          { label: "Hero" }
+        ),
+        quickAnswer: fields.object(
+          {
+            eyebrow: fields.text({ label: "Label boven titel", validation: { isRequired: true } }),
+            title: fields.text({ label: "Titel", validation: { isRequired: true } }),
+            text: fields.text({ label: "Antwoordtekst", multiline: true, validation: { isRequired: true } }),
+          },
+          { label: "Direct antwoord" }
+        ),
+        problem: fields.object(
+          {
+            eyebrow: fields.text({ label: "Label boven titel", validation: { isRequired: true } }),
+            title: fields.text({ label: "Titel", validation: { isRequired: true } }),
+            paragraphs: fields.array(fields.text({ label: "Alinea", multiline: true }), {
+              label: "Alinea's",
+              itemLabel: (props) => props.value || "Alinea",
+            }),
+          },
+          { label: "Probleemsectie" }
+        ),
+        levels: fields.object(
+          {
+            eyebrow: fields.text({ label: "Label boven titel", validation: { isRequired: true } }),
+            title: fields.text({ label: "Titel", validation: { isRequired: true } }),
+            intro: fields.text({ label: "Intro", multiline: true, validation: { isRequired: true } }),
+            items: fields.array(
+              fields.object(
+                {
+                  label: fields.text({ label: "Klein label", validation: { isRequired: true } }),
+                  title: fields.text({ label: "Titel", validation: { isRequired: true } }),
+                  text: fields.text({ label: "Korte tekst", multiline: true, validation: { isRequired: true } }),
+                  detailsTitle: fields.text({ label: "Uitklapknop tekst", validation: { isRequired: true } }),
+                  details: fields.array(fields.text({ label: "Detailregel", multiline: true }), {
+                    label: "Uitklapbare inhoud",
+                    itemLabel: (props) => props.value || "Detail",
+                  }),
+                },
+                { label: "Trainingsniveau" }
+              ),
+              {
+                label: "Trainingsniveaus",
+                itemLabel: (props) => props.fields.title.value || "Trainingsniveau",
+              }
+            ),
+            note: fields.text({ label: "Tekst onder niveaus", multiline: true, validation: { isRequired: true } }),
+          },
+          { label: "Trainingsniveaus" }
+        ),
+        groupSize: fields.object(
+          {
+            eyebrow: fields.text({ label: "Label boven titel", validation: { isRequired: true } }),
+            title: fields.text({ label: "Titel", validation: { isRequired: true } }),
+            intro: fields.text({ label: "Intro", multiline: true, validation: { isRequired: true } }),
+            items: fields.array(
+              fields.object(
+                {
+                  title: fields.text({ label: "Titel", validation: { isRequired: true } }),
+                  text: fields.text({ label: "Tekst", multiline: true, validation: { isRequired: true } }),
+                },
+                { label: "Pijler" }
+              ),
+              {
+                label: "Pijlers",
+                itemLabel: (props) => props.fields.title.value || "Pijler",
+              }
+            ),
+          },
+          { label: "Waarom maximaal 12" }
         ),
         finalCta: fields.object(
           {

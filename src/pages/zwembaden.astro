@@ -1,0 +1,110 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import page from "../content/pages/zwembaden.json";
+---
+
+<BaseLayout title={page.seoTitle} description={page.seoDescription}>
+  <section class="page-hero">
+    <img class="page-hero-image" src={page.hero.image} alt={page.hero.imageAlt} loading="eager" decoding="async" />
+    <div class="page-hero-overlay"></div>
+    <div class="container page-hero-content">
+      <div class="page-hero-copy">
+        <p class="eyebrow">{page.hero.eyebrow}</p>
+        <h1>{page.hero.title}</h1>
+        <p class="hero-intro">{page.hero.intro}</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href={page.hero.primaryCta.href}>{page.hero.primaryCta.label}</a>
+          <a class="button button-secondary" href={page.hero.secondaryCta.href}>{page.hero.secondaryCta.label}</a>
+        </div>
+      </div>
+      <aside class="hero-proof" aria-label="Kern van de zwembadtraining">
+        <span>Praktisch trainen</span>
+        <p>{page.hero.trust}</p>
+      </aside>
+    </div>
+  </section>
+
+  <section class="answer-band" id="hoe-het-werkt" aria-labelledby="answer-title">
+    <div class="container answer-panel">
+      <p class="eyebrow">{page.quickAnswer.eyebrow}</p>
+      <h2 id="answer-title">{page.quickAnswer.title}</h2>
+      <p>{page.quickAnswer.text}</p>
+    </div>
+  </section>
+
+  <section class="section section-split">
+    <div class="container split-grid">
+      <div>
+        <p class="eyebrow">{page.problem.eyebrow}</p>
+        <h2>{page.problem.title}</h2>
+      </div>
+      <div class="text-stack">
+        {page.problem.paragraphs.map((paragraph) => <p>{paragraph}</p>)}
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-soft" aria-labelledby="levels-title">
+    <div class="container">
+      <div class="section-heading">
+        <p class="eyebrow">{page.levels.eyebrow}</p>
+        <h2 id="levels-title">{page.levels.title}</h2>
+        <p>{page.levels.intro}</p>
+      </div>
+
+      <div class="level-grid">
+        {
+          page.levels.items.map((item, index) => (
+            <article class="level-card">
+              <span>{item.label}</span>
+              <h3>{item.title}</h3>
+              <p>{item.text}</p>
+              <details open={index === 1}>
+                <summary>{item.detailsTitle}</summary>
+                <ul>
+                  {item.details.map((detail) => (
+                    <li>{detail}</li>
+                  ))}
+                </ul>
+              </details>
+            </article>
+          ))
+        }
+      </div>
+
+      <p class="level-note">{page.levels.note}</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container group-size">
+      <div class="section-heading">
+        <p class="eyebrow">{page.groupSize.eyebrow}</p>
+        <h2>{page.groupSize.title}</h2>
+        <p>{page.groupSize.intro}</p>
+      </div>
+      <div class="reason-grid">
+        {
+          page.groupSize.items.map((item, index) => (
+            <article>
+              <span>{String(index + 1).padStart(2, "0")}</span>
+              <h3>{item.title}</h3>
+              <p>{item.text}</p>
+            </article>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <section class="final-cta">
+    <div class="container final-cta-inner">
+      <div>
+        <p class="eyebrow">{page.finalCta.eyebrow}</p>
+        <h2>{page.finalCta.title}</h2>
+        <p>{page.finalCta.text}</p>
+      </div>
+      <a class="button button-light" href={page.finalCta.button.href}>{page.finalCta.button.label}</a>
+    </div>
+  </section>
+</BaseLayout>

@@ -4,7 +4,7 @@ import vercel from "@astrojs/vercel";
 import keystatic from "@keystatic/astro";
 
 export default defineConfig({
-  site: "https://life-line-training.nl",
+  site: "https://life-line-trainingen.nl",
   output: "server",
   adapter: vercel(),
   integrations: [react(), keystatic()],
