@@ -54,13 +54,13 @@ import page from "../content/pages/zwembaden.json";
 
       <div class="level-grid">
         {
-          page.levels.items.map((item, index) => (
+          page.levels.items.map((item) => (
             <article class={`level-card${item.recommended ? " is-recommended" : ""}`}>
               {item.recommended && <strong class="level-badge">{item.recommendedLabel}</strong>}
               <span>{item.label}</span>
               <h3>{item.title}</h3>
               <p>{item.text}</p>
-              <details open={index === 1}>
+              <details>
                 <summary>{item.detailsTitle}</summary>
                 <ul>
                   {item.details.map((detail) => (
