@@ -1446,6 +1446,222 @@ h3 {
   font-size: 1.05rem;
 }
 
+.contact-hero .page-hero-overlay {
+  background:
+    linear-gradient(90deg, rgba(6, 47, 75, 0.97), rgba(6, 47, 75, 0.74) 48%, rgba(6, 47, 75, 0.38)),
+    linear-gradient(0deg, rgba(6, 47, 75, 0.5), rgba(6, 47, 75, 0.18));
+}
+
+.contact-section {
+  background: var(--white);
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.12fr) minmax(320px, 0.68fr);
+  gap: clamp(1.5rem, 4vw, 3rem);
+  align-items: start;
+}
+
+.contact-form,
+.contact-card {
+  border: 1px solid rgba(40, 119, 167, 0.18);
+  border-radius: var(--radius);
+  background: var(--white);
+  box-shadow: var(--shadow);
+}
+
+.contact-form {
+  display: grid;
+  gap: 1.15rem;
+  padding: clamp(1.4rem, 3vw, 2.5rem);
+}
+
+.form-heading {
+  display: grid;
+  gap: 0.7rem;
+  margin-bottom: 0.35rem;
+}
+
+.form-heading h2,
+.contact-card h2 {
+  font-size: clamp(1.9rem, 3vw, 2.8rem);
+}
+
+.form-heading p,
+.contact-card-body > p {
+  color: var(--muted);
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.contact-form label:not(.checkbox-line) {
+  display: grid;
+  gap: 0.45rem;
+}
+
+.contact-form label > span {
+  color: var(--blue-dark);
+  font-size: 0.86rem;
+  font-weight: 900;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+  width: 100%;
+  border: 1px solid rgba(40, 119, 167, 0.25);
+  border-radius: var(--radius);
+  background: #fbfdff;
+  color: var(--ink);
+  font: inherit;
+  min-height: 52px;
+  padding: 0.85rem 0.95rem;
+  transition:
+    border 160ms ease,
+    box-shadow 160ms ease,
+    background 160ms ease;
+}
+
+.contact-form textarea {
+  min-height: 168px;
+  resize: vertical;
+}
+
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus {
+  border-color: var(--blue);
+  background: var(--white);
+  box-shadow: 0 0 0 4px rgba(40, 119, 167, 0.12);
+  outline: 0;
+}
+
+.checkbox-line {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.7rem;
+  color: var(--muted);
+  font-weight: 800;
+}
+
+.checkbox-line input {
+  width: 18px;
+  min-width: 18px;
+  height: 18px;
+  min-height: auto;
+  margin-top: 0.25rem;
+  accent-color: var(--orange);
+}
+
+.privacy-copy {
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.privacy-copy a,
+.mail-fallback,
+.contact-card a {
+  color: var(--blue);
+  font-weight: 900;
+  text-decoration: underline;
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.18em;
+}
+
+.form-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+  margin-top: 0.35rem;
+}
+
+.mail-fallback {
+  text-decoration: none;
+}
+
+.contact-card {
+  overflow: hidden;
+  position: sticky;
+  top: 108px;
+}
+
+.contact-card img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  background: var(--blue-light);
+}
+
+.contact-card-body {
+  display: grid;
+  gap: 1.1rem;
+  padding: clamp(1.25rem, 2.4vw, 2rem);
+}
+
+.contact-card dl {
+  display: grid;
+  gap: 1rem;
+  margin: 0;
+}
+
+.contact-card dl div {
+  border-top: 1px solid rgba(40, 119, 167, 0.18);
+  padding-top: 0.9rem;
+}
+
+.contact-card dt {
+  color: var(--orange);
+  font-size: 0.76rem;
+  font-weight: 900;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.contact-card dd {
+  display: grid;
+  margin: 0.2rem 0 0;
+  color: var(--blue-dark);
+  font-weight: 900;
+}
+
+.contact-card dd span {
+  display: block;
+}
+
+.contact-reason-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.contact-reason-grid article {
+  border-left: 3px solid var(--orange);
+  border-radius: var(--radius);
+  background: var(--white);
+  padding: 1.35rem;
+  box-shadow: 0 12px 36px rgba(8, 63, 100, 0.07);
+}
+
+.contact-reason-grid span {
+  color: var(--blue);
+  font-weight: 900;
+}
+
+.contact-reason-grid h3 {
+  margin-top: 0.7rem;
+}
+
+.contact-reason-grid p {
+  margin-top: 0.65rem;
+  color: var(--muted);
+}
+
 @media (max-width: 1100px) {
   .desktop-nav,
   .header-cta {
@@ -1488,7 +1704,8 @@ h3 {
   .knowledge-hero-inner,
   .featured-article,
   .knowledge-toolbar,
-  .article-layout {
+  .article-layout,
+  .contact-grid {
     grid-template-columns: 1fr;
   }
 
@@ -1498,6 +1715,10 @@ h3 {
   }
 
   .article-sidebar {
+    position: static;
+  }
+
+  .contact-card {
     position: static;
   }
 
@@ -1674,6 +1895,23 @@ h3 {
 
   .related-card {
     grid-template-columns: 96px minmax(0, 1fr);
+  }
+
+  .form-row,
+  .contact-reason-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-form {
+    padding: 1.2rem;
+  }
+
+  .form-actions {
+    display: grid;
+  }
+
+  .mail-fallback {
+    justify-self: center;
   }
 }
 

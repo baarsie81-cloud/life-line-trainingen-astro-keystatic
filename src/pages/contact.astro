@@ -1,0 +1,165 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import page from "../content/pages/contact.json";
+
+const addressText = page.contactCard.address.join("\n");
+---
+
+<BaseLayout title={page.seoTitle} description={page.seoDescription} image={page.hero.image}>
+  <section class="page-hero contact-hero">
+    <img class="page-hero-image" src={page.hero.image} alt={page.hero.imageAlt} loading="eager" decoding="async" />
+    <div class="page-hero-overlay"></div>
+    <div class="container page-hero-content">
+      <div class="page-hero-copy">
+        <p class="eyebrow">{page.hero.eyebrow}</p>
+        <h1>{page.hero.title}</h1>
+        <p class="hero-intro">{page.hero.intro}</p>
+      </div>
+      <aside class="hero-proof" aria-label="Contact met Life-Line-Trainingen">
+        <span>Direct contact</span>
+        <p>Mail ons je vraag of aanvraag. We reageren zo snel mogelijk.</p>
+      </aside>
+    </div>
+  </section>
+
+  <section class="section contact-section" aria-labelledby="contact-form-title">
+    <div class="container contact-grid">
+      <form class="contact-form" id="contact-form">
+        <div class="form-heading">
+          <p class="eyebrow">Aanvraag</p>
+          <h2 id="contact-form-title">{page.form.title}</h2>
+          <p>{page.form.intro}</p>
+        </div>
+
+        <div class="form-row">
+          <label>
+            <span>Naam *</span>
+            <input name="voornaam" autocomplete="given-name" required />
+          </label>
+          <label>
+            <span>Achternaam</span>
+            <input name="achternaam" autocomplete="family-name" />
+          </label>
+        </div>
+
+        <div class="form-row">
+          <label>
+            <span>E-mailadres *</span>
+            <input name="email" type="email" autocomplete="email" required />
+          </label>
+          <label>
+            <span>Telefoonnummer *</span>
+            <input name="telefoon" type="tel" autocomplete="tel" required />
+          </label>
+        </div>
+
+        <label>
+          <span>Waar kunnen wij je mee helpen? *</span>
+          <select name="onderwerp" required>
+            <option value="">Kies een onderwerp</option>
+            {page.form.topics.map((topic) => <option value={topic}>{topic}</option>)}
+          </select>
+        </label>
+
+        <label>
+          <span>Omschrijf je wensen / stel je vraag *</span>
+          <textarea name="bericht" rows="7" required></textarea>
+        </label>
+
+        <label class="checkbox-line">
+          <input name="nieuwsbrief" type="checkbox" value="Ja" />
+          <span>{page.form.newsletterLabel}</span>
+        </label>
+
+        <p class="privacy-copy">
+          {page.form.privacyText}
+          <a href="/juridisch/privacy-statement/">Privacyverklaring</a>
+        </p>
+
+        <div class="form-actions">
+          <button class="button button-primary" type="submit">{page.form.submitLabel}</button>
+          <a class="mail-fallback" href={`mailto:${page.contactCard.email}`}>{page.form.fallbackLabel}</a>
+        </div>
+      </form>
+
+      <aside class="contact-card" aria-label={page.contactCard.title}>
+        <img src={page.contactCard.image} alt={page.contactCard.imageAlt} loading="lazy" decoding="async" />
+        <div class="contact-card-body">
+          <p class="eyebrow">Contactgegevens</p>
+          <h2>{page.contactCard.title}</h2>
+          <dl>
+            <div>
+              <dt>E-mail</dt>
+              <dd><a href={`mailto:${page.contactCard.email}`}>{page.contactCard.email}</a></dd>
+            </div>
+            <div>
+              <dt>Adres</dt>
+              <dd>
+                {page.contactCard.address.map((line) => <span>{line}</span>)}
+              </dd>
+            </div>
+          </dl>
+          <p>{page.contactCard.responsePromise}</p>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <section class="section section-soft contact-reasons" aria-labelledby="contact-reasons-title">
+    <div class="container">
+      <div class="section-heading">
+        <p class="eyebrow">{page.reasons.eyebrow}</p>
+        <h2 id="contact-reasons-title">{page.reasons.title}</h2>
+      </div>
+      <div class="contact-reason-grid">
+        {
+          page.reasons.items.map((item, index) => (
+            <article>
+              <span>{String(index + 1).padStart(2, "0")}</span>
+              <h3>{item.title}</h3>
+              <p>{item.text}</p>
+            </article>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <script define:vars={{ recipient: page.contactCard.email, addressText }}>
+    const form = document.querySelector("#contact-form");
+
+    form?.addEventListener("submit", (event) => {
+      event.preventDefault();
+
+      if (!form.checkValidity()) {
+        form.reportValidity();
+        return;
+      }
+
+      const data = new FormData(form);
+      const voornaam = String(data.get("voornaam") || "").trim();
+      const achternaam = String(data.get("achternaam") || "").trim();
+      const naam = [voornaam, achternaam].filter(Boolean).join(" ");
+      const onderwerp = String(data.get("onderwerp") || "Contactaanvraag").trim();
+      const nieuwsbrief = data.get("nieuwsbrief") ? "Ja" : "Nee";
+      const subject = `Contactaanvraag Life-Line-Trainingen - ${onderwerp}`;
+      const body = [
+        "Nieuwe contactaanvraag via de website",
+        "",
+        `Naam: ${naam}`,
+        `E-mailadres: ${String(data.get("email") || "").trim()}`,
+        `Telefoonnummer: ${String(data.get("telefoon") || "").trim()}`,
+        `Onderwerp: ${onderwerp}`,
+        `Nieuwsbrief: ${nieuwsbrief}`,
+        "",
+        "Bericht:",
+        String(data.get("bericht") || "").trim(),
+        "",
+        "Contactadres op website:",
+        addressText,
+      ].join("\n");
+
+      window.location.href = `mailto:${recipient}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    });
+  </script>
+</BaseLayout>

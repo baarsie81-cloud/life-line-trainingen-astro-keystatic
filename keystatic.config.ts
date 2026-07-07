@@ -22,6 +22,14 @@ const imageField = (label: string) =>
     validation: { isRequired: true },
   });
 
+const contactImageField = (label: string) =>
+  fields.image({
+    label,
+    directory: "public/assets/contact",
+    publicPath: "/assets/contact",
+    validation: { isRequired: true },
+  });
+
 export default config({
   storage: githubRepo
     ? {
@@ -36,7 +44,7 @@ export default config({
       name: "Life-Line-Trainingen CMS",
     },
     navigation: {
-      "Vaste pagina's": ["home", "zwembaden", "site"],
+      "Vaste pagina's": ["home", "zwembaden", "contact", "site"],
       Content: ["trainings", "blogs"],
     },
   },
@@ -351,6 +359,82 @@ export default config({
             button: fields.object(linkFields, { label: "Knop" }),
           },
           { label: "Conversieblok" }
+        ),
+      },
+    }),
+    contact: singleton({
+      label: "Contact",
+      path: "src/content/pages/contact",
+      format: { data: "json" },
+      schema: {
+        seoTitle: fields.text({ label: "SEO titel", validation: { isRequired: true } }),
+        seoDescription: fields.text({
+          label: "SEO omschrijving",
+          multiline: true,
+          validation: { isRequired: true },
+        }),
+        hero: fields.object(
+          {
+            eyebrow: fields.text({ label: "Label boven titel", validation: { isRequired: true } }),
+            title: fields.text({ label: "Hoofdtitel", validation: { isRequired: true } }),
+            intro: fields.text({ label: "Intro", multiline: true, validation: { isRequired: true } }),
+            image: contactImageField("Hero foto"),
+            imageAlt: fields.text({ label: "Alt-tekst hero foto", validation: { isRequired: true } }),
+          },
+          { label: "Hero" }
+        ),
+        form: fields.object(
+          {
+            title: fields.text({ label: "Formuliertitel", validation: { isRequired: true } }),
+            intro: fields.text({ label: "Formulierintro", multiline: true, validation: { isRequired: true } }),
+            topics: fields.array(fields.text({ label: "Onderwerp" }), {
+              label: "Onderwerpopties",
+              itemLabel: (props) => props.value || "Onderwerp",
+            }),
+            submitLabel: fields.text({ label: "Verzendknop", validation: { isRequired: true } }),
+            newsletterLabel: fields.text({ label: "Nieuwsbrief checkbox", validation: { isRequired: true } }),
+            privacyText: fields.text({ label: "Privacytekst", multiline: true, validation: { isRequired: true } }),
+            fallbackLabel: fields.text({ label: "Fallback mailknop", validation: { isRequired: true } }),
+          },
+          { label: "Formulier" }
+        ),
+        contactCard: fields.object(
+          {
+            title: fields.text({ label: "Titel contactkaart", validation: { isRequired: true } }),
+            image: contactImageField("Contactkaart foto"),
+            imageAlt: fields.text({ label: "Alt-tekst contactkaart foto", validation: { isRequired: true } }),
+            email: fields.text({ label: "E-mailadres", validation: { isRequired: true } }),
+            address: fields.array(fields.text({ label: "Adresregel" }), {
+              label: "Adres",
+              itemLabel: (props) => props.value || "Adresregel",
+            }),
+            responsePromise: fields.text({
+              label: "Reactiebelofte",
+              multiline: true,
+              validation: { isRequired: true },
+            }),
+          },
+          { label: "Contactkaart" }
+        ),
+        reasons: fields.object(
+          {
+            eyebrow: fields.text({ label: "Label boven titel", validation: { isRequired: true } }),
+            title: fields.text({ label: "Titel", validation: { isRequired: true } }),
+            items: fields.array(
+              fields.object(
+                {
+                  title: fields.text({ label: "Titel", validation: { isRequired: true } }),
+                  text: fields.text({ label: "Tekst", multiline: true, validation: { isRequired: true } }),
+                },
+                { label: "Reden" }
+              ),
+              {
+                label: "Redenen",
+                itemLabel: (props) => props.fields.title.value || "Reden",
+              }
+            ),
+          },
+          { label: "Waarvoor contact" }
         ),
       },
     }),

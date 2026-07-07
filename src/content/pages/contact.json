@@ -1,0 +1,46 @@
+{
+  "seoTitle": "Neem contact met ons op | Life-Line-Trainingen",
+  "seoDescription": "Wil je meer informatie over onze diensten of wil je een offerte ontvangen? Neem contact met ons op via het contactformulier of mail ons direct.",
+  "hero": {
+    "eyebrow": "Contact",
+    "title": "Neem contact op",
+    "intro": "Heb je een vraag, wil je advies over een passende training of een offerte aanvragen? Laat weten waar je naar zoekt, dan denken we praktisch met je mee.",
+    "image": "/assets/contact/aed-strand.jpg",
+    "imageAlt": "AED op het strand tijdens een praktijkgerichte lifesaver training"
+  },
+  "form": {
+    "title": "Waar kunnen we je mee helpen?",
+    "intro": "Vul je gegevens en vraag in. We nemen zo snel mogelijk contact met je op.",
+    "topics": ["Zwembaden", "Instructeurs", "Hulpverleners", "Organisaties", "Overig"],
+    "submitLabel": "Verstuur je aanvraag",
+    "newsletterLabel": "Ik meld me ook aan voor de nieuwsbrief",
+    "privacyText": "Wil je weten wat we met jouw gegevens uit dit formulier doen? Lees dan onze privacyverklaring.",
+    "fallbackLabel": "Mail ons direct"
+  },
+  "contactCard": {
+    "title": "Onze contactgegevens",
+    "image": "/assets/contact/aed-zwembad.jpg",
+    "imageAlt": "AED op de rand van een zwembad",
+    "email": "info@life-line-trainingen.nl",
+    "address": ["Life-Line-Trainingen", "Sleeg 1", "6905 BH Zevenaar"],
+    "responsePromise": "We reageren zo snel mogelijk. Voor een gerichte offerte helpt het als je kort aangeeft voor welke doelgroep, locatie en gewenste training je contact opneemt."
+  },
+  "reasons": {
+    "eyebrow": "Snel naar de juiste route",
+    "title": "Waarvoor kun je ons benaderen?",
+    "items": [
+      {
+        "title": "Training aanvragen",
+        "text": "Voor teams, organisaties en zwembadprofessionals die praktijkgericht willen trainen."
+      },
+      {
+        "title": "Advies over passende training",
+        "text": "Als je nog niet precies weet welke training of opbouw het beste past bij jouw situatie."
+      },
+      {
+        "title": "Vraag over opleiding",
+        "text": "Voor vragen over bestaande of toekomstige opleidingen, bijscholingen en instructeurstrajecten."
+      }
+    ]
+  }
+}
