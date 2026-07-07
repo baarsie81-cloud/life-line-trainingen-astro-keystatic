@@ -331,7 +331,7 @@ h3 {
 .page-hero {
   position: relative;
   isolation: isolate;
-  min-height: 500px;
+  min-height: 430px;
   overflow: hidden;
   background: var(--blue-deep);
 }
@@ -359,11 +359,11 @@ h3 {
 
 .page-hero-content {
   display: grid;
-  min-height: 500px;
+  min-height: 430px;
   grid-template-columns: minmax(0, 1fr) 300px;
   align-items: center;
   gap: 2.5rem;
-  padding-block: clamp(2.75rem, 5vw, 4.75rem);
+  padding-block: clamp(2.35rem, 4vw, 3.8rem);
 }
 
 .page-hero-copy {
@@ -373,7 +373,7 @@ h3 {
 .page-hero h1 {
   margin-top: 1rem;
   color: var(--white);
-  font-size: clamp(2.35rem, 4.2vw, 3.85rem);
+  font-size: clamp(2.15rem, 3.7vw, 3.45rem);
   overflow-wrap: break-word;
 }
 
@@ -1116,7 +1116,7 @@ h3 {
   }
 
   .page-hero-content {
-    padding-block: 2.7rem 4.4rem;
+    padding-block: 2.3rem 3.8rem;
   }
 
   .page-hero h1 {
