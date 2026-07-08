@@ -1,0 +1,139 @@
+{
+  "seoTitle": "Over Life-Line-Trainingen | Mensen trainen die moeten handelen",
+  "seoDescription": "Maak kennis met Life-Line-Trainingen: praktijkgerichte trainingen in eerste hulp, reanimatie, waterveiligheid en zwemmend redden voor teams en professionals.",
+  "hero": {
+    "eyebrow": "Over Life-Line-Trainingen",
+    "title": "Wij trainen mensen die moeten kunnen handelen",
+    "intro": "Life-Line-Trainingen is expert in eerste hulp bij waterongevallen, en dan vooral in zwembaden. Mike combineert jarenlange ervaring in de waterhulpverlening met klinische kennis en scherpe didactiek. Daarom is elke training praktijkgericht, herkenbaar en direct toepasbaar. Niet alleen weten wat moet, maar ook durven doen.",
+    "image": "/assets/photos/instructeur-zwembad-breed.jpg",
+    "imageAlt": "Instructeur geeft praktijkgerichte uitleg aan zwembadprofessionals",
+    "primaryCta": {
+      "label": "Vraag een training aan",
+      "href": "/contact/"
+    },
+    "trust": "Praktische trainingen voor teams en professionals die verantwoordelijkheid dragen voor veiligheid."
+  },
+  "origin": {
+    "eyebrow": "Het begin",
+    "title": "Hoe het ooit begon",
+    "paragraphs": [
+      "Life-Line-Trainingen ontstond toen Hubert de training tot eerste hulp instructeur volgde. Mike, toen nog in opleiding tot verpleegkundige, hielp hem met zijn verbandleer. Het lukte niet meteen: Hubert zakte voor zijn examen, want zijn verbanden waren te netjes voor een eerstehulpverlener. Verbanden die je als eerstehulpverlener aanlegt, worden door de huisarts of spoedeisende hulp toch weer verwijderd voor inspectie en behandeling.",
+      "Kort na zijn diploma verpleegkunde haalde Mike zijn certificaat als reanimatie-instructeur. Samen begonnen Hubert en Mike met het geven van eerste hulp trainingen. Eerst bij Reddingsbrigade de Breuly en het zwembad in Zevenaar. Later ook voor instructeurs in opleiding bij de Reddingsbrigade."
+    ]
+  },
+  "approach": {
+    "eyebrow": "Onze manier van trainen",
+    "title": "Zo pakken we het aan",
+    "intro": "In een noodsituatie telt niet alleen kennis, maar ook vertrouwen. Daarom trainen we met herkenbare situaties, duidelijke stappen en begeleiding die je in beweging brengt.",
+    "items": [
+      {
+        "title": "Praktijkgericht oefenen",
+        "text": "Geen droge theorie, maar oefenen met scenario's die lijken op jouw echte werkomgeving."
+      },
+      {
+        "title": "Herkenbare situaties",
+        "text": "Je leert beslissen, samenwerken en handelen met materialen en risico's die je kent."
+      },
+      {
+        "title": "Training op maat",
+        "text": "Voor teams en professionals stemmen we inhoud, niveau en voorbeelden af op de dagelijkse praktijk. Denk aan onze trainingen voor zwembadpersoneel: EHBO, BHV en zwemmend redden, opgebouwd in niveaus, op locatie, in teams van maximaal 12 deelnemers."
+      }
+    ],
+    "button": {
+      "label": "Maak kennis met de instructeurs",
+      "href": "#team"
+    }
+  },
+  "team": {
+    "eyebrow": "Team LLT7AAR",
+    "title": "Maak kennis met de instructeurs",
+    "intro": "Life-Line-Trainingen werkt met een groeiend instructeurskorps: mensen die onze missie onderschrijven en goed zijn in het verzorgen van eerste hulp trainingen in of rond het water. Hiervoor volgen zij een interne opleiding.",
+    "members": [
+      {
+        "name": "Mike",
+        "role": "Oprichter, expert en trainer",
+        "text": "Mike Lehnkering is de drijvende kracht achter Life-Line-Trainingen. Met zorgervaring, didactische expertise en passie voor waterveiligheid is hij specialist op het gebied van eerste hulp in en rond het water.",
+        "image": "/assets/team/mike.png",
+        "imageAlt": "Mike van Life-Line-Trainingen"
+      },
+      {
+        "name": "Arjen",
+        "role": "Trainer brand en ontruiming",
+        "text": "Arjen verzorgt naast eerste hulp trainingen met name trainingen op het gebied van brand en ontruiming. Hij brengt veel praktijkervaring mee in zijn lessen.",
+        "image": "/assets/team/arjen-posthumus.png",
+        "imageAlt": "Arjen van Life-Line-Trainingen"
+      },
+      {
+        "name": "Coen",
+        "role": "Eerste hulp instructeur",
+        "text": "Coen is eerste hulp instructeur bij Life-Line-Trainingen. Met zijn jarenlange ervaring in het lesgeven is hij breed inzetbaar binnen verschillende trainingen.",
+        "image": "/assets/team/coen-gerritsen.png",
+        "imageAlt": "Coen van Life-Line-Trainingen"
+      },
+      {
+        "name": "Olga",
+        "role": "Eerste hulp instructeur en LOTUS",
+        "text": "Olga zet zich binnen Life-Line-Trainingen in als eerste hulp instructeur en LOTUS. Daarmee maakt zij oefensituaties herkenbaar en levensecht.",
+        "image": "/assets/team/olga-doppen.png",
+        "imageAlt": "Olga van Life-Line-Trainingen"
+      },
+      {
+        "name": "Sandra",
+        "role": "Reanimatie-instructeur en stille kracht",
+        "text": "Sandra is reanimatie-instructeur bij de Nederlandse Reanimatie Raad en doet daarnaast veel achter de schermen voor Life-Line-Trainingen.",
+        "image": "/assets/team/sandra-wezendonk.png",
+        "imageAlt": "Sandra van Life-Line-Trainingen"
+      },
+      {
+        "name": "Teuni",
+        "role": "Eerste hulp instructeur en LOTUS",
+        "text": "Teuni is eerste hulp instructeur en LOTUS. Ze brengt energie, vernieuwende ideeen en een frisse blik mee in de praktijktrainingen.",
+        "image": "/assets/team/teuni-tuinman.png",
+        "imageAlt": "Teuni van Life-Line-Trainingen"
+      },
+      {
+        "name": "Silvia",
+        "role": "Eerste hulp instructeur",
+        "text": "Silvia is eerste hulp instructeur met oog voor ontwikkeling. Ze helpt deelnemers stap voor stap groeien in kennis, vertrouwen en handelen.",
+        "image": "/assets/team/silvia-van-baren.png",
+        "imageAlt": "Silvia van Life-Line-Trainingen"
+      }
+    ]
+  },
+  "partners": {
+    "eyebrow": "Erkenningen en samenwerkingen",
+    "title": "Onze erkenningen en samenwerkingen",
+    "intro": "Life-Line-Trainingen werkt samen met een aantal landelijke organisaties. Elke samenwerking raakt een ander deel van ons aanbod.",
+    "items": [
+      {
+        "name": "Nederlandse Reanimatie Raad (NRR)",
+        "text": "Wij zijn een erkend opleidingsinstituut. Zelf verzorgen we de opleiding en bijscholing voor reanimatie-instructeurs, voor zowel Basic Life Support (BLS) als Pediatric Basic Life Support (PBLS). Deze erkenning raakt onze instructeursopleidingen."
+      },
+      {
+        "name": "Rode Kruis",
+        "text": "Wij zijn partner van het Rode Kruis. Al onze EHBO-opleidingen verzorgen we volgens hun richtlijnen. Het Rode Kruis heeft een groot aanbod aan EHBO-trainingen, dus we bieden jou altijd een passende opleiding, met een erkend EHBO-diploma van een A-merk. Deze samenwerking raakt onze EHBO-opleidingen en, via EHBOinstructeurs.nl, ook het bijscholingsweekend voor instructeurs."
+      },
+      {
+        "name": "Reddingsbrigade Nederland",
+        "text": "Mike is namens Reddingsbrigade Nederland examinator voor Zwemmend Redden in Zwembaden, Zwemmend Redden in Open Water en Zwemmend Redden Strand. Deze relatie raakt onze trainingen zwemmend redden."
+      },
+      {
+        "name": "NIBHV",
+        "text": "Voor bedrijfshulpverlening (BHV) certificeren wij volgens de richtlijnen van het NIBHV. Deze relatie raakt onze BHV-certificering."
+      }
+    ]
+  },
+  "audience": {
+    "eyebrow": "Kies jouw situatie",
+    "title": "Welke situatie past bij jou?"
+  },
+  "newsletter": {
+    "eyebrow": "Eerste hulp tip",
+    "title": "Op de hoogte blijven?",
+    "text": "Ontvang iedere week een eerste hulp tip in je mailbox.",
+    "button": {
+      "label": "Ik wil die tips!",
+      "href": "https://lifelinetrainingen.activehosted.com/f/2"
+    }
+  }
+}

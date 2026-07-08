@@ -30,6 +30,14 @@ const contactImageField = (label: string) =>
     validation: { isRequired: true },
   });
 
+const teamImageField = (label: string) =>
+  fields.image({
+    label,
+    directory: "public/assets/team",
+    publicPath: "/assets/team",
+    validation: { isRequired: true },
+  });
+
 export default config({
   storage: githubRepo
     ? {
@@ -44,7 +52,7 @@ export default config({
       name: "Life-Line-Trainingen CMS",
     },
     navigation: {
-      "Vaste pagina's": ["home", "zwembaden", "contact", "site"],
+      "Vaste pagina's": ["home", "zwembaden", "over", "contact", "site"],
       Content: ["trainings", "blogs"],
     },
   },
@@ -400,6 +408,125 @@ export default config({
             button: fields.object(linkFields, { label: "Knop" }),
           },
           { label: "Conversieblok" }
+        ),
+      },
+    }),
+    over: singleton({
+      label: "Over ons",
+      path: "src/content/pages/over",
+      format: { data: "json" },
+      schema: {
+        seoTitle: fields.text({ label: "SEO titel", validation: { isRequired: true } }),
+        seoDescription: fields.text({
+          label: "SEO omschrijving",
+          multiline: true,
+          validation: { isRequired: true },
+        }),
+        hero: fields.object(
+          {
+            eyebrow: fields.text({ label: "Label boven titel", validation: { isRequired: true } }),
+            title: fields.text({ label: "Hoofdtitel", validation: { isRequired: true } }),
+            intro: fields.text({ label: "Intro", multiline: true, validation: { isRequired: true } }),
+            image: imageField("Hero foto"),
+            imageAlt: fields.text({ label: "Alt-tekst hero foto", validation: { isRequired: true } }),
+            primaryCta: fields.object(linkFields, { label: "Primaire knop" }),
+            trust: fields.text({ label: "Vertrouwensregel", validation: { isRequired: true } }),
+          },
+          { label: "Hero" }
+        ),
+        origin: fields.object(
+          {
+            eyebrow: fields.text({ label: "Label boven titel", validation: { isRequired: true } }),
+            title: fields.text({ label: "Titel", validation: { isRequired: true } }),
+            paragraphs: fields.array(fields.text({ label: "Alinea", multiline: true }), {
+              label: "Alinea's",
+              itemLabel: (props) => props.value || "Alinea",
+            }),
+          },
+          { label: "Hoe het ooit begon" }
+        ),
+        approach: fields.object(
+          {
+            eyebrow: fields.text({ label: "Label boven titel", validation: { isRequired: true } }),
+            title: fields.text({ label: "Titel", validation: { isRequired: true } }),
+            intro: fields.text({ label: "Intro", multiline: true, validation: { isRequired: true } }),
+            items: fields.array(
+              fields.object(
+                {
+                  title: fields.text({ label: "Titel", validation: { isRequired: true } }),
+                  text: fields.text({ label: "Tekst", multiline: true, validation: { isRequired: true } }),
+                },
+                { label: "Pijler" }
+              ),
+              {
+                label: "Pijlers",
+                itemLabel: (props) => props.fields.title.value || "Pijler",
+              }
+            ),
+            button: fields.object(linkFields, { label: "Knop naar team" }),
+          },
+          { label: "Zo pakken we het aan" }
+        ),
+        team: fields.object(
+          {
+            eyebrow: fields.text({ label: "Label boven titel", validation: { isRequired: true } }),
+            title: fields.text({ label: "Titel", validation: { isRequired: true } }),
+            intro: fields.text({ label: "Intro", multiline: true, validation: { isRequired: true } }),
+            members: fields.array(
+              fields.object(
+                {
+                  name: fields.text({ label: "Naam", validation: { isRequired: true } }),
+                  role: fields.text({ label: "Rol", validation: { isRequired: true } }),
+                  text: fields.text({ label: "Korte omschrijving", multiline: true, validation: { isRequired: true } }),
+                  image: teamImageField("Foto"),
+                  imageAlt: fields.text({ label: "Alt-tekst foto", validation: { isRequired: true } }),
+                },
+                { label: "Teamlid" }
+              ),
+              {
+                label: "Teamleden",
+                itemLabel: (props) => props.fields.name.value || "Teamlid",
+              }
+            ),
+          },
+          { label: "Team" }
+        ),
+        partners: fields.object(
+          {
+            eyebrow: fields.text({ label: "Label boven titel", validation: { isRequired: true } }),
+            title: fields.text({ label: "Titel", validation: { isRequired: true } }),
+            intro: fields.text({ label: "Intro", multiline: true, validation: { isRequired: true } }),
+            items: fields.array(
+              fields.object(
+                {
+                  name: fields.text({ label: "Naam organisatie", validation: { isRequired: true } }),
+                  text: fields.text({ label: "Tekst", multiline: true, validation: { isRequired: true } }),
+                },
+                { label: "Samenwerking" }
+              ),
+              {
+                label: "Samenwerkingen",
+                itemLabel: (props) => props.fields.name.value || "Samenwerking",
+              }
+            ),
+          },
+          { label: "Erkenningen en samenwerkingen" }
+        ),
+        audience: fields.object(
+          {
+            eyebrow: fields.text({ label: "Label boven titel", validation: { isRequired: true } }),
+            title: fields.text({ label: "Titel", validation: { isRequired: true } }),
+          },
+          { label: "Doelgroepblok" }
+        ),
+        newsletter: fields.object(
+          {
+            eyebrow: fields.text({ label: "Label boven titel", validation: { isRequired: true } }),
+            title: fields.text({ label: "Titel", validation: { isRequired: true } }),
+            text: fields.text({ label: "Tekst", multiline: true, validation: { isRequired: true } }),
+            button: fields.object(linkFields, { label: "Knop" }),
+          },
+          { label: "Nieuwsbriefblok" }
         ),
       },
     }),

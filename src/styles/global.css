@@ -1966,6 +1966,111 @@ h3 {
   color: var(--muted);
 }
 
+.over-origin .text-stack {
+  margin-top: 1.15rem;
+  max-width: 980px;
+}
+
+.over-inline-cta {
+  margin-top: 1.6rem;
+}
+
+.over-approach-grid {
+  grid-template-columns: 1fr;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.team-card {
+  display: grid;
+  overflow: hidden;
+  border: 1px solid rgba(40, 119, 167, 0.14);
+  border-radius: var(--radius);
+  background: var(--white);
+  box-shadow: 0 14px 36px rgba(8, 63, 100, 0.08);
+}
+
+.team-card img {
+  width: 100%;
+  aspect-ratio: 5 / 3.45;
+  background: var(--blue-light);
+  object-fit: cover;
+}
+
+.team-card div {
+  display: grid;
+  align-content: start;
+  min-height: 255px;
+  padding: 1.2rem;
+}
+
+.team-card span {
+  color: var(--orange);
+  font-size: 0.72rem;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  line-height: 1.35;
+  text-transform: uppercase;
+}
+
+.team-card h3 {
+  margin-top: 0.55rem;
+  font-size: 1.55rem;
+}
+
+.team-card p {
+  margin-top: 0.75rem;
+  color: var(--muted);
+}
+
+.section-heading.align-left {
+  max-width: 840px;
+}
+
+.partner-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0;
+  border-top: 1px solid rgba(40, 119, 167, 0.18);
+}
+
+.partner-list article {
+  border-bottom: 1px solid rgba(40, 119, 167, 0.18);
+  padding: 1.35rem 1.35rem 1.35rem 0;
+}
+
+.partner-list article:nth-child(odd) {
+  border-right: 1px solid rgba(40, 119, 167, 0.18);
+}
+
+.partner-list article:nth-child(even) {
+  padding-left: 1.35rem;
+}
+
+.partner-list h3 {
+  color: var(--blue);
+  font-size: 1.18rem;
+}
+
+.partner-list p {
+  margin-top: 0.65rem;
+  color: var(--muted);
+}
+
+.over-audience {
+  margin-top: 0;
+  padding-block: clamp(4rem, 7vw, 6rem);
+  background: var(--sand);
+}
+
+.over-audience .audience-panel {
+  box-shadow: 0 18px 54px rgba(8, 63, 100, 0.1);
+}
+
 @media (max-width: 1100px) {
   .desktop-nav,
   .header-cta {
@@ -2005,6 +2110,7 @@ h3 {
 
   .addition-swimlane,
   .reason-grid,
+  .team-grid,
   .knowledge-hero-inner,
   .featured-article,
   .knowledge-toolbar,
@@ -2231,6 +2337,23 @@ h3 {
 
   .mail-fallback {
     justify-self: center;
+  }
+
+  .partner-list {
+    grid-template-columns: 1fr;
+  }
+
+  .partner-list article,
+  .partner-list article:nth-child(even) {
+    padding-inline: 0;
+  }
+
+  .partner-list article:nth-child(odd) {
+    border-right: 0;
+  }
+
+  .team-card div {
+    min-height: auto;
   }
 }
 

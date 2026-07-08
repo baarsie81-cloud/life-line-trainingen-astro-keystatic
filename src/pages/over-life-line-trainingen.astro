@@ -1,0 +1,128 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import AudienceCard from "../components/AudienceCard.astro";
+import page from "../content/pages/over.json";
+import home from "../content/pages/home.json";
+---
+
+<BaseLayout title={page.seoTitle} description={page.seoDescription} image={page.hero.image}>
+  <section class="page-hero over-hero">
+    <img class="page-hero-image" src={page.hero.image} alt={page.hero.imageAlt} loading="eager" decoding="async" />
+    <div class="page-hero-overlay"></div>
+    <div class="container page-hero-content">
+      <div class="page-hero-copy">
+        <p class="eyebrow">{page.hero.eyebrow}</p>
+        <h1>{page.hero.title}</h1>
+        <p class="hero-intro">{page.hero.intro}</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href={page.hero.primaryCta.href}>{page.hero.primaryCta.label}</a>
+        </div>
+      </div>
+      <aside class="hero-proof" aria-label="Kern van Life-Line-Trainingen">
+        <span>Niet alleen weten</span>
+        <p>{page.hero.trust}</p>
+      </aside>
+    </div>
+  </section>
+
+  <section class="answer-band over-origin" aria-labelledby="origin-title">
+    <div class="container answer-panel">
+      <p class="eyebrow">{page.origin.eyebrow}</p>
+      <h2 id="origin-title">{page.origin.title}</h2>
+      <div class="text-stack">
+        {page.origin.paragraphs.map((paragraph) => <p>{paragraph}</p>)}
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-split" aria-labelledby="approach-title">
+    <div class="container split-grid">
+      <div>
+        <p class="eyebrow">{page.approach.eyebrow}</p>
+        <h2 id="approach-title">{page.approach.title}</h2>
+        <p class="section-intro">{page.approach.intro}</p>
+        <a class="button button-primary over-inline-cta" href={page.approach.button.href}>{page.approach.button.label}</a>
+      </div>
+      <div class="reason-grid over-approach-grid">
+        {
+          page.approach.items.map((item, index) => (
+            <article>
+              <span>{String(index + 1).padStart(2, "0")}</span>
+              <h3>{item.title}</h3>
+              <p>{item.text}</p>
+            </article>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-soft" id="team" aria-labelledby="team-title">
+    <div class="container">
+      <div class="section-heading">
+        <p class="eyebrow">{page.team.eyebrow}</p>
+        <h2 id="team-title">{page.team.title}</h2>
+        <p>{page.team.intro}</p>
+      </div>
+      <div class="team-grid">
+        {
+          page.team.members.map((member) => (
+            <article class="team-card">
+              <img src={member.image} alt={member.imageAlt} loading="lazy" decoding="async" />
+              <div>
+                <span>{member.role}</span>
+                <h3>{member.name}</h3>
+                <p>{member.text}</p>
+              </div>
+            </article>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <section class="section over-partners" aria-labelledby="partners-title">
+    <div class="container">
+      <div class="section-heading align-left">
+        <p class="eyebrow">{page.partners.eyebrow}</p>
+        <h2 id="partners-title">{page.partners.title}</h2>
+        <p>{page.partners.intro}</p>
+      </div>
+      <div class="partner-list">
+        {
+          page.partners.items.map((partner) => (
+            <article>
+              <h3>{partner.name}</h3>
+              <p>{partner.text}</p>
+            </article>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <section class="audience-shell over-audience" aria-labelledby="over-audience-title">
+    <div class="container audience-panel">
+      <div class="section-kicker">
+        <p class="eyebrow">{page.audience.eyebrow}</p>
+        <h2 id="over-audience-title">{page.audience.title}</h2>
+      </div>
+      <div class="audience-grid">
+        {home.audiences.map((audience) => <AudienceCard {...audience} />)}
+      </div>
+    </div>
+  </section>
+
+  <section class="final-cta over-newsletter">
+    <div class="container final-cta-inner">
+      <div>
+        <p class="eyebrow">{page.newsletter.eyebrow}</p>
+        <h2>{page.newsletter.title}</h2>
+        <p>{page.newsletter.text}</p>
+      </div>
+      <a class="button button-light" href={page.newsletter.button.href} target="_blank" rel="noopener noreferrer">
+        {page.newsletter.button.label}
+      </a>
+    </div>
+  </section>
+</BaseLayout>
