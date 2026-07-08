@@ -21,10 +21,30 @@
     { "label": "Contact", "href": "/contact/" }
   ],
   "footerPartners": [
-    { "label": "Reddingsbrigade", "href": "https://www.reddingsbrigade.nl/" },
-    { "label": "NRR", "href": "https://www.reanimatieraad.nl/" },
-    { "label": "Rode Kruis", "href": "https://www.rodekruis.nl/" },
-    { "label": "NIBHV", "href": "https://www.nibhv.nl/" }
+    {
+      "label": "Reddingsbrigade",
+      "href": "https://www.reddingsbrigade.nl/",
+      "logo": "/assets/partners/reddingsbrigade.svg",
+      "alt": "Reddingsbrigade Nederland"
+    },
+    {
+      "label": "NRR",
+      "href": "https://www.reanimatieraad.nl/",
+      "logo": "/assets/partners/nrr.webp",
+      "alt": "Nederlandse Reanimatie Raad"
+    },
+    {
+      "label": "Rode Kruis",
+      "href": "https://www.rodekruis.nl/",
+      "logo": "/assets/partners/rode-kruis.svg",
+      "alt": "Het Nederlandse Rode Kruis"
+    },
+    {
+      "label": "NIBHV",
+      "href": "https://www.nibhv.nl/",
+      "logo": "/assets/partners/nibhv.svg",
+      "alt": "NIBHV"
+    }
   ],
   "footerText": "Life-Line-Trainingen helpt mensen en teams om rustig, praktisch en doelgericht te handelen wanneer het erop aankomt."
 }

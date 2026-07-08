@@ -25,7 +25,7 @@ import site from "../content/settings/site.json";
       <nav class="footer-partners" aria-label="Organisaties">
         {site.footerPartners.map((partner) => (
           <a href={partner.href} target="_blank" rel="noopener noreferrer" aria-label={`${partner.label} website`}>
-            {partner.label}
+            <img src={partner.logo} alt={partner.alt} loading="lazy" decoding="async" />
           </a>
         ))}
       </nav>

@@ -85,7 +85,20 @@ export default config({
           label: "Navigatie",
           itemLabel: (props) => props.fields.label.value || "Menu-item",
         }),
-        footerPartners: fields.array(fields.object(linkFields, { label: "Footer logo/link" }), {
+        footerPartners: fields.array(fields.object(
+          {
+            label: fields.text({ label: "Naam", validation: { isRequired: true } }),
+            href: fields.url({ label: "Link", validation: { isRequired: true } }),
+            logo: fields.image({
+              label: "Logo",
+              directory: "public/assets/partners",
+              publicPath: "/assets/partners",
+              validation: { isRequired: true },
+            }),
+            alt: fields.text({ label: "Alt-tekst", validation: { isRequired: true } }),
+          },
+          { label: "Footer logo/link" }
+        ), {
           label: "Footer logo-links",
           itemLabel: (props) => props.fields.label.value || "Footer logo/link",
         }),
