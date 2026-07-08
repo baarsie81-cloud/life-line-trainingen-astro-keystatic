@@ -85,6 +85,10 @@ export default config({
           label: "Navigatie",
           itemLabel: (props) => props.fields.label.value || "Menu-item",
         }),
+        footerPartners: fields.array(fields.object(linkFields, { label: "Footer logo/link" }), {
+          label: "Footer logo-links",
+          itemLabel: (props) => props.fields.label.value || "Footer logo/link",
+        }),
       },
     }),
     home: singleton({

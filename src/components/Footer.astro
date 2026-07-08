@@ -22,6 +22,13 @@ import site from "../content/settings/site.json";
         {site.address.map((line) => <>{line}<br /></>)}
         <a href={`mailto:${site.email}`}>{site.email}</a>
       </address>
+      <nav class="footer-partners" aria-label="Organisaties">
+        {site.footerPartners.map((partner) => (
+          <a href={partner.href} target="_blank" rel="noopener noreferrer" aria-label={`${partner.label} website`}>
+            {partner.label}
+          </a>
+        ))}
+      </nav>
     </div>
   </div>
   <div class="footer-bottom">

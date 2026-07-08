@@ -20,5 +20,11 @@
     { "label": "Over ons", "href": "/over-life-line-trainingen/" },
     { "label": "Contact", "href": "/contact/" }
   ],
+  "footerPartners": [
+    { "label": "Reddingsbrigade", "href": "https://www.reddingsbrigade.nl/" },
+    { "label": "NRR", "href": "https://www.reanimatieraad.nl/" },
+    { "label": "Rode Kruis", "href": "https://www.rodekruis.nl/" },
+    { "label": "NIBHV", "href": "https://www.nibhv.nl/" }
+  ],
   "footerText": "Life-Line-Trainingen helpt mensen en teams om rustig, praktisch en doelgericht te handelen wanneer het erop aankomt."
 }
