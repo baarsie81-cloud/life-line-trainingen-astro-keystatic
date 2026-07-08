@@ -24,25 +24,25 @@
     {
       "label": "Reddingsbrigade",
       "href": "https://www.reddingsbrigade.nl/",
-      "logo": "/assets/partners/reddingsbrigade.svg",
+      "logo": "/assets/partners/reddingsbrigade.png",
       "alt": "Reddingsbrigade Nederland"
     },
     {
       "label": "NRR",
       "href": "https://www.reanimatieraad.nl/",
-      "logo": "/assets/partners/nrr.webp",
+      "logo": "/assets/partners/nrr.png",
       "alt": "Nederlandse Reanimatie Raad"
     },
     {
       "label": "Rode Kruis",
       "href": "https://www.rodekruis.nl/",
-      "logo": "/assets/partners/rode-kruis.svg",
+      "logo": "/assets/partners/rode-kruis.png",
       "alt": "Het Nederlandse Rode Kruis"
     },
     {
       "label": "NIBHV",
       "href": "https://www.nibhv.nl/",
-      "logo": "/assets/partners/nibhv.svg",
+      "logo": "/assets/partners/nibhv.png",
       "alt": "NIBHV"
     }
   ],
