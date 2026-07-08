@@ -6,7 +6,7 @@ const blogFiles = import.meta.glob("../content/blogs/*.json", { eager: true });
 const blogs = Object.values(blogFiles).map((entry: any) => entry.default);
 
 export async function GET() {
-  const staticPaths = ["/", ...site.navigation.map((item) => item.href)];
+  const staticPaths = ["/", "/juridisch/privacy-statement/", ...site.navigation.map((item) => item.href)];
   const trainingPaths = trainings.filter((training) => training.visible).map((training) => training.href);
   const blogPaths = blogs.filter((blog) => blog.visible).map((blog) => `/nieuws/${blog.title.slug}/`);
   const paths = Array.from(new Set([...staticPaths, ...trainingPaths, ...blogPaths]));

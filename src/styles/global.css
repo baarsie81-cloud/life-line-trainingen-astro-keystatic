@@ -1724,6 +1724,148 @@ h3 {
   padding: clamp(1.25rem, 2.4vw, 2rem);
 }
 
+.legal-hero {
+  background:
+    linear-gradient(90deg, rgba(6, 47, 75, 0.95), rgba(6, 47, 75, 0.78)),
+    url("/assets/photos/instructeur-zwembad-breed.jpg") center / cover;
+  color: var(--white);
+}
+
+.legal-hero-inner {
+  display: grid;
+  min-height: 340px;
+  align-items: end;
+  padding-block: clamp(5rem, 12vw, 8rem) clamp(2.2rem, 5vw, 4rem);
+}
+
+.legal-hero h1 {
+  max-width: 760px;
+  color: var(--white);
+  font-size: clamp(2.35rem, 5vw, 4.6rem);
+  line-height: 0.98;
+}
+
+.legal-hero p:not(.eyebrow) {
+  max-width: 760px;
+  margin-top: 1rem;
+  color: rgba(255, 255, 255, 0.88);
+  font-size: clamp(1.05rem, 1.8vw, 1.28rem);
+  line-height: 1.65;
+}
+
+.legal-section {
+  background: linear-gradient(180deg, var(--white), #f6fbfe);
+}
+
+.legal-layout {
+  display: grid;
+  grid-template-columns: minmax(220px, 300px) minmax(0, 1fr);
+  gap: clamp(1.5rem, 4vw, 3.5rem);
+  align-items: start;
+}
+
+.legal-summary {
+  position: sticky;
+  top: 108px;
+  border: 1px solid rgba(40, 119, 167, 0.18);
+  border-radius: var(--radius);
+  background: var(--white);
+  box-shadow: var(--shadow);
+  padding: clamp(1.2rem, 2.4vw, 1.8rem);
+}
+
+.legal-summary h2 {
+  margin-top: 0.35rem;
+  color: var(--blue-dark);
+  font-size: 1.55rem;
+}
+
+.legal-summary dl {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1.2rem;
+}
+
+.legal-summary div {
+  border-top: 1px solid rgba(40, 119, 167, 0.16);
+  padding-top: 0.8rem;
+}
+
+.legal-summary dt {
+  color: var(--orange);
+  font-size: 0.74rem;
+  font-weight: 900;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.legal-summary dd {
+  margin: 0.25rem 0 0;
+  color: var(--blue-dark);
+  font-weight: 850;
+  line-height: 1.45;
+}
+
+.legal-content {
+  border: 1px solid rgba(40, 119, 167, 0.14);
+  border-radius: var(--radius);
+  background: var(--white);
+  box-shadow: 0 16px 44px rgba(6, 47, 75, 0.08);
+  padding: clamp(1.35rem, 3vw, 3rem);
+}
+
+.legal-content h2 {
+  margin-top: 2.1rem;
+  color: var(--blue-dark);
+  font-size: clamp(1.45rem, 2.2vw, 2.15rem);
+  line-height: 1.12;
+}
+
+.legal-content h2:first-child {
+  margin-top: 0;
+}
+
+.legal-content p,
+.legal-content li,
+.legal-content address {
+  color: var(--ink);
+  font-size: 1.02rem;
+  line-height: 1.78;
+}
+
+.legal-content p,
+.legal-content ul,
+.legal-content ol,
+.legal-content address {
+  margin-top: 0.85rem;
+}
+
+.legal-content ul,
+.legal-content ol {
+  padding-left: 1.25rem;
+}
+
+.legal-content li + li {
+  margin-top: 0.45rem;
+}
+
+.legal-content address {
+  border-left: 4px solid var(--orange);
+  border-radius: var(--radius);
+  background: rgba(240, 74, 24, 0.07);
+  font-style: normal;
+  padding: 1rem 1.15rem;
+}
+
+.legal-content a,
+.legal-summary a {
+  color: var(--blue);
+  font-weight: 900;
+  text-decoration: underline;
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.18em;
+}
+
 .contact-card dl {
   display: grid;
   gap: 1rem;
@@ -1825,6 +1967,7 @@ h3 {
   .featured-article,
   .knowledge-toolbar,
   .article-layout,
+  .legal-layout,
   .contact-grid {
     grid-template-columns: 1fr;
   }
@@ -1838,7 +1981,8 @@ h3 {
     position: static;
   }
 
-  .contact-card {
+  .contact-card,
+  .legal-summary {
     position: static;
   }
 
