@@ -1695,6 +1695,12 @@ h3 {
   margin-top: 0.35rem;
 }
 
+.form-actions .button {
+  min-height: 58px;
+  padding-inline: 1.45rem;
+  font-size: 1.08rem;
+}
+
 .mail-fallback {
   text-decoration: none;
 }
