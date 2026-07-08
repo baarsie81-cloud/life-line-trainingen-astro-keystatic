@@ -1177,13 +1177,19 @@ h3 {
 .footer-partners {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.75rem;
+  column-gap: 0.85rem;
+  row-gap: 0.7rem;
+  width: fit-content;
   margin-top: 1.25rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius);
+  background: rgba(235, 246, 251, 0.9);
+  padding: 0.75rem 0.85rem;
 }
 
 .footer-partners a {
   display: inline-flex;
-  width: 92px;
+  width: 82px;
   min-height: 46px;
   align-items: center;
   justify-content: center;
@@ -1198,7 +1204,7 @@ h3 {
 .footer-partners img {
   display: block;
   width: 100%;
-  max-width: 92px;
+  max-width: 82px;
   max-height: 42px;
   object-fit: contain;
 }
