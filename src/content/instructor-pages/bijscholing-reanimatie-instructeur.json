@@ -1,26 +1,177 @@
 {
   "title": {
-    "name": "Bijscholing reanimatie-instructeur",
+    "name": "Houd je NRR-instructeurscertificaat geldig met de verplichte bijscholing",
     "slug": "bijscholing-reanimatie-instructeur"
   },
   "seoTitle": "Bijscholing reanimatie-instructeur | Life-Line-Trainingen",
-  "seoDescription": "Houd je NRR-instructeurscertificaat geldig met een praktijkgerichte bijscholing reanimatie-instructeur van 1 dag.",
+  "seoDescription": "Verleng je NRR-instructeurscertificaat met een bijscholing van 1 dag. Oefen BLS, PBLS, didactiek, AED en scenario's bij Life-Line-Trainingen.",
   "eyebrow": "Certificaat verlengen",
-  "intro": "Ben je al NRR-instructeur? Houd je certificaat geldig met deze bijscholing van 1 dag. Je frist je vaardigheden voor volwassenen-, kinder- en babyreanimatie op.",
+  "intro": "Ben je al NRR-erkend reanimatie-instructeur? Dan verleng je je certificaat elke twee jaar met deze bijscholing van een dag. Je frist zowel je reanimatievaardigheden als je didactische vaardigheden op, en blijft op de hoogte van de laatste richtlijnen.",
   "image": "/assets/photos/bls-reanimatie-aed.jpg",
   "imageAlt": "Bijscholing reanimatie-instructeur met reanimatiepop en AED",
-  "body": [
-    "Deze pagina is alvast ingericht als vaste route voor de bijscholing reanimatie-instructeur. De volledige bijscholingsinformatie wordt later aangevuld.",
-    "Tot die tijd kun je contact opnemen voor data, voorwaarden en mogelijkheden."
+  "proof": {
+    "label": "NRR refresher",
+    "text": "Een praktijkgerichte bijscholing voor bestaande NRR-instructeurs, met kleine groepen en actuele scenario's."
+  },
+  "facts": [
+    {
+      "label": "Duur",
+      "value": "1 dag"
+    },
+    {
+      "label": "Groepsgrootte",
+      "value": "Max. 6 deelnemers"
+    },
+    {
+      "label": "Tijden",
+      "value": "9.00 tot 17.00 uur"
+    },
+    {
+      "label": "Certificering",
+      "value": "BLS en PBLS verlengen"
+    }
   ],
+  "summary": {
+    "eyebrow": "Direct antwoord",
+    "title": "Verleng je NRR-erkenning in een dag",
+    "text": "Deze bijscholing is bedoeld voor reanimatie-instructeurs die hun NRR-certificaat geldig willen houden. In een kleine groep oefen je reanimatie bij volwassenen, kinderen en baby's, werk je aan je didactiek en blijf je scherp op de laatste richtlijnen."
+  },
+  "sections": [
+    {
+      "eyebrow": "Voor wie",
+      "title": "Voor wie is deze bijscholing?",
+      "text": "Deze bijscholing is voor instructeurs die al NRR-erkend reanimatie-instructeur zijn, als kandidaat of volledig instructeur.",
+      "items": [
+        "Je bent al NRR-erkend reanimatie-instructeur.",
+        "Je moet je certificaat elke twee jaar verlengen om instructeur te blijven.",
+        "Volg je de bijscholing niet op tijd? Dan valt je kwalificatie terug."
+      ],
+      "image": "/assets/photos/instructie-aan-bad.jpg",
+      "imageAlt": "Instructeur begeleidt een praktijkgerichte reanimatietraining"
+    },
+    {
+      "eyebrow": "Inhoud",
+      "title": "Wat behandelt de bijscholing?",
+      "text": "In een dag oefen je reanimatie bij volwassenen, kinderen en baby's. Daarnaast besteden we aandacht aan didactiek, AED-gebruik, scenario's en feedback op je eigen manier van lesgeven.",
+      "items": [
+        "De laatste richtlijnen van de Nederlandse Reanimatie Raad.",
+        "Je didactische vaardigheden: hoe geef je goed les?",
+        "Praktische oefeningen met een AED.",
+        "Scenariotraining met virtual reality.",
+        "Scenariotraining en feedback op je eigen manier van lesgeven."
+      ],
+      "image": "/assets/photos/bls-aed-training-breed.jpg",
+      "imageAlt": "AED-training tijdens een reanimatiebijscholing"
+    },
+    {
+      "eyebrow": "Pool-editie",
+      "title": "Nieuw sinds 2025: de Pool-editie",
+      "text": "Naast de reguliere bijscholing in het leslokaal bieden we ook een editie in het zwembad aan. Daar verdiep je je kennis over de reanimatie van drenkelingen en oefen je met uitdagende scenario's in het water.",
+      "items": [
+        "Je verdiept je in reanimatie na waterongevallen.",
+        "Je oefent scenario's die passen bij zwembad- en watercontexten.",
+        "Je traint met andere instructeurs uit het vak."
+      ],
+      "image": "/assets/photos/waterredding-praktijk.jpg",
+      "imageAlt": "Praktijkscenario in een zwembadomgeving"
+    },
+    {
+      "eyebrow": "Na afloop",
+      "title": "Certificaten verlengen bij de NRR",
+      "text": "Na de bijscholing verlengen we je certificaten voor zowel Basic Life Support als Pediatric Basic Life Support bij de Nederlandse Reanimatie Raad.",
+      "items": [
+        "Verlenging van Basic Life Support.",
+        "Verlenging van Pediatric Basic Life Support.",
+        "Kleine groep van maximaal 6 deelnemers per instructeur-trainer."
+      ],
+      "image": "/assets/photos/instructeur-zwembad-breed.jpg",
+      "imageAlt": "Life-Line-Trainingen instructeur geeft uitleg aan een groep"
+    }
+  ],
+  "reasons": {
+    "eyebrow": "Waarom Life-Line",
+    "title": "Waarom bij Life-Line-Trainingen?",
+    "items": [
+      "Life-Line-Trainingen is een erkend opleidingsinstituut van de Nederlandse Reanimatie Raad, sinds de audit in 2014.",
+      "We toetsen je vaardigheden met Laerdal QCPR-technologie en trainen met ZOLL AED-trainers.",
+      "Per 3 deelnemers is er minimaal 1 reanimatiepop en AED-trainer aanwezig.",
+      "Docent-instructeur Mike Lehnkering combineert klinische kennis als anesthesiemedewerker met actuele didactische inzichten.",
+      "Alles is geregeld: koffie, thee, lunch, lesmateriaal en certificering."
+    ]
+  },
+  "practical": {
+    "eyebrow": "Praktische informatie",
+    "title": "Duur, locatie en certificering",
+    "items": [
+      {
+        "label": "Duur",
+        "text": "De bijscholing duurt 1 dag."
+      },
+      {
+        "label": "Groepsgrootte",
+        "text": "Maximaal 6 deelnemers per instructeur-trainer."
+      },
+      {
+        "label": "Tijden",
+        "text": "Van 9.00 tot 17.00 uur. Koffie en thee staan vanaf 8.30 uur klaar."
+      },
+      {
+        "label": "Locatie",
+        "text": "Centrum 4.0 in Zevenaar, Punt5 in IJsselstein, tenzij anders vermeld, of de Pool-editie in het zwembad."
+      },
+      {
+        "label": "Op locatie of in compagnie",
+        "text": "Mogelijk vanaf 3 collega's, in overleg."
+      },
+      {
+        "label": "Certificering",
+        "text": "Verlenging van Basic Life Support en Pediatric Basic Life Support bij de Nederlandse Reanimatie Raad."
+      }
+    ]
+  },
+  "notice": {
+    "eyebrow": "Let op bij inschrijven",
+    "title": "Gebruik het e-mailadres dat bekend is bij CoSy",
+    "text": "Gebruik bij je inschrijving het e-mailadres dat bekend is bij CoSy. Doe je dat niet, dan kan er per ongeluk een dubbel account ontstaan."
+  },
+  "price": {
+    "eyebrow": "Prijs",
+    "title": "€245,00",
+    "text": "Per persoon exclusief btw. Inclusief koffie/thee, lunch, lesmateriaal en certificering.",
+    "amount": "245.00",
+    "currency": "EUR"
+  },
+  "faq": {
+    "eyebrow": "Veelgestelde vragen",
+    "title": "FAQ over de bijscholing",
+    "items": [
+      {
+        "question": "Hoe vaak moet ik deze bijscholing volgen?",
+        "answer": "Elke twee jaar, om je NRR-erkenning geldig te houden."
+      },
+      {
+        "question": "Wat als ik de bijscholing niet op tijd volg?",
+        "answer": "Dan valt je kwalificatie terug. Je wordt dan weer kandidaat-instructeur, of zelfs instructeur-in-opleiding."
+      },
+      {
+        "question": "Behandelt de bijscholing ook kinder- en babyreanimatie?",
+        "answer": "Ja, in een dag komen volwassenen-, kinder- en babyreanimatie allemaal aan bod."
+      },
+      {
+        "question": "Kan de bijscholing bij ons op locatie, of samen met andere instructeurs?",
+        "answer": "Ja, dat kan in overleg, ook in compagnie met collega-instructeurs."
+      }
+    ]
+  },
+  "body": [],
   "cta": {
-    "label": "Vraag bijscholing aan",
-    "href": "/contact/"
+    "label": "Claim hier jouw plek voor de bijscholing",
+    "href": "https://llt7aar.plugandpay.nl/checkout/nrr-basis-instructeurs-cursus-opfristraining"
   },
   "secondaryCta": {
-    "label": "Terug naar instructeurs",
-    "href": "/instructeurs/"
+    "label": "Training op locatie bespreken",
+    "href": "/contact/"
   },
   "visible": true,
-  "indexable": false
+  "indexable": true
 }

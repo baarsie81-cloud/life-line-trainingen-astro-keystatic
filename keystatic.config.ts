@@ -830,13 +830,46 @@ export default config({
           },
           { label: "Praktische informatie" }
         ),
+        notice: fields.object(
+          {
+            eyebrow: fields.text({ label: "Label boven titel" }),
+            title: fields.text({ label: "Titel" }),
+            text: fields.text({ label: "Tekst", multiline: true }),
+          },
+          { label: "Opvallende melding" }
+        ),
         price: fields.object(
           {
             eyebrow: fields.text({ label: "Label boven titel" }),
             title: fields.text({ label: "Prijs/titel" }),
             text: fields.text({ label: "Tekst", multiline: true }),
+            amount: fields.text({
+              label: "Prijs voor structured data",
+              description: "Gebruik puntnotatie, bijvoorbeeld 245.00.",
+            }),
+            currency: fields.text({ label: "Valuta", defaultValue: "EUR" }),
           },
           { label: "Prijsblok" }
+        ),
+        faq: fields.object(
+          {
+            eyebrow: fields.text({ label: "Label boven titel" }),
+            title: fields.text({ label: "Titel" }),
+            items: fields.array(
+              fields.object(
+                {
+                  question: fields.text({ label: "Vraag" }),
+                  answer: fields.text({ label: "Antwoord", multiline: true }),
+                },
+                { label: "FAQ item" }
+              ),
+              {
+                label: "Vragen",
+                itemLabel: (props) => props.fields.question.value || "Vraag",
+              }
+            ),
+          },
+          { label: "FAQ" }
         ),
         body: fields.array(fields.text({ label: "Alinea", multiline: true }), {
           label: "Pagina-inhoud",

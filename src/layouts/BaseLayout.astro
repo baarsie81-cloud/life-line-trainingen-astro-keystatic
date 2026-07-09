@@ -9,7 +9,7 @@ interface Props {
   description: string;
   image?: string;
   type?: string;
-  structuredData?: Record<string, unknown>;
+  structuredData?: Record<string, unknown> | Record<string, unknown>[];
   noindex?: boolean;
 }
 

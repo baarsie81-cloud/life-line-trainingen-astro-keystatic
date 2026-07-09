@@ -17,7 +17,7 @@ export function getStaticPaths() {
 const { page } = Astro.props;
 const isExternalCta = page.cta.href.startsWith("http");
 const hasFullContent = Boolean(page.summary && page.sections && page.reasons && page.practical && page.price);
-const structuredData = page.indexable
+const courseData = page.indexable
   ? {
       "@context": "https://schema.org",
       "@type": "Course",
@@ -29,17 +29,33 @@ const structuredData = page.indexable
         name: site.name,
         url: site.url,
       },
-      offers: page.price
+      offers: page.price?.amount
         ? {
             "@type": "Offer",
-            price: "599.00",
-            priceCurrency: "EUR",
+            price: page.price.amount,
+            priceCurrency: page.price.currency || "EUR",
             availability: "https://schema.org/InStock",
-            url: page.cta.href,
+            url: new URL(page.cta.href, site.url).href,
           }
         : undefined,
     }
   : undefined;
+const faqData = page.indexable && page.faq?.items?.length
+  ? {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: page.faq.items.map((item) => ({
+        "@type": "Question",
+        name: item.question,
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: item.answer,
+        },
+      })),
+    }
+  : undefined;
+const structuredDataItems = [courseData, faqData].filter(Boolean);
+const structuredData = structuredDataItems.length > 0 ? structuredDataItems : undefined;
 ---
 
 <BaseLayout title={page.seoTitle} description={page.seoDescription} image={page.image} noindex={!page.indexable} structuredData={structuredData}>
@@ -157,6 +173,37 @@ const structuredData = page.indexable
           </div>
         </div>
       </section>
+
+      {page.notice && (
+        <section class="section instructor-notice-section">
+          <div class="container">
+            <aside class="instructor-notice">
+              <p class="eyebrow">{page.notice.eyebrow}</p>
+              <h2>{page.notice.title}</h2>
+              <p>{page.notice.text}</p>
+            </aside>
+          </div>
+        </section>
+      )}
+
+      {page.faq?.items?.length > 0 && (
+        <section class="section section-soft" aria-labelledby="instructor-faq-title">
+          <div class="container faq-grid">
+            <div>
+              <p class="eyebrow">{page.faq.eyebrow}</p>
+              <h2 id="instructor-faq-title">{page.faq.title}</h2>
+            </div>
+            <div class="faq-list">
+              {page.faq.items.map((item) => (
+                <details>
+                  <summary>{item.question}</summary>
+                  <p>{item.answer}</p>
+                </details>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       <section class="final-cta instructor-price-cta">
         <div class="container final-cta-inner">

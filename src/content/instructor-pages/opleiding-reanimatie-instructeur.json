@@ -113,7 +113,9 @@
   "price": {
     "eyebrow": "Prijs",
     "title": "€599,00",
-    "text": "Per persoon exclusief btw. Inclusief koffie/thee, lunch, lesmaterialen en certificering."
+    "text": "Per persoon exclusief btw. Inclusief koffie/thee, lunch, lesmaterialen en certificering.",
+    "amount": "599.00",
+    "currency": "EUR"
   },
   "cta": {
     "label": "Claim hier jouw opleidingsplek",
