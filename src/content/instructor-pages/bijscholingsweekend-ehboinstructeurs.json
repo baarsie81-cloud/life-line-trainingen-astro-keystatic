@@ -1,26 +1,178 @@
 {
   "title": {
-    "name": "Bijscholingsweekend EHBOinstructeurs.nl",
+    "name": "Bijscholing Oranje Kruis-instructeurs: verleng je certificering in één weekend",
     "slug": "bijscholingsweekend-ehboinstructeurs"
   },
-  "seoTitle": "Bijscholingsweekend EHBOinstructeurs.nl | Life-Line-Trainingen",
-  "seoDescription": "Haal als Oranje Kruis-, NRR- of SDBREL-instructeur in één weekend punten voor meerdere certificeringen via EHBOinstructeurs.nl.",
-  "eyebrow": "Meerdere certificeringen",
-  "intro": "Ben je ook Oranje Kruis-, NRR- of SDBREL-instructeur? Haal in één weekend in Barchem je punten voor meerdere certificeringen. Dit weekend wordt georganiseerd door EHBOinstructeurs.nl, sinds 2026 onderdeel van ons netwerk.",
+  "seoTitle": "Bijscholing Oranje Kruis, NRR & SDBREL-instructeurs | EHBOinstructeurs.nl",
+  "seoDescription": "Eén weekend, drie certificeringen. Bijscholing voor Oranje Kruis-, NRR- en SDBREL-instructeurs via EHBOinstructeurs.nl, onderdeel van Life-Line's netwerk.",
+  "eyebrow": "Bijscholingsweekend",
+  "intro": "Twee keer per jaar organiseert EHBOinstructeurs.nl, het 88e competentierayon van het Rode Kruis en sinds 2026 onderdeel van het Life-Line-netwerk, een bijscholingsweekend. Je verlengt er in één keer je punten voor Het Oranje Kruis (HOK), de Nederlandse Reanimatieraad (NRR) en Stop De Bloeding Red Een Leven (SDBREL).",
   "image": "/assets/photos/instructie-aan-bad.jpg",
   "imageAlt": "Instructeur geeft praktijkgerichte uitleg tijdens een training",
-  "body": [
-    "Deze pagina is alvast ingericht als vaste route voor het bijscholingsweekend van EHBOinstructeurs.nl. De volledige informatie wordt later aangevuld.",
-    "Let op: aanmelding en facturatie lopen via EHBOinstructeurs.nl, niet via de Life-Line-checkout."
+  "proof": {
+    "label": "Eén weekend",
+    "text": "Voor instructeurs die hun praktische én didactische vaardigheden willen verdiepen en meerdere certificeringen willen verlengen."
+  },
+  "facts": [
+    {
+      "label": "Duur",
+      "value": "1 weekend"
+    },
+    {
+      "label": "Frequentie",
+      "value": "2x per jaar"
+    },
+    {
+      "label": "Groepsgrootte",
+      "value": "Max. 18 deelnemers"
+    },
+    {
+      "label": "Aanmelden",
+      "value": "Via EHBOinstructeurs.nl"
+    }
   ],
+  "summary": {
+    "eyebrow": "Direct antwoord",
+    "title": "Verleng meerdere certificeringen in één weekend",
+    "text": "Dit bijscholingsweekend is bedoeld voor NRR- of ERC-instructeurs die hun vakkennis willen verdiepen. Ben je daarnaast Oranje Kruis- of SDBREL-instructeur, dan verleng je die certificeringen in hetzelfde weekend mee."
+  },
+  "sections": [
+    {
+      "eyebrow": "Doelgroep",
+      "title": "Voor wie is dit weekend?",
+      "text": "De basisvoorwaarde is dat je NRR- of ERC-instructeur bent. Vanuit die basis kun je in hetzelfde weekend ook andere relevante certificeringen verlengen.",
+      "items": [
+        "Je bent NRR- of ERC-instructeur. Dit is de basisvoorwaarde om mee te mogen doen.",
+        "Ben je daarnaast ook Oranje Kruis- of SDBREL-instructeur? Dan verleng je die certificeringen in hetzelfde weekend mee.",
+        "Ben je instructeur bij een andere organisatie, zoals Rode Kruis, EFR of Nikta? Dan kun je ook meedoen, maar volg je voor die certificering nog een aparte bijscholing bij je eigen certificerende instantie.",
+        "SDBREL-nascholing volg je alleen via dit weekend. Een losse SDBREL-bijscholing bestaat niet."
+      ],
+      "image": "/assets/photos/bls-aed-training-breed.jpg",
+      "imageAlt": "Instructeurs werken met reanimatiepop en AED-trainer"
+    },
+    {
+      "eyebrow": "Programma",
+      "title": "Wat behandelt het programma?",
+      "text": "Je bereidt je thuis voor met een aantal theorie-opdrachten die je van tevoren ontvangt. Het weekend zelf bestaat uit een combinatie van plenaire onderdelen en workshoprondes, deels binnen en deels buiten.",
+      "items": [
+        "Bijscholing basic life support: PBLS en BLS, met NRR-hercertificering.",
+        "Verdieping in je didactische vaardigheden.",
+        "Verschillende manieren van feedback geven en bespreken.",
+        "De officiële SDBREL-hercertificering.",
+        "EHBO-vaardigheden, getoetst op een creatieve en praktische manier."
+      ],
+      "image": "/assets/photos/bls-reanimatie-aed.jpg",
+      "imageAlt": "Praktische reanimatie-oefening tijdens een bijscholing"
+    },
+    {
+      "eyebrow": "EHBOinstructeurs.nl",
+      "title": "Aanmelden, planning en facturatie lopen extern",
+      "text": "Dit weekend wordt georganiseerd via EHBOinstructeurs.nl. Life-Line-Trainingen verwijst hier vanuit het netwerk naar door, maar de actuele planning, aanmelding en facturatie lopen niet via de Life-Line-checkout.",
+      "items": [
+        "Aanmelden gaat via het formulier op EHBOinstructeurs.nl, uiterlijk 2 weken voor aanvang.",
+        "Facturatie loopt via EHBOinstructeurs.nl, niet via Life-Line-Trainingen.",
+        "Locatie en exacte data wijzigen per editie.",
+        "Check de actuele planning altijd op ehboinstructeurs.nl/programma."
+      ],
+      "image": "/assets/photos/instructeur-zwembad-breed.jpg",
+      "imageAlt": "Life-Line-Trainingen instructeur geeft uitleg aan een groep"
+    }
+  ],
+  "reasons": {
+    "eyebrow": "Waarom dit weekend",
+    "title": "Waarom via EHBOinstructeurs.nl en Life-Line?",
+    "items": [
+      "EHBOinstructeurs.nl is het 88e competentierayon van het Rode Kruis.",
+      "Het weekend richt zich specifiek op instructeurs die hun didactische en praktische vaardigheden verder willen verdiepen.",
+      "Je werkt niet alleen certificeringspunten bij, maar wordt ook inhoudelijk scherper in je vak.",
+      "Sinds 2026 is EHBOinstructeurs.nl onderdeel van het Life-Line-netwerk."
+    ]
+  },
+  "practical": {
+    "eyebrow": "Praktische informatie",
+    "title": "Planning, prijs en organisatie",
+    "items": [
+      {
+        "label": "Duur",
+        "text": "1 weekend."
+      },
+      {
+        "label": "Frequentie",
+        "text": "2 keer per jaar."
+      },
+      {
+        "label": "Groepsgrootte",
+        "text": "Maximaal 18 deelnemers."
+      },
+      {
+        "label": "Aanmelden",
+        "text": "Via het formulier op EHBOinstructeurs.nl, uiterlijk 2 weken voor aanvang."
+      },
+      {
+        "label": "Prijs",
+        "text": "Op aanvraag. Check de actuele prijs en voorwaarden op EHBOinstructeurs.nl."
+      },
+      {
+        "label": "Facturatie",
+        "text": "Loopt via EHBOinstructeurs.nl, niet via Life-Line's checkout."
+      },
+      {
+        "label": "Overnachting",
+        "text": "Niet inbegrepen."
+      },
+      {
+        "label": "Organisatie",
+        "text": "Eefje Zumbrink-Hendriks, Sija Jacobs-Landman en Mike Lehnkering."
+      }
+    ]
+  },
+  "notice": {
+    "eyebrow": "Let op",
+    "title": "Check altijd de actuele planning",
+    "text": "Locatie en exacte data wijzigen per editie. Check de actuele planning altijd op ehboinstructeurs.nl/programma in plaats van een vaste locatie of datum te verwachten op deze pagina."
+  },
+  "price": {
+    "eyebrow": "Prijs en aanmelden",
+    "title": "Actuele prijs via EHBOinstructeurs.nl",
+    "text": "Life-Line publiceert hier bewust geen vast bedrag, omdat prijs, voorwaarden, locatie en planning per editie kunnen verschillen. Bekijk daarom altijd het actuele programma bij EHBOinstructeurs.nl.",
+    "amount": "",
+    "currency": "EUR"
+  },
+  "faq": {
+    "eyebrow": "Veelgestelde vragen",
+    "title": "FAQ over het bijscholingsweekend",
+    "items": [
+      {
+        "question": "Boek ik dit via Life-Line-Trainingen?",
+        "answer": "Nee. Aanmelding, facturatie en actuele planning lopen via EHBOinstructeurs.nl. Life-Line verwijst hiernaar door vanuit het netwerk."
+      },
+      {
+        "question": "Moet ik alle drie de certificeringen hebben om mee te mogen doen?",
+        "answer": "Nee. De basisvoorwaarde is dat je NRR- of ERC-instructeur bent. Heb je daarnaast ook een Oranje Kruis- of SDBREL-certificering, dan verleng je die in hetzelfde weekend mee. Andere certificerende instanties, zoals Rode Kruis, kunnen ook meedoen met een aparte bijscholing bij hun eigen instantie ernaast."
+      },
+      {
+        "question": "Voor welke certificeringen haal ik hier punten?",
+        "answer": "Het Oranje Kruis (HOK), de Nederlandse Reanimatieraad (NRR) en Stop De Bloeding Red Een Leven (SDBREL)."
+      },
+      {
+        "question": "Wat kost het weekend?",
+        "answer": "Check de actuele prijs op EHBOinstructeurs.nl. Life-Line publiceert hier bewust geen bedrag, omdat de prijs per editie kan verschillen."
+      },
+      {
+        "question": "Kan ik alleen de SDBREL-hercertificering volgen, zonder de rest?",
+        "answer": "Nee, een losse SDBREL-bijscholing bestaat niet. Die volg je alleen als onderdeel van dit weekend."
+      }
+    ]
+  },
+  "body": [],
   "cta": {
-    "label": "Meer informatie aanvragen",
-    "href": "/contact/"
+    "label": "Bekijk het actuele programma",
+    "href": "https://ehboinstructeurs.nl/programma/"
   },
   "secondaryCta": {
     "label": "Terug naar instructeurs",
     "href": "/instructeurs/"
   },
   "visible": true,
-  "indexable": false
+  "indexable": true
 }
