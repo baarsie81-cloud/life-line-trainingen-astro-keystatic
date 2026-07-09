@@ -1424,6 +1424,7 @@ h3 {
 
 .article-card {
   display: grid;
+  grid-template-columns: minmax(0, 1fr);
   min-width: 0;
   overflow: hidden;
   border: 1px solid rgba(40, 119, 167, 0.18);
@@ -1437,6 +1438,7 @@ h3 {
 }
 
 .article-card-media {
+  min-width: 0;
   aspect-ratio: 16 / 10;
   background: var(--blue-light);
 }
@@ -1455,11 +1457,20 @@ h3 {
 .article-card-copy .article-meta,
 .article-link {
   min-width: 0;
-  overflow-wrap: break-word;
-  word-break: normal;
+  max-width: 100%;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+.article-card-copy h3 {
+  line-height: 1.08;
 }
 
 .article-card-copy p {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 5;
   color: var(--muted);
 }
 
