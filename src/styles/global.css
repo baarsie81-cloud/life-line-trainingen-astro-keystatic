@@ -1424,6 +1424,7 @@ h3 {
 
 .article-card {
   display: grid;
+  min-width: 0;
   overflow: hidden;
   border: 1px solid rgba(40, 119, 167, 0.18);
   border-radius: var(--radius);
@@ -1442,9 +1443,20 @@ h3 {
 
 .article-card-copy {
   display: grid;
+  min-width: 0;
   grid-template-rows: auto auto 1fr auto;
   gap: 0.85rem;
   padding: 1.25rem;
+}
+
+.article-card-copy h3,
+.article-card-copy h3 a,
+.article-card-copy p,
+.article-card-copy .article-meta,
+.article-link {
+  min-width: 0;
+  overflow-wrap: break-word;
+  word-break: normal;
 }
 
 .article-card-copy p {
