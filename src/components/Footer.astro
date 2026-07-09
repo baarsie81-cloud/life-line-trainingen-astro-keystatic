@@ -22,13 +22,14 @@ import site from "../content/settings/site.json";
         {site.address.map((line) => <>{line}<br /></>)}
         <a href={`mailto:${site.email}`}>{site.email}</a>
       </address>
-      <nav class="footer-partners" aria-label="Organisaties">
-        {site.footerPartners.map((partner) => (
-          <a href={partner.href} target="_blank" rel="noopener noreferrer" aria-label={`${partner.label} website`}>
-            <img src={partner.logo} alt={partner.alt} loading="lazy" decoding="async" />
-          </a>
-        ))}
-      </nav>
+      <div class="footer-partners" aria-label="Samenwerkende organisaties">
+        <img
+          src="/assets/partners/footer-partners-row.png"
+          alt="Reddingsbrigade Nederland, NIBHV, Rode Kruis en Nederlandse Reanimatie Raad"
+          loading="lazy"
+          decoding="async"
+        />
+      </div>
     </div>
   </div>
   <div class="footer-bottom">
