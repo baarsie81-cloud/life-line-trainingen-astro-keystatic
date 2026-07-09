@@ -2227,6 +2227,132 @@ h3 {
   font-size: 1.05rem;
 }
 
+.instructor-summary .answer-panel > p:not(.eyebrow) {
+  max-width: 980px;
+}
+
+.fact-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+.fact-grid div {
+  border-left: 3px solid var(--orange);
+  border-radius: var(--radius);
+  background: rgba(220, 239, 248, 0.55);
+  padding: 0.9rem 1rem;
+}
+
+.fact-grid span {
+  display: block;
+  color: var(--orange);
+  font-size: 0.72rem;
+  font-weight: 900;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+.fact-grid strong {
+  display: block;
+  margin-top: 0.35rem;
+  color: var(--blue-dark);
+  font-size: 1.02rem;
+  line-height: 1.25;
+}
+
+.instructor-detail-section .text-stack h2 {
+  margin-top: 0.35rem;
+}
+
+.check-list {
+  display: grid;
+  gap: 0.55rem;
+  margin: 0.25rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.check-list li {
+  position: relative;
+  padding-left: 1.55rem;
+  color: var(--ink);
+}
+
+.check-list li::before {
+  position: absolute;
+  left: 0;
+  top: 0.1rem;
+  color: var(--orange);
+  content: "✓";
+  font-weight: 900;
+}
+
+.instructor-section-cta {
+  width: fit-content;
+  margin-top: 0.65rem;
+}
+
+.instructor-image-card {
+  overflow: hidden;
+  align-self: stretch;
+  min-height: 360px;
+  border-radius: var(--radius);
+  background: var(--blue-light);
+  box-shadow: var(--shadow);
+  margin: 0;
+}
+
+.instructor-image-card img {
+  width: 100%;
+  height: 100%;
+  min-height: 360px;
+  object-fit: cover;
+}
+
+.practical-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.78fr) minmax(0, 1.22fr);
+  gap: clamp(2rem, 5vw, 5rem);
+  align-items: start;
+}
+
+.practical-grid h2 {
+  margin-top: 0.7rem;
+}
+
+.practical-list {
+  display: grid;
+  gap: 0.85rem;
+}
+
+.practical-list article {
+  border-top: 1px solid rgba(40, 119, 167, 0.18);
+  padding-top: 1rem;
+}
+
+.practical-list h3 {
+  color: var(--blue);
+  font-size: 1.12rem;
+}
+
+.practical-list p {
+  margin-top: 0.35rem;
+  color: var(--muted);
+}
+
+.instructor-final-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 0.75rem;
+}
+
+.instructor-price-cta .button-secondary {
+  border-color: rgba(255, 255, 255, 0.55);
+}
+
 @media (max-width: 1100px) {
   .desktop-nav,
   .header-cta {
@@ -2269,6 +2395,8 @@ h3 {
   .team-grid,
   .instructor-card-grid,
   .faq-grid,
+  .fact-grid,
+  .practical-grid,
   .knowledge-hero-inner,
   .featured-article,
   .knowledge-toolbar,
@@ -2516,6 +2644,10 @@ h3 {
 
   .team-card div {
     min-height: auto;
+  }
+
+  .instructor-final-actions {
+    justify-content: flex-start;
   }
 }
 

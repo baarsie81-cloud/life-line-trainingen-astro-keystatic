@@ -3,20 +3,126 @@
     "name": "Opleiding reanimatie-instructeur (BIC)",
     "slug": "opleiding-reanimatie-instructeur"
   },
-  "seoTitle": "Opleiding reanimatie-instructeur | Life-Line-Trainingen",
-  "seoDescription": "Word in 2 dagen NRR-erkend reanimatie-instructeur. Vooropleiding is niet nodig; een geldig reanimatiecertificaat wel.",
+  "seoTitle": "Opleiding reanimatie-instructeur (BIC) | Life-Line-Trainingen",
+  "seoDescription": "Word in 2 dagen NRR-erkend reanimatie-instructeur bij Life-Line-Trainingen. Kleine groepen, persoonlijke aandacht, Centrum 4.0 Zevenaar of op locatie.",
   "eyebrow": "Instructeur worden",
-  "intro": "Word in 2 dagen NRR-erkend reanimatie-instructeur. Je hebt geen vooropleiding nodig, wel een geldig reanimatiecertificaat. De opleiding vindt plaats bij Centrum 4.0 in Zevenaar, of op je eigen locatie.",
+  "intro": "Tijdens de NRR Basis Instructeurs Cursus (BIC) word je in 2 dagen opgeleid tot kandidaat BLS-instructeur. Je leert volgens de richtlijnen van de Nederlandse Reanimatie Raad hoe je volwassenen leert reanimeren en hoe je deelnemers veilig, duidelijk en praktijkgericht begeleidt.",
   "image": "/assets/photos/bls-aed-training-breed.jpg",
   "imageAlt": "Reanimatie-instructeur opleiding met AED-training",
-  "body": [
-    "Deze pagina is alvast ingericht als vaste route voor de opleiding reanimatie-instructeur. De volledige opleidingsinformatie wordt later aangevuld.",
-    "Tot die tijd kun je contact opnemen voor data, voorwaarden en mogelijkheden op locatie."
+  "proof": {
+    "label": "NRR BIC",
+    "text": "Kleine groep, persoonlijke begeleiding en een erkend traject richting reanimatie-instructeur."
+  },
+  "facts": [
+    {
+      "label": "Duur",
+      "value": "2 dagen"
+    },
+    {
+      "label": "Tussenperiode",
+      "value": "6 weken"
+    },
+    {
+      "label": "Groepsgrootte",
+      "value": "Maximaal 6 deelnemers"
+    },
+    {
+      "label": "Locatie",
+      "value": "Centrum 4.0 Zevenaar of op locatie"
+    }
   ],
+  "summary": {
+    "eyebrow": "Direct antwoord",
+    "title": "Word in 2 dagen kandidaat BLS-instructeur",
+    "text": "Bij Life-Line-Trainingen volg je de NRR Basis Instructeurs Cursus in een kleine groep van maximaal 6 deelnemers per instructeur-trainer. Je hebt sinds 2023 geen vooropleiding meer nodig, maar wel een geldig reanimatiecertificaat en de fysieke mogelijkheid om zelf te reanimeren."
+  },
+  "sections": [
+    {
+      "eyebrow": "Training bij Life-Line",
+      "title": "Praktisch leren lesgeven in reanimatie",
+      "text": "We trainen je met een gevarieerd programma waarin je niet alleen de inhoud leert, maar vooral leert hoe je anderen goed begeleidt. In 2 dagen leer je hoe je volwassenen leert reanimeren en hoe je daarna aan de slag kunt als kandidaat BLS-instructeur.",
+      "items": [
+        "Kleine groepen met maximaal 6 deelnemers.",
+        "Persoonlijke aandacht van de instructeur-trainer.",
+        "Voldoende tijd en ruimte om jezelf te ontwikkelen als instructeur.",
+        "In-company training is mogelijk.",
+        "Erkend certificaat van de Nederlandse Reanimatie Raad."
+      ],
+      "image": "/assets/photos/bls-reanimatie-aed.jpg",
+      "imageAlt": "Reanimatietraining met AED en oefenpop"
+    },
+    {
+      "eyebrow": "Toelating",
+      "title": "Toelatingscriteria",
+      "text": "Je hebt sinds 2023 geen vooropleiding meer nodig om een training tot reanimatie-instructeur te volgen. Wel moet je fysiek in staat zijn zelf een reanimatie uit te voeren en beschikken over een geldig reanimatiecertificaat van de Nederlandse Reanimatie Raad.",
+      "items": [
+        "Je beschikt over een geldig reanimatiecertificaat.",
+        "Je kunt zelf veilig en fysiek correct reanimeren.",
+        "De training bestaat uit 2 dagen met ongeveer 6 weken tussentijd.",
+        "In de tussenperiode breng je het geleerde in de praktijk."
+      ],
+      "image": "/assets/photos/instructie-aan-bad.jpg",
+      "imageAlt": "Instructeur geeft praktijkgerichte uitleg"
+    },
+    {
+      "eyebrow": "Na de training",
+      "title": "Van kandidaat naar volwaardig instructeur",
+      "text": "Heb je de training bijgewoond en actief meegedaan? Dan ontvang je de status kandidaat-instructeur BLS bij de Nederlandse Reanimatie Raad. Wanneer je daarna twee trainingen onder begeleiding van een volwaardig reanimatie-instructeur hebt verzorgd, kun je zelf volwaardig reanimatie-instructeur worden.",
+      "items": [
+        "Je ontvangt na actieve deelname de status kandidaat-instructeur BLS.",
+        "Je verzorgt daarna twee trainingen onder begeleiding.",
+        "Na afronding kun je doorgroeien naar volwaardig reanimatie-instructeur."
+      ],
+      "image": "/assets/photos/instructeur-zwembad-breed.jpg",
+      "imageAlt": "Praktijkgerichte instructie door Life-Line-Trainingen"
+    }
+  ],
+  "reasons": {
+    "eyebrow": "Waarom Life-Line",
+    "title": "5 redenen om bij Life-Line-Trainingen te trainen",
+    "items": [
+      "Life-Line-Trainingen is een door de Nederlandse Reanimatie Raad erkend opleidingsinstituut.",
+      "Je traint in een kleine groep van maximaal 6 deelnemers per instructeur-trainer.",
+      "Je hebt geen vooropleiding nodig.",
+      "De training is geheel verzorgd, inclusief koffie/thee, lunch, lesmaterialen en certificering.",
+      "De training kan eventueel bij jou op locatie verzorgd worden."
+    ]
+  },
+  "practical": {
+    "eyebrow": "Praktische informatie",
+    "title": "Locatie, duur en verzorging",
+    "items": [
+      {
+        "label": "Locatie",
+        "text": "De opleiding NRR Basis Instructeurs Cursus (BIC) wordt verzorgd bij Centrum 4.0 in Zevenaar, tenzij anders vermeld. Op locatie trainen is mogelijk in overleg."
+      },
+      {
+        "label": "Tijden",
+        "text": "De training start om 8.30 uur en eindigt rond 17.00 uur. Koffie en thee staan vanaf 8.15 uur klaar."
+      },
+      {
+        "label": "Verzorging",
+        "text": "Lunch, koffie, thee, lesmaterialen en certificering zijn inbegrepen. Dieetwensen kun je bij aanmelding doorgeven."
+      },
+      {
+        "label": "Prijs",
+        "text": "€599,00 per persoon exclusief btw."
+      }
+    ]
+  },
+  "price": {
+    "eyebrow": "Prijs",
+    "title": "€599,00",
+    "text": "Per persoon exclusief btw. Inclusief koffie/thee, lunch, lesmaterialen en certificering."
+  },
   "cta": {
-    "label": "Vraag informatie aan",
+    "label": "Claim hier jouw opleidingsplek",
+    "href": "https://llt7aar.plugandpay.nl/checkout/nrr-basic-instructor-course"
+  },
+  "secondaryCta": {
+    "label": "Training op locatie bespreken",
     "href": "/contact/"
   },
   "visible": true,
-  "indexable": false
+  "indexable": true
 }

@@ -17,6 +17,10 @@
     "label": "Vraag bijscholing aan",
     "href": "/contact/"
   },
+  "secondaryCta": {
+    "label": "Terug naar instructeurs",
+    "href": "/instructeurs/"
+  },
   "visible": true,
   "indexable": false
 }

@@ -751,11 +751,100 @@ export default config({
         intro: fields.text({ label: "Intro", multiline: true, validation: { isRequired: true } }),
         image: imageField("Hero foto"),
         imageAlt: fields.text({ label: "Alt-tekst afbeelding", validation: { isRequired: true } }),
+        proof: fields.object(
+          {
+            label: fields.text({ label: "Klein label" }),
+            text: fields.text({ label: "Tekst", multiline: true }),
+          },
+          { label: "Hero bewijsblok" }
+        ),
+        facts: fields.array(
+          fields.object(
+            {
+              label: fields.text({ label: "Label" }),
+              value: fields.text({ label: "Waarde" }),
+            },
+            { label: "Kernfeit" }
+          ),
+          {
+            label: "Kernfeiten",
+            itemLabel: (props) => props.fields.label.value || "Kernfeit",
+          }
+        ),
+        summary: fields.object(
+          {
+            eyebrow: fields.text({ label: "Label boven titel" }),
+            title: fields.text({ label: "Titel" }),
+            text: fields.text({ label: "Tekst", multiline: true }),
+          },
+          { label: "Direct antwoord" }
+        ),
+        sections: fields.array(
+          fields.object(
+            {
+              eyebrow: fields.text({ label: "Label boven titel" }),
+              title: fields.text({ label: "Titel" }),
+              text: fields.text({ label: "Tekst", multiline: true }),
+              items: fields.array(fields.text({ label: "Punt", multiline: true }), {
+                label: "Punten",
+                itemLabel: (props) => props.value || "Punt",
+              }),
+              image: imageField("Afbeelding"),
+              imageAlt: fields.text({ label: "Alt-tekst afbeelding" }),
+            },
+            { label: "Contentsectie" }
+          ),
+          {
+            label: "Contentsecties",
+            itemLabel: (props) => props.fields.title.value || "Contentsectie",
+          }
+        ),
+        reasons: fields.object(
+          {
+            eyebrow: fields.text({ label: "Label boven titel" }),
+            title: fields.text({ label: "Titel" }),
+            items: fields.array(fields.text({ label: "Reden", multiline: true }), {
+              label: "Redenen",
+              itemLabel: (props) => props.value || "Reden",
+            }),
+          },
+          { label: "Redenenblok" }
+        ),
+        practical: fields.object(
+          {
+            eyebrow: fields.text({ label: "Label boven titel" }),
+            title: fields.text({ label: "Titel" }),
+            items: fields.array(
+              fields.object(
+                {
+                  label: fields.text({ label: "Label" }),
+                  text: fields.text({ label: "Tekst", multiline: true }),
+                },
+                { label: "Praktisch item" }
+              ),
+              {
+                label: "Praktische informatie",
+                itemLabel: (props) => props.fields.label.value || "Praktisch item",
+              }
+            ),
+          },
+          { label: "Praktische informatie" }
+        ),
+        price: fields.object(
+          {
+            eyebrow: fields.text({ label: "Label boven titel" }),
+            title: fields.text({ label: "Prijs/titel" }),
+            text: fields.text({ label: "Tekst", multiline: true }),
+          },
+          { label: "Prijsblok" }
+        ),
         body: fields.array(fields.text({ label: "Alinea", multiline: true }), {
           label: "Pagina-inhoud",
+          description: "Alleen gebruikt zolang een subpagina nog geen volledige sectie-opbouw heeft.",
           itemLabel: (props) => props.value || "Alinea",
         }),
         cta: fields.object(linkFields, { label: "CTA" }),
+        secondaryCta: fields.object(linkFields, { label: "Tweede CTA" }),
         visible: fields.checkbox({
           label: "Pagina zichtbaar",
           defaultValue: true,

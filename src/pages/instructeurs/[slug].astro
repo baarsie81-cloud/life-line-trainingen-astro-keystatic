@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import site from "../../content/settings/site.json";
 
 export const prerender = true;
 
@@ -14,9 +15,34 @@ export function getStaticPaths() {
 }
 
 const { page } = Astro.props;
+const isExternalCta = page.cta.href.startsWith("http");
+const hasFullContent = Boolean(page.summary && page.sections && page.reasons && page.practical && page.price);
+const structuredData = page.indexable
+  ? {
+      "@context": "https://schema.org",
+      "@type": "Course",
+      name: page.title.name,
+      description: page.seoDescription,
+      image: new URL(page.image, site.url).href,
+      provider: {
+        "@type": "EducationalOrganization",
+        name: site.name,
+        url: site.url,
+      },
+      offers: page.price
+        ? {
+            "@type": "Offer",
+            price: "599.00",
+            priceCurrency: "EUR",
+            availability: "https://schema.org/InStock",
+            url: page.cta.href,
+          }
+        : undefined,
+    }
+  : undefined;
 ---
 
-<BaseLayout title={page.seoTitle} description={page.seoDescription} image={page.image} noindex={!page.indexable}>
+<BaseLayout title={page.seoTitle} description={page.seoDescription} image={page.image} noindex={!page.indexable} structuredData={structuredData}>
   <section class="page-hero instructor-subpage-hero">
     <img class="page-hero-image" src={page.image} alt={page.imageAlt} loading="eager" decoding="async" />
     <div class="page-hero-overlay"></div>
@@ -26,24 +52,137 @@ const { page } = Astro.props;
         <h1>{page.title.name}</h1>
         <p class="hero-intro">{page.intro}</p>
         <div class="hero-actions">
-          <a class="button button-primary" href={page.cta.href}>{page.cta.label}</a>
-          <a class="button button-secondary" href="/instructeurs/">Terug naar instructeurs</a>
+          <a class="button button-primary" href={page.cta.href} target={isExternalCta ? "_blank" : undefined} rel={isExternalCta ? "noopener noreferrer" : undefined}>
+            {page.cta.label}
+          </a>
+          {page.secondaryCta ? (
+            <a class="button button-secondary" href={page.secondaryCta.href}>{page.secondaryCta.label}</a>
+          ) : (
+            <a class="button button-secondary" href="/instructeurs/">Terug naar instructeurs</a>
+          )}
         </div>
       </div>
-      <aside class="hero-proof" aria-label="Status van deze pagina">
-        <span>Wordt aangevuld</span>
-        <p>Deze route staat klaar en wordt later inhoudelijk uitgebreid.</p>
+      <aside class="hero-proof" aria-label="Kern van deze instructeurspagina">
+        <span>{page.proof?.label || "Wordt aangevuld"}</span>
+        <p>{page.proof?.text || "Deze route staat klaar en wordt later inhoudelijk uitgebreid."}</p>
       </aside>
     </div>
   </section>
 
-  <section class="answer-band" aria-labelledby="subpage-summary-title">
-    <div class="container answer-panel">
-      <p class="eyebrow">Voorlopige pagina</p>
-      <h2 id="subpage-summary-title">De route werkt alvast, de volledige inhoud volgt later</h2>
-      <div class="text-stack">
-        {page.body.map((paragraph) => <p>{paragraph}</p>)}
+  {hasFullContent ? (
+    <>
+      <section class="answer-band instructor-summary" aria-labelledby="subpage-summary-title">
+        <div class="container answer-panel">
+          <p class="eyebrow">{page.summary.eyebrow}</p>
+          <h2 id="subpage-summary-title">{page.summary.title}</h2>
+          <p>{page.summary.text}</p>
+          <div class="fact-grid" aria-label="Kerngegevens van de opleiding">
+            {
+              page.facts.map((fact) => (
+                <div>
+                  <span>{fact.label}</span>
+                  <strong>{fact.value}</strong>
+                </div>
+              ))
+            }
+          </div>
+        </div>
+      </section>
+
+      {
+        page.sections.map((section, index) => (
+          <section class={`section instructor-detail-section${index % 2 === 1 ? " section-soft" : ""}`}>
+            <div class="container split-grid">
+              <div class="text-stack">
+                <p class="eyebrow">{section.eyebrow}</p>
+                <h2>{section.title}</h2>
+                <p>{section.text}</p>
+                {section.items?.length > 0 && (
+                  <ul class="check-list">
+                    {section.items.map((item) => (
+                      <li>{item}</li>
+                    ))}
+                  </ul>
+                )}
+                {index === 0 && (
+                  <a class="button button-primary instructor-section-cta" href={page.cta.href} target={isExternalCta ? "_blank" : undefined} rel={isExternalCta ? "noopener noreferrer" : undefined}>
+                    {page.cta.label}
+                  </a>
+                )}
+              </div>
+              {section.image && (
+                <figure class="instructor-image-card">
+                  <img src={section.image} alt={section.imageAlt} loading="lazy" decoding="async" />
+                </figure>
+              )}
+            </div>
+          </section>
+        ))
+      }
+
+      <section class="section section-soft" aria-labelledby="reasons-title">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">{page.reasons.eyebrow}</p>
+            <h2 id="reasons-title">{page.reasons.title}</h2>
+          </div>
+          <div class="reason-grid">
+            {
+              page.reasons.items.map((item, index) => (
+                <article>
+                  <span>{String(index + 1).padStart(2, "0")}</span>
+                  <p>{item}</p>
+                </article>
+              ))
+            }
+          </div>
+        </div>
+      </section>
+
+      <section class="section instructor-practical" aria-labelledby="practical-title">
+        <div class="container practical-grid">
+          <div>
+            <p class="eyebrow">{page.practical.eyebrow}</p>
+            <h2 id="practical-title">{page.practical.title}</h2>
+          </div>
+          <div class="practical-list">
+            {
+              page.practical.items.map((item) => (
+                <article>
+                  <h3>{item.label}</h3>
+                  <p>{item.text}</p>
+                </article>
+              ))
+            }
+          </div>
+        </div>
+      </section>
+
+      <section class="final-cta instructor-price-cta">
+        <div class="container final-cta-inner">
+          <div>
+            <p class="eyebrow">{page.price.eyebrow}</p>
+            <h2>{page.price.title}</h2>
+            <p>{page.price.text}</p>
+          </div>
+          <div class="instructor-final-actions">
+            <a class="button button-light" href={page.cta.href} target={isExternalCta ? "_blank" : undefined} rel={isExternalCta ? "noopener noreferrer" : undefined}>
+              {page.cta.label}
+            </a>
+            {page.secondaryCta && <a class="button button-secondary" href={page.secondaryCta.href}>{page.secondaryCta.label}</a>}
+          </div>
+        </div>
+      </section>
+    </>
+  ) : (
+    <section class="answer-band" aria-labelledby="subpage-summary-title">
+      <div class="container answer-panel">
+        <p class="eyebrow">Voorlopige pagina</p>
+        <h2 id="subpage-summary-title">De route werkt alvast, de volledige inhoud volgt later</h2>
+        <div class="text-stack">
+          {page.body.map((paragraph) => <p>{paragraph}</p>)}
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
+  )}
 </BaseLayout>
