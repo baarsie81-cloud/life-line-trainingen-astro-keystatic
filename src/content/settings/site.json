@@ -14,7 +14,24 @@
   },
   "navigation": [
     { "label": "Zwembaden", "href": "/zwembaden/" },
-    { "label": "Instructeurs", "href": "/instructeurs/" },
+    {
+      "label": "Instructeurs",
+      "href": "/instructeurs/",
+      "children": [
+        {
+          "label": "Opleiding reanimatie-instructeur",
+          "href": "/instructeurs/opleiding-reanimatie-instructeur/"
+        },
+        {
+          "label": "Bijscholing reanimatie-instructeur",
+          "href": "/instructeurs/bijscholing-reanimatie-instructeur/"
+        },
+        {
+          "label": "Bijscholingsweekend EHBOinstructeurs.nl",
+          "href": "/instructeurs/bijscholingsweekend-ehboinstructeurs/"
+        }
+      ]
+    },
     { "label": "Hulpverleners", "href": "/hulpverleners/" },
     { "label": "Kennisbank", "href": "/nieuws/" },
     { "label": "Over ons", "href": "/over-life-line-trainingen/" },

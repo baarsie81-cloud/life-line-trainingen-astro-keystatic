@@ -1,0 +1,22 @@
+{
+  "title": {
+    "name": "Bijscholingsweekend EHBOinstructeurs.nl",
+    "slug": "bijscholingsweekend-ehboinstructeurs"
+  },
+  "seoTitle": "Bijscholingsweekend EHBOinstructeurs.nl | Life-Line-Trainingen",
+  "seoDescription": "Haal als Oranje Kruis-, NRR- of SDBREL-instructeur in één weekend punten voor meerdere certificeringen via EHBOinstructeurs.nl.",
+  "eyebrow": "Meerdere certificeringen",
+  "intro": "Ben je ook Oranje Kruis-, NRR- of SDBREL-instructeur? Haal in één weekend in Barchem je punten voor meerdere certificeringen. Dit weekend wordt georganiseerd door EHBOinstructeurs.nl, sinds 2026 onderdeel van ons netwerk.",
+  "image": "/assets/photos/instructie-aan-bad.jpg",
+  "imageAlt": "Instructeur geeft praktijkgerichte uitleg tijdens een training",
+  "body": [
+    "Deze pagina is alvast ingericht als vaste route voor het bijscholingsweekend van EHBOinstructeurs.nl. De volledige informatie wordt later aangevuld.",
+    "Let op: aanmelding en facturatie lopen via EHBOinstructeurs.nl, niet via de Life-Line-checkout."
+  ],
+  "cta": {
+    "label": "Meer informatie aanvragen",
+    "href": "/contact/"
+  },
+  "visible": true,
+  "indexable": false
+}

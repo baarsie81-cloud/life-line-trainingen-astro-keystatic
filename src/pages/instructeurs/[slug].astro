@@ -1,0 +1,49 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+export const prerender = true;
+
+export function getStaticPaths() {
+  const pageFiles = import.meta.glob("../../content/instructor-pages/*.json", { eager: true });
+  const pages = Object.values(pageFiles).map((entry: any) => entry.default).filter((page) => page.visible);
+
+  return pages.map((page) => ({
+    params: { slug: page.title.slug },
+    props: { page },
+  }));
+}
+
+const { page } = Astro.props;
+---
+
+<BaseLayout title={page.seoTitle} description={page.seoDescription} image={page.image} noindex={!page.indexable}>
+  <section class="page-hero instructor-subpage-hero">
+    <img class="page-hero-image" src={page.image} alt={page.imageAlt} loading="eager" decoding="async" />
+    <div class="page-hero-overlay"></div>
+    <div class="container page-hero-content">
+      <div class="page-hero-copy">
+        <p class="eyebrow">{page.eyebrow}</p>
+        <h1>{page.title.name}</h1>
+        <p class="hero-intro">{page.intro}</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href={page.cta.href}>{page.cta.label}</a>
+          <a class="button button-secondary" href="/instructeurs/">Terug naar instructeurs</a>
+        </div>
+      </div>
+      <aside class="hero-proof" aria-label="Status van deze pagina">
+        <span>Wordt aangevuld</span>
+        <p>Deze route staat klaar en wordt later inhoudelijk uitgebreid.</p>
+      </aside>
+    </div>
+  </section>
+
+  <section class="answer-band" aria-labelledby="subpage-summary-title">
+    <div class="container answer-panel">
+      <p class="eyebrow">Voorlopige pagina</p>
+      <h2 id="subpage-summary-title">De route werkt alvast, de volledige inhoud volgt later</h2>
+      <div class="text-stack">
+        {page.body.map((paragraph) => <p>{paragraph}</p>)}
+      </div>
+    </div>
+  </section>
+</BaseLayout>

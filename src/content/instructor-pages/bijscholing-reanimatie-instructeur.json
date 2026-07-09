@@ -1,0 +1,22 @@
+{
+  "title": {
+    "name": "Bijscholing reanimatie-instructeur",
+    "slug": "bijscholing-reanimatie-instructeur"
+  },
+  "seoTitle": "Bijscholing reanimatie-instructeur | Life-Line-Trainingen",
+  "seoDescription": "Houd je NRR-instructeurscertificaat geldig met een praktijkgerichte bijscholing reanimatie-instructeur van 1 dag.",
+  "eyebrow": "Certificaat verlengen",
+  "intro": "Ben je al NRR-instructeur? Houd je certificaat geldig met deze bijscholing van 1 dag. Je frist je vaardigheden voor volwassenen-, kinder- en babyreanimatie op.",
+  "image": "/assets/photos/bls-reanimatie-aed.jpg",
+  "imageAlt": "Bijscholing reanimatie-instructeur met reanimatiepop en AED",
+  "body": [
+    "Deze pagina is alvast ingericht als vaste route voor de bijscholing reanimatie-instructeur. De volledige bijscholingsinformatie wordt later aangevuld.",
+    "Tot die tijd kun je contact opnemen voor data, voorwaarden en mogelijkheden."
+  ],
+  "cta": {
+    "label": "Vraag bijscholing aan",
+    "href": "/contact/"
+  },
+  "visible": true,
+  "indexable": false
+}

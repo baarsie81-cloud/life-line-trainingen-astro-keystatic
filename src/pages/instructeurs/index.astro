@@ -1,0 +1,87 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import page from "../../content/pages/instructeurs.json";
+
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: page.faq.items.map((item) => ({
+    "@type": "Question",
+    name: item.question,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: item.answer,
+    },
+  })),
+};
+---
+
+<BaseLayout title={page.seoTitle} description={page.seoDescription} image={page.hero.image} structuredData={structuredData}>
+  <section class="page-hero instructors-hero">
+    <img class="page-hero-image" src={page.hero.image} alt={page.hero.imageAlt} loading="eager" decoding="async" />
+    <div class="page-hero-overlay"></div>
+    <div class="container page-hero-content">
+      <div class="page-hero-copy">
+        <p class="eyebrow">{page.hero.eyebrow}</p>
+        <h1>{page.hero.title}</h1>
+        <p class="hero-intro">{page.hero.intro}</p>
+        <div class="hero-actions instructor-hero-actions" aria-label="Kies je instructeursroute">
+          {page.routes.map((route) => <a class="button button-primary" href={route.href}>{route.label}</a>)}
+        </div>
+      </div>
+      <aside class="hero-proof" aria-label="Kern van instructeurstrajecten">
+        <span>Maximaal 6 cursisten</span>
+        <p>{page.hero.trust}</p>
+      </aside>
+    </div>
+  </section>
+
+  <section class="answer-band" aria-labelledby="instructor-answer-title">
+    <div class="container answer-panel">
+      <p class="eyebrow">{page.audience.eyebrow}</p>
+      <h2 id="instructor-answer-title">{page.audience.title}</h2>
+      <p>{page.audience.text}</p>
+    </div>
+  </section>
+
+  <section class="section section-soft" aria-labelledby="instructor-routes-title">
+    <div class="container">
+      <div class="section-heading">
+        <p class="eyebrow">Drie routes</p>
+        <h2 id="instructor-routes-title">Welke instructeursroute past bij jou?</h2>
+        <p>Geen niveaus of vergelijkingstabel, maar drie verschillende trajecten met elk een eigen zoekintentie en vervolgpad.</p>
+      </div>
+      <div class="instructor-card-grid">
+        {
+          page.cards.map((card) => (
+            <article class="instructor-path-card">
+              <span>{card.eyebrow}</span>
+              <h3>{card.title}</h3>
+              <p>{card.text}</p>
+              <a href={card.href}>{card.linkLabel}</a>
+            </article>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <section class="section instructors-faq" aria-labelledby="instructors-faq-title">
+    <div class="container faq-grid">
+      <div>
+        <p class="eyebrow">{page.faq.eyebrow}</p>
+        <h2 id="instructors-faq-title">{page.faq.title}</h2>
+      </div>
+      <div class="faq-list">
+        {
+          page.faq.items.map((item) => (
+            <details>
+              <summary>{item.question}</summary>
+              <p>{item.answer}</p>
+            </details>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+</BaseLayout>

@@ -10,9 +10,10 @@ interface Props {
   image?: string;
   type?: string;
   structuredData?: Record<string, unknown>;
+  noindex?: boolean;
 }
 
-const { title, description, image = "/assets/photos/instructeur-zwembad-breed.jpg", type = "website", structuredData } = Astro.props;
+const { title, description, image = "/assets/photos/instructeur-zwembad-breed.jpg", type = "website", structuredData, noindex = false } = Astro.props;
 const canonical = new URL(Astro.url.pathname, site.url);
 const ogImage = new URL(image, site.url);
 ---
@@ -25,6 +26,7 @@ const ogImage = new URL(image, site.url);
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
     <meta name="description" content={description} />
+    {noindex && <meta name="robots" content="noindex, follow" />}
     <link rel="canonical" href={canonical} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />

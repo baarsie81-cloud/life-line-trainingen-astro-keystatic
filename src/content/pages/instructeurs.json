@@ -1,0 +1,75 @@
+{
+  "seoTitle": "Instructeur worden of bijscholen | Life-Line-Trainingen",
+  "seoDescription": "Word NRR-erkend reanimatie-instructeur of blijf gecertificeerd via bijscholing. Kleine groepen, persoonlijke aandacht. Bekijk je opties bij Life-Line-Trainingen.",
+  "hero": {
+    "eyebrow": "Instructeurs",
+    "title": "Instructeur worden of blijven bij Life-Line-Trainingen",
+    "intro": "Bij Life-Line-Trainingen leid je je op tot NRR-erkend reanimatie-instructeur, of blijf je als bestaande instructeur gecertificeerd via bijscholing. We werken met kleine groepen van maximaal 6 cursisten per instructeur-trainer, zodat er echt ruimte is voor persoonlijke aandacht.",
+    "image": "/assets/photos/bls-aed-training-breed.jpg",
+    "imageAlt": "Praktijktraining reanimatie en AED voor instructeurs",
+    "trust": "Drie routes voor drie verschillende instructeursvragen."
+  },
+  "routes": [
+    {
+      "label": "Ik wil instructeur worden",
+      "href": "/instructeurs/opleiding-reanimatie-instructeur/",
+      "title": "Opleiding reanimatie-instructeur"
+    },
+    {
+      "label": "Ik moet bijscholen",
+      "href": "/instructeurs/bijscholing-reanimatie-instructeur/",
+      "title": "Bijscholing reanimatie-instructeur"
+    },
+    {
+      "label": "Ik ben EHBO-instructeur",
+      "href": "/instructeurs/bijscholingsweekend-ehboinstructeurs/",
+      "title": "Bijscholingsweekend EHBOinstructeurs.nl"
+    }
+  ],
+  "audience": {
+    "eyebrow": "Voor wie is dit?",
+    "title": "Kies de route die past bij jouw situatie",
+    "text": "Wil je instructeur worden, maar heb je nog geen ervaring? Dan volg je de opleiding reanimatie-instructeur. Ben je al instructeur en moet je je certificaat verlengen? Dan is de bijscholing reanimatie-instructeur voor jou. Ben je ook actief als Oranje Kruis-, NRR- of SDBREL-instructeur? Dan haal je bij ons bijscholingsweekend in één keer punten voor meerdere certificeringen."
+  },
+  "cards": [
+    {
+      "eyebrow": "Instructeur worden",
+      "title": "Opleiding reanimatie-instructeur (BIC)",
+      "text": "Word in 2 dagen NRR-erkend reanimatie-instructeur. Je hebt geen vooropleiding nodig, wel een geldig reanimatiecertificaat. De opleiding vindt plaats bij Centrum 4.0 in Zevenaar, of op je eigen locatie.",
+      "href": "/instructeurs/opleiding-reanimatie-instructeur/",
+      "linkLabel": "Lees meer"
+    },
+    {
+      "eyebrow": "Certificaat verlengen",
+      "title": "Bijscholing reanimatie-instructeur",
+      "text": "Ben je al NRR-instructeur? Houd je certificaat geldig met deze bijscholing van 1 dag. Je frist je vaardigheden voor volwassenen-, kinder- en babyreanimatie op.",
+      "href": "/instructeurs/bijscholing-reanimatie-instructeur/",
+      "linkLabel": "Lees meer"
+    },
+    {
+      "eyebrow": "Meerdere certificeringen",
+      "title": "Bijscholingsweekend EHBOinstructeurs.nl",
+      "text": "Ben je ook Oranje Kruis-, NRR- of SDBREL-instructeur? Haal in één weekend in Barchem je punten voor meerdere certificeringen. Dit weekend wordt georganiseerd door EHBOinstructeurs.nl, sinds 2026 onderdeel van ons netwerk.",
+      "href": "/instructeurs/bijscholingsweekend-ehboinstructeurs/",
+      "linkLabel": "Lees meer"
+    }
+  ],
+  "faq": {
+    "eyebrow": "Veelgestelde vragen",
+    "title": "Snel duidelijkheid",
+    "items": [
+      {
+        "question": "Moet ik al instructeur zijn om de opleiding te volgen?",
+        "answer": "Nee. Sinds 2023 is er geen vooropleiding meer vereist. Je moet wel een geldig reanimatiecertificaat hebben en fysiek in staat zijn zelf te reanimeren."
+      },
+      {
+        "question": "Wat is het verschil tussen de opleiding en de bijscholing?",
+        "answer": "De opleiding (BIC) leidt je in 2 dagen op tot instructeur, ook als je nog geen ervaring hebt. De bijscholing is voor instructeurs die hun certificaat elke twee jaar moeten verlengen, in 1 dag."
+      },
+      {
+        "question": "Is de EHBOinstructeurs.nl-bijscholing hetzelfde als bij Life-Line zelf boeken?",
+        "answer": "Nee. Aanmelding en facturatie lopen via EHBOinstructeurs.nl, niet via de Life-Line-checkout."
+      }
+    ]
+  }
+}

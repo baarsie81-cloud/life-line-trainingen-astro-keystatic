@@ -1,0 +1,22 @@
+{
+  "title": {
+    "name": "Opleiding reanimatie-instructeur (BIC)",
+    "slug": "opleiding-reanimatie-instructeur"
+  },
+  "seoTitle": "Opleiding reanimatie-instructeur | Life-Line-Trainingen",
+  "seoDescription": "Word in 2 dagen NRR-erkend reanimatie-instructeur. Vooropleiding is niet nodig; een geldig reanimatiecertificaat wel.",
+  "eyebrow": "Instructeur worden",
+  "intro": "Word in 2 dagen NRR-erkend reanimatie-instructeur. Je hebt geen vooropleiding nodig, wel een geldig reanimatiecertificaat. De opleiding vindt plaats bij Centrum 4.0 in Zevenaar, of op je eigen locatie.",
+  "image": "/assets/photos/bls-aed-training-breed.jpg",
+  "imageAlt": "Reanimatie-instructeur opleiding met AED-training",
+  "body": [
+    "Deze pagina is alvast ingericht als vaste route voor de opleiding reanimatie-instructeur. De volledige opleidingsinformatie wordt later aangevuld.",
+    "Tot die tijd kun je contact opnemen voor data, voorwaarden en mogelijkheden op locatie."
+  ],
+  "cta": {
+    "label": "Vraag informatie aan",
+    "href": "/contact/"
+  },
+  "visible": true,
+  "indexable": false
+}

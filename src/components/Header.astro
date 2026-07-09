@@ -11,7 +11,20 @@ const navItems = site.navigation;
     </a>
 
     <nav class="desktop-nav" aria-label="Hoofdnavigatie">
-      {navItems.map((item) => <a href={item.href}>{item.label}</a>)}
+      {
+        navItems.map((item) =>
+          item.children?.length ? (
+            <div class="nav-item">
+              <a class="nav-parent" href={item.href}>{item.label}</a>
+              <div class="desktop-subnav" aria-label={`${item.label} submenu`}>
+                {item.children.map((child) => <a href={child.href}>{child.label}</a>)}
+              </div>
+            </div>
+          ) : (
+            <a href={item.href}>{item.label}</a>
+          )
+        )
+      }
     </nav>
 
     <a class="header-cta" href={site.headerCta.href}>{site.headerCta.label}</a>
@@ -19,7 +32,18 @@ const navItems = site.navigation;
     <details class="mobile-menu">
       <summary>Menu</summary>
       <nav aria-label="Mobiele navigatie">
-        {navItems.map((item) => <a href={item.href}>{item.label}</a>)}
+        {
+          navItems.map((item) => (
+            <>
+              <a href={item.href}>{item.label}</a>
+              {item.children?.length && (
+                <div class="mobile-subnav" aria-label={`${item.label} submenu`}>
+                  {item.children.map((child) => <a href={child.href}>{child.label}</a>)}
+                </div>
+              )}
+            </>
+          ))
+        }
         <a class="mobile-cta" href={site.headerCta.href}>{site.headerCta.label}</a>
       </nav>
     </details>
