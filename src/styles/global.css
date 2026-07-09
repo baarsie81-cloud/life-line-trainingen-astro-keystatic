@@ -2199,6 +2199,11 @@ h3 {
   margin-top: 0.7rem;
 }
 
+.instructor-faq-grid {
+  grid-template-columns: minmax(260px, 0.95fr) minmax(0, 1.05fr);
+  column-gap: clamp(2.25rem, 6vw, 6rem);
+}
+
 .faq-list {
   display: grid;
   gap: 0.85rem;
