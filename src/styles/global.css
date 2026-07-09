@@ -1275,9 +1275,8 @@ h3 {
 .knowledge-hero-inner {
   display: grid;
   min-height: 420px;
-  grid-template-columns: minmax(0, 1fr) 270px;
+  grid-template-columns: minmax(0, 1fr);
   align-items: end;
-  gap: 3rem;
   padding-block: 4.5rem;
 }
 
@@ -1291,26 +1290,6 @@ h3 {
   margin-top: 1.2rem;
   color: rgba(255, 255, 255, 0.84);
   font-size: clamp(1.05rem, 1.65vw, 1.35rem);
-}
-
-.knowledge-hero aside {
-  border-left: 3px solid var(--orange);
-  padding-left: 1.2rem;
-}
-
-.knowledge-hero strong {
-  display: block;
-  color: var(--white);
-  font-size: 3.8rem;
-  font-weight: 900;
-  line-height: 0.95;
-}
-
-.knowledge-hero span {
-  display: block;
-  margin-top: 0.75rem;
-  color: rgba(255, 255, 255, 0.78);
-  font-weight: 800;
 }
 
 .knowledge-featured {
@@ -2605,10 +2584,6 @@ h3 {
   .knowledge-hero-inner {
     min-height: auto;
     padding-block: 3rem;
-  }
-
-  .knowledge-hero aside {
-    max-width: 320px;
   }
 
   .featured-media {
