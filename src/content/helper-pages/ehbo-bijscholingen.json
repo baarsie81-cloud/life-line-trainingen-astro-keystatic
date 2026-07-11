@@ -110,10 +110,9 @@
     {
       "eyebrow": "Toelating",
       "title": "Schrijf je in voor de juiste certificering",
-      "text": "De herhalingsroutes zijn bedoeld voor deelnemers met een geldig certificaat. Kies daarom de checkout die exact aansluit op het certificaat dat je wilt verlengen.",
+      "text": "De herhalingsroutes zijn bedoeld voor deelnemers met een geldig certificaat. Kies daarom de herhaling die exact aansluit op het certificaat dat je wilt verlengen.",
       "items": [
         "Controleer de naam en geldigheidsdatum van je certificaat.",
-        "Gebruik de inschrijfknop voor de actuele planning en voorwaarden.",
         "Neem bij twijfel eerst contact op, zodat je geen verkeerde route boekt."
       ],
       "image": "/assets/photos/instructie-aan-bad.jpg",
