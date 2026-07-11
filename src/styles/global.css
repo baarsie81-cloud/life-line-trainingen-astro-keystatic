@@ -2501,6 +2501,10 @@ h3 {
   color: var(--muted);
 }
 
+.helper-variant-grid-two .helper-variant-heading p {
+  min-height: 7.5rem;
+}
+
 .helper-variant-card dl {
   display: grid;
   gap: 0;
@@ -2912,7 +2916,8 @@ h3 {
   }
 
   .helper-variant-heading h3,
-  .helper-variant-heading p {
+  .helper-variant-heading p,
+  .helper-variant-grid-two .helper-variant-heading p {
     min-height: auto;
   }
 

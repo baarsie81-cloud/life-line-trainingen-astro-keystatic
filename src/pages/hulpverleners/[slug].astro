@@ -103,7 +103,7 @@ const structuredData = [...courseData, faqData].filter(Boolean);
         <h2 id="helper-variants-title">{page.variantsSection.title}</h2>
         <p>{page.variantsSection.text}</p>
       </div>
-      <div class="helper-variant-grid">
+      <div class={`helper-variant-grid${variants.length === 2 ? " helper-variant-grid-two" : ""}`}>
         {variants.length > 0 ? (
           variants.map((variant) => (
             <article class="helper-variant-card">
