@@ -47,7 +47,7 @@
   "variantsSection": {
     "eyebrow": "Drie mogelijkheden",
     "title": "Welke EHBO-opleiding past bij jou?",
-    "text": "Bekijk per opleiding de doelgroep, tijdsinvestering en certificering. De knop brengt je rechtstreeks naar de actuele informatie en inschrijving in Plug&Pay."
+    "text": "Bekijk per opleiding de doelgroep, tijdsinvestering en certificering. Via de knop bij de opleiding bekijk je de actuele informatie en kun je je direct inschrijven."
   },
   "variants": [
     {
@@ -142,7 +142,7 @@
       },
       {
         "question": "Waar vind ik de actuele prijs?",
-        "answer": "Gebruik de inschrijfknop bij de gekozen opleiding. In Plug&Pay staan de actuele prijs, voorwaarden en beschikbare data."
+        "answer": "Gebruik de inschrijfknop bij de gekozen opleiding. Daar vind je de actuele prijs, voorwaarden en beschikbare data."
       }
     ]
   },

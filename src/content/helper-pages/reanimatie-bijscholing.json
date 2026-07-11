@@ -15,8 +15,8 @@
   },
   "eyebrow": "Reanimatie bijscholing",
   "intro": "Heb je al een geldig reanimatiecertificaat? Met een herhalingstraining oefen je de belangrijkste vaardigheden opnieuw en verleng je je certificaat. Kies een bijscholing voor volwassenen of voor baby’s, kinderen en volwassenen.",
-  "image": "/assets/photos/bls-aed-training-breed.jpg",
-  "imageAlt": "Hulpverleners oefenen reanimatie en AED-gebruik tijdens een bijscholing",
+  "image": "/assets/photos/reanimatiebijscholing-aed.jpg",
+  "imageAlt": "Deelnemers oefenen reanimatie en AED-gebruik tijdens een bijscholing",
   "proof": {
     "label": "Blijf voorbereid",
     "text": "Actief herhalen, gerichte feedback krijgen en opnieuw vertrouwen opbouwen in je handelen."
@@ -47,7 +47,7 @@
   "variantsSection": {
     "eyebrow": "Twee mogelijkheden",
     "title": "Welke reanimatiebijscholing heb je nodig?",
-    "text": "Kies dezelfde leeftijdsgroep als waarvoor je gecertificeerd bent. Controleer in Plug&Pay de actuele trainingsdata, prijs en voorwaarden."
+    "text": "Kies dezelfde leeftijdsgroep als waarvoor je gecertificeerd bent. Via de knop bij de training bekijk je de actuele trainingsdata, prijs en voorwaarden."
   },
   "variants": [
     {

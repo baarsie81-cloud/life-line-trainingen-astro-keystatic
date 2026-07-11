@@ -1084,7 +1084,7 @@ export default config({
               description: fields.text({ label: "Omschrijving", multiline: true, validation: { isRequired: true } }),
               preparation: fields.text({ label: "Voorbereiding/voorwaarde", multiline: true }),
               ctaLabel: fields.text({ label: "Knoptekst", validation: { isRequired: true } }),
-              ctaHref: fields.url({ label: "Volledige Plug&Pay-link", validation: { isRequired: true } }),
+              ctaHref: fields.url({ label: "Volledige inschrijflink", validation: { isRequired: true } }),
               visible: fields.checkbox({ label: "Variant zichtbaar", defaultValue: true }),
               order: fields.integer({ label: "Volgorde", validation: { isRequired: true } }),
             },

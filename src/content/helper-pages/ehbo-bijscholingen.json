@@ -47,7 +47,7 @@
   "variantsSection": {
     "eyebrow": "Drie mogelijkheden",
     "title": "Welk EHBO-certificaat wil je verlengen?",
-    "text": "Kies de variant die overeenkomt met je huidige certificaat. De actuele planning, prijs en voorwaarden staan bij de betreffende checkout in Plug&Pay."
+    "text": "Kies de variant die overeenkomt met je huidige certificaat. Via de knop bij de training bekijk je de actuele planning, prijs en voorwaarden."
   },
   "variants": [
     {
@@ -86,7 +86,7 @@
       "format": "Actieve bijscholing",
       "certificate": "Verlenging uitgebreid Rode Kruis-certificaat",
       "description": "Een breed en actief programma met EHBO, kinder-EHBO, reanimatie, AED en scenario-onderwijs voor uiteenlopende noodsituaties.",
-      "preparation": "Controleer je certificaat en bekijk in Plug&Pay de actuele vorm en planning van de editie.",
+      "preparation": "Controleer je certificaat en bekijk via de inschrijfknop de actuele vorm en planning van de editie.",
       "ctaLabel": "Bekijk actuele data en prijs",
       "ctaHref": "https://llt7aar.plugandpay.nl/checkout/rode-kruis-eh4300h-uitgebreide-ehbo-inclusief-kinderen",
       "visible": true,
@@ -113,7 +113,7 @@
       "text": "De herhalingsroutes zijn bedoeld voor deelnemers met een geldig certificaat. Kies daarom de checkout die exact aansluit op het certificaat dat je wilt verlengen.",
       "items": [
         "Controleer de naam en geldigheidsdatum van je certificaat.",
-        "Gebruik de actuele Plug&Pay-pagina voor planning en voorwaarden.",
+        "Gebruik de inschrijfknop voor de actuele planning en voorwaarden.",
         "Neem bij twijfel eerst contact op, zodat je geen verkeerde route boekt."
       ],
       "image": "/assets/photos/instructie-aan-bad.jpg",
@@ -144,7 +144,7 @@
       },
       {
         "question": "Waarom staat er geen prijs op deze pagina?",
-        "answer": "Prijs, planning en voorwaarden kunnen per trainingsvariant of editie verschillen. Via de inschrijfknop zie je altijd de actuele informatie in Plug&Pay."
+        "answer": "Prijs, planning en voorwaarden kunnen per trainingsvariant of editie verschillen. Via de inschrijfknop zie je altijd de actuele informatie."
       }
     ]
   },
