@@ -1,0 +1,151 @@
+{
+  "title": {
+    "name": "Reanimatiebijscholing: houd je vaardigheden geldig",
+    "slug": "reanimatie-bijscholing"
+  },
+  "seoTitle": "Reanimatie bijscholing | Life-Line-Trainingen",
+  "seoDescription": "Verleng je Rode Kruis-reanimatiecertificaat met een praktische herhaling voor volwassenen of voor baby’s, kinderen en volwassenen.",
+  "category": "bijscholing",
+  "card": {
+    "eyebrow": "Reanimatiecertificaat verlengen",
+    "title": "Reanimatiebijscholing",
+    "text": "Fris je vaardigheden op en oefen opnieuw reanimatie, AED-gebruik en herkenbare scenario’s.",
+    "audience": "Voor deelnemers met een geldig reanimatiecertificaat",
+    "linkLabel": "Bekijk de reanimatiebijscholingen"
+  },
+  "eyebrow": "Reanimatie bijscholing",
+  "intro": "Heb je al een geldig reanimatiecertificaat? Met een herhalingstraining oefen je de belangrijkste vaardigheden opnieuw en verleng je je certificaat. Kies een bijscholing voor volwassenen of voor baby’s, kinderen en volwassenen.",
+  "image": "/assets/photos/bls-aed-training-breed.jpg",
+  "imageAlt": "Hulpverleners oefenen reanimatie en AED-gebruik tijdens een bijscholing",
+  "proof": {
+    "label": "Blijf voorbereid",
+    "text": "Actief herhalen, gerichte feedback krijgen en opnieuw vertrouwen opbouwen in je handelen."
+  },
+  "facts": [
+    {
+      "label": "Voorwaarde",
+      "value": "Geldig certificaat"
+    },
+    {
+      "label": "Keuze",
+      "value": "2 bijscholingen"
+    },
+    {
+      "label": "Onderwerp",
+      "value": "Reanimatie en AED"
+    },
+    {
+      "label": "Resultaat",
+      "value": "Certificaat verlengen"
+    }
+  ],
+  "summary": {
+    "eyebrow": "Direct antwoord",
+    "title": "Herhaal voordat je certificaat verloopt",
+    "text": "Een reanimatiebijscholing is bedoeld voor hulpverleners met een geldig certificaat. Je traint de volledige aanpak opnieuw, scherpt je techniek aan en oefent hoe je in een noodsituatie snel en doelgericht handelt."
+  },
+  "variantsSection": {
+    "eyebrow": "Twee mogelijkheden",
+    "title": "Welke reanimatiebijscholing heb je nodig?",
+    "text": "Kies dezelfde leeftijdsgroep als waarvoor je gecertificeerd bent. Controleer in Plug&Pay de actuele trainingsdata, prijs en voorwaarden."
+  },
+  "variants": [
+    {
+      "code": "EH2100h",
+      "title": "Herhaling reanimatie en AED voor volwassenen",
+      "audience": "Voor deelnemers met een geldig certificaat voor reanimatie bij volwassenen.",
+      "duration": "2 uur praktijk",
+      "format": "Klassikale herhaling",
+      "certificate": "Verlenging Rode Kruis-certificaat",
+      "description": "Je oefent borstcompressies, beademingen, AED-gebruik en de aanpak van herkenbare noodsituaties bij volwassenen.",
+      "preparation": "Controleer voor inschrijving of je huidige certificaat op de trainingsdag nog geldig is.",
+      "ctaLabel": "Bekijk actuele data en prijs",
+      "ctaHref": "https://llt7aar.plugandpay.nl/checkout/rode-kruis-reanimatie-training-eh2100h-herhaling",
+      "visible": true,
+      "order": 1
+    },
+    {
+      "code": "EH2105h",
+      "title": "Herhaling reanimatie voor alle leeftijden",
+      "audience": "Voor deelnemers met een geldig certificaat voor baby’s, kinderen en volwassenen.",
+      "duration": "4 uur praktijk",
+      "format": "Klassikale herhaling",
+      "certificate": "Verlenging Rode Kruis-certificaat",
+      "description": "Je herhaalt reanimatie en AED-gebruik voor verschillende leeftijden en oefent de verschillen in aanpak bij baby’s, kinderen en volwassenen.",
+      "preparation": "Controleer voor inschrijving of je huidige certificaat op de trainingsdag nog geldig is.",
+      "ctaLabel": "Bekijk actuele data en prijs",
+      "ctaHref": "https://llt7aar.plugandpay.nl/checkout/rode-kruis-eh2105h-reanimatie-training-volwassenen-baby-kind-herhaling",
+      "visible": true,
+      "order": 2
+    }
+  ],
+  "sections": [
+    {
+      "eyebrow": "Actief herhalen",
+      "title": "Vaardigheden onderhouden door opnieuw te doen",
+      "text": "Reanimatievaardigheden blijven alleen scherp als je ze regelmatig oefent. Tijdens de bijscholing doorloop je de hulpverlening opnieuw en krijg je feedback op je techniek en keuzes.",
+      "items": [
+        "Een hartstilstand snel herkennen.",
+        "Borstcompressies en beademingen technisch goed uitvoeren.",
+        "Een AED veilig en zonder onnodige vertraging gebruiken.",
+        "Handelen in gesimuleerde praktijksituaties."
+      ],
+      "image": "/assets/photos/bls-reanimatie-aed.jpg",
+      "imageAlt": "Reanimatiepop en AED tijdens een praktische herhalingstraining"
+    },
+    {
+      "eyebrow": "Toelating",
+      "title": "Je huidige certificaat moet nog geldig zijn",
+      "text": "Een bijscholing is bedoeld om een bestaand certificaat te verlengen. Is je certificaat al verlopen, dan kan het nodig zijn om opnieuw de volledige opleiding te volgen.",
+      "items": [
+        "Controleer de geldigheidsdatum vóór je inschrijving.",
+        "Kies de variant die aansluit op je huidige certificering.",
+        "Twijfel je? Neem eerst contact op voordat je een plek boekt."
+      ],
+      "image": "/assets/photos/instructie-aan-bad.jpg",
+      "imageAlt": "Instructeur begeleidt deelnemers tijdens een reanimatiebijscholing"
+    }
+  ],
+  "reasons": {
+    "eyebrow": "Waarom Life-Line",
+    "title": "Gericht oefenen op wat er echt toe doet",
+    "items": [
+      "De beschikbare tijd wordt gebruikt voor actieve herhaling en scenario’s.",
+      "Je krijgt persoonlijke aanwijzingen om je techniek verder aan te scherpen.",
+      "Je oefent met reanimatiepoppen en AED-trainers.",
+      "Je kiest een variant die aansluit op de leeftijden waarvoor je gecertificeerd bent."
+    ]
+  },
+  "faq": {
+    "eyebrow": "Veelgestelde vragen",
+    "title": "FAQ over de reanimatiebijscholing",
+    "items": [
+      {
+        "question": "Wanneer moet ik een bijscholing volgen?",
+        "answer": "Volg de bijscholing voordat je huidige certificaat verloopt. Controleer de geldigheidsdatum ruim voor je een trainingsmoment kiest."
+      },
+      {
+        "question": "Wat als mijn certificaat al verlopen is?",
+        "answer": "Dan kan een volledige opleiding nodig zijn. Neem contact op zodat we kunnen controleren welke route bij jouw situatie past."
+      },
+      {
+        "question": "Worden baby- en kinderreanimatie ook behandeld?",
+        "answer": "Alleen in de variant voor baby’s, kinderen en volwassenen. De andere bijscholing richt zich uitsluitend op volwassenen."
+      }
+    ]
+  },
+  "finalCta": {
+    "eyebrow": "Bijscholing voor collega’s",
+    "title": "Meerdere certificaten tegelijk verlengen?",
+    "text": "Vertel ons om hoeveel deelnemers het gaat en welke certificaten zij hebben. Dan kijken we naar een passende groepstraining.",
+    "button": {
+      "label": "Bespreek een groepstraining",
+      "href": "/contact/"
+    }
+  },
+  "visible": true,
+  "indexable": true,
+  "showOnHub": true,
+  "showInMenu": true,
+  "order": 3
+}

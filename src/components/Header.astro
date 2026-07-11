@@ -1,7 +1,19 @@
 ---
 import site from "../content/settings/site.json";
 
-const navItems = site.navigation;
+const helperPageFiles = import.meta.glob("../content/helper-pages/*.json", { eager: true });
+const helperNavItems = Object.values(helperPageFiles)
+  .map((entry: any) => entry.default)
+  .filter((page) => page.visible && page.showInMenu)
+  .sort((a, b) => a.order - b.order)
+  .map((page) => ({
+    label: page.card.title,
+    href: `/hulpverleners/${page.title.slug}/`,
+  }));
+
+const navItems = site.navigation.map((item) =>
+  item.href === "/hulpverleners/" ? { ...item, children: helperNavItems } : item
+);
 ---
 
 <header class="site-header">

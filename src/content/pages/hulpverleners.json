@@ -1,0 +1,87 @@
+{
+  "seoTitle": "EHBO- en reanimatietrainingen | Life-Line-Trainingen",
+  "seoDescription": "Kies een praktijkgerichte EHBO- of reanimatietraining van Life-Line-Trainingen. Behaal een Rode Kruis-certificaat of houd je vaardigheden geldig.",
+  "hero": {
+    "eyebrow": "Hulpverleners",
+    "title": "EHBO- en reanimatietrainingen voor mensen die willen handelen",
+    "intro": "Wil je leren reanimeren, een EHBO-certificaat behalen of je bestaande certificaat verlengen? Kies de route die past bij jouw ervaring en de mensen aan wie jij hulp wilt kunnen verlenen.",
+    "image": "/assets/photos/bls-reanimatie-aed.jpg",
+    "imageAlt": "Praktijkgerichte reanimatietraining met AED en reanimatiepop",
+    "trust": "Praktisch trainen, duidelijke keuzes en erkende Rode Kruis-certificering.",
+    "primaryCta": {
+      "label": "Bekijk de vier routes",
+      "href": "#trainingsroutes"
+    },
+    "secondaryCta": {
+      "label": "Hulp bij kiezen",
+      "href": "/contact/"
+    }
+  },
+  "quickAnswer": {
+    "eyebrow": "Direct antwoord",
+    "title": "Welke training past bij jou?",
+    "text": "Begin je zonder geldig certificaat, kies dan een opleiding EHBO of een reanimatietraining. Heb je al een geldig Rode Kruis-certificaat en wil je dit verlengen, kies dan een reanimatiebijscholing of een van de EHBO-bijscholingen. Op iedere routepagina zie je de varianten voor volwassenen, kinderen of alle leeftijden."
+  },
+  "groups": {
+    "opleiding": {
+      "eyebrow": "Starten of verbreden",
+      "title": "Een certificaat behalen",
+      "text": "Voor wie nieuwe vaardigheden wil leren en een erkend certificaat wil behalen. Kies tussen een volledige EHBO-opleiding en een gerichte reanimatietraining."
+    },
+    "bijscholing": {
+      "eyebrow": "Kennis onderhouden",
+      "title": "Je certificaat verlengen",
+      "text": "Voor hulpverleners met een geldig certificaat die hun vaardigheden willen oefenen, aanscherpen en opnieuw laten certificeren."
+    }
+  },
+  "trust": {
+    "eyebrow": "Leren door te doen",
+    "title": "Praktisch, persoonlijk en direct toepasbaar",
+    "text": "Je oefent met herkenbare noodsituaties, actuele materialen en begeleiding die je helpt om met vertrouwen te handelen.",
+    "items": [
+      {
+        "title": "Praktijkgericht",
+        "text": "Geen lange theoriedag, maar voorbereid naar de training komen en de beschikbare tijd gebruiken om echt te oefenen."
+      },
+      {
+        "title": "Erkende certificering",
+        "text": "De opleidingen en bijscholingen op deze pagina sluiten aan op de certificering van het Nederlandse Rode Kruis."
+      },
+      {
+        "title": "Duidelijke keuze",
+        "text": "Per route zie je voor wie de training bedoeld is, welke voorbereiding nodig is en welke checkout bij jouw situatie hoort."
+      }
+    ]
+  },
+  "faq": {
+    "eyebrow": "Veelgestelde vragen",
+    "title": "Snel de juiste route kiezen",
+    "items": [
+      {
+        "question": "Wat is het verschil tussen een opleiding en een bijscholing?",
+        "answer": "Een opleiding is bedoeld om nieuwe vaardigheden te leren en een certificaat te behalen. Een bijscholing is bedoeld voor deelnemers die al een geldig certificaat hebben en dit willen verlengen."
+      },
+      {
+        "question": "Kan ik kiezen tussen een training voor volwassenen en een training voor alle leeftijden?",
+        "answer": "Ja. Bij de reanimatietrainingen en reanimatiebijscholingen kun je kiezen tussen alleen volwassenen of baby’s, kinderen en volwassenen."
+      },
+      {
+        "question": "Waar zie ik de actuele prijs en beschikbare data?",
+        "answer": "Via de inschrijfknop bij iedere trainingsvariant ga je rechtstreeks naar Plug&Pay. Daar staan de actuele prijs, voorwaarden en beschikbare momenten."
+      },
+      {
+        "question": "Kan Life-Line-Trainingen ook bij onze organisatie trainen?",
+        "answer": "Dat is voor verschillende trainingen mogelijk. Neem contact op en vertel kort om welke groep en leerbehoefte het gaat, dan bespreken we de mogelijkheden."
+      }
+    ]
+  },
+  "finalCta": {
+    "eyebrow": "Nog niet zeker?",
+    "title": "Vertel ons wat je wilt leren of verlengen",
+    "text": "We helpen je graag kiezen tussen de opleidingen en bijscholingen, voor jezelf of voor een team.",
+    "button": {
+      "label": "Vraag persoonlijk advies",
+      "href": "/contact/"
+    }
+  }
+}

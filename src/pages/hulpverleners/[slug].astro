@@ -1,0 +1,223 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import site from "../../content/settings/site.json";
+
+export const prerender = true;
+
+export function getStaticPaths() {
+  const pageFiles = import.meta.glob("../../content/helper-pages/*.json", { eager: true });
+  const pages = Object.values(pageFiles)
+    .map((entry: any) => entry.default)
+    .filter((page) => page.visible);
+
+  return pages.map((page) => ({
+    params: { slug: page.title.slug },
+    props: { page },
+  }));
+}
+
+const { page } = Astro.props;
+const variants = page.variants.filter((variant) => variant.visible).sort((a, b) => a.order - b.order);
+const courseData = page.indexable
+  ? variants.map((variant) => ({
+      "@context": "https://schema.org",
+      "@type": "Course",
+      name: variant.title,
+      description: variant.description,
+      image: new URL(page.image, site.url).href,
+      url: new URL(`/hulpverleners/${page.title.slug}/`, site.url).href,
+      provider: {
+        "@type": "EducationalOrganization",
+        name: site.name,
+        url: site.url,
+      },
+      courseMode: variant.format,
+    }))
+  : [];
+const faqData = page.indexable && page.faq?.items?.length
+  ? {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: page.faq.items.map((item) => ({
+        "@type": "Question",
+        name: item.question,
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: item.answer,
+        },
+      })),
+    }
+  : undefined;
+const structuredData = [...courseData, faqData].filter(Boolean);
+---
+
+<BaseLayout
+  title={page.seoTitle}
+  description={page.seoDescription}
+  image={page.image}
+  noindex={!page.indexable}
+  structuredData={structuredData}
+>
+  <section class="page-hero helper-subpage-hero">
+    <img class="page-hero-image" src={page.image} alt={page.imageAlt} loading="eager" decoding="async" />
+    <div class="page-hero-overlay"></div>
+    <div class="container page-hero-content">
+      <div class="page-hero-copy">
+        <p class="eyebrow">{page.eyebrow}</p>
+        <h1>{page.title.name}</h1>
+        <p class="hero-intro">{page.intro}</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#trainingsvarianten">Bekijk de mogelijkheden</a>
+          <a class="button button-secondary" href="/hulpverleners/">Terug naar hulpverleners</a>
+        </div>
+      </div>
+      <aside class="hero-proof" aria-label="Kern van deze training">
+        <span>{page.proof.label}</span>
+        <p>{page.proof.text}</p>
+      </aside>
+    </div>
+  </section>
+
+  <section class="answer-band helper-summary" aria-labelledby="helper-summary-title">
+    <div class="container answer-panel">
+      <p class="eyebrow">{page.summary.eyebrow}</p>
+      <h2 id="helper-summary-title">{page.summary.title}</h2>
+      <p>{page.summary.text}</p>
+      <div class="fact-grid" aria-label="Kerngegevens van deze route">
+        {
+          page.facts.map((fact) => (
+            <div>
+              <span>{fact.label}</span>
+              <strong>{fact.value}</strong>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-soft helper-variants-section" id="trainingsvarianten" aria-labelledby="helper-variants-title">
+    <div class="container">
+      <div class="section-heading">
+        <p class="eyebrow">{page.variantsSection.eyebrow}</p>
+        <h2 id="helper-variants-title">{page.variantsSection.title}</h2>
+        <p>{page.variantsSection.text}</p>
+      </div>
+      <div class="helper-variant-grid">
+        {variants.length > 0 ? (
+          variants.map((variant) => (
+            <article class="helper-variant-card">
+              <div class="helper-variant-heading">
+                <span>{variant.code}</span>
+                <h3>{variant.title}</h3>
+                <p>{variant.audience}</p>
+              </div>
+              <dl>
+                <div>
+                  <dt>Duur</dt>
+                  <dd>{variant.duration}</dd>
+                </div>
+                <div>
+                  <dt>Lesvorm</dt>
+                  <dd>{variant.format}</dd>
+                </div>
+                <div>
+                  <dt>Certificering</dt>
+                  <dd>{variant.certificate}</dd>
+                </div>
+              </dl>
+              <p class="helper-variant-description">{variant.description}</p>
+              {variant.preparation && (
+                <aside class="helper-variant-notice">
+                  <strong>Goed om te weten</strong>
+                  <p>{variant.preparation}</p>
+                </aside>
+              )}
+              <a class="button button-primary helper-checkout" href={variant.ctaHref} target="_blank" rel="noopener noreferrer">
+                {variant.ctaLabel}
+              </a>
+            </article>
+          ))
+        ) : (
+          <aside class="helper-empty-state">
+            <h3>Op dit moment staan er geen openbare trainingsvarianten klaar</h3>
+            <p>Neem contact op, dan kijken we samen welke training bij jouw situatie past.</p>
+            <a class="button button-primary" href="/contact/">Vraag persoonlijk advies</a>
+          </aside>
+        )}
+      </div>
+      {variants.length > 0 && <p class="helper-price-note">Actuele prijzen, voorwaarden en trainingsdata staan in Plug&amp;Pay.</p>}
+    </div>
+  </section>
+
+  {
+    page.sections.map((section, index) => (
+      <section class={`section helper-detail-section${index % 2 === 1 ? " section-soft" : ""}`}>
+        <div class="container split-grid">
+          <div class="text-stack">
+            <p class="eyebrow">{section.eyebrow}</p>
+            <h2>{section.title}</h2>
+            <p>{section.text}</p>
+            {section.items?.length > 0 && (
+              <ul class="check-list">
+                {section.items.map((item) => <li>{item}</li>)}
+              </ul>
+            )}
+          </div>
+          <figure class="instructor-image-card helper-image-card">
+            <img src={section.image} alt={section.imageAlt} loading="lazy" decoding="async" />
+          </figure>
+        </div>
+      </section>
+    ))
+  }
+
+  <section class="section section-soft" aria-labelledby="helper-reasons-title">
+    <div class="container">
+      <div class="section-heading">
+        <p class="eyebrow">{page.reasons.eyebrow}</p>
+        <h2 id="helper-reasons-title">{page.reasons.title}</h2>
+      </div>
+      <div class="reason-grid helper-reason-grid">
+        {
+          page.reasons.items.map((item, index) => (
+            <article>
+              <span>{String(index + 1).padStart(2, "0")}</span>
+              <p>{item}</p>
+            </article>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <section class="section helpers-faq" aria-labelledby="helper-faq-title">
+    <div class="container faq-grid helper-faq-grid">
+      <div>
+        <p class="eyebrow">{page.faq.eyebrow}</p>
+        <h2 id="helper-faq-title">{page.faq.title}</h2>
+      </div>
+      <div class="faq-list">
+        {
+          page.faq.items.map((item) => (
+            <details>
+              <summary>{item.question}</summary>
+              <p>{item.answer}</p>
+            </details>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <section class="final-cta">
+    <div class="container final-cta-inner">
+      <div>
+        <p class="eyebrow">{page.finalCta.eyebrow}</p>
+        <h2>{page.finalCta.title}</h2>
+        <p>{page.finalCta.text}</p>
+      </div>
+      <a class="button button-light" href={page.finalCta.button.href}>{page.finalCta.button.label}</a>
+    </div>
+  </section>
+</BaseLayout>

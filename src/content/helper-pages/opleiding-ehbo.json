@@ -1,0 +1,164 @@
+{
+  "title": {
+    "name": "EHBO-opleiding die past bij jouw situatie",
+    "slug": "opleiding-ehbo"
+  },
+  "seoTitle": "EHBO-cursus en opleiding | Life-Line-Trainingen",
+  "seoDescription": "Behaal een Rode Kruis-certificaat met een praktijkgerichte EHBO-cursus voor volwassenen, kinderen of alle leeftijden bij Life-Line-Trainingen.",
+  "category": "opleiding",
+  "card": {
+    "eyebrow": "EHBO-certificaat behalen",
+    "title": "Opleiding EHBO",
+    "text": "Kies EHBO voor volwassenen, Eerste Hulp aan Kinderen of de uitgebreide opleiding voor alle leeftijden.",
+    "audience": "Voor deelnemers zonder geldig EHBO-certificaat",
+    "linkLabel": "Bekijk de EHBO-opleidingen"
+  },
+  "eyebrow": "Opleiding EHBO",
+  "intro": "Wil je weten wat je moet doen bij een ongeluk of medische noodsituatie? Kies een EHBO-opleiding voor volwassenen, kinderen of alle leeftijden. Je bereidt je online voor en gebruikt de praktijktraining om vaardigheden echt te oefenen.",
+  "image": "/assets/photos/instructie-aan-bad.jpg",
+  "imageAlt": "Instructeur begeleidt deelnemers tijdens een praktische EHBO-training",
+  "proof": {
+    "label": "Drie opleidingen",
+    "text": "Van Eerste Hulp aan Kinderen tot uitgebreide EHBO voor baby’s, kinderen en volwassenen."
+  },
+  "facts": [
+    {
+      "label": "Lesvorm",
+      "value": "Blended leren"
+    },
+    {
+      "label": "Keuze",
+      "value": "3 opleidingen"
+    },
+    {
+      "label": "Certificering",
+      "value": "Rode Kruis"
+    },
+    {
+      "label": "Aanpak",
+      "value": "Theorie en praktijk"
+    }
+  ],
+  "summary": {
+    "eyebrow": "Direct antwoord",
+    "title": "Kies op basis van wie jij wilt kunnen helpen",
+    "text": "De basisopleiding EHBO richt zich op volwassenen. Eerste Hulp aan Kinderen is bedoeld voor iedereen die veel met baby’s en kinderen omgaat. Wil je één complete opleiding voor alle leeftijden, kies dan Uitgebreide EHBO inclusief Eerste Hulp aan Kinderen."
+  },
+  "variantsSection": {
+    "eyebrow": "Drie mogelijkheden",
+    "title": "Welke EHBO-opleiding past bij jou?",
+    "text": "Bekijk per opleiding de doelgroep, tijdsinvestering en certificering. De knop brengt je rechtstreeks naar de actuele informatie en inschrijving in Plug&Pay."
+  },
+  "variants": [
+    {
+      "code": "EH3110p",
+      "title": "EHBO voor volwassenen",
+      "audience": "Voor wie eerste hulp wil leren verlenen aan volwassenen.",
+      "duration": "8 uur online + 4 uur praktijk",
+      "format": "Blended training",
+      "certificate": "Rode Kruis-certificaat",
+      "description": "Je leert de basisvaardigheden van eerste hulp, waaronder handelen bij letsels en medische noodsituaties, reanimatie en het gebruik van een AED.",
+      "preparation": "Rond de e-learning en toetsen volledig af voordat het praktijkdeel begint.",
+      "ctaLabel": "Bekijk actuele data en prijs",
+      "ctaHref": "https://llt7aar.plugandpay.nl/checkout/rode-kruis-eh3110p-cursus-ehbo-blended",
+      "visible": true,
+      "order": 1
+    },
+    {
+      "code": "EH3112p",
+      "title": "Eerste Hulp aan Kinderen",
+      "audience": "Voor ouders, grootouders, gastouders en professionals die met kinderen werken.",
+      "duration": "4 tot 6 uur online + 4 uur praktijk",
+      "format": "Blended training",
+      "certificate": "Wet IKK-erkend Rode Kruis-certificaat",
+      "description": "Je leert eerste hulp verlenen aan baby’s en kinderen, van verslikking en letsels tot reanimatie en AED-gebruik.",
+      "preparation": "Rond de e-learning en toetsen volledig af voordat het praktijkdeel begint.",
+      "ctaLabel": "Bekijk actuele data en prijs",
+      "ctaHref": "https://llt7aar.plugandpay.nl/checkout/rode-kruis-eh3112p-cursus-ehak-blended",
+      "visible": true,
+      "order": 2
+    },
+    {
+      "code": "EH4310p",
+      "title": "Uitgebreide EHBO inclusief kinderen",
+      "audience": "Voor wie één complete EHBO-opleiding wil voor baby’s, kinderen en volwassenen.",
+      "duration": "16 uur online + 8 uur praktijk",
+      "format": "Blended training",
+      "certificate": "Uitgebreid Rode Kruis-certificaat",
+      "description": "De meest complete route met eerste hulp, reanimatie en AED voor alle leeftijden. Je oefent breed en leert systematisch handelen in uiteenlopende noodsituaties.",
+      "preparation": "Rond de uitgebreide e-learning en toetsen volledig af voordat het praktijkdeel begint.",
+      "ctaLabel": "Bekijk actuele data en prijs",
+      "ctaHref": "https://llt7aar.plugandpay.nl/checkout/rode-kruis-uitgebreide-eerste-hulp-inclusief-kinderen",
+      "visible": true,
+      "order": 3
+    }
+  ],
+  "sections": [
+    {
+      "eyebrow": "Blended leren",
+      "title": "Goed voorbereid naar de praktijktraining",
+      "text": "Je maakt eerst de e-learning die bij jouw opleiding hoort. Daardoor ken je de belangrijkste stappen al voordat je met de instructeur gaat oefenen.",
+      "items": [
+        "Je doorloopt de theorie in je eigen tempo.",
+        "Je rondt de online toetsen af voor het praktijkdeel.",
+        "Tijdens de praktijktraining ligt de nadruk op doen, feedback en herhalen."
+      ],
+      "image": "/assets/photos/bls-aed-training-breed.jpg",
+      "imageAlt": "Deelnemers oefenen praktische hulpverlening met trainingsmaterialen"
+    },
+    {
+      "eyebrow": "Na afloop",
+      "title": "Een certificaat dat past bij jouw gekozen opleiding",
+      "text": "Wanneer je de voorbereiding voldoende hebt afgerond en actief aan de praktijktraining hebt deelgenomen, ontvang je het bijbehorende Rode Kruis-certificaat.",
+      "items": [
+        "Kies vooraf zorgvuldig welke leeftijdsgroep bij jouw situatie past.",
+        "Bekijk in Plug&Pay de actuele voorwaarden en trainingsmomenten.",
+        "Voor een groep of training op locatie kun je rechtstreeks contact opnemen."
+      ],
+      "image": "/assets/photos/bls-reanimatie-aed.jpg",
+      "imageAlt": "AED en reanimatiepop tijdens een praktijkgerichte EHBO-opleiding"
+    }
+  ],
+  "reasons": {
+    "eyebrow": "Waarom Life-Line",
+    "title": "Niet alleen weten wat moet, maar ook durven doen",
+    "items": [
+      "Je gebruikt de praktijktraining om veel te oefenen in herkenbare situaties.",
+      "De instructeur geeft persoonlijke feedback op jouw handelen.",
+      "De opleiding combineert een duidelijke online voorbereiding met actieve praktijk.",
+      "Je kiest vooraf de opleiding en certificering die bij jouw situatie past."
+    ]
+  },
+  "faq": {
+    "eyebrow": "Veelgestelde vragen",
+    "title": "FAQ over de EHBO-opleidingen",
+    "items": [
+      {
+        "question": "Welke EHBO-opleiding moet ik kiezen?",
+        "answer": "Kies EHBO voor volwassenen als je je daarop wilt richten. Werk je veel met kinderen, kies dan Eerste Hulp aan Kinderen. Wil je één complete opleiding voor alle leeftijden, kies dan Uitgebreide EHBO inclusief kinderen."
+      },
+      {
+        "question": "Moet ik de e-learning vooraf afronden?",
+        "answer": "Ja. De e-learning en bijbehorende toetsen moeten voldoende zijn afgerond voordat je aan het praktijkdeel kunt deelnemen."
+      },
+      {
+        "question": "Waar vind ik de actuele prijs?",
+        "answer": "Gebruik de inschrijfknop bij de gekozen opleiding. In Plug&Pay staan de actuele prijs, voorwaarden en beschikbare data."
+      }
+    ]
+  },
+  "finalCta": {
+    "eyebrow": "Voor teams en organisaties",
+    "title": "Een EHBO-opleiding voor meerdere collega’s?",
+    "text": "Vertel ons voor wie de training bedoeld is en wat jullie in de praktijk nodig hebben. Dan denken we mee over de passende route.",
+    "button": {
+      "label": "Bespreek een groepstraining",
+      "href": "/contact/"
+    }
+  },
+  "visible": true,
+  "indexable": true,
+  "showOnHub": true,
+  "showInMenu": true,
+  "order": 1
+}

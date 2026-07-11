@@ -1,0 +1,151 @@
+{
+  "title": {
+    "name": "Reanimatietraining met AED",
+    "slug": "reanimatie-training"
+  },
+  "seoTitle": "Reanimatiecursus met AED | Life-Line-Trainingen",
+  "seoDescription": "Leer reanimeren en een AED gebruiken bij volwassenen of bij baby’s, kinderen en volwassenen. Praktijkgerichte Rode Kruis-training.",
+  "category": "opleiding",
+  "card": {
+    "eyebrow": "Levensreddend handelen",
+    "title": "Reanimatietraining",
+    "text": "Leer een hartstilstand herkennen, direct reanimeren en veilig een AED gebruiken.",
+    "audience": "Voor iedereen, met of zonder ervaring",
+    "linkLabel": "Bekijk de reanimatietrainingen"
+  },
+  "eyebrow": "Reanimatie en AED",
+  "intro": "In deze training leer je een hartstilstand herkennen, de hulpverlening starten, reanimeren en veilig een AED gebruiken. Kies een training voor volwassenen of een complete variant voor baby’s, kinderen en volwassenen.",
+  "image": "/assets/photos/bls-reanimatie-aed.jpg",
+  "imageAlt": "Reanimatietraining met reanimatiepop en AED",
+  "proof": {
+    "label": "Voor iedereen",
+    "text": "Een korte, praktische cursus die je voorbereidt om direct te handelen bij een hartstilstand."
+  },
+  "facts": [
+    {
+      "label": "Lesvorm",
+      "value": "Blended leren"
+    },
+    {
+      "label": "Keuze",
+      "value": "2 trainingen"
+    },
+    {
+      "label": "Onderwerp",
+      "value": "Reanimatie en AED"
+    },
+    {
+      "label": "Certificering",
+      "value": "Rode Kruis"
+    }
+  ],
+  "summary": {
+    "eyebrow": "Direct antwoord",
+    "title": "Leer wat je moet doen als iedere seconde telt",
+    "text": "Je leert stap voor stap hoe je reageert bij bewusteloosheid en een hartstilstand. Je oefent borstcompressies, beademingen en het gebruik van een AED onder begeleiding van een ervaren instructeur."
+  },
+  "variantsSection": {
+    "eyebrow": "Twee mogelijkheden",
+    "title": "Voor welke leeftijden wil je leren reanimeren?",
+    "text": "Kies alleen volwassenen of de complete training voor baby’s, kinderen en volwassenen. In Plug&Pay vind je de actuele prijs en beschikbare trainingsdata."
+  },
+  "variants": [
+    {
+      "code": "EH2110p",
+      "title": "Reanimatie en AED voor volwassenen",
+      "audience": "Voor iedereen die wil leren handelen bij een hartstilstand bij volwassenen.",
+      "duration": "2 uur online + 2 uur praktijk",
+      "format": "Blended training",
+      "certificate": "Rode Kruis-certificaat",
+      "description": "Je leert een hartstilstand herkennen, de hulpverlening starten, borstcompressies en beademingen geven en een AED veilig gebruiken.",
+      "preparation": "Voltooi de e-learning en toetsen voordat het praktijkdeel begint.",
+      "ctaLabel": "Bekijk actuele data en prijs",
+      "ctaHref": "https://llt7aar.plugandpay.nl/checkout/rode-kruis-reanimatie-training-eh2110p",
+      "visible": true,
+      "order": 1
+    },
+    {
+      "code": "EH2115p",
+      "title": "Reanimatie en AED voor alle leeftijden",
+      "audience": "Voor wie wil leren reanimeren bij baby’s, kinderen en volwassenen.",
+      "duration": "2,5 uur online + 3,5 uur praktijk",
+      "format": "Blended training",
+      "certificate": "Rode Kruis-certificaat",
+      "description": "Je oefent levensreddend handelen voor verschillende leeftijden en leert hoe de aanpak bij baby’s en kinderen verschilt van die bij volwassenen.",
+      "preparation": "Voltooi de e-learning en toetsen voordat het praktijkdeel begint.",
+      "ctaLabel": "Bekijk actuele data en prijs",
+      "ctaHref": "https://llt7aar.plugandpay.nl/checkout/rode-kruis-reanimatie-training-volwassenen-baby-kind-eh2115p",
+      "visible": true,
+      "order": 2
+    }
+  ],
+  "sections": [
+    {
+      "eyebrow": "Wat je leert",
+      "title": "Van herkennen naar direct handelen",
+      "text": "Tijdens het praktijkdeel oefen je de volledige hulpverlening. Je leert niet alleen de techniek, maar ook hoe je rustig blijft en de juiste stappen in de goede volgorde uitvoert.",
+      "items": [
+        "Een bewusteloos slachtoffer en hartstilstand herkennen.",
+        "Professionele hulp inschakelen en de hulpverlening organiseren.",
+        "Effectieve borstcompressies en beademingen geven.",
+        "Een AED aansluiten en veilig gebruiken."
+      ],
+      "image": "/assets/photos/bls-aed-training-breed.jpg",
+      "imageAlt": "Deelnemers oefenen reanimatie en AED-gebruik"
+    },
+    {
+      "eyebrow": "Na afloop",
+      "title": "Voorbereid om het verschil te maken",
+      "text": "Na voldoende afronding van de voorbereiding en actieve deelname aan de praktijktraining ontvang je het bijbehorende Rode Kruis-certificaat.",
+      "items": [
+        "Het certificaat is twee jaar geldig.",
+        "Met een passend certificaat kun je je aanmelden als burgerhulpverlener.",
+        "Een mogelijke vergoeding verschilt per zorgverzekeraar en aanvullende verzekering."
+      ],
+      "image": "/assets/photos/instructie-aan-bad.jpg",
+      "imageAlt": "Instructeur geeft persoonlijke feedback tijdens een reanimatietraining"
+    }
+  ],
+  "reasons": {
+    "eyebrow": "Waarom Life-Line",
+    "title": "Oefenen tot je weet wat je moet doen",
+    "items": [
+      "Je bereidt je online voor en gebruikt de praktijktraining om veel te oefenen.",
+      "Je traint met reanimatiepoppen en AED-trainers onder deskundige begeleiding.",
+      "De stappen worden helder opgebouwd, ook als je nog geen ervaring hebt.",
+      "Je kiest zelf of je alleen volwassenen of alle leeftijden wilt leren helpen."
+    ]
+  },
+  "faq": {
+    "eyebrow": "Veelgestelde vragen",
+    "title": "FAQ over de reanimatietraining",
+    "items": [
+      {
+        "question": "Heb ik ervaring nodig om mee te doen?",
+        "answer": "Nee. De training is geschikt voor iedereen en wordt stap voor stap opgebouwd."
+      },
+      {
+        "question": "Wat is het verschil tussen de twee varianten?",
+        "answer": "De ene training richt zich alleen op volwassenen. De complete variant behandelt reanimatie en AED-gebruik bij baby’s, kinderen en volwassenen."
+      },
+      {
+        "question": "Kan mijn zorgverzekeraar de cursus vergoeden?",
+        "answer": "Sommige aanvullende verzekeringen vergoeden een deel van een reanimatiecursus. Controleer dit altijd rechtstreeks bij je eigen zorgverzekeraar."
+      }
+    ]
+  },
+  "finalCta": {
+    "eyebrow": "Training voor een groep",
+    "title": "Samen leren reanimeren op jullie locatie?",
+    "text": "Voor teams en organisaties bespreken we graag welke variant en trainingsvorm het beste aansluit.",
+    "button": {
+      "label": "Vraag naar de mogelijkheden",
+      "href": "/contact/"
+    }
+  },
+  "visible": true,
+  "indexable": true,
+  "showOnHub": true,
+  "showInMenu": true,
+  "order": 2
+}

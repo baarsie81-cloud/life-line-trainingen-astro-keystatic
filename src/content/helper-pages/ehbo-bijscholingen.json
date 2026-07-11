@@ -1,0 +1,165 @@
+{
+  "title": {
+    "name": "EHBO-bijscholingen en herhaling",
+    "slug": "ehbo-bijscholingen"
+  },
+  "seoTitle": "EHBO-bijscholingen en herhaling | Life-Line-Trainingen",
+  "seoDescription": "Verleng je Rode Kruis-certificaat met een EHBO-bijscholing voor volwassenen, kinderen of uitgebreide EHBO bij Life-Line-Trainingen.",
+  "category": "bijscholing",
+  "card": {
+    "eyebrow": "EHBO-certificaat verlengen",
+    "title": "EHBO-bijscholingen",
+    "text": "Onderhoud je vaardigheden voor volwassenen, kinderen of alle leeftijden en verleng je certificaat.",
+    "audience": "Voor deelnemers met een geldig EHBO-certificaat",
+    "linkLabel": "Bekijk de EHBO-bijscholingen"
+  },
+  "eyebrow": "EHBO bijscholing",
+  "intro": "Heb je een geldig Rode Kruis-certificaat voor EHBO, Eerste Hulp aan Kinderen of Uitgebreide EHBO? Kies de herhaling die aansluit op jouw certificaat en oefen opnieuw met actieve scenario’s en herkenbare noodsituaties.",
+  "image": "/assets/photos/instructeur-zwembad-breed.jpg",
+  "imageAlt": "Instructeur begeleidt een praktische EHBO-bijscholing",
+  "proof": {
+    "label": "Drie herhalingen",
+    "text": "Voor volwassenen, kinderen of alle leeftijden, afgestemd op je bestaande certificaat."
+  },
+  "facts": [
+    {
+      "label": "Voorwaarde",
+      "value": "Geldig certificaat"
+    },
+    {
+      "label": "Keuze",
+      "value": "3 bijscholingen"
+    },
+    {
+      "label": "Aanpak",
+      "value": "Scenario en praktijk"
+    },
+    {
+      "label": "Resultaat",
+      "value": "Certificaat verlengen"
+    }
+  ],
+  "summary": {
+    "eyebrow": "Direct antwoord",
+    "title": "Kies de herhaling die bij je huidige certificaat hoort",
+    "text": "Volg de gewone EHBO-herhaling voor volwassenen, de herhaling Eerste Hulp aan Kinderen of de uitgebreide bijscholing voor baby’s, kinderen en volwassenen. Je oefent bekende vaardigheden opnieuw en verdiept ze met praktische scenario’s."
+  },
+  "variantsSection": {
+    "eyebrow": "Drie mogelijkheden",
+    "title": "Welk EHBO-certificaat wil je verlengen?",
+    "text": "Kies de variant die overeenkomt met je huidige certificaat. De actuele planning, prijs en voorwaarden staan bij de betreffende checkout in Plug&Pay."
+  },
+  "variants": [
+    {
+      "code": "EH3100h",
+      "title": "Herhaling EHBO voor volwassenen",
+      "audience": "Voor deelnemers met een geldig Rode Kruis-certificaat EHBO voor volwassenen.",
+      "duration": "4 uur praktijk",
+      "format": "Klassikale herhaling",
+      "certificate": "Verlenging Rode Kruis-certificaat",
+      "description": "Je onderhoudt basisvaardigheden, reanimatie en AED-gebruik en oefent met letsels en medische noodsituaties bij volwassenen.",
+      "preparation": "Controleer of je huidige certificaat op de trainingsdag nog geldig is.",
+      "ctaLabel": "Bekijk actuele data en prijs",
+      "ctaHref": "https://llt7aar.plugandpay.nl/checkout/rode-kruis-eh3100h-cursus-ehbo",
+      "visible": true,
+      "order": 1
+    },
+    {
+      "code": "EH3102h",
+      "title": "Herhaling Eerste Hulp aan Kinderen",
+      "audience": "Voor deelnemers met een geldig certificaat Eerste Hulp aan Kinderen.",
+      "duration": "4 uur praktijk",
+      "format": "Klassikale herhaling",
+      "certificate": "Verlenging Wet IKK-erkend certificaat",
+      "description": "Je oefent eerste hulp, reanimatie en AED-gebruik bij baby’s en kinderen en werkt met herkenbare situaties uit opvang en gezin.",
+      "preparation": "Controleer of je huidige certificaat op de trainingsdag nog geldig is.",
+      "ctaLabel": "Bekijk actuele data en prijs",
+      "ctaHref": "https://llt7aar.plugandpay.nl/checkout/rode-kruis-eh3102h-cursus-ehak-herhaling",
+      "visible": true,
+      "order": 2
+    },
+    {
+      "code": "EH4300h",
+      "title": "Herhaling Uitgebreide EHBO inclusief kinderen",
+      "audience": "Voor deelnemers met een geldig uitgebreid EHBO-certificaat voor alle leeftijden.",
+      "duration": "Bekijk de actuele planning",
+      "format": "Actieve bijscholing",
+      "certificate": "Verlenging uitgebreid Rode Kruis-certificaat",
+      "description": "Een breed en actief programma met EHBO, kinder-EHBO, reanimatie, AED en scenario-onderwijs voor uiteenlopende noodsituaties.",
+      "preparation": "Controleer je certificaat en bekijk in Plug&Pay de actuele vorm en planning van de editie.",
+      "ctaLabel": "Bekijk actuele data en prijs",
+      "ctaHref": "https://llt7aar.plugandpay.nl/checkout/rode-kruis-eh4300h-uitgebreide-ehbo-inclusief-kinderen",
+      "visible": true,
+      "order": 3
+    }
+  ],
+  "sections": [
+    {
+      "eyebrow": "Onderhouden en verdiepen",
+      "title": "Geen herhaling op de automatische piloot",
+      "text": "Een goede bijscholing laat je opnieuw nadenken, beslissen en handelen. Daarom oefen je met afwisselende situaties en krijg je feedback op je aanpak.",
+      "items": [
+        "Reanimatie en het gebruik van een AED blijven vaste onderdelen.",
+        "Je oefent relevante EHBO-vaardigheden voor jouw certificering.",
+        "Scenario’s helpen je om kennis onder druk toe te passen.",
+        "De instructeur sluit waar mogelijk aan op vragen uit de groep."
+      ],
+      "image": "/assets/photos/bls-aed-training-breed.jpg",
+      "imageAlt": "Actieve EHBO-bijscholing met reanimatiepop en AED"
+    },
+    {
+      "eyebrow": "Toelating",
+      "title": "Schrijf je in voor de juiste certificering",
+      "text": "De herhalingsroutes zijn bedoeld voor deelnemers met een geldig certificaat. Kies daarom de checkout die exact aansluit op het certificaat dat je wilt verlengen.",
+      "items": [
+        "Controleer de naam en geldigheidsdatum van je certificaat.",
+        "Gebruik de actuele Plug&Pay-pagina voor planning en voorwaarden.",
+        "Neem bij twijfel eerst contact op, zodat je geen verkeerde route boekt."
+      ],
+      "image": "/assets/photos/instructie-aan-bad.jpg",
+      "imageAlt": "Instructeur geeft uitleg tijdens een praktische EHBO-herhaling"
+    }
+  ],
+  "reasons": {
+    "eyebrow": "Waarom Life-Line",
+    "title": "Bijscholen met aandacht voor de praktijk",
+    "items": [
+      "Je oefent actief met vaardigheden die in een noodsituatie direct beschikbaar moeten zijn.",
+      "Scenario’s en feedback maken de training herkenbaar en leerzaam.",
+      "Je kiest een programma dat aansluit op je bestaande certificaat.",
+      "Voor teams kan de inhoud in overleg aansluiten op de dagelijkse werkomgeving."
+    ]
+  },
+  "faq": {
+    "eyebrow": "Veelgestelde vragen",
+    "title": "FAQ over EHBO-bijscholingen",
+    "items": [
+      {
+        "question": "Welke bijscholing moet ik kiezen?",
+        "answer": "Kies de bijscholing die dezelfde naam en doelgroep heeft als je huidige certificaat: volwassenen, Eerste Hulp aan Kinderen of Uitgebreide EHBO inclusief kinderen."
+      },
+      {
+        "question": "Kan ik meedoen als mijn certificaat verlopen is?",
+        "answer": "Een herhaling is bedoeld voor een geldig certificaat. Is je certificaat verlopen, neem dan eerst contact op om te bepalen of je opnieuw een volledige opleiding moet volgen."
+      },
+      {
+        "question": "Waarom staat er geen prijs op deze pagina?",
+        "answer": "Prijs, planning en voorwaarden kunnen per trainingsvariant of editie verschillen. Via de inschrijfknop zie je altijd de actuele informatie in Plug&Pay."
+      }
+    ]
+  },
+  "finalCta": {
+    "eyebrow": "Bijscholing op maat",
+    "title": "Een actieve EHBO-herhaling voor jullie team?",
+    "text": "Vertel ons welke certificaten jullie willen verlengen en welke praktijksituaties extra aandacht verdienen.",
+    "button": {
+      "label": "Bespreek de mogelijkheden",
+      "href": "/contact/"
+    }
+  },
+  "visible": true,
+  "indexable": true,
+  "showOnHub": true,
+  "showInMenu": true,
+  "order": 4
+}

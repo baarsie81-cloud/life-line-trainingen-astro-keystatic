@@ -6,6 +6,8 @@ const blogFiles = import.meta.glob("../content/blogs/*.json", { eager: true });
 const blogs = Object.values(blogFiles).map((entry: any) => entry.default);
 const instructorPageFiles = import.meta.glob("../content/instructor-pages/*.json", { eager: true });
 const instructorPages = Object.values(instructorPageFiles).map((entry: any) => entry.default);
+const helperPageFiles = import.meta.glob("../content/helper-pages/*.json", { eager: true });
+const helperPages = Object.values(helperPageFiles).map((entry: any) => entry.default);
 
 export async function GET() {
   const staticPaths = ["/", "/juridisch/privacy-statement/", ...site.navigation.map((item) => item.href)];
@@ -14,7 +16,10 @@ export async function GET() {
   const instructorPaths = instructorPages
     .filter((page) => page.visible && page.indexable)
     .map((page) => `/instructeurs/${page.title.slug}/`);
-  const paths = Array.from(new Set([...staticPaths, ...trainingPaths, ...blogPaths, ...instructorPaths]));
+  const helperPaths = helperPages
+    .filter((page) => page.visible && page.indexable)
+    .map((page) => `/hulpverleners/${page.title.slug}/`);
+  const paths = Array.from(new Set([...staticPaths, ...trainingPaths, ...blogPaths, ...instructorPaths, ...helperPaths]));
 
   const body = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">

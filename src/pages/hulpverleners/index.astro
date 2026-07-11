@@ -1,0 +1,147 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import page from "../../content/pages/hulpverleners.json";
+
+const helperPageFiles = import.meta.glob("../../content/helper-pages/*.json", { eager: true });
+const routes = Object.values(helperPageFiles)
+  .map((entry: any) => entry.default)
+  .filter((route) => route.visible && route.showOnHub)
+  .sort((a, b) => a.order - b.order);
+
+const routeGroups = [
+  { key: "opleiding", content: page.groups.opleiding },
+  { key: "bijscholing", content: page.groups.bijscholing },
+];
+
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: page.faq.items.map((item) => ({
+    "@type": "Question",
+    name: item.question,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: item.answer,
+    },
+  })),
+};
+---
+
+<BaseLayout title={page.seoTitle} description={page.seoDescription} image={page.hero.image} structuredData={structuredData}>
+  <section class="page-hero helper-hero">
+    <img class="page-hero-image" src={page.hero.image} alt={page.hero.imageAlt} loading="eager" decoding="async" />
+    <div class="page-hero-overlay"></div>
+    <div class="container page-hero-content">
+      <div class="page-hero-copy">
+        <p class="eyebrow">{page.hero.eyebrow}</p>
+        <h1>{page.hero.title}</h1>
+        <p class="hero-intro">{page.hero.intro}</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href={page.hero.primaryCta.href}>{page.hero.primaryCta.label}</a>
+          <a class="button button-secondary" href={page.hero.secondaryCta.href}>{page.hero.secondaryCta.label}</a>
+        </div>
+      </div>
+      <aside class="hero-proof" aria-label="Kern van de hulpverlenerstrainingen">
+        <span>Vier duidelijke routes</span>
+        <p>{page.hero.trust}</p>
+      </aside>
+    </div>
+  </section>
+
+  <section class="answer-band" aria-labelledby="helper-answer-title">
+    <div class="container answer-panel">
+      <p class="eyebrow">{page.quickAnswer.eyebrow}</p>
+      <h2 id="helper-answer-title">{page.quickAnswer.title}</h2>
+      <p>{page.quickAnswer.text}</p>
+    </div>
+  </section>
+
+  <section class="section helper-routes-section" id="trainingsroutes" aria-labelledby="helper-routes-title">
+    <div class="container">
+      <div class="section-heading">
+        <p class="eyebrow">Kies je vervolgpad</p>
+        <h2 id="helper-routes-title">Starten of geldig blijven</h2>
+        <p>De routes zijn gegroepeerd op jouw huidige situatie. Zo kom je zonder vergelijken van onvergelijkbare trainingen direct op de juiste pagina.</p>
+      </div>
+
+      <div class="helper-route-groups">
+        {
+          routeGroups.map((group) => {
+            const groupRoutes = routes.filter((route) => route.category === group.key);
+            return groupRoutes.length > 0 ? (
+              <section class="helper-route-group" aria-labelledby={`helper-group-${group.key}`}>
+                <div class="helper-group-heading">
+                  <p class="eyebrow">{group.content.eyebrow}</p>
+                  <h3 id={`helper-group-${group.key}`}>{group.content.title}</h3>
+                  <p>{group.content.text}</p>
+                </div>
+                <div class="helper-route-grid">
+                  {groupRoutes.map((route) => (
+                    <article class="helper-route-card">
+                      <span>{route.card.eyebrow}</span>
+                      <h4>{route.card.title}</h4>
+                      <strong>{route.card.audience}</strong>
+                      <p>{route.card.text}</p>
+                      <a href={`/hulpverleners/${route.title.slug}/`}>{route.card.linkLabel}</a>
+                    </article>
+                  ))}
+                </div>
+              </section>
+            ) : null;
+          })
+        }
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-soft helper-trust" aria-labelledby="helper-trust-title">
+    <div class="container">
+      <div class="section-heading">
+        <p class="eyebrow">{page.trust.eyebrow}</p>
+        <h2 id="helper-trust-title">{page.trust.title}</h2>
+        <p>{page.trust.text}</p>
+      </div>
+      <div class="reason-grid">
+        {
+          page.trust.items.map((item, index) => (
+            <article>
+              <span>{String(index + 1).padStart(2, "0")}</span>
+              <h3>{item.title}</h3>
+              <p>{item.text}</p>
+            </article>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <section class="section helpers-faq" aria-labelledby="helpers-faq-title">
+    <div class="container faq-grid">
+      <div>
+        <p class="eyebrow">{page.faq.eyebrow}</p>
+        <h2 id="helpers-faq-title">{page.faq.title}</h2>
+      </div>
+      <div class="faq-list">
+        {
+          page.faq.items.map((item) => (
+            <details>
+              <summary>{item.question}</summary>
+              <p>{item.answer}</p>
+            </details>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <section class="final-cta">
+    <div class="container final-cta-inner">
+      <div>
+        <p class="eyebrow">{page.finalCta.eyebrow}</p>
+        <h2>{page.finalCta.title}</h2>
+        <p>{page.finalCta.text}</p>
+      </div>
+      <a class="button button-light" href={page.finalCta.button.href}>{page.finalCta.button.label}</a>
+    </div>
+  </section>
+</BaseLayout>

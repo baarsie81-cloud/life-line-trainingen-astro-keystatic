@@ -61,8 +61,8 @@ export default config({
       name: "Life-Line-Trainingen CMS",
     },
     navigation: {
-      "Vaste pagina's": ["home", "zwembaden", "instructeurs", "over", "contact", "site"],
-      Content: ["trainings", "instructorPages", "blogs"],
+      "Vaste pagina's": ["home", "zwembaden", "instructeurs", "hulpverleners", "over", "contact", "site"],
+      Content: ["trainings", "instructorPages", "helperPages", "blogs"],
     },
   },
   singletons: {
@@ -502,6 +502,111 @@ export default config({
         ),
       },
     }),
+    hulpverleners: singleton({
+      label: "Hulpverleners",
+      path: "src/content/pages/hulpverleners",
+      format: { data: "json" },
+      schema: {
+        seoTitle: fields.text({ label: "SEO titel", validation: { isRequired: true } }),
+        seoDescription: fields.text({
+          label: "SEO omschrijving",
+          multiline: true,
+          validation: { isRequired: true },
+        }),
+        hero: fields.object(
+          {
+            eyebrow: fields.text({ label: "Label boven titel", validation: { isRequired: true } }),
+            title: fields.text({ label: "Hoofdtitel", validation: { isRequired: true } }),
+            intro: fields.text({ label: "Intro", multiline: true, validation: { isRequired: true } }),
+            image: imageField("Hero foto"),
+            imageAlt: fields.text({ label: "Alt-tekst hero foto", validation: { isRequired: true } }),
+            trust: fields.text({ label: "Vertrouwensregel", multiline: true, validation: { isRequired: true } }),
+            primaryCta: fields.object(linkFields, { label: "Primaire knop" }),
+            secondaryCta: fields.object(linkFields, { label: "Tweede knop" }),
+          },
+          { label: "Hero" }
+        ),
+        quickAnswer: fields.object(
+          {
+            eyebrow: fields.text({ label: "Label boven titel", validation: { isRequired: true } }),
+            title: fields.text({ label: "Titel", validation: { isRequired: true } }),
+            text: fields.text({ label: "Tekst", multiline: true, validation: { isRequired: true } }),
+          },
+          { label: "Direct antwoord" }
+        ),
+        groups: fields.object(
+          {
+            opleiding: fields.object(
+              {
+                eyebrow: fields.text({ label: "Label boven titel", validation: { isRequired: true } }),
+                title: fields.text({ label: "Titel", validation: { isRequired: true } }),
+                text: fields.text({ label: "Tekst", multiline: true, validation: { isRequired: true } }),
+              },
+              { label: "Opleidingen" }
+            ),
+            bijscholing: fields.object(
+              {
+                eyebrow: fields.text({ label: "Label boven titel", validation: { isRequired: true } }),
+                title: fields.text({ label: "Titel", validation: { isRequired: true } }),
+                text: fields.text({ label: "Tekst", multiline: true, validation: { isRequired: true } }),
+              },
+              { label: "Bijscholingen" }
+            ),
+          },
+          { label: "Keuzerubrieken" }
+        ),
+        trust: fields.object(
+          {
+            eyebrow: fields.text({ label: "Label boven titel", validation: { isRequired: true } }),
+            title: fields.text({ label: "Titel", validation: { isRequired: true } }),
+            text: fields.text({ label: "Intro", multiline: true, validation: { isRequired: true } }),
+            items: fields.array(
+              fields.object(
+                {
+                  title: fields.text({ label: "Titel", validation: { isRequired: true } }),
+                  text: fields.text({ label: "Tekst", multiline: true, validation: { isRequired: true } }),
+                },
+                { label: "Vertrouwenspunt" }
+              ),
+              {
+                label: "Vertrouwenspunten",
+                itemLabel: (props) => props.fields.title.value || "Vertrouwenspunt",
+              }
+            ),
+          },
+          { label: "Waarom Life-Line" }
+        ),
+        faq: fields.object(
+          {
+            eyebrow: fields.text({ label: "Label boven titel", validation: { isRequired: true } }),
+            title: fields.text({ label: "Titel", validation: { isRequired: true } }),
+            items: fields.array(
+              fields.object(
+                {
+                  question: fields.text({ label: "Vraag", validation: { isRequired: true } }),
+                  answer: fields.text({ label: "Antwoord", multiline: true, validation: { isRequired: true } }),
+                },
+                { label: "FAQ item" }
+              ),
+              {
+                label: "FAQ items",
+                itemLabel: (props) => props.fields.question.value || "FAQ item",
+              }
+            ),
+          },
+          { label: "FAQ" }
+        ),
+        finalCta: fields.object(
+          {
+            eyebrow: fields.text({ label: "Label boven titel", validation: { isRequired: true } }),
+            title: fields.text({ label: "Titel", validation: { isRequired: true } }),
+            text: fields.text({ label: "Tekst", multiline: true, validation: { isRequired: true } }),
+            button: fields.object(linkFields, { label: "Knop" }),
+          },
+          { label: "Conversieblok" }
+        ),
+      },
+    }),
     over: singleton({
       label: "Over ons",
       path: "src/content/pages/over",
@@ -887,6 +992,178 @@ export default config({
           description: "Zet dit pas aan zodra de subpagina volledige inhoud heeft.",
           defaultValue: false,
         }),
+      },
+    }),
+    helperPages: collection({
+      label: "Hulpverlenerpagina's",
+      slugField: "title",
+      path: "src/content/helper-pages/*",
+      format: { data: "json" },
+      columns: ["title", "category", "visible", "indexable", "order"],
+      schema: {
+        title: fields.slug({
+          name: { label: "Titel", validation: { isRequired: true } },
+          slug: {
+            label: "Slug",
+            description: "Deze slug bepaalt de URL onder /hulpverleners/.",
+          },
+        }),
+        seoTitle: fields.text({ label: "SEO titel", validation: { isRequired: true } }),
+        seoDescription: fields.text({
+          label: "SEO omschrijving",
+          multiline: true,
+          validation: { isRequired: true },
+        }),
+        category: fields.select({
+          label: "Routegroep",
+          defaultValue: "opleiding",
+          options: [
+            { label: "Een certificaat behalen", value: "opleiding" },
+            { label: "Een certificaat verlengen", value: "bijscholing" },
+          ],
+        }),
+        card: fields.object(
+          {
+            eyebrow: fields.text({ label: "Klein label", validation: { isRequired: true } }),
+            title: fields.text({ label: "Kaarttitel", validation: { isRequired: true } }),
+            text: fields.text({ label: "Korte uitleg", multiline: true, validation: { isRequired: true } }),
+            audience: fields.text({ label: "Voor wie", multiline: true, validation: { isRequired: true } }),
+            linkLabel: fields.text({ label: "Linktekst", validation: { isRequired: true } }),
+          },
+          { label: "Kaart op de overzichtspagina" }
+        ),
+        eyebrow: fields.text({ label: "Label boven titel", validation: { isRequired: true } }),
+        intro: fields.text({ label: "Hero intro", multiline: true, validation: { isRequired: true } }),
+        image: imageField("Hero foto"),
+        imageAlt: fields.text({ label: "Alt-tekst hero foto", validation: { isRequired: true } }),
+        proof: fields.object(
+          {
+            label: fields.text({ label: "Klein label", validation: { isRequired: true } }),
+            text: fields.text({ label: "Tekst", multiline: true, validation: { isRequired: true } }),
+          },
+          { label: "Hero bewijsblok" }
+        ),
+        facts: fields.array(
+          fields.object(
+            {
+              label: fields.text({ label: "Label", validation: { isRequired: true } }),
+              value: fields.text({ label: "Waarde", validation: { isRequired: true } }),
+            },
+            { label: "Kernfeit" }
+          ),
+          {
+            label: "Kernfeiten",
+            itemLabel: (props) => props.fields.label.value || "Kernfeit",
+          }
+        ),
+        summary: fields.object(
+          {
+            eyebrow: fields.text({ label: "Label boven titel", validation: { isRequired: true } }),
+            title: fields.text({ label: "Titel", validation: { isRequired: true } }),
+            text: fields.text({ label: "Tekst", multiline: true, validation: { isRequired: true } }),
+          },
+          { label: "Direct antwoord" }
+        ),
+        variantsSection: fields.object(
+          {
+            eyebrow: fields.text({ label: "Label boven titel", validation: { isRequired: true } }),
+            title: fields.text({ label: "Titel", validation: { isRequired: true } }),
+            text: fields.text({ label: "Intro", multiline: true, validation: { isRequired: true } }),
+          },
+          { label: "Intro trainingsvarianten" }
+        ),
+        variants: fields.array(
+          fields.object(
+            {
+              code: fields.text({ label: "Trainingscode", validation: { isRequired: true } }),
+              title: fields.text({ label: "Titel", validation: { isRequired: true } }),
+              audience: fields.text({ label: "Voor wie", multiline: true, validation: { isRequired: true } }),
+              duration: fields.text({ label: "Duur", validation: { isRequired: true } }),
+              format: fields.text({ label: "Lesvorm", validation: { isRequired: true } }),
+              certificate: fields.text({ label: "Certificering", validation: { isRequired: true } }),
+              description: fields.text({ label: "Omschrijving", multiline: true, validation: { isRequired: true } }),
+              preparation: fields.text({ label: "Voorbereiding/voorwaarde", multiline: true }),
+              ctaLabel: fields.text({ label: "Knoptekst", validation: { isRequired: true } }),
+              ctaHref: fields.url({ label: "Volledige Plug&Pay-link", validation: { isRequired: true } }),
+              visible: fields.checkbox({ label: "Variant zichtbaar", defaultValue: true }),
+              order: fields.integer({ label: "Volgorde", validation: { isRequired: true } }),
+            },
+            { label: "Trainingsvariant" }
+          ),
+          {
+            label: "Trainingsvarianten",
+            itemLabel: (props) => props.fields.title.value || "Trainingsvariant",
+          }
+        ),
+        sections: fields.array(
+          fields.object(
+            {
+              eyebrow: fields.text({ label: "Label boven titel", validation: { isRequired: true } }),
+              title: fields.text({ label: "Titel", validation: { isRequired: true } }),
+              text: fields.text({ label: "Tekst", multiline: true, validation: { isRequired: true } }),
+              items: fields.array(fields.text({ label: "Punt", multiline: true }), {
+                label: "Punten",
+                itemLabel: (props) => props.value || "Punt",
+              }),
+              image: imageField("Afbeelding"),
+              imageAlt: fields.text({ label: "Alt-tekst afbeelding", validation: { isRequired: true } }),
+            },
+            { label: "Contentsectie" }
+          ),
+          {
+            label: "Contentsecties",
+            itemLabel: (props) => props.fields.title.value || "Contentsectie",
+          }
+        ),
+        reasons: fields.object(
+          {
+            eyebrow: fields.text({ label: "Label boven titel", validation: { isRequired: true } }),
+            title: fields.text({ label: "Titel", validation: { isRequired: true } }),
+            items: fields.array(fields.text({ label: "Reden", multiline: true }), {
+              label: "Redenen",
+              itemLabel: (props) => props.value || "Reden",
+            }),
+          },
+          { label: "Waarom Life-Line" }
+        ),
+        faq: fields.object(
+          {
+            eyebrow: fields.text({ label: "Label boven titel", validation: { isRequired: true } }),
+            title: fields.text({ label: "Titel", validation: { isRequired: true } }),
+            items: fields.array(
+              fields.object(
+                {
+                  question: fields.text({ label: "Vraag", validation: { isRequired: true } }),
+                  answer: fields.text({ label: "Antwoord", multiline: true, validation: { isRequired: true } }),
+                },
+                { label: "FAQ item" }
+              ),
+              {
+                label: "FAQ items",
+                itemLabel: (props) => props.fields.question.value || "FAQ item",
+              }
+            ),
+          },
+          { label: "FAQ" }
+        ),
+        finalCta: fields.object(
+          {
+            eyebrow: fields.text({ label: "Label boven titel", validation: { isRequired: true } }),
+            title: fields.text({ label: "Titel", validation: { isRequired: true } }),
+            text: fields.text({ label: "Tekst", multiline: true, validation: { isRequired: true } }),
+            button: fields.object(linkFields, { label: "Knop" }),
+          },
+          { label: "Conversieblok" }
+        ),
+        visible: fields.checkbox({ label: "Pagina zichtbaar", defaultValue: true }),
+        indexable: fields.checkbox({
+          label: "Indexeerbaar in Google",
+          description: "Alleen indexeerbare pagina's komen in de sitemap.",
+          defaultValue: false,
+        }),
+        showOnHub: fields.checkbox({ label: "Tonen op Hulpverleners-overzicht", defaultValue: true }),
+        showInMenu: fields.checkbox({ label: "Tonen in submenu Hulpverleners", defaultValue: true }),
+        order: fields.integer({ label: "Volgorde", validation: { isRequired: true } }),
       },
     }),
     blogs: collection({
