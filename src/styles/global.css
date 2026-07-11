@@ -2433,7 +2433,10 @@ h3 {
   margin-top: 0.7rem;
   color: var(--blue-dark);
   font-size: clamp(1.45rem, 2vw, 1.8rem);
-  overflow-wrap: anywhere;
+  overflow-wrap: break-word;
+  word-break: normal;
+  hyphens: auto;
+  text-wrap: balance;
 }
 
 .helper-route-card > strong {
@@ -2492,7 +2495,10 @@ h3 {
   color: var(--blue-dark);
   font-size: clamp(1.4rem, 2vw, 1.8rem);
   line-height: 1.08;
-  overflow-wrap: anywhere;
+  overflow-wrap: break-word;
+  word-break: normal;
+  hyphens: auto;
+  text-wrap: balance;
 }
 
 .helper-variant-heading p {
