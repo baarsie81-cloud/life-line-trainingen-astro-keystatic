@@ -2487,7 +2487,7 @@ h3 {
 }
 
 .helper-variant-heading h3 {
-  min-height: 3.2rem;
+  min-height: 4rem;
   margin-top: 0.65rem;
   color: var(--blue-dark);
   font-size: clamp(1.4rem, 2vw, 1.8rem);
@@ -2504,6 +2504,7 @@ h3 {
 .helper-variant-card dl {
   display: grid;
   gap: 0;
+  min-height: 12rem;
   margin: 1rem 0 0;
 }
 
@@ -2918,6 +2919,10 @@ h3 {
   .helper-variant-card dl div {
     grid-template-columns: 1fr;
     gap: 0.2rem;
+  }
+
+  .helper-variant-card dl {
+    min-height: auto;
   }
 }
 
