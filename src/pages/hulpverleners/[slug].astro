@@ -110,7 +110,7 @@ const structuredData = [...courseData, faqData].filter(Boolean);
               <div class="helper-variant-heading">
                 <span>{variant.code}</span>
                 <h3>{variant.title}</h3>
-                <p>{variant.audience}</p>
+                <p>{variant.audience} {variant.description}</p>
               </div>
               <dl>
                 <div>
@@ -126,7 +126,6 @@ const structuredData = [...courseData, faqData].filter(Boolean);
                   <dd>{variant.certificate}</dd>
                 </div>
               </dl>
-              <p class="helper-variant-description">{variant.description}</p>
               {variant.preparation && (
                 <aside class="helper-variant-notice">
                   <strong>Goed om te weten</strong>

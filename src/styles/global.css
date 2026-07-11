@@ -2477,7 +2477,7 @@ h3 {
 .helper-variant-card {
   display: grid;
   min-width: 0;
-  grid-template-rows: auto auto auto auto 1fr;
+  grid-template-rows: auto auto auto 1fr;
   border: 1px solid rgba(40, 119, 167, 0.2);
   border-top: 4px solid var(--orange);
   border-radius: var(--radius);
@@ -2496,7 +2496,7 @@ h3 {
 }
 
 .helper-variant-heading p {
-  min-height: 4.2rem;
+  min-height: 11.5rem;
   margin-top: 0.75rem;
   color: var(--muted);
 }
@@ -2530,11 +2530,6 @@ h3 {
   font-weight: 850;
   line-height: 1.4;
   overflow-wrap: anywhere;
-}
-
-.helper-variant-description {
-  margin-top: 1rem;
-  color: var(--muted);
 }
 
 .helper-variant-notice {
