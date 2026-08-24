@@ -1,5 +1,7 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import Markdoc from "@markdoc/markdoc";
+import knowledge from "../../content/pages/knowledge.json";
 import site from "../../content/settings/site.json";
 import { withContentSlugs } from "../../lib/content";
 
@@ -23,6 +25,8 @@ export function getStaticPaths() {
 }
 
 const { blog } = Astro.props;
+const seoTitle = blog.seoTitle || `${blog.title} | Life-Line-Trainingen`;
+const seoDescription = blog.seoDescription || blog.excerpt;
 const related = visibleBlogs
   .filter((item) => item.slug !== blog.slug && item.category === blog.category)
   .slice(0, 3);
@@ -39,7 +43,7 @@ const structuredData = {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
   headline: blog.title,
-  description: blog.seoDescription,
+  description: seoDescription,
   image: new URL(blog.image, site.url).href,
   datePublished: blog.date,
   dateModified: blog.date,
@@ -58,11 +62,14 @@ const structuredData = {
   },
   mainEntityOfPage: canonical.href,
 };
+const articleHtml = Markdoc.renderers
+  .html(Markdoc.transform(Markdoc.parse(blog.bodyMarkdown)))
+  .replace(/<a href="(https?:\/\/[^\"]+)"/g, '<a href="$1" target="_blank" rel="noopener noreferrer"');
 ---
 
 <BaseLayout
-  title={blog.seoTitle}
-  description={blog.seoDescription}
+  title={seoTitle}
+  description={seoDescription}
   image={blog.image}
   type="article"
   structuredData={structuredData}
@@ -70,7 +77,7 @@ const structuredData = {
   <article class="article-page">
     <header class="article-hero">
       <div class="container article-hero-inner">
-        <a class="back-link" href="/nieuws/">Terug naar kennisbank</a>
+        <a class="back-link" href="/nieuws/">{knowledge.article.backLabel}</a>
         <div class="article-meta">
           <span>{formatDate(blog.date)}</span>
           <span>{blog.category}</span>
@@ -86,17 +93,17 @@ const structuredData = {
         <img src={blog.image} alt={blog.imageAlt} loading="eager" decoding="async" />
         <dl>
           <div>
-            <dt>Auteur</dt>
+            <dt>{knowledge.article.authorLabel}</dt>
             <dd>{blog.author}</dd>
           </div>
           <div>
-            <dt>Doelgroep</dt>
+            <dt>{knowledge.article.audienceLabel}</dt>
             <dd>{blog.audience}</dd>
           </div>
         </dl>
       </aside>
 
-      <div class="article-content" set:html={blog.bodyHtml} />
+      <div class="article-content" set:html={articleHtml} />
     </div>
   </article>
 
@@ -104,8 +111,8 @@ const structuredData = {
     <section class="section section-soft related-articles" aria-labelledby="related-title">
       <div class="container">
         <div class="section-heading">
-          <p class="eyebrow">Verder lezen</p>
-          <h2 id="related-title">Meer over {blog.category.toLowerCase()}</h2>
+          <p class="eyebrow">{knowledge.article.relatedEyebrow}</p>
+          <h2 id="related-title">{knowledge.article.relatedTitlePrefix} {blog.category.toLowerCase()}</h2>
         </div>
         <div class="related-grid">
           {
@@ -129,11 +136,11 @@ const structuredData = {
   <section class="final-cta">
     <div class="container final-cta-inner">
       <div>
-        <p class="eyebrow">Aan de slag</p>
-        <h2>Wil je dit praktisch trainen met je team?</h2>
-        <p>Life-Line-Trainingen vertaalt kennis naar oefenen, handelen en vertrouwen in echte situaties.</p>
+        <p class="eyebrow">{knowledge.articleCta.eyebrow}</p>
+        <h2>{knowledge.articleCta.title}</h2>
+        <p>{knowledge.articleCta.text}</p>
       </div>
-      <a class="button button-light" href="/contact/">Neem contact op</a>
+      <a class="button button-light" href={knowledge.articleCta.button.href}>{knowledge.articleCta.button.label}</a>
     </div>
   </section>
 </BaseLayout>

@@ -1611,7 +1611,30 @@ h3 {
 }
 
 .article-content img {
+  display: block;
+  max-width: 100%;
+  height: auto;
   border-radius: var(--radius);
+}
+
+.article-content table {
+  display: block;
+  width: 100%;
+  overflow-x: auto;
+  border-collapse: collapse;
+}
+
+.article-content th,
+.article-content td {
+  border: 1px solid rgba(40, 119, 167, 0.22);
+  padding: 0.75rem;
+  text-align: left;
+  vertical-align: top;
+}
+
+.article-content th {
+  background: var(--blue-pale);
+  color: var(--blue-dark);
 }
 
 .related-grid {

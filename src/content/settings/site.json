@@ -66,5 +66,13 @@
   "footerText": "Life-Line-Trainingen helpt mensen en teams om rustig, praktisch en doelgericht te handelen wanneer het erop aankomt.",
   "footerPagesTitle": "Pagina's",
   "footerContactTitle": "Contact",
-  "copyrightText": "© Life-Line-Trainingen 2026. Alle rechten voorbehouden."
+  "copyrightText": "© Life-Line-Trainingen 2026. Alle rechten voorbehouden.",
+  "helperPageLabels": {
+    "heroPrimary": "Bekijk de mogelijkheden",
+    "heroSecondary": "Terug naar hulpverleners",
+    "duration": "Duur",
+    "format": "Lesvorm",
+    "certificate": "Certificering",
+    "notice": "Goed om te weten"
+  }
 }

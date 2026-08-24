@@ -1,0 +1,45 @@
+{
+  "seoTitle": "Kennisbank | Life-Line-Trainingen",
+  "seoDescription": "Praktische kennis, nieuws en blogs over reanimatie, EHBO, waterveiligheid en handelen in noodsituaties.",
+  "hero": {
+    "eyebrow": "Kennisbank",
+    "title": "Praktische kennis voor mensen die moeten handelen",
+    "intro": "Artikelen, inzichten en praktijklessen over reanimatie, eerste hulp, waterveiligheid en professioneel handelen wanneer seconden tellen."
+  },
+  "featured": {
+    "eyebrow": "Nieuwste artikel",
+    "buttonLabel": "Lees artikel"
+  },
+  "index": {
+    "eyebrow": "Alle artikelen",
+    "title": "Verdieping per onderwerp",
+    "filterLabel": "Filter artikelen",
+    "allLabel": "Alle",
+    "articleLinkLabel": "Lees meer"
+  },
+  "article": {
+    "backLabel": "Terug naar kennisbank",
+    "authorLabel": "Auteur",
+    "audienceLabel": "Doelgroep",
+    "relatedEyebrow": "Verder lezen",
+    "relatedTitlePrefix": "Meer over"
+  },
+  "indexCta": {
+    "eyebrow": "Training nodig?",
+    "title": "Van kennis naar handelen in de praktijk",
+    "text": "Wil je dit vertalen naar een training voor jouw team of organisatie? We denken graag praktisch met je mee.",
+    "button": {
+      "label": "Plan een kennismaking",
+      "href": "/contact/"
+    }
+  },
+  "articleCta": {
+    "eyebrow": "Aan de slag",
+    "title": "Wil je dit praktisch trainen met je team?",
+    "text": "Life-Line-Trainingen vertaalt kennis naar oefenen, handelen en vertrouwen in echte situaties.",
+    "button": {
+      "label": "Neem contact op",
+      "href": "/contact/"
+    }
+  }
+}

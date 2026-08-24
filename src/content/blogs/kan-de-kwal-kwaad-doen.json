@@ -6,7 +6,7 @@
   "author": "Mike Lehnkering",
   "readingTime": "± 2 min",
   "excerpt": "Een kwal is een zeedier met een zachte, doorzichtige, gelei-achtige bol (hoed) en tentakels. Via hun tentakels kunnen ze netelcellen afschieten die huidirritatie of pijn veroorzaken. In deze blog lees je meer over kwallen en hun behandeling.",
-  "image": "/assets/blogs/kan-de-kwal-kwaad-doen.png",
+  "image": "/assets/blogs/kan-de-kwal-kwaad-doen/image.png",
   "imageAlt": "Kan de kwal kwaad doen",
   "category": "EHBO & hulpverlening",
   "audience": "Hulpverleners",
@@ -15,7 +15,6 @@
     "Hulpverlener",
     "Rode Kruis"
   ],
-  "featured": false,
   "visible": true,
-  "bodyHtml": ""
+  "bodyMarkdown": "Een kwal is een zeedier met een zachte, doorzichtige, gelei-achtige bol (hoed) en tentakels. Via hun tentakels kunnen ze netelcellen afschieten die huidirritatie of pijn veroorzaken. In deze blog lees je meer over kwallen en hun behandeling."
 }

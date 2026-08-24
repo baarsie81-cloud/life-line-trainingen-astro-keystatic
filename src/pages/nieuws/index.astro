@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import knowledge from "../../content/pages/knowledge.json";
 import { withContentSlugs } from "../../lib/content";
 
 const blogFiles = import.meta.glob("../../content/blogs/*.json", { eager: true });
@@ -7,7 +8,7 @@ const blogs = withContentSlugs(blogFiles)
   .filter((blog) => blog.visible)
   .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 
-const featured = blogs.find((blog) => blog.featured) || blogs[0];
+const featured = blogs[0];
 const articles = blogs.filter((blog) => blog !== featured);
 const categories = Array.from(new Set(blogs.map((blog) => blog.category))).sort();
 
@@ -20,19 +21,16 @@ const formatDate = (date: string) =>
 ---
 
 <BaseLayout
-  title="Kennisbank | Life-Line-Trainingen"
-  description="Praktische kennis, nieuws en blogs over reanimatie, EHBO, waterveiligheid en handelen in noodsituaties."
+  title={knowledge.seoTitle}
+  description={knowledge.seoDescription}
   image={featured?.image}
 >
   <section class="knowledge-hero">
     <div class="container knowledge-hero-inner">
       <div>
-        <p class="eyebrow">Kennisbank</p>
-        <h1>Praktische kennis voor mensen die moeten handelen</h1>
-        <p>
-          Artikelen, inzichten en praktijklessen over reanimatie, eerste hulp, waterveiligheid en professioneel handelen
-          wanneer seconden tellen.
-        </p>
+        <p class="eyebrow">{knowledge.hero.eyebrow}</p>
+        <h1>{knowledge.hero.title}</h1>
+        <p>{knowledge.hero.intro}</p>
       </div>
     </div>
   </section>
@@ -44,7 +42,7 @@ const formatDate = (date: string) =>
           <img src={featured.image} alt={featured.imageAlt} loading="eager" decoding="async" />
         </a>
         <div class="featured-copy">
-          <p class="eyebrow">Uitgelicht</p>
+          <p class="eyebrow">{knowledge.featured.eyebrow}</p>
           <h2 id="featured-article-title">
             <a href={`/nieuws/${featured.slug}/`}>{featured.title}</a>
           </h2>
@@ -54,7 +52,7 @@ const formatDate = (date: string) =>
             <span>{featured.category}</span>
             <span>{featured.readingTime}</span>
           </div>
-          <a class="button button-primary" href={`/nieuws/${featured.slug}/`}>Lees artikel</a>
+          <a class="button button-primary" href={`/nieuws/${featured.slug}/`}>{knowledge.featured.buttonLabel}</a>
         </div>
       </div>
     </section>
@@ -64,11 +62,11 @@ const formatDate = (date: string) =>
     <div class="container">
       <div class="knowledge-toolbar">
         <div>
-          <p class="eyebrow">Alle artikelen</p>
-          <h2>Verdieping per onderwerp</h2>
+          <p class="eyebrow">{knowledge.index.eyebrow}</p>
+          <h2>{knowledge.index.title}</h2>
         </div>
-        <div class="filter-buttons" aria-label="Filter artikelen">
-          <button type="button" class="is-active" data-filter="all">Alle</button>
+        <div class="filter-buttons" aria-label={knowledge.index.filterLabel}>
+          <button type="button" class="is-active" data-filter="all">{knowledge.index.allLabel}</button>
           {categories.map((category) => <button type="button" data-filter={category}>{category}</button>)}
         </div>
       </div>
@@ -89,7 +87,7 @@ const formatDate = (date: string) =>
                   <a href={`/nieuws/${article.slug}/`}>{article.title}</a>
                 </h3>
                 <p>{article.excerpt}</p>
-                <a class="article-link" href={`/nieuws/${article.slug}/`}>Lees meer</a>
+                <a class="article-link" href={`/nieuws/${article.slug}/`}>{knowledge.index.articleLinkLabel}</a>
               </div>
             </article>
           ))
@@ -101,11 +99,11 @@ const formatDate = (date: string) =>
   <section class="final-cta">
     <div class="container final-cta-inner">
       <div>
-        <p class="eyebrow">Training nodig?</p>
-        <h2>Van kennis naar handelen in de praktijk</h2>
-        <p>Wil je dit vertalen naar een training voor jouw team of organisatie? We denken graag praktisch met je mee.</p>
+        <p class="eyebrow">{knowledge.indexCta.eyebrow}</p>
+        <h2>{knowledge.indexCta.title}</h2>
+        <p>{knowledge.indexCta.text}</p>
       </div>
-      <a class="button button-light" href="/contact/">Plan een kennismaking</a>
+      <a class="button button-light" href={knowledge.indexCta.button.href}>{knowledge.indexCta.button.label}</a>
     </div>
   </section>
 
