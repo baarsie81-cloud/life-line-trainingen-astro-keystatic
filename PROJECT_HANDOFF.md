@@ -233,17 +233,23 @@ Contact:
 - Zonder `PUBLIC_KEYSTATIC_GITHUB_REPO` gebruikt de configuratie lokale opslag.
 - Voor GitHub mode moet op Vercel minimaal worden ingesteld:
   `PUBLIC_KEYSTATIC_GITHUB_REPO=baarsie81-cloud/life-line-trainingen-astro-keystatic`.
-- Daarnaast zijn de officiële Keystatic GitHub App-/OAuth-variabelen nodig.
+- Daarnaast zijn `PUBLIC_KEYSTATIC_GITHUB_APP_SLUG`,
+  `KEYSTATIC_GITHUB_CLIENT_ID`, `KEYSTATIC_GITHUB_CLIENT_SECRET` en
+  `KEYSTATIC_SECRET` nodig. De namenlijst staat zonder geheimen in `.env.example`.
 - Productie-authenticatie en schrijven naar GitHub zijn nog een verplichte
   livegangtest; niet aannemen dat alleen het dashboard openen voldoende is.
 - Vaste pagina's in Keystatic: homepage, Zwembaden, Instructeurs, Hulpverleners,
-  Over ons, Contact en algemene sitegegevens.
+  Over ons, Contact, Kennisbank overzicht en algemene sitegegevens.
 - Collecties: trainingen, instructeurspagina's, hulpverlenerpagina's en blogs.
 - Zichtbaarheid en indexeerbaarheid sturen waar relevant pagina, hub, submenu en
   sitemap aan.
 - Layout, styling, kleuren en vaste sectievolgorde blijven in Astro/CSS.
-- De klant moet veilig teksten, foto's, CTA's, blogs, trainingen en opleidingen
-  kunnen beheren en nieuwe items kunnen toevoegen zonder de layout te wijzigen.
+- Sanne en de klant beheren veilig de teksten van bestaande pagina's. Technische
+  links, vaste afbeeldingen, SEO-sturing, zichtbaarheid, volgorde en nieuwe
+  training-/doelgroeppagina's blijven bij Jan/code.
+- Kennisbankartikelen hebben een vaste layout met vrije titel, artikeltekst en
+  hoofdafbeelding. Nieuwe artikelen beginnen standaard als niet-gepubliceerd; het
+  nieuwste gepubliceerde artikel wordt automatisch het kopartikel.
 
 ## 12. SEO en techniek die al aanwezig zijn
 
@@ -306,10 +312,11 @@ goedgekeurd. Sla geen onderdeel over.
 
 - [ ] Keystatic GitHub mode en alle benodigde Vercel-variabelen ingesteld.
 - [ ] Inloggen via `/keystatic` getest met het toekomstige klantaccount.
-- [ ] Tekst wijzigen, foto vervangen en opslaan naar GitHub getest.
+- [ ] Tekst wijzigen en een kennisbank-hoofdafbeelding opslaan naar GitHub getest.
 - [ ] Nieuw blogartikel als test aangemaakt, verborgen en daarna verwijderd.
-- [ ] Nieuwe training/opleiding als niet-zichtbaar testitem aangemaakt.
-- [ ] Zichtbaar/onzichtbaar en indexeerbaar/niet-indexeerbaar getest.
+- [ ] Bevestigd dat nieuwe training-/doelgroeppagina's via Jan/code lopen.
+- [ ] Bevestigd dat technische zichtbaarheid en indexeerbaarheid niet door de klant
+      kunnen worden gewijzigd.
 - [ ] Bevestigd dat de klant layout, kleuren en componentstructuur niet kan wijzigen.
 - [ ] Rechten op GitHub, Vercel en Keystatic volgens least privilege ingericht.
 - [ ] Herstelprocedure voor een verkeerde CMS-commit vastgelegd.
@@ -438,4 +445,3 @@ Gebruik desgewenst deze tekst als eerste bericht:
 > geen livegang uit. De klant heeft nieuwe feedback; analyseer die eerst en maak
 > alleen de benodigde, kleine wijzigingen. Herinner ons aan de volledige
 > livegang-checklist zodra we aangeven dat de website definitief live mag.
-
