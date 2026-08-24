@@ -6,11 +6,24 @@
     "title": "Neem contact op",
     "intro": "Heb je een vraag, wil je advies over een passende training of een offerte aanvragen? Laat weten waar je naar zoekt, dan denken we praktisch met je mee.",
     "image": "/assets/contact/aed-strand.jpg",
-    "imageAlt": "AED op het strand tijdens een praktijkgerichte lifesaver training"
+    "imageAlt": "AED op het strand tijdens een praktijkgerichte lifesaver training",
+    "proofLabel": "Direct contact",
+    "proofText": "Mail ons je vraag of aanvraag. We reageren zo snel mogelijk."
   },
   "form": {
+    "eyebrow": "Aanvraag",
     "title": "Waar kunnen we je mee helpen?",
     "intro": "Vul je gegevens en vraag in. We nemen zo snel mogelijk contact met je op.",
+    "labels": {
+      "firstName": "Naam *",
+      "lastName": "Achternaam",
+      "email": "E-mailadres *",
+      "phone": "Telefoonnummer *",
+      "topic": "Waar kunnen wij je mee helpen? *",
+      "topicPlaceholder": "Kies een onderwerp",
+      "message": "Omschrijf je wensen / stel je vraag *",
+      "privacyLink": "privacyverklaring"
+    },
     "topics": ["Zwembaden", "Instructeurs", "Hulpverleners", "Organisaties", "Overig"],
     "submitLabel": "Verstuur je aanvraag",
     "newsletterLabel": "Ik meld me ook aan voor de nieuwsbrief",
@@ -18,10 +31,13 @@
     "fallbackLabel": "Mail ons direct"
   },
   "contactCard": {
+    "eyebrow": "Contactgegevens",
     "title": "Onze contactgegevens",
     "image": "/assets/contact/aed-zwembad.jpg",
     "imageAlt": "AED op de rand van een zwembad",
+    "emailLabel": "E-mail",
     "email": "info@life-line-trainingen.nl",
+    "addressLabel": "Adres",
     "address": ["Life-Line-Trainingen", "Sleeg 1", "6905 BH Zevenaar"],
     "responsePromise": "We reageren zo snel mogelijk. Voor een gerichte offerte helpt het als je kort aangeeft voor welke doelgroep, locatie en gewenste training je contact opneemt."
   },

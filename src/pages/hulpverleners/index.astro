@@ -42,7 +42,7 @@ const structuredData = {
         </div>
       </div>
       <aside class="hero-proof" aria-label="Kern van de hulpverlenerstrainingen">
-        <span>Vier duidelijke routes</span>
+        <span>{page.hero.proofLabel}</span>
         <p>{page.hero.trust}</p>
       </aside>
     </div>
@@ -59,9 +59,9 @@ const structuredData = {
   <section class="section helper-routes-section" id="trainingsroutes" aria-labelledby="helper-routes-title">
     <div class="container">
       <div class="section-heading">
-        <p class="eyebrow">Kies je vervolgpad</p>
-        <h2 id="helper-routes-title">Starten of geldig blijven</h2>
-        <p>De routes zijn gegroepeerd op jouw huidige situatie. Zo kom je zonder vergelijken van onvergelijkbare trainingen direct op de juiste pagina.</p>
+        <p class="eyebrow">{page.routesSection.eyebrow}</p>
+        <h2 id="helper-routes-title">{page.routesSection.title}</h2>
+        <p>{page.routesSection.text}</p>
       </div>
 
       <div class="helper-route-groups">

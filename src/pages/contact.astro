@@ -16,8 +16,8 @@ const addressText = page.contactCard.address.join("\n");
         <p class="hero-intro">{page.hero.intro}</p>
       </div>
       <aside class="hero-proof" aria-label="Contact met Life-Line-Trainingen">
-        <span>Direct contact</span>
-        <p>Mail ons je vraag of aanvraag. We reageren zo snel mogelijk.</p>
+        <span>{page.hero.proofLabel}</span>
+        <p>{page.hero.proofText}</p>
       </aside>
     </div>
   </section>
@@ -26,43 +26,43 @@ const addressText = page.contactCard.address.join("\n");
     <div class="container contact-grid">
       <form class="contact-form" id="contact-form">
         <div class="form-heading">
-          <p class="eyebrow">Aanvraag</p>
+          <p class="eyebrow">{page.form.eyebrow}</p>
           <h2 id="contact-form-title">{page.form.title}</h2>
           <p>{page.form.intro}</p>
         </div>
 
         <div class="form-row">
           <label>
-            <span>Naam *</span>
+            <span>{page.form.labels.firstName}</span>
             <input name="voornaam" autocomplete="given-name" required />
           </label>
           <label>
-            <span>Achternaam</span>
+            <span>{page.form.labels.lastName}</span>
             <input name="achternaam" autocomplete="family-name" />
           </label>
         </div>
 
         <div class="form-row">
           <label>
-            <span>E-mailadres *</span>
+            <span>{page.form.labels.email}</span>
             <input name="email" type="email" autocomplete="email" required />
           </label>
           <label>
-            <span>Telefoonnummer *</span>
+            <span>{page.form.labels.phone}</span>
             <input name="telefoon" type="tel" autocomplete="tel" required />
           </label>
         </div>
 
         <label>
-          <span>Waar kunnen wij je mee helpen? *</span>
+          <span>{page.form.labels.topic}</span>
           <select name="onderwerp" required>
-            <option value="">Kies een onderwerp</option>
+            <option value="">{page.form.labels.topicPlaceholder}</option>
             {page.form.topics.map((topic) => <option value={topic}>{topic}</option>)}
           </select>
         </label>
 
         <label>
-          <span>Omschrijf je wensen / stel je vraag *</span>
+          <span>{page.form.labels.message}</span>
           <textarea name="bericht" rows="7" required></textarea>
         </label>
 
@@ -74,7 +74,7 @@ const addressText = page.contactCard.address.join("\n");
         <p class="privacy-copy">
           {page.form.privacyText}
           {" "}
-          <a href="/juridisch/privacy-statement/">privacyverklaring</a>.
+          <a href="/juridisch/privacy-statement/">{page.form.labels.privacyLink}</a>.
         </p>
 
         <div class="form-actions">
@@ -86,15 +86,15 @@ const addressText = page.contactCard.address.join("\n");
       <aside class="contact-card" aria-label={page.contactCard.title}>
         <img src={page.contactCard.image} alt={page.contactCard.imageAlt} loading="lazy" decoding="async" />
         <div class="contact-card-body">
-          <p class="eyebrow">Contactgegevens</p>
+          <p class="eyebrow">{page.contactCard.eyebrow}</p>
           <h2>{page.contactCard.title}</h2>
           <dl>
             <div>
-              <dt>E-mail</dt>
+              <dt>{page.contactCard.emailLabel}</dt>
               <dd><a href={`mailto:${page.contactCard.email}`}>{page.contactCard.email}</a></dd>
             </div>
             <div>
-              <dt>Adres</dt>
+              <dt>{page.contactCard.addressLabel}</dt>
               <dd>
                 {page.contactCard.address.map((line) => <span>{line}</span>)}
               </dd>

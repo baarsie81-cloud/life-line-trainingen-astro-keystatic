@@ -30,7 +30,7 @@ const structuredData = {
         </div>
       </div>
       <aside class="hero-proof" aria-label="Kern van instructeurstrajecten">
-        <span>Maximaal 6 cursisten</span>
+        <span>{page.hero.proofLabel}</span>
         <p>{page.hero.trust}</p>
       </aside>
     </div>
@@ -47,9 +47,9 @@ const structuredData = {
   <section class="section section-soft" aria-labelledby="instructor-routes-title">
     <div class="container">
       <div class="section-heading">
-        <p class="eyebrow">Drie routes</p>
-        <h2 id="instructor-routes-title">Welke instructeursroute past bij jou?</h2>
-        <p>Geen niveaus of vergelijkingstabel, maar drie verschillende trajecten met elk een eigen zoekintentie en vervolgpad.</p>
+        <p class="eyebrow">{page.routesSection.eyebrow}</p>
+        <h2 id="instructor-routes-title">{page.routesSection.title}</h2>
+        <p>{page.routesSection.text}</p>
       </div>
       <div class="instructor-card-grid">
         {

@@ -15,31 +15,40 @@
       "label": "Bekijk trainingen",
       "href": "/hulpverleners/"
     },
+    "proofLabel": "Al meer dan 20 jaar",
     "trust": "praktijkgerichte trainingen in veiligheid, reanimatie en waterveiligheid"
+  },
+  "audienceSection": {
+    "eyebrow": "Kies jouw situatie",
+    "title": "Vind sneller de training die past"
   },
   "audiences": [
     {
       "label": "In en rond het zwembad",
       "title": "Zwembaden",
       "text": "Voor zwembadteams die verantwoordelijkheid dragen voor bezoekers, toezicht, veiligheid en snel handelen bij incidenten.",
+      "linkLabel": "Bekijk mogelijkheden",
       "href": "/zwembaden/"
     },
     {
       "label": "Training geven",
       "title": "Instructeurs",
       "text": "Voor instructeurs die hun kennis willen verdiepen, actualiseren of sterker willen overbrengen in de praktijk.",
+      "linkLabel": "Bekijk mogelijkheden",
       "href": "/instructeurs/"
     },
     {
       "label": "Handelen onder druk",
       "title": "Hulpverleners",
       "text": "Voor hulpverleners en professionals die zekerder willen handelen bij reanimatie, eerste hulp en waterveiligheid.",
+      "linkLabel": "Bekijk mogelijkheden",
       "href": "/hulpverleners/"
     },
     {
       "label": "Teams en medewerkers",
       "title": "Organisaties",
       "text": "Voor bedrijven, scholen, verenigingen en instellingen die medewerkers praktisch en doelgericht willen trainen.",
+      "linkLabel": "Bekijk mogelijkheden",
       "href": "/hulpverleners/"
     }
   ],
@@ -62,7 +71,18 @@
       }
     ]
   },
-  "featuredTrainingSlugs": ["bls", "pbls", "waterveiligheid", "instructeursopleidingen"],
+  "featuredTrainingSlugs": [
+    "bls",
+    "pbls",
+    "waterveiligheid",
+    "instructeursopleidingen"
+  ],
+  "trainingSection": {
+    "eyebrow": "Uitgelichte trainingen",
+    "title": "Trainingen die direct toepasbaar zijn",
+    "text": "Een selectie van trainingen en opleidingen voor mensen die verantwoordelijkheid dragen voor veiligheid.",
+    "linkLabel": "Bekijk training"
+  },
   "visualStatement": {
     "quote": "In een noodsituatie heb je geen tijd voor twijfel.",
     "text": "Daarom trainen we mensen niet alleen op kennis, maar vooral op doen: kijken, beslissen, communiceren en handelen.",

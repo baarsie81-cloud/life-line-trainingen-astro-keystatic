@@ -2,6 +2,12 @@ import { collection, config, fields, singleton } from "@keystatic/core";
 
 const githubRepo = import.meta.env.PUBLIC_KEYSTATIC_GITHUB_REPO;
 
+const hiddenField = <Field extends { Input: unknown }>(field: Field) =>
+  ({ ...field, Input: () => null }) as Field;
+
+const hiddenTextField = (label = "Technische waarde") =>
+  hiddenField(fields.text({ label }));
+
 const linkFields = {
   label: fields.text({
     label: "Knoptekst",
@@ -14,43 +20,27 @@ const linkFields = {
   }),
 };
 
+const textOnlyLinkFields = {
+  label: fields.text({
+    label: "Knoptekst",
+    validation: { isRequired: true },
+  }),
+  href: hiddenTextField("Vaste link"),
+};
+
 const navigationItemFields = {
-  ...linkFields,
-  children: fields.array(fields.object(linkFields, { label: "Submenu-item" }), {
+  ...textOnlyLinkFields,
+  children: fields.array(fields.object(textOnlyLinkFields, { label: "Submenu-item" }), {
     label: "Submenu-items",
     description: "Optioneel. Gebruik dit alleen voor een klein dropdownmenu, zoals bij Instructeurs.",
     itemLabel: (props) => props.fields.label.value || "Submenu-item",
   }),
 };
 
-const imageField = (label: string) =>
-  fields.image({
-    label,
-    directory: "public/assets/photos",
-    publicPath: "/assets/photos",
-    validation: { isRequired: true },
-  });
-
 const fixedImagePathField = (label: string) =>
   fields.text({
     label: `${label} (vast afbeeldingspad)`,
     description: "Niet wijzigen in Keystatic. Afbeeldingen op deze pagina lopen via Jan en de code.",
-    validation: { isRequired: true },
-  });
-
-const contactImageField = (label: string) =>
-  fields.image({
-    label,
-    directory: "public/assets/contact",
-    publicPath: "/assets/contact",
-    validation: { isRequired: true },
-  });
-
-const teamImageField = (label: string) =>
-  fields.image({
-    label,
-    directory: "public/assets/team",
-    publicPath: "/assets/team",
     validation: { isRequired: true },
   });
 
@@ -79,53 +69,41 @@ export default config({
       format: { data: "json" },
       schema: {
         name: fields.text({ label: "Bedrijfsnaam", validation: { isRequired: true } }),
-        url: fields.url({ label: "Website URL", validation: { isRequired: true } }),
+        url: hiddenField(fields.url({ label: "Website URL", validation: { isRequired: true } })),
         email: fields.text({ label: "E-mailadres", validation: { isRequired: true } }),
         address: fields.array(fields.text({ label: "Adresregel" }), {
           label: "Adres",
           itemLabel: (props) => props.value || "Adresregel",
         }),
-        description: fields.text({ label: "Korte omschrijving", multiline: true }),
-        headerCta: fields.object(linkFields, { label: "Knop rechtsboven" }),
+        description: hiddenField(fields.text({ label: "Korte omschrijving", multiline: true })),
+        headerCta: fields.object(textOnlyLinkFields, { label: "Knop rechtsboven" }),
         footerText: fields.text({ label: "Footertekst", multiline: true }),
-        logos: fields.object(
+        footerPagesTitle: fields.text({ label: "Footertitel pagina's", validation: { isRequired: true } }),
+        footerContactTitle: fields.text({ label: "Footertitel contact", validation: { isRequired: true } }),
+        copyrightText: fields.text({ label: "Copyrightregel", validation: { isRequired: true } }),
+        logos: hiddenField(fields.object(
           {
-            blue: fields.image({
-              label: "Logo blauw",
-              directory: "public/assets/brand",
-              publicPath: "/assets/brand",
-              validation: { isRequired: true },
-            }),
-            white: fields.image({
-              label: "Logo wit",
-              directory: "public/assets/brand",
-              publicPath: "/assets/brand",
-              validation: { isRequired: true },
-            }),
+            blue: hiddenTextField("Logo blauw"),
+            white: hiddenTextField("Logo wit"),
           },
           { label: "Logo's" }
-        ),
+        )),
         navigation: fields.array(fields.object(navigationItemFields, { label: "Menu-item" }), {
           label: "Navigatie",
           itemLabel: (props) => props.fields.label.value || "Menu-item",
         }),
-        footerPartners: fields.array(fields.object(
+        footerPartners: hiddenField(fields.array(fields.object(
           {
             label: fields.text({ label: "Naam", validation: { isRequired: true } }),
             href: fields.url({ label: "Link", validation: { isRequired: true } }),
-            logo: fields.image({
-              label: "Logo",
-              directory: "public/assets/partners",
-              publicPath: "/assets/partners",
-              validation: { isRequired: true },
-            }),
+            logo: hiddenTextField("Logo"),
             alt: fields.text({ label: "Alt-tekst", validation: { isRequired: true } }),
           },
           { label: "Footer logo/link" }
         ), {
           label: "Footer logo-links",
           itemLabel: (props) => props.fields.label.value || "Footer logo/link",
-        }),
+        })),
       },
     }),
     home: singleton({
@@ -133,24 +111,32 @@ export default config({
       path: "src/content/pages/home",
       format: { data: "json" },
       schema: {
-        seoTitle: fields.text({ label: "SEO titel", validation: { isRequired: true } }),
-        seoDescription: fields.text({
+        seoTitle: hiddenField(fields.text({ label: "SEO titel", validation: { isRequired: true } })),
+        seoDescription: hiddenField(fields.text({
           label: "SEO omschrijving",
           multiline: true,
           validation: { isRequired: true },
-        }),
+        })),
         hero: fields.object(
           {
             eyebrow: fields.text({ label: "Label boven titel", validation: { isRequired: true } }),
             title: fields.text({ label: "Hoofdtitel", validation: { isRequired: true } }),
             intro: fields.text({ label: "Intro", multiline: true, validation: { isRequired: true } }),
-            image: imageField("Hero foto"),
-            imageAlt: fields.text({ label: "Alt-tekst hero foto", validation: { isRequired: true } }),
-            primaryCta: fields.object(linkFields, { label: "Primaire knop" }),
-            secondaryCta: fields.object(linkFields, { label: "Tweede knop" }),
+            image: hiddenTextField("Hero foto"),
+            imageAlt: hiddenTextField("Alt-tekst hero foto"),
+            primaryCta: fields.object(textOnlyLinkFields, { label: "Primaire knop" }),
+            secondaryCta: fields.object(textOnlyLinkFields, { label: "Tweede knop" }),
+            proofLabel: fields.text({ label: "Klein label bewijsblok", validation: { isRequired: true } }),
             trust: fields.text({ label: "Vertrouwensregel", validation: { isRequired: true } }),
           },
           { label: "Hero" }
+        ),
+        audienceSection: fields.object(
+          {
+            eyebrow: fields.text({ label: "Label boven titel", validation: { isRequired: true } }),
+            title: fields.text({ label: "Titel", validation: { isRequired: true } }),
+          },
+          { label: "Doelgroepblok" }
         ),
         audiences: fields.array(
           fields.object(
@@ -158,7 +144,8 @@ export default config({
               label: fields.text({ label: "Klein label", validation: { isRequired: true } }),
               title: fields.text({ label: "Titel", validation: { isRequired: true } }),
               text: fields.text({ label: "Tekst", multiline: true, validation: { isRequired: true } }),
-              href: fields.text({ label: "Link", validation: { isRequired: true } }),
+              linkLabel: fields.text({ label: "Linktekst", validation: { isRequired: true } }),
+              href: hiddenTextField("Vaste link"),
             },
             { label: "Doelgroepkaart" }
           ),
@@ -188,19 +175,28 @@ export default config({
           },
           { label: "Positionering" }
         ),
-        featuredTrainingSlugs: fields.array(fields.text({ label: "Training slug" }), {
+        featuredTrainingSlugs: hiddenField(fields.array(fields.text({ label: "Training slug" }), {
           label: "Uitgelichte trainingen",
           description: "Gebruik slugs uit de trainingcollectie, bijvoorbeeld bls of waterveiligheid.",
           itemLabel: (props) => props.value || "Training",
-        }),
+        })),
+        trainingSection: fields.object(
+          {
+            eyebrow: fields.text({ label: "Label boven titel", validation: { isRequired: true } }),
+            title: fields.text({ label: "Titel", validation: { isRequired: true } }),
+            text: fields.text({ label: "Tekst", multiline: true, validation: { isRequired: true } }),
+            linkLabel: fields.text({ label: "Linktekst trainingskaarten", validation: { isRequired: true } }),
+          },
+          { label: "Uitgelichte trainingen" }
+        ),
         visualStatement: fields.object(
           {
             quote: fields.text({ label: "Statement", validation: { isRequired: true } }),
             text: fields.text({ label: "Tekst", multiline: true, validation: { isRequired: true } }),
-            images: fields.array(
+            images: hiddenField(fields.array(
               fields.object(
                 {
-                  src: imageField("Foto"),
+                  src: hiddenTextField("Foto"),
                   alt: fields.text({ label: "Alt-tekst", validation: { isRequired: true } }),
                 },
                 { label: "Praktijkbeeld" }
@@ -209,7 +205,7 @@ export default config({
                 label: "Praktijkbeelden",
                 itemLabel: (props) => props.fields.alt.value || "Praktijkbeeld",
               }
-            ),
+            )),
           },
           { label: "Visueel statement" }
         ),
@@ -219,11 +215,11 @@ export default config({
             title: fields.text({ label: "Titel", validation: { isRequired: true } }),
             intro: fields.text({ label: "Intro", multiline: true, validation: { isRequired: true } }),
             sourceLabel: fields.text({ label: "Google linktekst", validation: { isRequired: true } }),
-            sourceHref: fields.text({
+            sourceHref: hiddenField(fields.text({
               label: "Google link",
               description: "Plak hier de link naar de Google reviews of het Google bedrijfsprofiel.",
               validation: { isRequired: true },
-            }),
+            })),
             reviews: fields.array(
               fields.object(
                 {
@@ -232,21 +228,21 @@ export default config({
                     label: "Context",
                     description: "Bijvoorbeeld Google review, organisatie of type training.",
                   }),
-                  rating: fields.integer({
+                  rating: hiddenField(fields.integer({
                     label: "Score",
                     description: "Gebruik een score van 1 t/m 5.",
                     defaultValue: 5,
                     validation: { isRequired: true },
-                  }),
+                  })),
                   quote: fields.text({ label: "Reviewtekst", multiline: true, validation: { isRequired: true } }),
                   date: fields.text({
                     label: "Datum",
                     description: "Optioneel, bijvoorbeeld juni 2026.",
                   }),
-                  visible: fields.checkbox({
+                  visible: hiddenField(fields.checkbox({
                     label: "Zichtbaar op de website",
                     defaultValue: false,
-                  }),
+                  })),
                 },
                 { label: "Review" }
               ),
@@ -263,7 +259,7 @@ export default config({
             eyebrow: fields.text({ label: "Label boven titel", validation: { isRequired: true } }),
             title: fields.text({ label: "Titel", validation: { isRequired: true } }),
             text: fields.text({ label: "Tekst", multiline: true, validation: { isRequired: true } }),
-            button: fields.object(linkFields, { label: "Knop" }),
+            button: fields.object(textOnlyLinkFields, { label: "Knop" }),
           },
           { label: "Conversieblok" }
         ),
@@ -274,21 +270,22 @@ export default config({
       path: "src/content/pages/zwembaden",
       format: { data: "json" },
       schema: {
-        seoTitle: fields.text({ label: "SEO titel", validation: { isRequired: true } }),
-        seoDescription: fields.text({
+        seoTitle: hiddenField(fields.text({ label: "SEO titel", validation: { isRequired: true } })),
+        seoDescription: hiddenField(fields.text({
           label: "SEO omschrijving",
           multiline: true,
           validation: { isRequired: true },
-        }),
+        })),
         hero: fields.object(
           {
             eyebrow: fields.text({ label: "Label boven titel", validation: { isRequired: true } }),
             title: fields.text({ label: "Hoofdtitel", validation: { isRequired: true } }),
             intro: fields.text({ label: "Intro", multiline: true, validation: { isRequired: true } }),
-            image: imageField("Hero foto"),
-            imageAlt: fields.text({ label: "Alt-tekst hero foto", validation: { isRequired: true } }),
-            primaryCta: fields.object(linkFields, { label: "Primaire knop" }),
-            secondaryCta: fields.object(linkFields, { label: "Tweede knop / ankerlink" }),
+            image: hiddenTextField("Hero foto"),
+            imageAlt: hiddenTextField("Alt-tekst hero foto"),
+            primaryCta: fields.object(textOnlyLinkFields, { label: "Primaire knop" }),
+            secondaryCta: fields.object(textOnlyLinkFields, { label: "Tweede knop / ankerlink" }),
+            proofLabel: fields.text({ label: "Klein label bewijsblok", validation: { isRequired: true } }),
             trust: fields.text({ label: "Vertrouwensregel", validation: { isRequired: true } }),
           },
           { label: "Hero" }
@@ -321,10 +318,10 @@ export default config({
               fields.object(
                 {
                   label: fields.text({ label: "Klein label", validation: { isRequired: true } }),
-                  recommended: fields.checkbox({
+                  recommended: hiddenField(fields.checkbox({
                     label: "Toon als aanbeveling",
                     defaultValue: false,
-                  }),
+                  })),
                   recommendedLabel: fields.text({
                     label: "Aanbeveling label",
                     description: "Bijvoorbeeld: Onze aanbeveling.",
@@ -383,7 +380,7 @@ export default config({
                     description: "Laat leeg als er geen opvallend blok nodig is.",
                   }),
                   ctaLabel: fields.text({ label: "Knoptekst", validation: { isRequired: true } }),
-                  ctaHref: fields.text({ label: "Knoplink", validation: { isRequired: true } }),
+                  ctaHref: hiddenTextField("Vaste knoplink"),
                 },
                 { label: "Module" }
               ),
@@ -421,7 +418,7 @@ export default config({
             eyebrow: fields.text({ label: "Label boven titel", validation: { isRequired: true } }),
             title: fields.text({ label: "Titel", validation: { isRequired: true } }),
             text: fields.text({ label: "Tekst", multiline: true, validation: { isRequired: true } }),
-            button: fields.object(linkFields, { label: "Knop" }),
+            button: fields.object(textOnlyLinkFields, { label: "Knop" }),
           },
           { label: "Conversieblok" }
         ),
@@ -432,19 +429,20 @@ export default config({
       path: "src/content/pages/instructeurs",
       format: { data: "json" },
       schema: {
-        seoTitle: fields.text({ label: "SEO titel", validation: { isRequired: true } }),
-        seoDescription: fields.text({
+        seoTitle: hiddenField(fields.text({ label: "SEO titel", validation: { isRequired: true } })),
+        seoDescription: hiddenField(fields.text({
           label: "SEO omschrijving",
           multiline: true,
           validation: { isRequired: true },
-        }),
+        })),
         hero: fields.object(
           {
             eyebrow: fields.text({ label: "Label boven titel", validation: { isRequired: true } }),
             title: fields.text({ label: "Hoofdtitel", validation: { isRequired: true } }),
             intro: fields.text({ label: "Intro", multiline: true, validation: { isRequired: true } }),
-            image: imageField("Hero foto"),
-            imageAlt: fields.text({ label: "Alt-tekst hero foto", validation: { isRequired: true } }),
+            image: hiddenTextField("Hero foto"),
+            imageAlt: hiddenTextField("Alt-tekst hero foto"),
+            proofLabel: fields.text({ label: "Klein label bewijsblok", validation: { isRequired: true } }),
             trust: fields.text({ label: "Vertrouwensregel", validation: { isRequired: true } }),
           },
           { label: "Hero" }
@@ -453,8 +451,8 @@ export default config({
           fields.object(
             {
               label: fields.text({ label: "Knoptekst", validation: { isRequired: true } }),
-              href: fields.text({ label: "Link", validation: { isRequired: true } }),
-              title: fields.text({ label: "Interne titel", validation: { isRequired: true } }),
+              href: hiddenTextField("Vaste link"),
+              title: hiddenTextField("Interne titel"),
             },
             { label: "Hero knop" }
           ),
@@ -471,13 +469,21 @@ export default config({
           },
           { label: "Voor wie is dit" }
         ),
+        routesSection: fields.object(
+          {
+            eyebrow: fields.text({ label: "Label boven titel", validation: { isRequired: true } }),
+            title: fields.text({ label: "Titel", validation: { isRequired: true } }),
+            text: fields.text({ label: "Tekst", multiline: true, validation: { isRequired: true } }),
+          },
+          { label: "Intro routekaarten" }
+        ),
         cards: fields.array(
           fields.object(
             {
               eyebrow: fields.text({ label: "Klein label", validation: { isRequired: true } }),
               title: fields.text({ label: "Titel", validation: { isRequired: true } }),
               text: fields.text({ label: "Tekst", multiline: true, validation: { isRequired: true } }),
-              href: fields.text({ label: "Link", validation: { isRequired: true } }),
+              href: hiddenTextField("Vaste link"),
               linkLabel: fields.text({ label: "Linktekst", validation: { isRequired: true } }),
             },
             { label: "Routekaart" }
@@ -514,22 +520,23 @@ export default config({
       path: "src/content/pages/hulpverleners",
       format: { data: "json" },
       schema: {
-        seoTitle: fields.text({ label: "SEO titel", validation: { isRequired: true } }),
-        seoDescription: fields.text({
+        seoTitle: hiddenField(fields.text({ label: "SEO titel", validation: { isRequired: true } })),
+        seoDescription: hiddenField(fields.text({
           label: "SEO omschrijving",
           multiline: true,
           validation: { isRequired: true },
-        }),
+        })),
         hero: fields.object(
           {
             eyebrow: fields.text({ label: "Label boven titel", validation: { isRequired: true } }),
             title: fields.text({ label: "Hoofdtitel", validation: { isRequired: true } }),
             intro: fields.text({ label: "Intro", multiline: true, validation: { isRequired: true } }),
-            image: imageField("Hero foto"),
-            imageAlt: fields.text({ label: "Alt-tekst hero foto", validation: { isRequired: true } }),
+            image: hiddenTextField("Hero foto"),
+            imageAlt: hiddenTextField("Alt-tekst hero foto"),
+            proofLabel: fields.text({ label: "Klein label bewijsblok", validation: { isRequired: true } }),
             trust: fields.text({ label: "Vertrouwensregel", multiline: true, validation: { isRequired: true } }),
-            primaryCta: fields.object(linkFields, { label: "Primaire knop" }),
-            secondaryCta: fields.object(linkFields, { label: "Tweede knop" }),
+            primaryCta: fields.object(textOnlyLinkFields, { label: "Primaire knop" }),
+            secondaryCta: fields.object(textOnlyLinkFields, { label: "Tweede knop" }),
           },
           { label: "Hero" }
         ),
@@ -540,6 +547,14 @@ export default config({
             text: fields.text({ label: "Tekst", multiline: true, validation: { isRequired: true } }),
           },
           { label: "Direct antwoord" }
+        ),
+        routesSection: fields.object(
+          {
+            eyebrow: fields.text({ label: "Label boven titel", validation: { isRequired: true } }),
+            title: fields.text({ label: "Titel", validation: { isRequired: true } }),
+            text: fields.text({ label: "Tekst", multiline: true, validation: { isRequired: true } }),
+          },
+          { label: "Intro routekaarten" }
         ),
         groups: fields.object(
           {
@@ -608,7 +623,7 @@ export default config({
             eyebrow: fields.text({ label: "Label boven titel", validation: { isRequired: true } }),
             title: fields.text({ label: "Titel", validation: { isRequired: true } }),
             text: fields.text({ label: "Tekst", multiline: true, validation: { isRequired: true } }),
-            button: fields.object(linkFields, { label: "Knop" }),
+            button: fields.object(textOnlyLinkFields, { label: "Knop" }),
           },
           { label: "Conversieblok" }
         ),
@@ -619,20 +634,21 @@ export default config({
       path: "src/content/pages/over",
       format: { data: "json" },
       schema: {
-        seoTitle: fields.text({ label: "SEO titel", validation: { isRequired: true } }),
-        seoDescription: fields.text({
+        seoTitle: hiddenField(fields.text({ label: "SEO titel", validation: { isRequired: true } })),
+        seoDescription: hiddenField(fields.text({
           label: "SEO omschrijving",
           multiline: true,
           validation: { isRequired: true },
-        }),
+        })),
         hero: fields.object(
           {
             eyebrow: fields.text({ label: "Label boven titel", validation: { isRequired: true } }),
             title: fields.text({ label: "Hoofdtitel", validation: { isRequired: true } }),
             intro: fields.text({ label: "Intro", multiline: true, validation: { isRequired: true } }),
-            image: imageField("Hero foto"),
-            imageAlt: fields.text({ label: "Alt-tekst hero foto", validation: { isRequired: true } }),
-            primaryCta: fields.object(linkFields, { label: "Primaire knop" }),
+            image: hiddenTextField("Hero foto"),
+            imageAlt: hiddenTextField("Alt-tekst hero foto"),
+            primaryCta: fields.object(textOnlyLinkFields, { label: "Primaire knop" }),
+            proofLabel: fields.text({ label: "Klein label bewijsblok", validation: { isRequired: true } }),
             trust: fields.text({ label: "Vertrouwensregel", validation: { isRequired: true } }),
           },
           { label: "Hero" }
@@ -666,7 +682,7 @@ export default config({
                 itemLabel: (props) => props.fields.title.value || "Pijler",
               }
             ),
-            button: fields.object(linkFields, { label: "Knop naar team" }),
+            button: fields.object(textOnlyLinkFields, { label: "Knop naar team" }),
           },
           { label: "Zo pakken we het aan" }
         ),
@@ -681,8 +697,8 @@ export default config({
                   name: fields.text({ label: "Naam", validation: { isRequired: true } }),
                   role: fields.text({ label: "Rol", validation: { isRequired: true } }),
                   text: fields.text({ label: "Korte omschrijving", multiline: true, validation: { isRequired: true } }),
-                  image: teamImageField("Foto"),
-                  imageAlt: fields.text({ label: "Alt-tekst foto", validation: { isRequired: true } }),
+                  image: hiddenTextField("Foto"),
+                  imageAlt: hiddenTextField("Alt-tekst foto"),
                 },
                 { label: "Teamlid" }
               ),
@@ -727,7 +743,7 @@ export default config({
             eyebrow: fields.text({ label: "Label boven titel", validation: { isRequired: true } }),
             title: fields.text({ label: "Titel", validation: { isRequired: true } }),
             text: fields.text({ label: "Tekst", multiline: true, validation: { isRequired: true } }),
-            button: fields.object(linkFields, { label: "Knop" }),
+            button: fields.object(textOnlyLinkFields, { label: "Knop" }),
           },
           { label: "Nieuwsbriefblok" }
         ),
@@ -738,26 +754,42 @@ export default config({
       path: "src/content/pages/contact",
       format: { data: "json" },
       schema: {
-        seoTitle: fields.text({ label: "SEO titel", validation: { isRequired: true } }),
-        seoDescription: fields.text({
+        seoTitle: hiddenField(fields.text({ label: "SEO titel", validation: { isRequired: true } })),
+        seoDescription: hiddenField(fields.text({
           label: "SEO omschrijving",
           multiline: true,
           validation: { isRequired: true },
-        }),
+        })),
         hero: fields.object(
           {
             eyebrow: fields.text({ label: "Label boven titel", validation: { isRequired: true } }),
             title: fields.text({ label: "Hoofdtitel", validation: { isRequired: true } }),
             intro: fields.text({ label: "Intro", multiline: true, validation: { isRequired: true } }),
-            image: contactImageField("Hero foto"),
-            imageAlt: fields.text({ label: "Alt-tekst hero foto", validation: { isRequired: true } }),
+            image: hiddenTextField("Hero foto"),
+            imageAlt: hiddenTextField("Alt-tekst hero foto"),
+            proofLabel: fields.text({ label: "Klein label bewijsblok", validation: { isRequired: true } }),
+            proofText: fields.text({ label: "Tekst bewijsblok", multiline: true, validation: { isRequired: true } }),
           },
           { label: "Hero" }
         ),
         form: fields.object(
           {
+            eyebrow: fields.text({ label: "Label boven formuliertitel", validation: { isRequired: true } }),
             title: fields.text({ label: "Formuliertitel", validation: { isRequired: true } }),
             intro: fields.text({ label: "Formulierintro", multiline: true, validation: { isRequired: true } }),
+            labels: fields.object(
+              {
+                firstName: fields.text({ label: "Label voornaam", validation: { isRequired: true } }),
+                lastName: fields.text({ label: "Label achternaam", validation: { isRequired: true } }),
+                email: fields.text({ label: "Label e-mailadres", validation: { isRequired: true } }),
+                phone: fields.text({ label: "Label telefoonnummer", validation: { isRequired: true } }),
+                topic: fields.text({ label: "Label onderwerp", validation: { isRequired: true } }),
+                topicPlaceholder: fields.text({ label: "Placeholder onderwerp", validation: { isRequired: true } }),
+                message: fields.text({ label: "Label bericht", validation: { isRequired: true } }),
+                privacyLink: fields.text({ label: "Linktekst privacyverklaring", validation: { isRequired: true } }),
+              },
+              { label: "Veldlabels" }
+            ),
             topics: fields.array(fields.text({ label: "Onderwerp" }), {
               label: "Onderwerpopties",
               itemLabel: (props) => props.value || "Onderwerp",
@@ -771,10 +803,13 @@ export default config({
         ),
         contactCard: fields.object(
           {
+            eyebrow: fields.text({ label: "Label boven titel", validation: { isRequired: true } }),
             title: fields.text({ label: "Titel contactkaart", validation: { isRequired: true } }),
-            image: contactImageField("Contactkaart foto"),
-            imageAlt: fields.text({ label: "Alt-tekst contactkaart foto", validation: { isRequired: true } }),
+            image: hiddenTextField("Contactkaart foto"),
+            imageAlt: hiddenTextField("Alt-tekst contactkaart foto"),
+            emailLabel: fields.text({ label: "Label e-mail", validation: { isRequired: true } }),
             email: fields.text({ label: "E-mailadres", validation: { isRequired: true } }),
+            addressLabel: fields.text({ label: "Label adres", validation: { isRequired: true } }),
             address: fields.array(fields.text({ label: "Adresregel" }), {
               label: "Adres",
               itemLabel: (props) => props.value || "Adresregel",

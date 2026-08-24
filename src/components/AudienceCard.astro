@@ -3,15 +3,16 @@ interface Props {
   label: string;
   title: string;
   text: string;
+  linkLabel: string;
   href: string;
 }
 
-const { label, title, text, href } = Astro.props;
+const { label, title, text, linkLabel, href } = Astro.props;
 ---
 
 <a class="audience-card" href={href}>
   <span>{label}</span>
   <strong>{title}</strong>
   <p>{text}</p>
-  <em>Bekijk mogelijkheden</em>
+  <em>{linkLabel}</em>
 </a>

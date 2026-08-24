@@ -7,6 +7,7 @@
     "intro": "Bij Life-Line-Trainingen leid je je op tot NRR-erkend reanimatie-instructeur, of blijf je als bestaande instructeur gecertificeerd via bijscholing. We werken met kleine groepen van maximaal 6 cursisten per instructeur-trainer, zodat er echt ruimte is voor persoonlijke aandacht.",
     "image": "/assets/photos/bls-aed-training-breed.jpg",
     "imageAlt": "Praktijktraining reanimatie en AED voor instructeurs",
+    "proofLabel": "Maximaal 6 cursisten",
     "trust": "Drie routes voor drie verschillende instructeursvragen."
   },
   "routes": [
@@ -30,6 +31,11 @@
     "eyebrow": "Voor wie is dit?",
     "title": "Kies de route die past bij jouw situatie",
     "text": "Wil je instructeur worden, maar heb je nog geen ervaring? Dan volg je de opleiding reanimatie-instructeur. Ben je al instructeur en moet je je certificaat verlengen? Dan is de bijscholing reanimatie-instructeur voor jou. Ben je ook actief als Oranje Kruis-, NRR- of SDBREL-instructeur? Dan haal je bij ons bijscholingsweekend in één keer punten voor meerdere certificeringen."
+  },
+  "routesSection": {
+    "eyebrow": "Drie routes",
+    "title": "Welke instructeursroute past bij jou?",
+    "text": "Geen niveaus of vergelijkingstabel, maar drie verschillende trajecten met elk een eigen zoekintentie en vervolgpad."
   },
   "cards": [
     {

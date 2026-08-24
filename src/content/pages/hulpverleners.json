@@ -7,6 +7,7 @@
     "intro": "Wil je leren reanimeren, een EHBO-certificaat behalen of je bestaande certificaat verlengen? Kies de route die past bij jouw ervaring en de mensen aan wie jij hulp wilt kunnen verlenen.",
     "image": "/assets/photos/bls-reanimatie-aed.jpg",
     "imageAlt": "Praktijkgerichte reanimatietraining met AED en reanimatiepop",
+    "proofLabel": "Vier duidelijke routes",
     "trust": "Praktisch trainen, duidelijke keuzes en erkende Rode Kruis-certificering.",
     "primaryCta": {
       "label": "Bekijk de vier routes",
@@ -21,6 +22,11 @@
     "eyebrow": "Direct antwoord",
     "title": "Welke training past bij jou?",
     "text": "Begin je zonder geldig certificaat, kies dan een opleiding EHBO of een reanimatietraining. Heb je al een geldig Rode Kruis-certificaat en wil je dit verlengen, kies dan een reanimatiebijscholing of een van de EHBO-bijscholingen. Op iedere routepagina zie je de varianten voor volwassenen, kinderen of alle leeftijden."
+  },
+  "routesSection": {
+    "eyebrow": "Kies je vervolgpad",
+    "title": "Starten of geldig blijven",
+    "text": "De routes zijn gegroepeerd op jouw huidige situatie. Zo kom je zonder vergelijken van onvergelijkbare trainingen direct op de juiste pagina."
   },
   "groups": {
     "opleiding": {
