@@ -4,9 +4,10 @@ import AudienceCard from "../components/AudienceCard.astro";
 import ReviewSwimlane from "../components/ReviewSwimlane.astro";
 import TrainingCard from "../components/TrainingCard.astro";
 import home from "../content/pages/home.json";
+import { withContentSlugs } from "../lib/content";
 
 const trainingFiles = import.meta.glob("../content/trainings/*.json", { eager: true });
-const allTrainings = Object.values(trainingFiles).map((entry: any) => entry.default);
+const allTrainings = withContentSlugs(trainingFiles);
 const featuredTrainings = allTrainings
   .filter((training) => training.visible && home.featuredTrainingSlugs.includes(training.slug))
   .sort((a, b) => {

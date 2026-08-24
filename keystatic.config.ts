@@ -9,7 +9,7 @@ const linkFields = {
   }),
   href: fields.text({
     label: "Link",
-    description: "Gebruik bijvoorbeeld /contact/ of /trainingen/.",
+    description: "Gebruik bijvoorbeeld /contact/ of /hulpverleners/.",
     validation: { isRequired: true },
   }),
 };
@@ -28,6 +28,13 @@ const imageField = (label: string) =>
     label,
     directory: "public/assets/photos",
     publicPath: "/assets/photos",
+    validation: { isRequired: true },
+  });
+
+const fixedImagePathField = (label: string) =>
+  fields.text({
+    label: `${label} (vast afbeeldingspad)`,
+    description: "Niet wijzigen in Keystatic. Afbeeldingen op deze pagina lopen via Jan en de code.",
     validation: { isRequired: true },
   });
 
@@ -821,7 +828,7 @@ export default config({
           multiline: true,
           validation: { isRequired: true },
         }),
-        image: imageField("Afbeelding"),
+        image: fixedImagePathField("Afbeelding"),
         visible: fields.checkbox({
           label: "Zichtbaar op de website",
           defaultValue: true,
@@ -854,7 +861,7 @@ export default config({
         }),
         eyebrow: fields.text({ label: "Label boven titel", validation: { isRequired: true } }),
         intro: fields.text({ label: "Intro", multiline: true, validation: { isRequired: true } }),
-        image: imageField("Hero foto"),
+        image: fixedImagePathField("Hero foto"),
         imageAlt: fields.text({ label: "Alt-tekst afbeelding", validation: { isRequired: true } }),
         proof: fields.object(
           {
@@ -894,7 +901,7 @@ export default config({
                 label: "Punten",
                 itemLabel: (props) => props.value || "Punt",
               }),
-              image: imageField("Afbeelding"),
+              image: fixedImagePathField("Afbeelding"),
               imageAlt: fields.text({ label: "Alt-tekst afbeelding" }),
             },
             { label: "Contentsectie" }
@@ -1034,7 +1041,7 @@ export default config({
         ),
         eyebrow: fields.text({ label: "Label boven titel", validation: { isRequired: true } }),
         intro: fields.text({ label: "Hero intro", multiline: true, validation: { isRequired: true } }),
-        image: imageField("Hero foto"),
+        image: fixedImagePathField("Hero foto"),
         imageAlt: fields.text({ label: "Alt-tekst hero foto", validation: { isRequired: true } }),
         proof: fields.object(
           {
@@ -1105,7 +1112,7 @@ export default config({
                 label: "Punten",
                 itemLabel: (props) => props.value || "Punt",
               }),
-              image: imageField("Afbeelding"),
+              image: fixedImagePathField("Afbeelding"),
               imageAlt: fields.text({ label: "Alt-tekst afbeelding", validation: { isRequired: true } }),
             },
             { label: "Contentsectie" }
@@ -1194,10 +1201,9 @@ export default config({
           multiline: true,
           validation: { isRequired: true },
         }),
-        image: fields.image({
-          label: "Hoofdafbeelding",
-          directory: "public/assets/blogs",
-          publicPath: "/assets/blogs",
+        image: fields.text({
+          label: "Hoofdafbeelding (tijdelijk bestaand pad)",
+          description: "Wordt in blok 3 vervangen door veilige artikelafbeelding-upload.",
           validation: { isRequired: true },
         }),
         imageAlt: fields.text({ label: "Alt-tekst afbeelding", validation: { isRequired: true } }),

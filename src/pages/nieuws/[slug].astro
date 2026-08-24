@@ -1,30 +1,30 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import site from "../../content/settings/site.json";
+import { withContentSlugs } from "../../lib/content";
 
 export const prerender = true;
 
 const blogFiles = import.meta.glob("../../content/blogs/*.json", { eager: true });
-const allBlogs = Object.values(blogFiles).map((entry: any) => entry.default);
+const allBlogs = withContentSlugs(blogFiles);
 const visibleBlogs = allBlogs
   .filter((blog) => blog.visible)
   .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 
 export function getStaticPaths() {
   const files = import.meta.glob("../../content/blogs/*.json", { eager: true });
-  const blogs = Object.values(files)
-    .map((entry: any) => entry.default)
+  const blogs = withContentSlugs(files)
     .filter((blog) => blog.visible);
 
   return blogs.map((blog) => ({
-    params: { slug: blog.title.slug },
+    params: { slug: blog.slug },
     props: { blog },
   }));
 }
 
 const { blog } = Astro.props;
 const related = visibleBlogs
-  .filter((item) => item.title.slug !== blog.title.slug && item.category === blog.category)
+  .filter((item) => item.slug !== blog.slug && item.category === blog.category)
   .slice(0, 3);
 
 const formatDate = (date: string) =>
@@ -34,11 +34,11 @@ const formatDate = (date: string) =>
     year: "numeric",
   }).format(new Date(date));
 
-const canonical = new URL(`/nieuws/${blog.title.slug}/`, site.url);
+const canonical = new URL(`/nieuws/${blog.slug}/`, site.url);
 const structuredData = {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
-  headline: blog.title.name,
+  headline: blog.title,
   description: blog.seoDescription,
   image: new URL(blog.image, site.url).href,
   datePublished: blog.date,
@@ -76,7 +76,7 @@ const structuredData = {
           <span>{blog.category}</span>
           <span>{blog.readingTime}</span>
         </div>
-        <h1>{blog.title.name}</h1>
+        <h1>{blog.title}</h1>
         <p>{blog.excerpt}</p>
       </div>
     </header>
@@ -115,7 +115,7 @@ const structuredData = {
                 <div>
                   <span>{formatDate(item.date)}</span>
                   <h3>
-                    <a href={`/nieuws/${item.title.slug}/`}>{item.title.name}</a>
+                    <a href={`/nieuws/${item.slug}/`}>{item.title}</a>
                   </h3>
                 </div>
               </article>

@@ -1,10 +1,10 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import page from "../../content/pages/hulpverleners.json";
+import { withContentSlugs } from "../../lib/content";
 
 const helperPageFiles = import.meta.glob("../../content/helper-pages/*.json", { eager: true });
-const routes = Object.values(helperPageFiles)
-  .map((entry: any) => entry.default)
+const routes = withContentSlugs(helperPageFiles)
   .filter((route) => route.visible && route.showOnHub)
   .sort((a, b) => a.order - b.order);
 
@@ -82,7 +82,7 @@ const structuredData = {
                       <h4>{route.card.title}</h4>
                       <strong>{route.card.audience}</strong>
                       <p>{route.card.text}</p>
-                      <a href={`/hulpverleners/${route.title.slug}/`}>{route.card.linkLabel}</a>
+                      <a href={`/hulpverleners/${route.slug}/`}>{route.card.linkLabel}</a>
                     </article>
                   ))}
                 </div>

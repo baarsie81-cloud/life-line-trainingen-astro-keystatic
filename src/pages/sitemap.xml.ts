@@ -1,24 +1,25 @@
 import site from "../content/settings/site.json";
+import { withContentSlugs } from "../lib/content";
 
 const trainingFiles = import.meta.glob("../content/trainings/*.json", { eager: true });
-const trainings = Object.values(trainingFiles).map((entry: any) => entry.default);
+const trainings = withContentSlugs(trainingFiles);
 const blogFiles = import.meta.glob("../content/blogs/*.json", { eager: true });
-const blogs = Object.values(blogFiles).map((entry: any) => entry.default);
+const blogs = withContentSlugs(blogFiles);
 const instructorPageFiles = import.meta.glob("../content/instructor-pages/*.json", { eager: true });
-const instructorPages = Object.values(instructorPageFiles).map((entry: any) => entry.default);
+const instructorPages = withContentSlugs(instructorPageFiles);
 const helperPageFiles = import.meta.glob("../content/helper-pages/*.json", { eager: true });
-const helperPages = Object.values(helperPageFiles).map((entry: any) => entry.default);
+const helperPages = withContentSlugs(helperPageFiles);
 
 export async function GET() {
   const staticPaths = ["/", "/juridisch/privacy-statement/", ...site.navigation.map((item) => item.href)];
   const trainingPaths = trainings.filter((training) => training.visible).map((training) => training.href);
-  const blogPaths = blogs.filter((blog) => blog.visible).map((blog) => `/nieuws/${blog.title.slug}/`);
+  const blogPaths = blogs.filter((blog) => blog.visible).map((blog) => `/nieuws/${blog.slug}/`);
   const instructorPaths = instructorPages
     .filter((page) => page.visible && page.indexable)
-    .map((page) => `/instructeurs/${page.title.slug}/`);
+    .map((page) => `/instructeurs/${page.slug}/`);
   const helperPaths = helperPages
     .filter((page) => page.visible && page.indexable)
-    .map((page) => `/hulpverleners/${page.title.slug}/`);
+    .map((page) => `/hulpverleners/${page.slug}/`);
   const paths = Array.from(new Set([...staticPaths, ...trainingPaths, ...blogPaths, ...instructorPaths, ...helperPaths]));
 
   const body = `<?xml version="1.0" encoding="UTF-8"?>

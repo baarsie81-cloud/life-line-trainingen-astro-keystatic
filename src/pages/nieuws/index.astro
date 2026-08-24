@@ -1,9 +1,9 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import { withContentSlugs } from "../../lib/content";
 
 const blogFiles = import.meta.glob("../../content/blogs/*.json", { eager: true });
-const blogs = Object.values(blogFiles)
-  .map((entry: any) => entry.default)
+const blogs = withContentSlugs(blogFiles)
   .filter((blog) => blog.visible)
   .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 
@@ -40,13 +40,13 @@ const formatDate = (date: string) =>
   {featured && (
     <section class="section knowledge-featured" aria-labelledby="featured-article-title">
       <div class="container featured-article">
-        <a class="featured-media" href={`/nieuws/${featured.title.slug}/`} aria-label={featured.title.name}>
+        <a class="featured-media" href={`/nieuws/${featured.slug}/`} aria-label={featured.title}>
           <img src={featured.image} alt={featured.imageAlt} loading="eager" decoding="async" />
         </a>
         <div class="featured-copy">
           <p class="eyebrow">Uitgelicht</p>
           <h2 id="featured-article-title">
-            <a href={`/nieuws/${featured.title.slug}/`}>{featured.title.name}</a>
+            <a href={`/nieuws/${featured.slug}/`}>{featured.title}</a>
           </h2>
           <p>{featured.excerpt}</p>
           <div class="article-meta">
@@ -54,7 +54,7 @@ const formatDate = (date: string) =>
             <span>{featured.category}</span>
             <span>{featured.readingTime}</span>
           </div>
-          <a class="button button-primary" href={`/nieuws/${featured.title.slug}/`}>Lees artikel</a>
+          <a class="button button-primary" href={`/nieuws/${featured.slug}/`}>Lees artikel</a>
         </div>
       </div>
     </section>
@@ -77,7 +77,7 @@ const formatDate = (date: string) =>
         {
           articles.map((article) => (
             <article class="article-card" data-category={article.category}>
-              <a class="article-card-media" href={`/nieuws/${article.title.slug}/`} aria-label={article.title.name}>
+              <a class="article-card-media" href={`/nieuws/${article.slug}/`} aria-label={article.title}>
                 <img src={article.image} alt={article.imageAlt} loading="lazy" decoding="async" />
               </a>
               <div class="article-card-copy">
@@ -86,10 +86,10 @@ const formatDate = (date: string) =>
                   <span>{article.category}</span>
                 </div>
                 <h3>
-                  <a href={`/nieuws/${article.title.slug}/`}>{article.title.name}</a>
+                  <a href={`/nieuws/${article.slug}/`}>{article.title}</a>
                 </h3>
                 <p>{article.excerpt}</p>
-                <a class="article-link" href={`/nieuws/${article.title.slug}/`}>Lees meer</a>
+                <a class="article-link" href={`/nieuws/${article.slug}/`}>Lees meer</a>
               </div>
             </article>
           ))

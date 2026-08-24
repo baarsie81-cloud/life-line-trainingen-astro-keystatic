@@ -1,17 +1,16 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import site from "../../content/settings/site.json";
+import { withContentSlugs } from "../../lib/content";
 
 export const prerender = true;
 
 export function getStaticPaths() {
   const pageFiles = import.meta.glob("../../content/helper-pages/*.json", { eager: true });
-  const pages = Object.values(pageFiles)
-    .map((entry: any) => entry.default)
-    .filter((page) => page.visible);
+  const pages = withContentSlugs(pageFiles).filter((page) => page.visible);
 
   return pages.map((page) => ({
-    params: { slug: page.title.slug },
+    params: { slug: page.slug },
     props: { page },
   }));
 }
@@ -25,7 +24,7 @@ const courseData = page.indexable
       name: variant.title,
       description: variant.description,
       image: new URL(page.image, site.url).href,
-      url: new URL(`/hulpverleners/${page.title.slug}/`, site.url).href,
+      url: new URL(`/hulpverleners/${page.slug}/`, site.url).href,
       provider: {
         "@type": "EducationalOrganization",
         name: site.name,
@@ -64,7 +63,7 @@ const structuredData = [...courseData, faqData].filter(Boolean);
     <div class="container page-hero-content">
       <div class="page-hero-copy">
         <p class="eyebrow">{page.eyebrow}</p>
-        <h1>{page.title.name}</h1>
+        <h1>{page.title}</h1>
         <p class="hero-intro">{page.intro}</p>
         <div class="hero-actions">
           <a class="button button-primary" href="#trainingsvarianten">Bekijk de mogelijkheden</a>
