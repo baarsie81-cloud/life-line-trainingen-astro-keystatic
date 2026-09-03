@@ -247,9 +247,6 @@ Contact:
 - Sanne en de klant beheren veilig de teksten van bestaande pagina's. Technische
   links, vaste afbeeldingen, SEO-sturing, zichtbaarheid, volgorde en nieuwe
   training-/doelgroeppagina's blijven bij Jan/code.
-- Bij de vier uitgelichte trainingskaarten is de zichtbare titel losgekoppeld van
-  de verborgen technische sleutel/bestandsnaam. Een tekstuele titelwijziging in
-  Keystatic mag het bestand en de selectie op de homepage niet hernoemen.
 - Kennisbankartikelen hebben een vaste layout met vrije titel, artikeltekst en
   hoofdafbeelding. Nieuwe artikelen beginnen standaard als niet-gepubliceerd; het
   nieuwste gepubliceerde artikel wordt automatisch het kopartikel.
