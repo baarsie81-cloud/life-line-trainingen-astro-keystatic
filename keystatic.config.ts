@@ -917,17 +917,19 @@ export default config({
   collections: {
     trainings: collection({
       label: "Trainingen en opleidingen",
-      slugField: "title",
+      slugField: "technicalKey",
       path: "src/content/trainings/*",
       format: { data: "json" },
+      columns: ["title", "eyebrow"],
       schema: {
-        title: fields.slug({
-          name: { label: "Titel", validation: { isRequired: true } },
+        technicalKey: hiddenField(fields.slug({
+          name: { label: "Vaste technische sleutel", validation: { isRequired: true } },
           slug: {
-            label: "Vast URL-deel",
-            description: "Niet wijzigen bij een bestaande training.",
+            label: "Vaste bestandsnaam",
+            description: "Deze technische waarde wordt alleen via code beheerd.",
           },
-        }),
+        })),
+        title: fields.text({ label: "Titel", validation: { isRequired: true } }),
         href: hiddenTextField("Vaste URL"),
         eyebrow: fields.text({ label: "Klein label", validation: { isRequired: true } }),
         description: fields.text({
