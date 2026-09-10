@@ -493,7 +493,13 @@ h3 {
   font-size: clamp(1.8rem, 3vw, 3rem);
 }
 
-#audience-title {
+.audience-heading {
+  display: block;
+}
+
+.audience-heading h2 {
+  max-width: none;
+  margin-top: 0.65rem;
   text-wrap: balance;
 }
 
