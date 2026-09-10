@@ -40,13 +40,14 @@
       {
         "label": "Basisvaardigheden",
         "recommended": false,
-        "title": "Workshop drenkelingen & reanimatie",
+        "title": "Workshop reanimatie van drenkelingen",
         "text": "Voor individuele basisvaardigheden bij verdrinking, reanimatie en AED-gebruik.",
         "detailsTitle": "Bekijk wat deze training behandelt",
         "details": [
-          "Bewusteloosheid en verslikking",
-          "Reanimatie en AED, inclusief drenkelingen",
-          "Vaardigheidsniveau: individueel handelen"
+          "Bewusteloosheid",
+          "Reanimatie en AED, van de drenkeling",
+          "Vaardigheidsniveau: individueel handelen",
+          "Keten van overleving bij waterongevallen (drenkeling en reanimatie)"
         ]
       },
       {
@@ -59,8 +60,9 @@
         "details": [
           "EHBO-competenties: bewusteloosheid, bloedingen, brandwonden en huidwonden",
           "Letsels aan spieren, botten en gewrichten, vergiftiging, verslikking, reanimatie en AED",
-          "NIBHV-competenties: bhv-taken en bhv-inzet, brand en ontruiming",
-          "Beginnende brand blussen, deur controleren bij brand en ontruiming volgens procedure"
+          "BHV-taken en bhv-inzet, brand en ontruiming",
+          "Beginnende brand blussen, deur controleren bij brand en ontruiming volgens procedure",
+          "Toegang tot online leeromgeving"
         ]
       },
       {
