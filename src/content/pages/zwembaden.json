@@ -84,11 +84,11 @@
   },
   "addition": {
     "eyebrow": "Zwemmend Redden Zwembaden",
-    "title": "Aanvullend: Zwemmend Redden",
+    "title": "Aanvulling: Zwemmend Redden",
     "intro": "Zwemmend Redden bestaat uit drie losse trajecten, elk met een ander doel. Kies op basis van waar je team nu staat: vaardigheden aanscherpen, een certificaat behalen, of een bestaand certificaat verlengen.",
     "items": [
       {
-        "label": "Module 1",
+        "label": "Optie 1",
         "title": "Training Zwemmend Redden",
         "subtitle": "Voor teams die hun vaardigheden willen aanscherpen. Deze training leidt niet tot een certificaat.",
         "detailsTitle": "Bekijk details en voorwaarden",
@@ -112,7 +112,7 @@
         "ctaHref": "/contact/"
       },
       {
-        "label": "Module 2",
+        "label": "Optie 2",
         "title": "Opleiding Zwemmend Redden",
         "subtitle": "Voor teams die toe willen naar een erkend certificaat. Vooraf voorbereiden is verplicht.",
         "detailsTitle": "Bekijk details en instapeis",
@@ -136,7 +136,7 @@
         "ctaHref": "/contact/"
       },
       {
-        "label": "Module 3",
+        "label": "Optie 3",
         "title": "Hercertificering Zwemmend Redden",
         "subtitle": "Voor wie al een Zwemmend Redden Zwembaden-certificaat heeft en dit moet verlengen.",
         "detailsTitle": "Bekijk details",
