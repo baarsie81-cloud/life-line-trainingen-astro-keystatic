@@ -132,7 +132,6 @@ export default config({
             image: hiddenTextField("Hero foto"),
             imageAlt: hiddenTextField("Alt-tekst hero foto"),
             primaryCta: fields.object(textOnlyLinkFields, { label: "Primaire knop" }),
-            secondaryCta: fields.object(textOnlyLinkFields, { label: "Tweede knop" }),
             proofLabel: fields.text({ label: "Klein label bewijsblok", validation: { isRequired: true } }),
             trust: fields.text({ label: "Vertrouwensregel", validation: { isRequired: true } }),
           },

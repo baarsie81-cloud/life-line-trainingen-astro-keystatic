@@ -104,7 +104,7 @@ logo's zijn momenteel niet afzonderlijk klikbaar.
 
 ## 5. Homepage
 
-- Grote praktijkhero met titel, intro, twee CTA's en vertrouwensregel.
+- Grote praktijkhero met titel, intro, één primaire CTA en vertrouwensregel.
 - Vertrouwensregel begint met `Al meer dan 20 jaar` in plaats van `Sinds 2003`.
 - Vier doelgroepkaarten: Zwembaden, Instructeurs, Hulpverleners en Organisaties.
 - De kaart Organisaties verwijst ook naar `/hulpverleners/`, omdat het aanbod
