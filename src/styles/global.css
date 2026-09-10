@@ -493,6 +493,10 @@ h3 {
   font-size: clamp(1.8rem, 3vw, 3rem);
 }
 
+#audience-title {
+  text-wrap: balance;
+}
+
 .audience-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
