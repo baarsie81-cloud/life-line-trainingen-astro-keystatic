@@ -105,11 +105,31 @@
     "sourceHref": "https://www.google.com/search?q=Life-Line-Trainingen+reviews",
     "reviews": [
       {
+        "author": "Krista Beudel",
+        "context": "Google review",
+        "rating": 5,
+        "quote": "Wat een fijne en leerzame EHBO-training weer! Alles was opnieuw super goed georganiseerd. Leuke en vriendelijke mensen, duidelijke uitleg en veel nuttige informatie gekregen.",
+        "visible": true
+      },
+      {
+        "author": "Joops S",
+        "context": "Google review",
+        "rating": 5,
+        "quote": "Het was een zeer leerzame dag, veel dingen opgestoken waar ik in de praktijk zeker iets mee ga doen. De cursusleider Mike was top!! Rustig, nam alle tijd en zeer deskundig.",
+        "visible": true
+      },
+      {
+        "author": "Albert Koobs",
+        "context": "Google review",
+        "rating": 5,
+        "quote": "Het was een hele mooie en gezellige training. Fouten konden wij niet maken alleen maar leermomenten. De rust en de kalmte die er was werkt heel goed om te leren.",
+        "visible": true
+      },
+      {
         "author": "Jolien Kok",
         "context": "Google review",
         "rating": 5,
         "quote": "Twee leerzame trainingen achter de rug en nu gekwalificeerd als Instructeur BLS. De persoonlijke aanpak van Mike en de kleine groep maakten het voor mij extra waardevol.",
-        "date": "3 maanden geleden",
         "visible": true
       },
       {
@@ -117,7 +137,6 @@
         "context": "Google review",
         "rating": 5,
         "quote": "Via de NRR bij Mike terecht gekomen. Echt een ontzettende leuke leerzame training. Veilig leren met een vleugje humor.",
-        "date": "7 maanden geleden",
         "visible": true
       },
       {
@@ -125,7 +144,6 @@
         "context": "Google review",
         "rating": 4,
         "quote": "Zeer leerzame EHBO-training. Fijn om de informatie uit de e-learning ook toegepast te zien worden.",
-        "date": "7 maanden geleden",
         "visible": true
       },
       {
@@ -133,7 +151,6 @@
         "context": "Google review",
         "rating": 5,
         "quote": "Herhaling EHBO was zeer leerzaam en dynamisch. Veel praktijk met Lotus en groepjes.",
-        "date": "7 maanden geleden",
         "visible": true
       },
       {
@@ -141,7 +158,6 @@
         "context": "Google review",
         "rating": 5,
         "quote": "Erg fijne trainingsdagen gehad bij Mike. Duidelijke uitleg en leuke scenario's.",
-        "date": "7 maanden geleden",
         "visible": true
       },
       {
@@ -149,15 +165,6 @@
         "context": "Google review",
         "rating": 5,
         "quote": "Fijne leeromgeving, duidelijke uitleg en mooie opzet/verloop van lesstof.",
-        "date": "7 maanden geleden",
-        "visible": true
-      },
-      {
-        "author": "Thomas Flanderijn",
-        "context": "Google review",
-        "rating": 4,
-        "quote": "Erg gedetailleerd uitgelegd, stap voor stap. Lekker relaxen met thee en koekie tussendoor.",
-        "date": "7 maanden geleden",
         "visible": true
       },
       {
@@ -165,7 +172,13 @@
         "context": "Google review",
         "rating": 5,
         "quote": "Erg afwisselend programma met kundige leuke instructeurs en topper van een Lotus!",
-        "date": "7 maanden geleden",
+        "visible": true
+      },
+      {
+        "author": "Thomas Flanderijn",
+        "context": "Google review",
+        "rating": 4,
+        "quote": "Erg gedetailleerd uitgelegd, stap voor stap. Lekker relaxen met thee en koekie tussendoor.",
         "visible": true
       },
       {
@@ -173,7 +186,6 @@
         "context": "Google review",
         "rating": 5,
         "quote": "Prettige trainingen. Duidelijk instructies en goede indeling van de dagen",
-        "date": "7 maanden geleden",
         "visible": true
       },
       {
@@ -181,7 +193,6 @@
         "context": "Google review",
         "rating": 5,
         "quote": "Vandaag een EHBO cursus gevolgd, de trainer en de Lotus waren goed op elkaar ingespeeld. De leslokaal en de omgeving waar de cursus werd gegeven gaaf de mogelijkheid tot veel leerzame en creatieve situaties.",
-        "date": "een jaar geleden",
         "visible": true
       }
     ]

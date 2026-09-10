@@ -241,19 +241,15 @@ export default config({
                     validation: { isRequired: true },
                   })),
                   quote: fields.text({ label: "Reviewtekst", multiline: true, validation: { isRequired: true } }),
-                  date: fields.text({
-                    label: "Datum",
-                    description: "Optioneel, bijvoorbeeld juni 2026.",
-                  }),
                   visible: hiddenField(fields.checkbox({
                     label: "Zichtbaar op de website",
-                    defaultValue: false,
+                    defaultValue: true,
                   })),
                 },
                 { label: "Review" }
               ),
               {
-                label: "Reviews",
+                label: "Reviews (de eerste 10 worden getoond)",
                 itemLabel: (props) => props.fields.author.value || "Review",
               }
             ),

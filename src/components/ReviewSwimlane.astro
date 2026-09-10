@@ -4,7 +4,6 @@ interface ReviewItem {
   context?: string;
   rating: number;
   quote: string;
-  date?: string;
   visible?: boolean;
 }
 
@@ -18,7 +17,7 @@ interface Props {
 }
 
 const { eyebrow, title, intro, sourceLabel, sourceHref, reviews } = Astro.props;
-const visibleReviews = reviews.filter((review) => review.visible !== false);
+const visibleReviews = reviews.filter((review) => review.visible !== false).slice(0, 10);
 const loopReviews = [...visibleReviews, ...visibleReviews];
 const hasReviews = visibleReviews.length > 0;
 ---
@@ -51,11 +50,7 @@ const hasReviews = visibleReviews.length > 0;
               <blockquote>{review.quote}</blockquote>
               <footer>
                 <strong>{review.author}</strong>
-                {(review.context || review.date) && (
-                  <span>
-                    {[review.context, review.date].filter(Boolean).join(" - ")}
-                  </span>
-                )}
+                {review.context && <span>{review.context}</span>}
               </footer>
             </article>
           ))}
