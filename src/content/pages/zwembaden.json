@@ -4,7 +4,7 @@
   "hero": {
     "eyebrow": "Training voor zwembaden",
     "title": "Training voor zwembadpersoneel: veiligheid die je team écht beheerst",
-    "intro": "Praktijkgerichte EHBO- en BHV-trainingen, op locatie, in teams van maximaal 12. Zodat iedereen die bij jullie werkt weet wat te doen, nog voordat het misgaat.",
+    "intro": "Praktijkgerichte EHBO- en BHV-trainingen, op locatie, in teams van maximaal 12 deelnemers/collega's. Zodat iedereen die bij jullie werkt weet wat te doen, nog voordat het misgaat.",
     "image": "/assets/photos/zwembad-overzicht-rug.jpg",
     "imageAlt": "Zwembadomgeving waar Life-Line-Trainingen veiligheidstrainingen voor zwembadpersoneel verzorgt.",
     "primaryCta": {
@@ -39,6 +39,7 @@
     "items": [
       {
         "label": "Basisvaardigheden",
+        "recommended": false,
         "title": "Workshop drenkelingen & reanimatie",
         "text": "Voor individuele basisvaardigheden bij verdrinking, reanimatie en AED-gebruik.",
         "detailsTitle": "Bekijk wat deze training behandelt",
@@ -64,6 +65,7 @@
       },
       {
         "label": "Verdieping",
+        "recommended": false,
         "title": "Lifesavertraining",
         "text": "Voor teams die bovenop de veiligheidsdag extra willen trainen op acute en complexe situaties.",
         "detailsTitle": "Bekijk wat deze training behandelt",
@@ -148,8 +150,6 @@
             "text": "1,5 dagdeel (5 uur) actieve training."
           }
         ],
-        "noticeTitle": "",
-        "noticeText": "",
         "ctaLabel": "Vraag offerte aan",
         "ctaHref": "/contact/"
       }
