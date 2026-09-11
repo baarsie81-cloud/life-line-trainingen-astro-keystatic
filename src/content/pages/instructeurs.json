@@ -4,7 +4,7 @@
   "hero": {
     "eyebrow": "Instructeurs",
     "title": "Instructeur worden of blijven bij Life-Line-Trainingen",
-    "intro": "Bij Life-Line-Trainingen leid je je op tot NRR-erkend reanimatie-instructeur, of blijf je als bestaande instructeur gecertificeerd via bijscholing. We werken met kleine groepen van maximaal 6 cursisten per instructeur-trainer, zodat er echt ruimte is voor persoonlijke aandacht.",
+    "intro": "Bij Life-Line-Trainingen leid je je op tot NRR-erkend reanimatie-instructeur, of blijf je als instructeur gecertificeerd via bijscholing. We werken met kleine groepen van maximaal 6 cursisten per instructeur-trainer, zodat er echt ruimte is voor persoonlijke aandacht.",
     "image": "/assets/photos/bls-aed-training-breed.jpg",
     "imageAlt": "Praktijktraining reanimatie en AED voor instructeurs",
     "proofLabel": "Maximaal 6 cursisten",
@@ -35,7 +35,7 @@
   "routesSection": {
     "eyebrow": "Drie routes",
     "title": "Welke instructeursroute past bij jou?",
-    "text": "Geen niveaus of vergelijkingstabel, maar drie verschillende trajecten met elk een eigen zoekintentie en vervolgpad."
+    "text": " "
   },
   "cards": [
     {
