@@ -56,7 +56,7 @@
         "Je beschikt over een geldig reanimatiecertificaat.",
         "Je kunt zelf veilig en fysiek correct reanimeren.",
         "De training bestaat uit 2 dagen met ongeveer 6 weken tussentijd.",
-        "In de tussenperiode breng je het geleerde in de praktijk."
+        "In de tussenperiode breng je het geleerde in de praktijk.\nLet op! Zorg ervoor dat je vóór de start van de opleiding een stageplaats hebt geregeld."
       ],
       "image": "/assets/photos/instructie-aan-bad.jpg",
       "imageAlt": "Instructeur geeft praktijkgerichte uitleg"
@@ -67,15 +67,14 @@
       "text": "Heb je de training bijgewoond en actief meegedaan? Dan ontvang je de status kandidaat-instructeur BLS bij de Nederlandse Reanimatie Raad. Wanneer je daarna twee trainingen onder begeleiding van een volwaardig reanimatie-instructeur hebt verzorgd, kun je zelf volwaardig reanimatie-instructeur worden.",
       "items": [
         "Je ontvangt na actieve deelname de status kandidaat-instructeur BLS.",
-        "Je verzorgt daarna twee trainingen onder begeleiding.",
-        "Na afronding kun je doorgroeien naar volwaardig reanimatie-instructeur."
+        "Na dag 1 verzorg je onder begeleiding een volwaardige training. Op de tweede trainingsdag evalueren we deze training, waarna je onder begeleiding een tweede training verzorgt."
       ],
       "image": "/assets/photos/instructeur-zwembad-breed.jpg",
       "imageAlt": "Praktijkgerichte instructie door Life-Line-Trainingen"
     }
   ],
   "reasons": {
-    "eyebrow": "Waarom Life-Line",
+    "eyebrow": "Waarom Life-Line-Trainingen",
     "title": "5 redenen om bij Life-Line-Trainingen te trainen",
     "items": [
       "Life-Line-Trainingen is een door de Nederlandse Reanimatie Raad erkend opleidingsinstituut.",
@@ -95,7 +94,7 @@
       },
       {
         "label": "Tijden",
-        "text": "De training start om 8.30 uur en eindigt rond 17.00 uur. Koffie en thee staan vanaf 8.15 uur klaar."
+        "text": "De training start om 9.00 uur en eindigt rond 17.00 uur. Koffie en thee staan vanaf 8.30 uur klaar."
       },
       {
         "label": "Verzorging",
@@ -107,6 +106,7 @@
       }
     ]
   },
+  "notice": {},
   "price": {
     "eyebrow": "Prijs",
     "title": "€599,00",
@@ -114,6 +114,10 @@
     "amount": "599.00",
     "currency": "EUR"
   },
+  "faq": {
+    "items": []
+  },
+  "body": [],
   "cta": {
     "label": "Claim hier jouw opleidingsplek",
     "href": "https://llt7aar.plugandpay.nl/checkout/nrr-basic-instructor-course"
