@@ -30,7 +30,7 @@
   "audience": {
     "eyebrow": "Voor wie is dit?",
     "title": "Kies de route die past bij jouw situatie",
-    "text": "Wil je instructeur worden, maar heb je nog geen ervaring? Dan volg je de opleiding reanimatie-instructeur. Ben je al instructeur en moet je je certificaat verlengen? Dan is de bijscholing reanimatie-instructeur voor jou. Ben je ook actief als Oranje Kruis-, NRR- of SDBREL-instructeur? Dan haal je bij ons bijscholingsweekend in één keer punten voor meerdere certificeringen."
+    "text": "Wil je reanimatie instructeur worden, maar heb je nog geen ervaring? Dan volg je de opleiding reanimatie-instructeur. Ben je al reanimatie instructeur en moet je je certificaat verlengen? Dan is de bijscholing reanimatie-instructeur voor jou. Ben je ook actief als Oranje Kruis-, NRR- of SDBREL-instructeur? Dan haal je bij ons bijscholingsweekend in één keer punten voor meerdere certificeringen."
   },
   "routesSection": {
     "eyebrow": "Drie routes",
@@ -41,7 +41,7 @@
     {
       "eyebrow": "Instructeur worden",
       "title": "Opleiding reanimatie-instructeur (BIC)",
-      "text": "Word in 2 dagen NRR-erkend reanimatie-instructeur. Je hebt geen vooropleiding nodig, wel een geldig reanimatiecertificaat. De opleiding vindt plaats bij Centrum 4.0 in Zevenaar, of op je eigen locatie.",
+      "text": "Word in 2 dagen NRR-erkend reanimatie-instructeur. Je hebt geen vooropleiding nodig, wel een geldig reanimatiecertificaat. De opleiding vindt plaats bij Centrum 4.0 in Zevenaar, of op locatie.",
       "href": "/instructeurs/opleiding-reanimatie-instructeur/",
       "linkLabel": "Lees meer"
     },
