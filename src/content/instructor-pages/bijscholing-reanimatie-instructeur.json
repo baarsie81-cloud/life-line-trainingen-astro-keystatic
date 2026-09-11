@@ -48,13 +48,12 @@
     },
     {
       "eyebrow": "Inhoud",
-      "title": "Wat behandelt de bijscholing?",
+      "title": "Wat leer je tijdens de bijscholing?",
       "text": "In een dag oefen je reanimatie bij volwassenen, kinderen en baby's. Daarnaast besteden we aandacht aan didactiek, AED-gebruik, scenario's en feedback op je eigen manier van lesgeven.",
       "items": [
         "De laatste richtlijnen van de Nederlandse Reanimatie Raad.",
         "Je didactische vaardigheden: hoe geef je goed les?",
         "Praktische oefeningen met een AED.",
-        "Scenariotraining met virtual reality.",
         "Scenariotraining en feedback op je eigen manier van lesgeven."
       ],
       "image": "/assets/photos/bls-aed-training-breed.jpg",
@@ -86,13 +85,13 @@
     }
   ],
   "reasons": {
-    "eyebrow": "Waarom Life-Line",
+    "eyebrow": "Waarom Life-Line-Trainingen",
     "title": "Waarom bij Life-Line-Trainingen?",
     "items": [
       "Life-Line-Trainingen is een erkend opleidingsinstituut van de Nederlandse Reanimatie Raad, sinds de audit in 2014.",
       "We toetsen je vaardigheden met Laerdal QCPR-technologie en trainen met ZOLL AED-trainers.",
       "Per 3 deelnemers is er minimaal 1 reanimatiepop en AED-trainer aanwezig.",
-      "Docent-instructeur Mike Lehnkering combineert klinische kennis als anesthesiemedewerker met actuele didactische inzichten.",
+      "Jaarlijks NRR-bijgeschoolde docentinstructeurs combineren de laatste klinische inzichten met actuele didactische methodieken.",
       "Alles is geregeld: koffie, thee, lunch, lesmateriaal en certificering."
     ]
   },
