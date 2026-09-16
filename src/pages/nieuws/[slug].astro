@@ -64,7 +64,9 @@ const structuredData = {
 };
 const articleHtml = Markdoc.renderers
   .html(Markdoc.transform(Markdoc.parse(blog.bodyMarkdown)))
-  .replace(/<a href="(https?:\/\/[^\"]+)"/g, '<a href="$1" target="_blank" rel="noopener noreferrer"');
+  .replace(/<a href="(https?:\/\/[^\"]+)"/g, '<a href="$1" target="_blank" rel="noopener noreferrer"')
+  .replace(/<table>/g, '<div class="article-table-scroll" role="region" aria-label="Tabel" tabindex="0"><table>')
+  .replace(/<\/table>/g, '</table></div>');
 ---
 
 <BaseLayout

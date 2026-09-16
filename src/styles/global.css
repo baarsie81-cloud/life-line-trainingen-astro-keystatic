@@ -1561,6 +1561,7 @@ h3 {
 }
 
 .article-content {
+  min-width: 0;
   color: var(--ink);
   font-size: 1.08rem;
 }
@@ -1627,10 +1628,15 @@ h3 {
   border-radius: var(--radius);
 }
 
-.article-content table {
-  display: block;
+.article-table-scroll {
   width: 100%;
   overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.article-content table {
+  width: 100%;
+  min-width: 640px;
   border-collapse: collapse;
 }
 

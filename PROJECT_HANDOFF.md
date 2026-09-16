@@ -187,11 +187,11 @@ Lokale hero-afbeeldingen:
 
 - Overzicht op `/nieuws/`, in navigatie `Kennisbank` genoemd.
 - Artikelen staan op `/nieuws/[oude-slug]/` met hun oorspronkelijke WordPress-slug.
-- Migratie omvat de artikelen uit 2025 en 2026, momenteel twintig JSON-items.
+- Migratie omvat 36 artikelen uit 2018 tot en met 2026, als losse JSON-items.
 - Tekst en afbeeldingen zijn lokaal overgenomen; er is geen afhankelijkheid van
   de oude site.
-- Oudere artikelen kunnen later via Keystatic worden toegevoegd met hun originele
-  slug en publicatiedatum, zodat de oude URL behouden blijft.
+- Ook de zestien geselecteerde oudere artikelen zijn met hun originele slug en
+  publicatiedatum overgenomen, zodat de oude URL behouden blijft.
 - Gemigreerde artikelen krijgen geen redirect maar bestaan als echte pagina op
   dezelfde URL.
 - BlogPosting structured data en canonicals zijn aanwezig.
