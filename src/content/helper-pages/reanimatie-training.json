@@ -5,7 +5,7 @@
   "category": "opleiding",
   "card": {
     "eyebrow": "Levensreddend handelen",
-    "title": "Reanimatietraining",
+    "title": "Reanimatie opleiding",
     "text": "Leer een hartstilstand herkennen, direct reanimeren en veilig een AED gebruiken.",
     "audience": "Voor iedereen, met of zonder ervaring",
     "linkLabel": "Bekijk de reanimatietrainingen"
@@ -144,5 +144,5 @@
   "indexable": true,
   "showOnHub": true,
   "showInMenu": true,
-  "order": 2
+  "order": 3
 }

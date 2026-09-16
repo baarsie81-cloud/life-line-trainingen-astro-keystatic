@@ -5,7 +5,7 @@
   "category": "bijscholing",
   "card": {
     "eyebrow": "Reanimatiecertificaat verlengen",
-    "title": "Reanimatiebijscholing",
+    "title": "Reanimatie bijscholing",
     "text": "Fris je vaardigheden op en oefen opnieuw reanimatie, AED-gebruik en herkenbare scenario’s.",
     "audience": "Voor deelnemers met een geldig reanimatiecertificaat",
     "linkLabel": "Bekijk de reanimatiebijscholingen"
@@ -144,5 +144,5 @@
   "indexable": true,
   "showOnHub": true,
   "showInMenu": true,
-  "order": 3
+  "order": 4
 }

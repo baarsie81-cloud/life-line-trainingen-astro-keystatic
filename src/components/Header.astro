@@ -3,21 +3,13 @@ import site from "../content/settings/site.json";
 import { withContentSlugs } from "../lib/content";
 
 const helperPageFiles = import.meta.glob("../content/helper-pages/*.json", { eager: true });
-const helperMenuPresentation = {
-  "opleiding-ehbo": { label: "EHBO-opleiding", order: 1 },
-  "ehbo-bijscholingen": { label: "EHBO-bijscholing", order: 2 },
-  "reanimatie-training": { label: "Reanimatie opleiding", order: 3 },
-  "reanimatie-bijscholing": { label: "Reanimatie bijscholing", order: 4 },
-};
-
 const helperNavItems = withContentSlugs(helperPageFiles)
   .filter((page) => page.visible && page.showInMenu)
+  .sort((a, b) => a.order - b.order)
   .map((page) => ({
-    label: helperMenuPresentation[page.slug]?.label ?? page.card.title,
+    label: page.card.title,
     href: `/hulpverleners/${page.slug}/`,
-    order: helperMenuPresentation[page.slug]?.order ?? page.order,
-  }))
-  .sort((a, b) => a.order - b.order);
+  }));
 
 const navItems = site.navigation.map((item) =>
   item.href === "/hulpverleners/" ? { ...item, children: helperNavItems } : item

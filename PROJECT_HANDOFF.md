@@ -247,6 +247,10 @@ Contact:
 - Sanne en de klant beheren veilig de teksten van bestaande pagina's. Technische
   links, vaste afbeeldingen, SEO-sturing, zichtbaarheid, volgorde en nieuwe
   training-/doelgroeppagina's blijven bij Jan/code.
+- Iedere zichtbare tekstwijziging die via code wordt doorgevoerd, moet ook in het
+  bestaande Keystatic-contentveld worden vastgelegd. Gebruik geen losse tekst in
+  een component wanneer daarvoor al een CMS-veld bestaat; zo blijven website en
+  Keystatic gelijk en kan Sanne de tekst later correct blijven beheren.
 - Kennisbankartikelen hebben een vaste layout met vrije titel, artikeltekst en
   hoofdafbeelding. Nieuwe artikelen beginnen standaard als niet-gepubliceerd; het
   nieuwste gepubliceerde artikel wordt automatisch het kopartikel.
