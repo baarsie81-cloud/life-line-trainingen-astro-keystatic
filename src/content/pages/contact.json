@@ -19,12 +19,10 @@
       "lastName": "Achternaam",
       "email": "E-mailadres *",
       "phone": "Telefoonnummer *",
-      "topic": "Waar kunnen wij je mee helpen? *",
-      "topicPlaceholder": "Kies een onderwerp",
+      "company": "Naam van bedrijf",
       "message": "Omschrijf je wensen / stel je vraag *",
       "privacyLink": "privacyverklaring"
     },
-    "topics": ["Zwembaden", "Instructeurs", "Hulpverleners", "Organisaties", "Overig"],
     "submitLabel": "Verstuur je aanvraag",
     "newsletterLabel": "Ik meld me ook aan voor de nieuwsbrief",
     "privacyText": "Wil je weten wat we met jouw gegevens uit dit formulier doen? Lees onze",

@@ -847,17 +847,12 @@ export default config({
                 lastName: fields.text({ label: "Label achternaam", validation: { isRequired: true } }),
                 email: fields.text({ label: "Label e-mailadres", validation: { isRequired: true } }),
                 phone: fields.text({ label: "Label telefoonnummer", validation: { isRequired: true } }),
-                topic: fields.text({ label: "Label onderwerp", validation: { isRequired: true } }),
-                topicPlaceholder: fields.text({ label: "Placeholder onderwerp", validation: { isRequired: true } }),
+                company: fields.text({ label: "Label bedrijfsnaam", validation: { isRequired: true } }),
                 message: fields.text({ label: "Label bericht", validation: { isRequired: true } }),
                 privacyLink: fields.text({ label: "Linktekst privacyverklaring", validation: { isRequired: true } }),
               },
               { label: "Veldlabels" }
             ),
-            topics: fields.array(fields.text({ label: "Onderwerp" }), {
-              label: "Onderwerpopties",
-              itemLabel: (props) => props.value || "Onderwerp",
-            }),
             submitLabel: fields.text({ label: "Verzendknop", validation: { isRequired: true } }),
             newsletterLabel: fields.text({ label: "Nieuwsbrief checkbox", validation: { isRequired: true } }),
             privacyText: fields.text({ label: "Privacytekst", multiline: true, validation: { isRequired: true } }),

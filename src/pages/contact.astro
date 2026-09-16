@@ -54,11 +54,8 @@ const addressText = page.contactCard.address.join("\n");
         </div>
 
         <label>
-          <span>{page.form.labels.topic}</span>
-          <select name="onderwerp" required>
-            <option value="">{page.form.labels.topicPlaceholder}</option>
-            {page.form.topics.map((topic) => <option value={topic}>{topic}</option>)}
-          </select>
+          <span>{page.form.labels.company}</span>
+          <input name="bedrijfsnaam" autocomplete="organization" />
         </label>
 
         <label>
@@ -141,16 +138,15 @@ const addressText = page.contactCard.address.join("\n");
       const voornaam = String(data.get("voornaam") || "").trim();
       const achternaam = String(data.get("achternaam") || "").trim();
       const naam = [voornaam, achternaam].filter(Boolean).join(" ");
-      const onderwerp = String(data.get("onderwerp") || "Contactaanvraag").trim();
       const nieuwsbrief = data.get("nieuwsbrief") ? "Ja" : "Nee";
-      const subject = `Contactaanvraag Life-Line-Trainingen - ${onderwerp}`;
+      const subject = "Contactaanvraag Life-Line-Trainingen";
       const body = [
         "Nieuwe contactaanvraag via de website",
         "",
         `Naam: ${naam}`,
+        `Naam van bedrijf: ${String(data.get("bedrijfsnaam") || "Niet ingevuld").trim() || "Niet ingevuld"}`,
         `E-mailadres: ${String(data.get("email") || "").trim()}`,
         `Telefoonnummer: ${String(data.get("telefoon") || "").trim()}`,
-        `Onderwerp: ${onderwerp}`,
         `Nieuwsbrief: ${nieuwsbrief}`,
         "",
         "Bericht:",
