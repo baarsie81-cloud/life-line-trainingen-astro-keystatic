@@ -1044,6 +1044,11 @@ export default config({
             eyebrow: fields.text({ label: "Label boven titel" }),
             title: fields.text({ label: "Titel" }),
             text: fields.text({ label: "Tekst", multiline: true }),
+            placement: hiddenField(fields.text({
+              label: "Technische positie van melding",
+              description: "Wordt door Jan/code beheerd.",
+              defaultValue: "standalone",
+            })),
           },
           { label: "Opvallende melding" }
         ),

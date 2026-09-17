@@ -175,7 +175,7 @@ const structuredData = structuredDataItems.length > 0 ? structuredDataItems : un
         </div>
       </section>
 
-      {page.notice && (
+      {page.notice?.text && page.notice.placement !== "price" && (
         <section class="section instructor-notice-section">
           <div class="container">
             <aside class="instructor-notice">
@@ -213,11 +213,20 @@ const structuredData = structuredDataItems.length > 0 ? structuredDataItems : un
             <h2>{page.price.title}</h2>
             <p>{page.price.text}</p>
           </div>
-          <div class="instructor-final-actions">
-            <a class="button button-light" href={page.cta.href} target={isExternalCta ? "_blank" : undefined} rel={isExternalCta ? "noopener noreferrer" : undefined}>
-              {page.cta.label}
-            </a>
-            {page.secondaryCta && <a class="button button-secondary" href={page.secondaryCta.href}>{page.secondaryCta.label}</a>}
+          <div class="instructor-final-action-column">
+            <div class="instructor-final-actions">
+              <a class="button button-light" href={page.cta.href} target={isExternalCta ? "_blank" : undefined} rel={isExternalCta ? "noopener noreferrer" : undefined}>
+                {page.cta.label}
+              </a>
+              {page.secondaryCta && <a class="button button-secondary" href={page.secondaryCta.href}>{page.secondaryCta.label}</a>}
+            </div>
+            {page.notice?.text && page.notice.placement === "price" && (
+              <aside class="instructor-price-notice">
+                <p class="instructor-price-notice-label">{page.notice.eyebrow}</p>
+                <strong>{page.notice.title}</strong>
+                <p>{page.notice.text}</p>
+              </aside>
+            )}
           </div>
         </div>
       </section>

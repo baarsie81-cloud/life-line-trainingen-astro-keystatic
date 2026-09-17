@@ -128,7 +128,8 @@
   "notice": {
     "eyebrow": "Let op bij inschrijven",
     "title": "Gebruik het e-mailadres dat bekend is bij CoSy",
-    "text": "Gebruik bij je inschrijving het e-mailadres dat bekend is bij CoSy. Doe je dat niet, dan kan er per ongeluk een dubbel account ontstaan."
+    "text": "Doe je dat niet, dan kan er per ongeluk een dubbel account ontstaan.",
+    "placement": "price"
   },
   "price": {
     "eyebrow": "Prijs",
