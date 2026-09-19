@@ -110,6 +110,11 @@ logo's zijn momenteel niet afzonderlijk klikbaar.
 - De kaart Organisaties verwijst ook naar `/hulpverleners/`, omdat het aanbod
   gelijk is en organisaties via contact een offerte op maat krijgen.
 - Positionering: praktijkgericht oefenen, herkenbare situaties en training op maat.
+- Tussen de positionering en de uitgelichte trainingen staat een rustige,
+  niet-klikbare referentiesectie met Ataro BV/Lentebad Zevenaar, Zwembad
+  Meekenesch, Stichting Sportkompas/Zwembad Rhienderoord en Openluchtzwembad
+  Klarenbeek. De logo's staan lokaal in `public/assets/clients`; de zichtbare
+  teksten blijven via Keystatic bewerkbaar en de vaste logo's blijven codebeheer.
 - Uitgelichte trainingen komen uit zichtbare trainingscontent.
 - Visuele statementsectie: `In een noodsituatie heb je geen tijd voor twijfel.`
 - Google-review-swimlane staat daaronder. Reviews worden handmatig via Keystatic

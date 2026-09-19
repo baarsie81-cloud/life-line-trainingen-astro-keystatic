@@ -40,6 +40,13 @@ const navigationItemFields = {
 const fixedImagePathField = (label: string) =>
   hiddenTextField(label);
 
+const clientReferenceFields = () => ({
+  name: fields.text({ label: "Naam organisatie", validation: { isRequired: true } }),
+  context: fields.text({ label: "Zwembad of plaats", validation: { isRequired: true } }),
+  logo: hiddenTextField("Vast logo"),
+  alt: hiddenTextField("Alt-tekst logo"),
+});
+
 export default config({
   storage: githubRepo
     ? {
@@ -180,6 +187,18 @@ export default config({
             ),
           },
           { label: "Positionering" }
+        ),
+        clientTrust: fields.object(
+          {
+            eyebrow: fields.text({ label: "Label boven titel", validation: { isRequired: true } }),
+            title: fields.text({ label: "Titel", validation: { isRequired: true } }),
+            text: fields.text({ label: "Tekst", multiline: true, validation: { isRequired: true } }),
+            ataro: fields.object(clientReferenceFields(), { label: "Ataro BV" }),
+            meekenesch: fields.object(clientReferenceFields(), { label: "Zwembad Meekenesch" }),
+            sportkompas: fields.object(clientReferenceFields(), { label: "Stichting Sportkompas" }),
+            klarenbeek: fields.object(clientReferenceFields(), { label: "Openluchtzwembad Klarenbeek" }),
+          },
+          { label: "Opdrachtgevers zwembaden" }
         ),
         featuredTrainingSlugs: hiddenField(fields.array(fields.text({ label: "Training slug" }), {
           label: "Uitgelichte trainingen",

@@ -15,6 +15,12 @@ const featuredTrainings = allTrainings
     const bIndex = home.featuredTrainingSlugs.indexOf(b.slug);
     return aIndex - bIndex || a.order - b.order;
   });
+const clientTrustItems = [
+  { ...home.clientTrust.ataro, className: "is-ataro" },
+  { ...home.clientTrust.meekenesch, className: "is-meekenesch" },
+  { ...home.clientTrust.sportkompas, className: "is-sportkompas" },
+  { ...home.clientTrust.klarenbeek, className: "is-klarenbeek" },
+];
 ---
 
 <BaseLayout title={home.seoTitle} description={home.seoDescription}>
@@ -63,6 +69,31 @@ const featuredTrainings = allTrainings
               <span>{String(index + 1).padStart(2, "0")}</span>
               <h3>{item.title}</h3>
               <p>{item.text}</p>
+            </article>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <section class="client-trust" aria-labelledby="client-trust-title">
+    <div class="container">
+      <div class="client-trust-heading">
+        <p class="eyebrow">{home.clientTrust.eyebrow}</p>
+        <h2 id="client-trust-title">{home.clientTrust.title}</h2>
+        <p>{home.clientTrust.text}</p>
+      </div>
+      <div class="client-trust-grid" role="list" aria-label="Zwembadorganisaties waarvoor Life-Line-Trainingen opdrachten verzorgde">
+        {
+          clientTrustItems.map((client) => (
+            <article class="client-trust-item" role="listitem">
+              <div class={`client-trust-logo ${client.className}`}>
+                <img src={client.logo} alt={client.alt} loading="lazy" decoding="async" />
+              </div>
+              <div class="client-trust-caption">
+                <strong>{client.name}</strong>
+                <span>{client.context}</span>
+              </div>
             </article>
           ))
         }

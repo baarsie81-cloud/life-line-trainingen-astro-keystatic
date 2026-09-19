@@ -67,6 +67,35 @@
       }
     ]
   },
+  "clientTrust": {
+    "eyebrow": "Ervaring in de praktijk",
+    "title": "Vertrouwd door zwembadorganisaties",
+    "text": "Life-Line-Trainingen verzorgde trainingen en opdrachten voor onder meer deze zwembadorganisaties.",
+    "ataro": {
+      "name": "Ataro BV",
+      "context": "Lentebad Zevenaar",
+      "logo": "/assets/clients/ataro.png",
+      "alt": "Logo van Ataro BV"
+    },
+    "meekenesch": {
+      "name": "Zwembad Meekenesch",
+      "context": "Lichtenvoorde",
+      "logo": "/assets/clients/meekenesch.svg",
+      "alt": "Logo van Zwembad Meekenesch"
+    },
+    "sportkompas": {
+      "name": "Stichting Sportkompas",
+      "context": "Zwembad Rhienderoord · Brummen",
+      "logo": "/assets/clients/sportkompas.svg",
+      "alt": "Logo van Stichting Sportkompas"
+    },
+    "klarenbeek": {
+      "name": "Openluchtzwembad Klarenbeek",
+      "context": "Arnhem",
+      "logo": "/assets/clients/klarenbeek.png",
+      "alt": "Logo van Openluchtzwembad Klarenbeek"
+    }
+  },
   "featuredTrainingSlugs": [
     "bls",
     "ehbo",
