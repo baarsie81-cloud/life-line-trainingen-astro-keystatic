@@ -1,6 +1,6 @@
 # Life-Line-Trainingen - projectoverdracht
 
-Laatst bijgewerkt: 24 augustus 2026
+Laatst bijgewerkt: 19 september 2026
 
 Dit document is het vaste startpunt voor een nieuwe Codex-taak. Lees daarnaast
 altijd de actuele repository voordat je wijzigingen maakt. Bij verschil tussen
@@ -335,11 +335,21 @@ goedgekeurd. Sla geen onderdeel over.
 - [ ] Privacyverklaring inhoudelijk en juridisch laten controleren.
 - [ ] Controleren of cookie-informatie en cookiebanner nodig zijn voor gebruikte
       analytics, embeds of marketingtools.
+- [ ] Cookiebesluit opnieuw nemen op basis van de werkelijk gebruikte scripts bij
+      livegang. Voorlopige keuze op 17 september 2026: geen aparte cookiepagina of
+      banner bouwen zolang de publieke site geen niet-noodzakelijke cookies,
+      analytics, marketingtools of actieve embeds gebruikt.
+- [ ] Besluiten of actuele algemene voorwaarden op de website moeten worden
+      gepubliceerd. De verouderde Neon-verwijzing is geen reden om oude voorwaarden
+      automatisch over te nemen; een actuele versie kan later apart worden toegevoegd.
 - [ ] Bewaartermijnen, verwerkers en contactgegevens in privacytekst verifiëren.
 
 ### D. SEO en migratie vanaf WordPress
 
 - [ ] Volledige export/lijst van alle indexeerbare oude WordPress-URL's maken.
+- [ ] De bewaarde Neon-inventaris in `docs/neon-legacy-redirects-2026-09-17.txt`
+      beoordelen. Deze bevat 88 regels voor 80 unieke bron-URL's, inclusief oude
+      dubbelen, conflicten en ketens, en mag niet ongewijzigd worden geïmporteerd.
 - [ ] Iedere oude URL koppelen aan: dezelfde nieuwe URL, een relevante 301 of 410.
 - [ ] Redirectmatrix controleren, implementeren en met echte statuscodes testen.
 - [ ] Specifieke bekende redirects voor Over ons/team en oude trainingsroutes testen.
