@@ -2765,6 +2765,18 @@ h3 {
   object-position: center;
 }
 
+.ehbo-after-section .helper-image-card {
+  position: relative;
+  min-height: 0;
+}
+
+.ehbo-after-section .helper-image-card img {
+  position: absolute;
+  inset: 0;
+  min-height: 0;
+  object-position: center;
+}
+
 .helper-reason-grid {
   grid-template-columns: repeat(4, minmax(0, 1fr));
 }
@@ -2793,6 +2805,10 @@ h3 {
   .review-heading,
   .final-cta-inner {
     grid-template-columns: 1fr;
+  }
+
+  .ehbo-after-section .helper-image-card {
+    height: clamp(320px, 80vw, 480px);
   }
 
   .review-heading {
