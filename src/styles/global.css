@@ -412,6 +412,10 @@ h3 {
   object-position: center;
 }
 
+.helper-hero .page-hero-image {
+  object-position: center 35%;
+}
+
 .page-hero-overlay {
   z-index: -1;
   background:
