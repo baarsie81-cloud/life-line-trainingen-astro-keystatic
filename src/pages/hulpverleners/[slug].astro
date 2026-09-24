@@ -149,7 +149,7 @@ const structuredData = [...courseData, faqData].filter(Boolean);
 
   {
     page.sections.map((section, index) => (
-      <section class={`section helper-detail-section${index % 2 === 1 ? " section-soft" : ""}${page.slug === "opleiding-ehbo" && index === 1 ? " ehbo-after-section" : ""}`}>
+      <section class={`section helper-detail-section${index % 2 === 1 ? " section-soft" : ""}${page.slug === "opleiding-ehbo" ? " ehbo-balanced-photo-section" : ""}`}>
         <div class="container split-grid">
           <div class="text-stack">
             <p class="eyebrow">{section.eyebrow}</p>

@@ -2765,12 +2765,12 @@ h3 {
   object-position: center;
 }
 
-.ehbo-after-section .helper-image-card {
+.ehbo-balanced-photo-section .helper-image-card {
   position: relative;
   min-height: 0;
 }
 
-.ehbo-after-section .helper-image-card img {
+.ehbo-balanced-photo-section .helper-image-card img {
   position: absolute;
   inset: 0;
   min-height: 0;
@@ -2807,7 +2807,7 @@ h3 {
     grid-template-columns: 1fr;
   }
 
-  .ehbo-after-section .helper-image-card {
+  .ehbo-balanced-photo-section .helper-image-card {
     height: clamp(320px, 80vw, 480px);
   }
 
