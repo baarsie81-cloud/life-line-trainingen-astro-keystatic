@@ -16,6 +16,7 @@ export function getStaticPaths() {
 }
 
 const { page } = Astro.props;
+const hasSharedReanimationHero = ["reanimatie-training", "reanimatie-bijscholing"].includes(page.slug);
 const variants = page.variants.filter((variant) => variant.visible).sort((a, b) => a.order - b.order);
 const courseData = page.indexable
   ? variants.map((variant) => ({
@@ -57,7 +58,7 @@ const structuredData = [...courseData, faqData].filter(Boolean);
   noindex={!page.indexable}
   structuredData={structuredData}
 >
-  <section class="page-hero helper-subpage-hero">
+  <section class={`page-hero helper-subpage-hero${hasSharedReanimationHero ? " reanimation-shared-hero" : ""}`}>
     <img class="page-hero-image" src={page.image} alt={page.imageAlt} loading="eager" decoding="async" />
     <div class="page-hero-overlay"></div>
     <div class="container page-hero-content">
