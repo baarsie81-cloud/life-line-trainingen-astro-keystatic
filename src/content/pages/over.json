@@ -127,14 +127,5 @@
   "audience": {
     "eyebrow": "Kies jouw situatie",
     "title": "Welke situatie past bij jou?"
-  },
-  "newsletter": {
-    "eyebrow": "Eerste hulp tip",
-    "title": "Op de hoogte blijven?",
-    "text": "Ontvang iedere week een eerste hulp tip in je mailbox.",
-    "button": {
-      "label": "Ik wil die tips!",
-      "href": "https://lifelinetrainingen.activehosted.com/f/2"
-    }
   }
 }

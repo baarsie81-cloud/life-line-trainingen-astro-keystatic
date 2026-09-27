@@ -204,14 +204,17 @@ Lokale hero-afbeeldingen:
 - Kaarttitels en teksten zijn aangepast om niet uit de rechter kaart te lopen.
 - Artikelen kunnen zichtbaar/onzichtbaar worden gezet. Verberg bij twijfel eerst;
   verwijder pas definitief nadat SEO- en redirectgevolgen zijn gecontroleerd.
+- De vervallen nieuwsbriefoproepen zijn verwijderd uit drie oudere artikelen:
+  `cold-shock-waarom-ademhalen-je-val-kan-worden`,
+  `voorjaar-waterpret-wees-voorbereid-als-eerste-hulpverlener` en
+  `waterveiligheid-en-de-kleur-van-badkleding-wat-ouders-moeten-weten`.
 
 ## 10. Over ons, contact en privacy
 
 Over ons:
 
 - Hero: `Wij trainen mensen die moeten kunnen handelen`.
-- Secties: ontstaan, aanpak, team, erkenningen/samenwerkingen, doelgroepkeuze en
-  nieuwsbrief-CTA.
+- Secties: ontstaan, aanpak, team, erkenningen/samenwerkingen en doelgroepkeuze.
 - Teamfoto's staan lokaal in `public/assets/team`.
 - Voor livegang redirects controleren voor onder andere:
   - `/over-ons/` naar `/over-life-line-trainingen/`.
@@ -226,7 +229,8 @@ Contact:
   openen. Er is nog geen server-side verzending, database of spambeveiliging.
 - Voor livegang moet expliciet worden besloten of dit wordt vervangen door een
   professioneel formulier via bijvoorbeeld een Vercel Function en Resend.
-- Privacytekst bevat een enkele link naar de lokale privacyverklaring.
+- Het formulier bevat geen nieuwsbriefcheckbox. De korte privacytekst linkt naar
+  de lokale privacyverklaring.
 - De privacyverklaring van de oude site is lokaal opgenomen en in de nieuwe stijl
   vormgegeven, zodat deze niet verdwijnt met WordPress.
 - Juridische tekst moet inhoudelijk door klant/juridisch verantwoordelijke worden
@@ -336,7 +340,6 @@ goedgekeurd. Sla geen onderdeel over.
 - [ ] Bij echte verzending: Vercel Function/Resend, afzenderdomein, reply-to,
       foutstatus, succesmelding, spam-/botbescherming en logging testen.
 - [ ] Alle formuliervelden, validatie, onderwerpkeuzes en mobiel gebruik testen.
-- [ ] Nieuwsbriefcheckbox alleen koppelen als toestemming correct wordt verwerkt.
 - [ ] Privacyverklaring inhoudelijk en juridisch laten controleren.
 - [ ] Controleren of cookie-informatie en cookiebanner nodig zijn voor gebruikte
       analytics, embeds of marketingtools.
@@ -384,7 +387,7 @@ goedgekeurd. Sla geen onderdeel over.
 - [ ] Homepage-doelgroepkaarten en uitgelichte trainingen controleren.
 - [ ] Alle accordion/details-elementen ingeklapt en met toetsenbord bruikbaar testen.
 - [ ] Reviewswimlane testen op hover/focus, swipe en reduced motion.
-- [ ] Contact- en nieuwsbrief-CTA's end-to-end testen.
+- [ ] Contact-CTA's end-to-end testen.
 - [ ] E-mailadressen en mailto-fallbacks controleren.
 
 ### F. Design, mobiel en toegankelijkheid

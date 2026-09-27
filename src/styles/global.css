@@ -1837,7 +1837,7 @@ h3 {
   gap: 1rem;
 }
 
-.contact-form label:not(.checkbox-line) {
+.contact-form label {
   display: grid;
   gap: 0.45rem;
 }
@@ -1877,23 +1877,6 @@ h3 {
   background: var(--white);
   box-shadow: 0 0 0 4px rgba(40, 119, 167, 0.12);
   outline: 0;
-}
-
-.checkbox-line {
-  display: flex;
-  align-items: flex-start;
-  gap: 0.7rem;
-  color: var(--muted);
-  font-weight: 800;
-}
-
-.checkbox-line input {
-  width: 18px;
-  min-width: 18px;
-  height: 18px;
-  min-height: auto;
-  margin-top: 0.25rem;
-  accent-color: var(--orange);
 }
 
 .privacy-copy {

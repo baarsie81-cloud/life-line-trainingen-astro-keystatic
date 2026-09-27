@@ -759,15 +759,6 @@ export default config({
           },
           { label: "Doelgroepblok" }
         ),
-        newsletter: fields.object(
-          {
-            eyebrow: fields.text({ label: "Label boven titel", validation: { isRequired: true } }),
-            title: fields.text({ label: "Titel", validation: { isRequired: true } }),
-            text: fields.text({ label: "Tekst", multiline: true, validation: { isRequired: true } }),
-            button: fields.object(textOnlyLinkFields, { label: "Knop" }),
-          },
-          { label: "Nieuwsbriefblok" }
-        ),
       },
     }),
     knowledge: singleton({
@@ -873,7 +864,6 @@ export default config({
               { label: "Veldlabels" }
             ),
             submitLabel: fields.text({ label: "Verzendknop", validation: { isRequired: true } }),
-            newsletterLabel: fields.text({ label: "Nieuwsbrief checkbox", validation: { isRequired: true } }),
             privacyText: fields.text({ label: "Privacytekst", multiline: true, validation: { isRequired: true } }),
             fallbackLabel: fields.text({ label: "Fallback mailknop", validation: { isRequired: true } }),
           },
