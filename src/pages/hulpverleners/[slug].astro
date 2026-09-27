@@ -16,7 +16,6 @@ export function getStaticPaths() {
 }
 
 const { page } = Astro.props;
-const usesInsetReanimationHero = page.slug === "reanimatie-training";
 const variants = page.variants.filter((variant) => variant.visible).sort((a, b) => a.order - b.order);
 const courseData = page.indexable
   ? variants.map((variant) => ({
@@ -58,7 +57,7 @@ const structuredData = [...courseData, faqData].filter(Boolean);
   noindex={!page.indexable}
   structuredData={structuredData}
 >
-  <section class={`page-hero helper-subpage-hero${usesInsetReanimationHero ? " reanimation-shared-hero" : ""}`}>
+  <section class="page-hero helper-subpage-hero">
     <img class="page-hero-image" src={page.image} alt={page.imageAlt} loading="eager" decoding="async" />
     <div class="page-hero-overlay"></div>
     <div class="container page-hero-content">
