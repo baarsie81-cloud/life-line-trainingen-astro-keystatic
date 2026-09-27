@@ -162,7 +162,7 @@ const structuredData = [...courseData, faqData].filter(Boolean);
               </ul>
             )}
           </div>
-          <figure class={`instructor-image-card helper-image-card${page.slug === "ehbo-bijscholingen" && index === 1 ? " ehbo-toelating-image-card" : ""}${page.slug === "reanimatie-training" && index === 0 ? " reanimatie-learn-image-card" : ""}${page.slug === "reanimatie-training" && index === 1 ? " reanimatie-afloop-image-card" : ""}`}>
+          <figure class={`instructor-image-card helper-image-card${page.slug === "ehbo-bijscholingen" && index === 1 ? " ehbo-toelating-image-card" : ""}${page.slug === "reanimatie-training" && index === 0 ? " reanimatie-learn-image-card" : ""}${page.slug === "reanimatie-training" && index === 1 ? " reanimatie-afloop-image-card" : ""}${page.slug === "reanimatie-bijscholing" && index === 0 ? " reanimatie-herhalen-image-card" : ""}`}>
             <img src={section.image} alt={section.imageAlt} loading="lazy" decoding="async" />
           </figure>
         </div>
