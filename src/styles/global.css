@@ -2779,7 +2779,7 @@ h3 {
 .ehbo-toelating-image-card,
 .reanimatie-learn-image-card,
 .reanimatie-afloop-image-card,
-.reanimatie-herhalen-image-card {
+.reanimatie-bijscholing-image-card {
   position: relative;
   min-height: 0;
 }
@@ -2788,7 +2788,7 @@ h3 {
 .ehbo-toelating-image-card img,
 .reanimatie-learn-image-card img,
 .reanimatie-afloop-image-card img,
-.reanimatie-herhalen-image-card img {
+.reanimatie-bijscholing-image-card img {
   position: absolute;
   inset: 0;
   min-height: 0;
@@ -2829,7 +2829,7 @@ h3 {
   .ehbo-toelating-image-card,
   .reanimatie-learn-image-card,
   .reanimatie-afloop-image-card,
-  .reanimatie-herhalen-image-card {
+  .reanimatie-bijscholing-image-card {
     height: clamp(320px, 80vw, 480px);
   }
 
