@@ -2765,16 +2765,29 @@ h3 {
   object-position: center;
 }
 
-.ehbo-balanced-photo-section .helper-image-card {
+@media (min-width: 1101px) {
+  .ehbo-toelating-image-card img {
+    transform: scale(1.14);
+    transform-origin: center top;
+  }
+}
+
+.ehbo-balanced-photo-section .helper-image-card,
+.ehbo-toelating-image-card {
   position: relative;
   min-height: 0;
 }
 
-.ehbo-balanced-photo-section .helper-image-card img {
+.ehbo-balanced-photo-section .helper-image-card img,
+.ehbo-toelating-image-card img {
   position: absolute;
   inset: 0;
   min-height: 0;
   object-position: center;
+}
+
+.ehbo-toelating-image-card img {
+  object-position: center top;
 }
 
 .helper-reason-grid {
@@ -2807,7 +2820,8 @@ h3 {
     grid-template-columns: 1fr;
   }
 
-  .ehbo-balanced-photo-section .helper-image-card {
+  .ehbo-balanced-photo-section .helper-image-card,
+  .ehbo-toelating-image-card {
     height: clamp(320px, 80vw, 480px);
   }
 
