@@ -2765,13 +2765,6 @@ h3 {
   object-position: center;
 }
 
-@media (min-width: 1101px) {
-  .ehbo-toelating-image-card img {
-    transform: scale(1.14);
-    transform-origin: center top;
-  }
-}
-
 .ehbo-balanced-photo-section .helper-image-card,
 .ehbo-toelating-image-card {
   position: relative;
@@ -2784,10 +2777,6 @@ h3 {
   inset: 0;
   min-height: 0;
   object-position: center;
-}
-
-.ehbo-toelating-image-card img {
-  object-position: center top;
 }
 
 .helper-reason-grid {
