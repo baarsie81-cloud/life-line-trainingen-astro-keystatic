@@ -2766,13 +2766,15 @@ h3 {
 }
 
 .ehbo-balanced-photo-section .helper-image-card,
-.ehbo-toelating-image-card {
+.ehbo-toelating-image-card,
+.reanimatie-learn-image-card {
   position: relative;
   min-height: 0;
 }
 
 .ehbo-balanced-photo-section .helper-image-card img,
-.ehbo-toelating-image-card img {
+.ehbo-toelating-image-card img,
+.reanimatie-learn-image-card img {
   position: absolute;
   inset: 0;
   min-height: 0;
@@ -2810,7 +2812,8 @@ h3 {
   }
 
   .ehbo-balanced-photo-section .helper-image-card,
-  .ehbo-toelating-image-card {
+  .ehbo-toelating-image-card,
+  .reanimatie-learn-image-card {
     height: clamp(320px, 80vw, 480px);
   }
 
