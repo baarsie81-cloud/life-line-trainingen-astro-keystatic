@@ -864,6 +864,9 @@ export default config({
               { label: "Veldlabels" }
             ),
             submitLabel: fields.text({ label: "Verzendknop", validation: { isRequired: true } }),
+            sendingLabel: fields.text({ label: "Tekst tijdens verzenden", validation: { isRequired: true } }),
+            successText: fields.text({ label: "Bevestiging na verzenden", multiline: true, validation: { isRequired: true } }),
+            errorText: fields.text({ label: "Foutmelding bij verzenden", multiline: true, validation: { isRequired: true } }),
             privacyText: fields.text({ label: "Privacytekst", multiline: true, validation: { isRequired: true } }),
             fallbackLabel: fields.text({ label: "Fallback mailknop", validation: { isRequired: true } }),
           },

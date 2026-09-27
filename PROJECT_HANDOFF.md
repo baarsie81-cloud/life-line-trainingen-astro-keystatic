@@ -225,10 +225,15 @@ Contact:
 
 - Contactgegevens: Life-Line-Trainingen, Sleeg 1, 6905 BH Zevenaar,
   `info@life-line-trainingen.nl`.
-- Het formulier gebruikt momenteel JavaScript om een ingevulde `mailto:`-mail te
-  openen. Er is nog geen server-side verzending, database of spambeveiliging.
-- Voor livegang moet expliciet worden besloten of dit wordt vervangen door een
-  professioneel formulier via bijvoorbeeld een Vercel Function en Resend.
+- Het formulier verstuurt via Formspree (`mkjgzvqz`), zonder eigen mailserver of
+  extra dependency. De ontvanger staat in de Formspree-workflow, niet in de code.
+  Een lokale end-to-end test bereikte de Formspree Inbox en Jans testmailbox.
+- De invuller ziet een succes- of foutmelding op de pagina, maar ontvangt geen
+  automatische bevestigingsmail. De rechtstreekse `mailto:`-link blijft als
+  alternatief bestaan.
+- Het gratis Formspree-plan heeft een limiet van 50 inzendingen per maand.
+  Controleer gebruik en aflevering periodiek; overweeg pas bij een aantoonbare
+  behoefte een eigen mailroute via formulierendesk.nl/Resend.
 - Het formulier bevat geen nieuwsbriefcheckbox. De korte privacytekst linkt naar
   de lokale privacyverklaring.
 - De privacyverklaring van de oude site is lokaal opgenomen en in de nieuwe stijl
@@ -336,9 +341,11 @@ goedgekeurd. Sla geen onderdeel over.
 
 ### C. Contact, privacy en juridische zaken
 
-- [ ] Definitief besluit: mailto-formulier behouden of vervangen door echte verzending.
-- [ ] Bij echte verzending: Vercel Function/Resend, afzenderdomein, reply-to,
-      foutstatus, succesmelding, spam-/botbescherming en logging testen.
+- [ ] Formspree-ontvanger `info@life-line-trainingen.nl` geverifieerd en in de
+      workflow geselecteerd; echte formulierinzending van de gepubliceerde site
+      tot en met Mike's mailbox getest, zonder klantaanvragen kwijt te raken.
+- [ ] Formspree-quota, spamfilter, foutstatus, succesmelding en bewaartermijn
+      gecontroleerd; beheer en toegang tot het Formspree-account vastgelegd.
 - [ ] Alle formuliervelden, validatie, onderwerpkeuzes en mobiel gebruik testen.
 - [ ] Privacyverklaring inhoudelijk en juridisch laten controleren.
 - [ ] Controleren of cookie-informatie en cookiebanner nodig zijn voor gebruikte

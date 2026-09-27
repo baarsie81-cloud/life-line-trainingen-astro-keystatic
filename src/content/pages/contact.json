@@ -24,6 +24,9 @@
       "privacyLink": "privacyverklaring"
     },
     "submitLabel": "Verstuur je aanvraag",
+    "sendingLabel": "Aanvraag wordt verzonden…",
+    "successText": "Bedankt! Je aanvraag is verzonden. We nemen zo snel mogelijk contact met je op.",
+    "errorText": "Verzenden is niet gelukt. Probeer het later opnieuw of mail ons direct via de link hierboven.",
     "privacyText": "Lees hoe we met je gegevens omgaan in onze",
     "fallbackLabel": "Mail ons direct"
   },

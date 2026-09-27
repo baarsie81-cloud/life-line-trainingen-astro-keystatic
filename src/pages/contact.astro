@@ -2,7 +2,7 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import page from "../content/pages/contact.json";
 
-const addressText = page.contactCard.address.join("\n");
+const formEndpoint = "https://formspree.io/f/mkjgzvqz";
 ---
 
 <BaseLayout title={page.seoTitle} description={page.seoDescription} image={page.hero.image}>
@@ -24,7 +24,7 @@ const addressText = page.contactCard.address.join("\n");
 
   <section class="section contact-section" aria-labelledby="contact-form-title">
     <div class="container contact-grid">
-      <form class="contact-form" id="contact-form">
+      <form class="contact-form" id="contact-form" action={formEndpoint} method="POST">
         <div class="form-heading">
           <p class="eyebrow">{page.form.eyebrow}</p>
           <h2 id="contact-form-title">{page.form.title}</h2>
@@ -73,6 +73,7 @@ const addressText = page.contactCard.address.join("\n");
           <button class="button button-primary" type="submit">{page.form.submitLabel}</button>
           <a class="mail-fallback" href={`mailto:${page.contactCard.email}`}>{page.form.fallbackLabel}</a>
         </div>
+        <p class="form-status" id="contact-form-status" role="status" aria-live="polite" aria-atomic="true"></p>
       </form>
 
       <aside class="contact-card" aria-label={page.contactCard.title}>
@@ -118,38 +119,52 @@ const addressText = page.contactCard.address.join("\n");
     </div>
   </section>
 
-  <script define:vars={{ recipient: page.contactCard.email, addressText }}>
+  <script define:vars={{ sendingLabel: page.form.sendingLabel, successText: page.form.successText, errorText: page.form.errorText }}>
     const form = document.querySelector("#contact-form");
+    const status = document.querySelector("#contact-form-status");
+    const submitButton = form?.querySelector('button[type="submit"]');
+    const submitLabel = submitButton?.textContent;
 
-    form?.addEventListener("submit", (event) => {
+    form?.addEventListener("input", () => {
+      status.textContent = "";
+      delete status.dataset.state;
+    });
+
+    form?.addEventListener("submit", async (event) => {
       event.preventDefault();
+      if (form.getAttribute("aria-busy") === "true") return;
 
       if (!form.checkValidity()) {
         form.reportValidity();
         return;
       }
 
-      const data = new FormData(form);
-      const voornaam = String(data.get("voornaam") || "").trim();
-      const achternaam = String(data.get("achternaam") || "").trim();
-      const naam = [voornaam, achternaam].filter(Boolean).join(" ");
-      const subject = "Contactaanvraag Life-Line-Trainingen";
-      const body = [
-        "Nieuwe contactaanvraag via de website",
-        "",
-        `Naam: ${naam}`,
-        `Naam van bedrijf: ${String(data.get("bedrijfsnaam") || "Niet ingevuld").trim() || "Niet ingevuld"}`,
-        `E-mailadres: ${String(data.get("email") || "").trim()}`,
-        `Telefoonnummer: ${String(data.get("telefoon") || "").trim()}`,
-        "",
-        "Bericht:",
-        String(data.get("bericht") || "").trim(),
-        "",
-        "Contactadres op website:",
-        addressText,
-      ].join("\n");
+      status.textContent = "";
+      delete status.dataset.state;
+      submitButton.disabled = true;
+      submitButton.textContent = sendingLabel;
+      form.setAttribute("aria-busy", "true");
 
-      window.location.href = `mailto:${recipient}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+      try {
+        const response = await fetch(form.action, {
+          method: "POST",
+          body: new FormData(form),
+          headers: { Accept: "application/json" },
+        });
+
+        if (!response.ok) throw new Error("Formspree rejected the submission");
+
+        form.reset();
+        status.textContent = successText;
+        status.dataset.state = "success";
+      } catch {
+        status.textContent = errorText;
+        status.dataset.state = "error";
+      } finally {
+        submitButton.disabled = false;
+        submitButton.textContent = submitLabel;
+        form.removeAttribute("aria-busy");
+      }
     });
   </script>
 </BaseLayout>
