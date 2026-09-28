@@ -128,7 +128,7 @@ const structuredData = structuredDataItems.length > 0 ? structuredDataItems : un
                 )}
               </div>
               {section.image && (
-                <figure class="instructor-image-card">
+                <figure class:list={["instructor-image-card", { "instructor-image-fixed-frame": page.slug === "bijscholing-reanimatie-instructeur" && index === 1 }]}>
                   <img src={section.image} alt={section.imageAlt} loading="lazy" decoding="async" />
                 </figure>
               )}
@@ -243,3 +243,14 @@ const structuredData = structuredDataItems.length > 0 ? structuredDataItems : un
     </section>
   )}
 </BaseLayout>
+
+<style>
+  .instructor-image-fixed-frame {
+    position: relative;
+  }
+
+  .instructor-image-fixed-frame img {
+    position: absolute;
+    inset: 0;
+  }
+</style>
