@@ -2821,7 +2821,7 @@ h3 {
   .split-grid,
   .review-heading,
   .final-cta-inner {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
 
   .ehbo-balanced-photo-section .helper-image-card,
@@ -2910,7 +2910,29 @@ h3 {
   }
 
   .instructor-final-action-column {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
+    min-width: 0;
+  }
+
+  .page-hero-copy,
+  .page-hero-content > *,
+  .final-cta-inner > * {
+    min-width: 0;
+  }
+
+  .client-trust-heading h2,
+  .page-hero h1,
+  .section-heading h2,
+  .instructor-price-cta h2,
+  .instructor-price-cta p {
+    overflow-wrap: anywhere;
+  }
+
+  .hero-actions .button,
+  .instructor-final-actions .button {
+    max-width: 100%;
+    overflow-wrap: anywhere;
+    text-align: center;
   }
 
   .instructor-final-actions .button {
@@ -3176,6 +3198,22 @@ h3 {
 
   .helper-variant-card dl {
     min-height: auto;
+  }
+}
+
+@media (max-width: 360px) {
+  .page-hero h1 {
+    font-size: 1.55rem;
+  }
+
+  .client-trust-heading h2,
+  .section-heading h2,
+  .instructor-price-cta h2 {
+    font-size: 1.65rem;
+  }
+
+  .client-trust-grid {
+    grid-template-columns: minmax(0, 1fr);
   }
 }
 
