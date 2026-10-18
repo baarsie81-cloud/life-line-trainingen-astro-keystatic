@@ -1306,11 +1306,11 @@ export default config({
           },
         }),
         seoTitle: hiddenTextField("SEO titel"),
-        seoDescription: hiddenField(fields.text({
+        seoDescription: fields.text({
           label: "SEO omschrijving",
           multiline: true,
           validation: { isRequired: true },
-        })),
+        }),
         date: fields.date({ label: "Publicatiedatum", validation: { isRequired: true } }),
         author: fields.text({ label: "Auteur", validation: { isRequired: true } }),
         readingTime: fields.text({ label: "Leestijd", validation: { isRequired: true } }),
